@@ -1,0 +1,779 @@
+data_42
+
+#Corrected using PDB structure: 1CHOI
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 33   N    HA       4.75         5.53
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.06     N/A     N/A     N/A     N/A   -0.12   
+#
+#bmr42.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr42.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.03      N/A      N/A      N/A      N/A  +/-0.09  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.841     N/A     N/A     N/A     N/A   0.742   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.125     N/A     N/A     N/A     N/A   0.306   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Two-Dimensional NMR Studies of Kazal Proteinase Inhibitors. 1. Sequence-Specific
+ Assignments and Secondary Structure of Turkey Ovomucoid Third Domain
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Robertson  Andrew   D.  . 
+       2   Westler    William  M.  . 
+       3   Markley    John     L.  . 
+
+   stop_
+
+   _BMRB_accession_number   42
+   _BMRB_flat_file_name     bmr42.str
+   _Entry_type              revision
+   _Submission_date         1995-07-31
+   _Accession_date          1996-04-13
+   _Entry_origination       BMRB
+   _NMR_STAR_version        2.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  305  
+
+   stop_
+
+   loop_
+      _Revision_date
+      _Revision_keyword
+      _Revision_author
+      _Revision_detail
+
+       1999-06-14  revision  BMRB 'Converted to BMRB NMR-STAR V 2.1 format'                
+       1996-04-13  revision  BMRB 'Link to the Protein Data Bank added'                    
+       1996-03-25  reformat  BMRB 'Converted to the BMRB 1996-03-01 STAR flat-file format' 
+       1995-07-31  original  BMRB 'Last release in original BMRB flat-file format'         
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_full         
+;
+ Robertson, Andrew D., Westler, William M., Markley, John L., 
+ "Two-Dimensional NMR Studies of Kazal Proteinase Inhibitors. 1. 
+ Sequence-Specific Assignments and Secondary Structure of Turkey Ovomucoid 
+ Third Domain,"
+ Biochemistry 27, 2519-2529 (1988).
+;
+   _Citation_title        
+;
+Two-Dimensional NMR Studies of Kazal Proteinase Inhibitors. 1. Sequence-Specific
+ Assignments and Secondary Structure of Turkey Ovomucoid Third Domain
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        ?
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Robertson  Andrew   D.  . 
+       2   Westler    William  M.  . 
+       3   Markley    John     L.  . 
+
+   stop_
+
+   _Journal_abbreviation   Biochemistry
+   _Journal_volume         27
+   _Page_first             2519
+   _Page_last              2529
+   _Year                   1988
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_ovomucoid_third_domain
+   _Saveframe_category      molecular_system
+
+   _Mol_system_name        'ovomucoid third domain'
+   _Abbreviation_common     ?
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      'ovomucoid third domain' $ovomucoid_third_domain 
+
+   stop_
+
+   _System_physical_state   ?
+   _System_oligomer_state   ?
+   _System_paramagnetic     ?
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  1PPF "I Chain I, Human Leukocyte Elastase (Hle) (Neutrophil Elastase (Hne)) (E.C.3.4.21.37) Complex With The Third Domain Of Turkey Ovomucoid Inhibitor (Omtky3)"  . 
+       PDB  1OMT "Solution Structure Of Ovomucoid (Third Domain) From Domestic Turkey (298k, Ph 4.1) (Nmr, 50 Structures) (Standard Noesy Analysis)"                           . 
+       PDB  1OMU "Solution Structure Of Ovomucoid (Third Domain) From Domestic Turkey (298k, Ph 4.1) (Nmr, 50 Structures) (Refined Model Using Network Editing Analysis)"      . 
+       PDB  1TUR "Ovomucoid (Third Domain) (Nmr, 12 Structures)"                                                                                                               . 
+       PDB  1TUS "Ovomucoid (Reactive-Site Hydrolyzed Third Domain) (Nmr, 12 Structures)"                                                                                      . 
+       PDB  1CHO "I Chain I, Alpha-Chymotrypsin (E.C.3.4.21.1) Complex With Turkey Ovomucoid Third Domain (OMTKY3)"                                                            . 
+       PDB  3SGB "I Chain I, Proteinase B From Streptomyces Griseus (SGPB) (E.C. Number Not Assigned) Complex With Third Domain Of The Turkey Ovomucoid Inhibitor (OMTKY3)"    . 
+       PDB  2OVO "Ovomucoid Third Domain"                                                                                                                                      . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_ovomucoid_third_domain
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                'ovomucoid third domain'
+   _Abbreviation_common                         ?
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               56
+   _Mol_residue_sequence                       
+;
+LAAVSVDCSEYPKPACTLEY
+RPLCGSDNKTYGNKCNFCNA
+VVESNGTLTLSHFGKC
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+
+        1   LEU    2   ALA    3   ALA    4   VAL    5   SER 
+        6   VAL    7   ASP    8   CYS    9   SER   10   GLU 
+       11   TYR   12   PRO   13   LYS   14   PRO   15   ALA 
+       16   CYS   17   THR   18   LEU   19   GLU   20   TYR 
+       21   ARG   22   PRO   23   LEU   24   CYS   25   GLY 
+       26   SER   27   ASP   28   ASN   29   LYS   30   THR 
+       31   TYR   32   GLY   33   ASN   34   LYS   35   CYS 
+       36   ASN   37   PHE   38   CYS   39   ASN   40   ALA 
+       41   VAL   42   VAL   43   GLU   44   SER   45   ASN 
+       46   GLY   47   THR   48   LEU   49   THR   50   LEU 
+       51   SER   52   HIS   53   PHE   54   GLY   55   LYS 
+       56   CYS 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-24
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1R0R   "I Chain I, 1.1 Angstrom Resolution StructureOf The Complex Between The Protein Inhibitor, Omtky3,And The Serine Protease, Subtilisin Carlsberg"           109.80   51   100   100   5e-26  
+       PDB         1SGR   "I Chain I, Leu 18 Variant Of Turkey OvomucoidInhibitor Third Domain Complexed With StreptomycesGriseus Proteinase B"                                      109.80   51   100   100   5e-26  
+       PDB         1CSO   "I Chain I, Crystal Structure Of The Omtky3 P1Variant Omtky3-Ile18i In Complex With Sgpb"                                                                  109.80   51    98   100   8e-26  
+       PDB         1CT0   "I Chain I, Crystal Structure Of The Omtky3 P1Variant Omtky3-Ser18i In Complex With Sgpb"                                                                  109.80   51    98    98   2e-25  
+       PDB         1CT2   "I Chain I, Crystal Structure Of The Omtky3 P1Variant Omtky3-Thr18i In Complex With Sgpb"                                                                  109.80   51    98    98   2e-25  
+       PDB         1CT4   "I Chain I, Crystal Structure Of The Omtky3 P1Variant Omtky3-Val18i In Complex With Sgpb"                                                                  109.80   51    98   100   10e-26 
+       PDB         1DS2   "I Chain I, Crystal Structure OfSgpb:omtky3-Coo-Leu18i"                                                                                                    109.80   51    98    98   2e-25  
+       PDB         1HJA   "I Chain I, Lys 18 Variant Of Turkey OvomucoidInhibitor Third Domain Complexed WithAlpha-Chymotrypsin"                                                     109.80   51    98    98   2e-25  
+       PDB         1SGD   "I Chain I, Asp 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 6.5"                            109.80   51    98    98   4e-25  
+       PDB         1SGE   "I Chain I, Glu 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 6.5"                            109.80   51    98    98   3e-25  
+       PDB         1SGN   "I Chain I, Asn 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B"                                      109.80   51    98    98   3e-25  
+       PDB         1SGP   "I Chain I, Ala 18 Variant Of Turkey OvomucoidInhibitor Third Domain Complexed With StreptomycesGriseus Proteinase B"                                      109.80   51    98    98   2e-25  
+       PDB         1SGQ   "I Chain I, Gly 18 Variant Of Turkey OvomucoidInhibitor Third Domain Complexed With StreptomycesGriseus Proteinase B"                                      109.80   51    98    98   4e-25  
+       PDB         1SGY   "I Chain I, Tyr 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 6.5"                            109.80   51    98    98   2e-25  
+       PDB         2SGD   "I Chain I, Asp 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 10.7"                           109.80   51    98    98   4e-25  
+       PDB         2SGE   "I Chain I, Glu 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 10.7"                           109.80   51    98    98   3e-25  
+       PDB         2SGF   "I Chain I, Phe 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B"                                      109.80   51    98    98   10e-26 
+       PDB         2SGP   "I Chain I, Pro 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 6.5"                            109.80   51    98    98   3e-25  
+       PDB         2SGQ   "I Chain I, Gln 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 6.5"                            109.80   51    98    98   2e-25  
+       PDB         3SGQ   "I Chain I, Gln 18 Variant Of TurkeyOvomucoid Inhibitor Third Domain Complexed WithStreptomyces Griseus Proteinase B At Ph 10.7"                           109.80   51    98    98   2e-25  
+       PDB         1IY5   "A Chain A, Solution Structure Of Wild TypeOmsvp3"                                                                                                         103.70   54    98   100   3e-27  
+       PDB         1CHO   "I Chain I, Alpha-Chymotrypsin (E.C.3.4.21.1)Complex With Turkey Ovomucoid Third Domain (OMTKY3)"                                                          100.00   56   100   100   2e-28  
+       PDB         1OMT   "Solution Structure Of Ovomucoid (ThirdDomain) From Domestic Turkey (298k, Ph 4.1) (Nmr, 50Structures) (Standard Noesy Analysis)"                          100.00   56   100   100   2e-28  
+       PDB         1OMU   "Solution Structure Of Ovomucoid (ThirdDomain) From Domestic Turkey (298k, Ph 4.1) (Nmr, 50Structures) (Refined Model Using Network EditingAnalysis)"      100.00   56   100   100   2e-28  
+       PDB         1PPF   "I Chain I, Human Leukocyte Elastase (Hle)(Neutrophil Elastase (Hne)) (E.C.3.4.21.37) ComplexWith The Third Domain Of Turkey Ovomucoid Inhibitor(Omtky3)"  100.00   56   100   100   2e-28  
+       PDB         1TUR   "Ovomucoid (Third Domain) (Nmr, 12Structures)"                                                                                                             100.00   56   100   100   2e-28  
+       PDB         1TUS   "Ovomucoid (Reactive-Site Hydrolyzed ThirdDomain) (Nmr, 12 Structures)"                                                                                    100.00   56   100   100   2e-28  
+       PDB         3SGB   "I Chain I, Proteinase B From StreptomycesGriseus (SGPB) (E.C. Number Not Assigned) Complex WithThird Domain Of The Turkey Ovomucoid Inhibitor (OMTKY3)"   100.00   56   100   100   2e-28  
+       PDB         1M8B   "A Chain A, Solution Structure Of The C StateOf Turkey Ovomucoid At Ph 2.5"                                                                                100.00   56    98    98   6e-27  
+       PDB         1M8C   "A Chain A, Solution Structure Of The T StateOf Turkey Ovomucoid At Ph 2.5"                                                                                100.00   56    98    98   6e-27  
+       PDB         2OVO   "Ovomucoid Third Domain"                                                                                                                                   100.00   56    98   100   4e-28  
+       PDB         4OVO   "Ovomucoid Third Domain Cleaved Rdi"                                                                                                                       100.00   56    98   100   1e-27  
+       PIR         C31444 "ovomucoid, third domain - ocellated turkey(fragment)"                                                                                                     100.00   56   100   100   2e-28  
+       PIR         H61589 "ovomucoid (PSTI-type proteinase inhibitor),third domain - white-eared pheasant"                                                                           100.00   56   100   100   2e-28  
+       PIR         A31445 "ovomucoid, third domain - ruffed grouse(fragment)"                                                                                                        100.00   56    98   100   4e-28  
+       PIR         G31445 "ovomucoid, third domain - sage grouse(fragment)"                                                                                                          100.00   56    98   100   4e-28  
+       PIR         TITKM  "ovomucoid - turkey (tentative sequence)"                                                                                                                   30.27  185   100   100   2e-28  
+       SWISS-PROT  P52245 "IOVO_CROCS Ovomucoid"                                                                                                                                     100.00   56   100   100   2e-28  
+       SWISS-PROT  P05586 "IOVO_TYMCU Ovomucoid"                                                                                                                                     100.00   56    98   100   4e-28  
+       SWISS-PROT  P05590 "IOVO_LOPCA Ovomucoid"                                                                                                                                     100.00   56    98    98   3e-27  
+       SWISS-PROT  P05609 "IOVO_PAVCR Ovomucoid"                                                                                                                                     100.00   56    98   100   8e-28  
+       SWISS-PROT  P01004 "IOVO_MELGA Ovomucoid"                                                                                                                                      30.27  185   100   100   2e-28  
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Genus
+      _Species
+      _Strain
+      _Tissue
+
+      $ovomucoid_third_domain  turkey  ?  Maleagris  gallopavo  generic  egg 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+
+      $ovomucoid_third_domain 'not available' 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_one
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+       ?  ?  ?  ? 
+
+   stop_
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_condition_set_one
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             4   .  na 
+       temperature  298   .  K  
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chem_shift_reference_par_set_one
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Chem_shift_units
+      _Chem_shift_value
+
+       TSP  H  ppm  0  
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_assignment_data_set_one
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_label         $sample_condition_set_one
+   _Chem_shift_reference_set_label  $chem_shift_reference_par_set_one
+   _Mol_system_component_name       'ovomucoid third domain'
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   LEU       HA    H      4.05        .     1
+     2     1   LEU       HG    H      1.70        .     1
+     3     1   LEU       HD1   H      1.00        .     2
+     4     1   LEU       HD2   H      0.96        .     2
+     5     2   ALA       H     H      8.65        .     1
+     6     2   ALA       HA    H      4.42        .     1
+     7     2   ALA       HB    H      1.42        .     1
+     8     3   ALA       H     H      8.42        .     1
+     9     3   ALA       HA    H      4.37        .     1
+    10     3   ALA       HB    H      1.41        .     1
+    11     4   VAL       H     H      8.15        .     1
+    12     4   VAL       HA    H      4.27        .     1
+    13     4   VAL       HB    H      2.05        .     1
+    14     4   VAL       HG1   H      0.93        .     2
+    15     4   VAL       HG2   H      0.88        .     2
+    16     5   SER       H     H      8.25        .     1
+    17     5   SER       HA    H      4.56        .     1
+    18     5   SER       HB2   H      3.84        .     1
+    19     5   SER       HB3   H      3.84        .     1
+    20     6   VAL       H     H      8.32        .     1
+    21     6   VAL       HA    H      4.29        .     1
+    22     6   VAL       HB    H      1.97        .     1
+    23     6   VAL       HG1   H      0.82        .     2
+    24     6   VAL       HG2   H      0.92        .     2
+    25     7   ASP       H     H      8.61        .     1
+    26     7   ASP       HA    H      4.76        .     1
+    27     7   ASP       HB2   H      2.98        .     2
+    28     7   ASP       HB3   H      2.72        .     2
+    29     8   CYS       H     H      8.90        .     1
+    30     8   CYS       HA    H      5.33        .     1
+    31     8   CYS       HB2   H      2.55        .     2
+    32     8   CYS       HB3   H      3.36        .     2
+    33     9   SER       H     H      8.69        .     1
+    34     9   SER       HA    H      4.27        .     1
+    35     9   SER       HB2   H      3.98        .     2
+    36     9   SER       HB3   H      4.08        .     2
+    37    10   GLU       H     H      8.73        .     1
+    38    10   GLU       HA    H      4.33        .     1
+    39    10   GLU       HB2   H      1.78        .     2
+    40    10   GLU       HB3   H      2.08        .     2
+    41    10   GLU       HG2   H      2.31        .     1
+    42    10   GLU       HG3   H      2.31        .     1
+    43    11   TYR       H     H      7.43        .     1
+    44    11   TYR       HA    H      4.07        .     1
+    45    11   TYR       HB2   H      2.78        .     2
+    46    11   TYR       HB3   H      2.90        .     2
+    47    11   TYR       HD1   H      7.15        .     1
+    48    11   TYR       HD2   H      7.15        .     1
+    49    12   PRO       HA    H      5.22        .     1
+    50    12   PRO       HB2   H      2.08        .     2
+    51    12   PRO       HB3   H      2.47        .     2
+    52    12   PRO       HG2   H      1.87        .     2
+    53    12   PRO       HG3   H      1.98        .     2
+    54    12   PRO       HD2   H      3.56        .     2
+    55    12   PRO       HD3   H      3.68        .     2
+    56    13   LYS       H     H      9.37        .     1
+    57    13   LYS       HA    H      4.89        .     1
+    58    13   LYS       HB2   H      1.59        .     2
+    59    13   LYS       HB3   H      1.90        .     2
+    60    13   LYS       HG2   H      0.91        .     2
+    61    13   LYS       HG3   H      1.14        .     2
+    62    13   LYS       HD2   H      1.60        .     2
+    63    13   LYS       HD3   H      1.43        .     2
+    64    13   LYS       HE2   H      2.40        .     2
+    65    13   LYS       HE3   H      2.57        .     2
+    66    14   PRO       HA    H      4.36        .     1
+    67    14   PRO       HB2   H      2.31        .     1
+    68    14   PRO       HB3   H      2.31        .     1
+    69    14   PRO       HG2   H      2.05        .     1
+    70    14   PRO       HG3   H      2.05        .     1
+    71    14   PRO       HD2   H      3.76        .     2
+    72    14   PRO       HD3   H      3.82        .     2
+    73    15   ALA       H     H      7.48        .     1
+    74    15   ALA       HA    H      4.58        .     1
+    75    15   ALA       HB    H      1.33        .     1
+    76    16   CYS       H     H      8.58        .     1
+    77    16   CYS       HA    H      5.32        .     1
+    78    16   CYS       HB2   H      2.79        .     2
+    79    16   CYS       HB3   H      3.37        .     2
+    80    17   THR       H     H      8.27        .     1
+    81    17   THR       HA    H      4.53        .     1
+    82    17   THR       HB    H      4.63        .     1
+    83    17   THR       HG2   H      1.36        .     1
+    84    18   LEU       H     H      8.42        .     1
+    85    18   LEU       HA    H      4.42        .     1
+    86    18   LEU       HB2   H      1.66        .     1
+    87    18   LEU       HB3   H      1.66        .     1
+    88    18   LEU       HG    H      1.73        .     1
+    89    18   LEU       HD1   H      0.90        .     2
+    90    18   LEU       HD2   H      0.96        .     2
+    91    19   GLU       H     H      8.06        .     1
+    92    19   GLU       HA    H      4.14        .     1
+    93    19   GLU       HB2   H      2.00        .     1
+    94    19   GLU       HB3   H      2.00        .     1
+    95    19   GLU       HG2   H      2.28        .     2
+    96    19   GLU       HG3   H      2.37        .     2
+    97    20   TYR       H     H      8.93        .     1
+    98    20   TYR       HA    H      5.06        .     1
+    99    20   TYR       HB2   H      2.92        .     2
+   100    20   TYR       HB3   H      3.11        .     2
+   101    20   TYR       HD1   H      7.28        .     1
+   102    20   TYR       HD2   H      7.28        .     1
+   103    20   TYR       HE1   H      6.82        .     1
+   104    20   TYR       HE2   H      6.82        .     1
+   105    21   ARG       H     H      8.89        .     1
+   106    21   ARG       HA    H      4.46        .     1
+   107    21   ARG       HB2   H      1.74        .     1
+   108    21   ARG       HB3   H      1.74        .     1
+   109    21   ARG       HG2   H      1.59        .     1
+   110    21   ARG       HG3   H      1.59        .     1
+   111    21   ARG       HD2   H      3.20        .     2
+   112    21   ARG       HD3   H      3.29        .     2
+   113    21   ARG       HE    H      7.25        .     1
+   114    22   PRO       HA    H      4.52        .     1
+   115    22   PRO       HB2   H      1.67        .     1
+   116    22   PRO       HB3   H      1.67        .     1
+   117    22   PRO       HG2   H      1.73        .     1
+   118    22   PRO       HG3   H      1.73        .     1
+   119    22   PRO       HD2   H      3.36        .     1
+   120    22   PRO       HD3   H      3.36        .     1
+   121    23   LEU       H     H      8.48        .     1
+   122    23   LEU       HA    H      4.28        .     1
+   123    23   LEU       HB2   H      0.98        .     1
+   124    23   LEU       HB3   H      0.98        .     1
+   125    23   LEU       HG    H      1.39        .     1
+   126    23   LEU       HD1   H      0.41        .     2
+   127    23   LEU       HD2   H      0.48        .     2
+   128    24   CYS       H     H      8.17        .     1
+   129    24   CYS       HA    H      5.23        .     1
+   130    24   CYS       HB2   H      1.35        .     2
+   131    24   CYS       HB3   H      2.40        .     2
+   132    25   GLY       H     H      9.40        .     1
+   133    25   GLY       HA2   H      4.50        .     2
+   134    25   GLY       HA3   H      4.68        .     2
+   135    26   SER       H     H      9.37        .     1
+   136    26   SER       HA    H      4.15        .     1
+   137    26   SER       HB2   H      3.82        .     2
+   138    26   SER       HB3   H      4.10        .     2
+   139    27   ASP       H     H      8.43        .     1
+   140    27   ASP       HA    H      4.43        .     1
+   141    27   ASP       HB2   H      2.59        .     2
+   142    27   ASP       HB3   H      3.01        .     2
+   143    28   ASN       H     H      8.65        .     1
+   144    28   ASN       HA    H      4.40        .     1
+   145    28   ASN       HB2   H      2.82        .     2
+   146    28   ASN       HB3   H      3.17        .     2
+   147    28   ASN       HD21  H      6.85        .     2
+   148    28   ASN       HD22  H      7.53        .     2
+   149    29   LYS       H     H      7.80        .     1
+   150    29   LYS       HA    H      4.40        .     1
+   151    29   LYS       HB2   H      1.44        .     2
+   152    29   LYS       HB3   H      1.66        .     2
+   153    29   LYS       HG2   H      0.81        .     2
+   154    29   LYS       HG3   H      1.14        .     2
+   155    29   LYS       HD2   H      1.43        .     2
+   156    29   LYS       HD3   H      1.54        .     2
+   157    29   LYS       HE2   H      2.82        .     1
+   158    29   LYS       HE3   H      2.82        .     1
+   159    29   LYS       HZ    H      7.45        .     1
+   160    30   THR       H     H      8.29        .     1
+   161    30   THR       HA    H      4.78        .     1
+   162    30   THR       HB    H      4.02        .     1
+   163    30   THR       HG2   H      1.18        .     1
+   164    31   TYR       H     H      9.70        .     1
+   165    31   TYR       HA    H      4.50        .     1
+   166    31   TYR       HB2   H      2.79        .     2
+   167    31   TYR       HB3   H      2.90        .     2
+   168    32   GLY       H     H      9.21        .     1
+   169    32   GLY       HA2   H      3.68        .     2
+   170    32   GLY       HA3   H      4.12        .     2
+   171    33   ASN       H     H      7.43        .     1
+   172    33   ASN       HA    H      4.81        .     1
+   173    33   ASN       HB2   H      3.19        .     2
+   174    33   ASN       HB3   H      3.67        .     2
+   175    33   ASN       HD21  H      6.32        .     2
+   176    33   ASN       HD22  H      8.11        .     2
+   177    34   LYS       H     H      8.92        .     1
+   178    34   LYS       HA    H      3.86        .     1
+   179    34   LYS       HB2   H      1.86        .     2
+   180    34   LYS       HB3   H      1.98        .     2
+   181    34   LYS       HG2   H      1.34        .     2
+   182    34   LYS       HG3   H      1.46        .     2
+   183    34   LYS       HD2   H      1.78        .     1
+   184    34   LYS       HD3   H      1.78        .     1
+   185    34   LYS       HE2   H      3.04        .     2
+   186    34   LYS       HE3   H      3.10        .     2
+   187    35   CYS       H     H      8.30        .     1
+   188    35   CYS       HA    H      4.53        .     1
+   189    35   CYS       HB2   H      3.25        .     2
+   190    35   CYS       HB3   H      3.47        .     2
+   191    36   ASN       H     H      8.39        .     1
+   192    36   ASN       HA    H      4.58        .     1
+   193    36   ASN       HB2   H      2.84        .     2
+   194    36   ASN       HB3   H      3.22        .     2
+   195    36   ASN       HD21  H      7.11        .     2
+   196    36   ASN       HD22  H      7.61        .     2
+   197    37   PHE       H     H      8.39        .     1
+   198    37   PHE       HA    H      3.51        .     1
+   199    37   PHE       HB2   H      2.78        .     2
+   200    37   PHE       HB3   H      2.85        .     2
+   201    37   PHE       HD1   H      6.55        .     1
+   202    37   PHE       HD2   H      6.55        .     1
+   203    37   PHE       HE1   H      6.82        .     1
+   204    37   PHE       HE2   H      6.82        .     1
+   205    37   PHE       HZ    H      6.55        .     1
+   206    38   CYS       H     H      9.19        .     1
+   207    38   CYS       HA    H      3.97        .     1
+   208    38   CYS       HB2   H      1.38        .     2
+   209    38   CYS       HB3   H      1.77        .     2
+   210    39   ASN       H     H      8.17        .     1
+   211    39   ASN       HA    H      4.69        .     1
+   212    39   ASN       HB2   H      2.78        .     2
+   213    39   ASN       HB3   H      2.98        .     2
+   214    39   ASN       HD21  H      6.81        .     2
+   215    39   ASN       HD22  H      7.52        .     2
+   216    40   ALA       H     H      7.22        .     1
+   217    40   ALA       HA    H      4.17        .     1
+   218    40   ALA       HB    H      1.30        .     1
+   219    41   VAL       H     H      8.60        .     1
+   220    41   VAL       HA    H      3.18        .     1
+   221    41   VAL       HB    H      2.06        .     1
+   222    41   VAL       HG1   H      0.02        .     2
+   223    41   VAL       HG2   H      0.72        .     2
+   224    42   VAL       H     H      8.06        .     1
+   225    42   VAL       HA    H      3.93        .     1
+   226    42   VAL       HB    H      2.31        .     1
+   227    42   VAL       HG1   H      1.00        .     2
+   228    42   VAL       HG2   H      1.05        .     2
+   229    43   GLU       H     H      7.63        .     1
+   230    43   GLU       HA    H      4.32        .     1
+   231    43   GLU       HB2   H      2.10        .     2
+   232    43   GLU       HB3   H      2.25        .     2
+   233    43   GLU       HG2   H      2.58        .     1
+   234    43   GLU       HG3   H      2.58        .     1
+   235    44   SER       H     H      7.80        .     1
+   236    44   SER       HA    H      4.52        .     1
+   237    44   SER       HB2   H      3.98        .     2
+   238    44   SER       HB3   H      4.22        .     2
+   239    45   ASN       H     H      8.50        .     1
+   240    45   ASN       HA    H      4.48        .     1
+   241    45   ASN       HB2   H      2.85        .     2
+   242    45   ASN       HB3   H      3.15        .     2
+   243    45   ASN       HD21  H      6.85        .     2
+   244    45   ASN       HD22  H      7.58        .     2
+   245    46   GLY       H     H      8.12        .     1
+   246    46   GLY       HA2   H      3.58        .     2
+   247    46   GLY       HA3   H      4.10        .     2
+   248    47   THR       H     H      7.58        .     1
+   249    47   THR       HA    H      4.22        .     1
+   250    47   THR       HB    H      4.26        .     1
+   251    47   THR       HG2   H      1.26        .     1
+   252    48   LEU       H     H      7.65        .     1
+   253    48   LEU       HA    H      4.28        .     1
+   254    48   LEU       HB2   H      1.51        .     1
+   255    48   LEU       HB3   H      1.51        .     1
+   256    48   LEU       HG    H      1.12        .     1
+   257    48   LEU       HD1   H      0.30        .     2
+   258    48   LEU       HD2   H      1.17        .     2
+   259    49   THR       H     H      8.56        .     1
+   260    49   THR       HA    H      4.68        .     1
+   261    49   THR       HB    H      4.36        .     1
+   262    49   THR       HG2   H      1.13        .     1
+   263    50   LEU       H     H      8.77        .     1
+   264    50   LEU       HA    H      4.10        .     1
+   265    50   LEU       HB2   H      1.00        .     2
+   266    50   LEU       HB3   H      1.78        .     2
+   267    50   LEU       HG    H      0.65        .     1
+   268    50   LEU       HD1   H      0.12        .     2
+   269    50   LEU       HD2   H      0.04        .     2
+   270    51   SER       H     H      8.85        .     1
+   271    51   SER       HA    H      4.53        .     1
+   272    51   SER       HB2   H      3.38        .     2
+   273    51   SER       HB3   H      3.53        .     2
+   274    52   HIS       H     H      7.27        .     1
+   275    52   HIS       HA    H      4.52        .     1
+   276    52   HIS       HB2   H      3.32        .     2
+   277    52   HIS       HB3   H      3.79        .     2
+   278    52   HIS       HD2   H      7.26        .     1
+   279    52   HIS       HE1   H      8.80        .     1
+   280    53   PHE       H     H      9.17        .     1
+   281    53   PHE       HA    H      4.32        .     1
+   282    53   PHE       HB2   H      3.04        .     2
+   283    53   PHE       HB3   H      3.24        .     2
+   284    53   PHE       HD1   H      7.28        .     1
+   285    53   PHE       HD2   H      7.28        .     1
+   286    53   PHE       HE1   H      7.17        .     1
+   287    53   PHE       HE2   H      7.17        .     1
+   288    54   GLY       H     H      8.26        .     1
+   289    54   GLY       HA2   H      3.57        .     2
+   290    54   GLY       HA3   H      4.61        .     2
+   291    55   LYS       H     H      7.99        .     1
+   292    55   LYS       HA    H      4.05        .     1
+   293    55   LYS       HB2   H      1.74        .     2
+   294    55   LYS       HB3   H      1.88        .     2
+   295    55   LYS       HG2   H      1.49        .     2
+   296    55   LYS       HG3   H      1.55        .     2
+   297    55   LYS       HD2   H      1.75        .     1
+   298    55   LYS       HD3   H      1.75        .     1
+   299    55   LYS       HE2   H      3.09        .     1
+   300    55   LYS       HE3   H      3.09        .     1
+   301    55   LYS       HZ    H      7.54        .     1
+   302    56   CYS       H     H      8.31        .     1
+   303    56   CYS       HA    H      4.39        .     1
+   304    56   CYS       HB2   H      2.52        .     2
+   305    56   CYS       HB3   H      3.15        .     2
+
+   stop_
+
+   loop_
+      _Chem_shift_value_error
+
+       .02 
+
+   stop_
+
+save_
+

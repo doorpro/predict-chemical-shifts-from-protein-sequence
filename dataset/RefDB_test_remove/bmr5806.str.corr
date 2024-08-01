@@ -1,0 +1,979 @@
+data_5806
+
+#Corrected using PDB structure: 1UEOA
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+#  6   G    HA       3.83         4.65
+# 11   I    HA       4.35         3.26
+# 30   N    HA       4.42         5.15
+# 31   G    HA       3.76         4.86
+#
+#After reference correction, the following residues still 
+#have a HN chemical shift difference (obs*-pred) greater than  2.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 58   G    H        8.32        10.66
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.06     N/A     N/A     N/A     N/A   -0.22   
+#
+#bmr5806.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr5806.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.05      N/A      N/A      N/A      N/A  +/-0.11  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.494     N/A     N/A     N/A     N/A   0.383   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.179     N/A     N/A     N/A     N/A   0.395   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Solution structure of the recombinant Penaeidin-3, a shrimp antimicrobial 
+peptide 
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Yang     Yinshan  .  . 
+       2   Poncet   Joel     .  . 
+       3   Garnier  Julien   .  . 
+       4   Zatylny  Celine   .  . 
+       5   Bachere  Evelyne  .  . 
+       6   Aumelas  Andre    .  . 
+
+   stop_
+
+   _BMRB_accession_number   5806
+   _BMRB_flat_file_name     bmr5806.str
+   _Entry_type              new
+   _Submission_date         2003-05-22
+   _Accession_date          2003-05-22
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  370  
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Solution Structure of the Recombinant Penaeidin-3, a Shrimp Antimicrobial 
+Peptide
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        22853153
+   _PubMed_ID              12842879
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Yang     Yinshan  .  . 
+       2   Poncet   Joel     .  . 
+       3   Garnier  Julien   .  . 
+       4   Zatylny  Celine   .  . 
+       5   Bachere  Evelyne  .  . 
+       6   Aumelas  Andre    .  . 
+
+   stop_
+
+   _Journal_abbreviation  "J. Biol. Chem."
+   _Journal_volume         278
+   _Journal_issue          38
+   _Page_first             36859
+   _Page_last              36867
+   _Year                   2003
+
+   loop_
+      _Keyword
+
+      "antimicrobial peptide" 
+      "proline-rich"          
+      "cysteine-rich"         
+      "disulfide bond"        
+       penaeidin              
+       shrimp                 
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_pen-3a
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name            penaeidin-3
+   _Abbreviation_common        pen-3a
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "pen-3a monomer" $pen-3a 
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all disulfide bound'
+
+   loop_
+      _Biological_function
+
+       antimicrobial 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_pen-3a
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                 penaeidin-3
+   _Name_variant                                T8A
+   _Abbreviation_common                         pen-3a
+   _Molecular_mass                              6656.3
+   _Mol_thiol_state                            'all disulfide bound'
+   _Details                                    
+;
+The protein studied is the T8A mutant.
+;
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               63
+   _Mol_residue_sequence                       
+;
+QVYKGGYARPIPRPPPFVRP
+LPGGPIGPYNGCPVSCRGIS
+FSQARSCCSRLGRCCHVGKG
+YSG
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+
+        1   GLN    2   VAL    3   TYR    4   LYS    5   GLY 
+        6   GLY    7   TYR    8   ALA    9   ARG   10   PRO 
+       11   ILE   12   PRO   13   ARG   14   PRO   15   PRO 
+       16   PRO   17   PHE   18   VAL   19   ARG   20   PRO 
+       21   LEU   22   PRO   23   GLY   24   GLY   25   PRO 
+       26   ILE   27   GLY   28   PRO   29   TYR   30   ASN 
+       31   GLY   32   CYS   33   PRO   34   VAL   35   SER 
+       36   CYS   37   ARG   38   GLY   39   ILE   40   SER 
+       41   PHE   42   SER   43   GLN   44   ALA   45   ARG 
+       46   SER   47   CYS   48   CYS   49   SER   50   ARG 
+       51   LEU   52   GLY   53   ARG   54   CYS   55   CYS 
+       56   HIS   57   VAL   58   GLY   59   LYS   60   GLY 
+       61   TYR   62   SER   63   GLY 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1UEO       "A Chain A, Solution Structure Of The[t8a]-Penaeidin-3"  100.00  63   100   100   2e-34 
+       EMBL        CAA75143.1 "penaeidin-3a [Litopenaeus vannamei]"                     76.83  82    98    98   5e-34 
+       GenBank     AAK73084.1 "penaeidin 3a.1 [Litopenaeus vannamei]"                   76.83  82    98    98   5e-34 
+       GenBank     AAK73085.1 "penaeidin 3a.2 [Litopenaeus vannamei]"                   76.83  82    98    98   5e-34 
+       GenBank     AAK73086.1 "penaeidin 3a.3 [Litopenaeus vannamei]"                   76.83  82    98    98   5e-34 
+       GenBank     AAK77532.1 "penaeidin 3a [Litopenaeus vannamei]"                     76.83  82    98    98   5e-34 
+       GenBank     AAK77534.1 "penaeidin 3e [Litopenaeus vannamei]"                     76.83  82    98    98   5e-34 
+       SWISS-PROT  P81058     "PN3A_PENVA Penaeidin-3a precursor (Pen-3a)(P3-a)"        76.83  82    98    98   5e-34 
+       SWISS-PROT  Q963C9     "PN3E_PENVA Penaeidin-3e precursor (Pen-3e)"              76.83  82    98    98   5e-34 
+
+   stop_
+
+save_
+
+
+    ########################################
+    #  Molecular bond linkage definitions  #
+    ########################################
+
+save_crosslink_bonds
+   _Saveframe_category   crosslink_bonds
+
+
+   loop_
+      _Bond_order
+      _Bond_type
+      _Atom_one_mol_system_component_name
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_atom_name
+      _Atom_two_mol_system_component_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_atom_name
+
+       single  disulfide "pen-3a monomer"  32   CYS  SG "pen-3a monomer"  47   CYS  SG 
+       single  disulfide "pen-3a monomer"  36   CYS  SG "pen-3a monomer"  54   CYS  SG 
+       single  disulfide "pen-3a monomer"  48   CYS  SG "pen-3a monomer"  55   CYS  SG 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+
+      $pen-3a "Pacific white shrimp"  6689   Eukaryota  Metazoa  Litopenaeus  vannamei 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $pen-3a 'recombinant technology'  .  .  .  .  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Concentration_min_value
+      _Isotopic_labeling
+
+      $pen-3a  .  mM  0.7  . 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_xwinnmr
+   _Saveframe_category   software
+
+   _Name                 xwinnmr
+
+   loop_
+      _Task
+
+      "collection of data" 
+      "processing"         
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer_1
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         BRUKER
+   _Model                AVANCE
+   _Field_strength       600
+
+save_
+
+
+save_NMR_spectrometer_2
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         BRUKER
+   _Model                AVANCE
+   _Field_strength       500
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+DQF-COSY
+TOCSY
+NOESY
+;
+   _Details             
+;
+A cryoprobe was used with the 500 MHz spectrometer.
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_Exp-cond_1
+   _Saveframe_category   sample_conditions
+
+   _Details             
+;
+The sample was equilibrated for at least 1 hour before the spectra were 
+collected.
+;
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             3.9  0.1  n/a 
+       temperature  285    0.1  K   
+
+   stop_
+
+save_
+
+
+save_Exp-cond_2
+   _Saveframe_category   sample_conditions
+
+   _Details             
+;
+The sample was equilibrated for at least 1 hour before the spectra were 
+collected.
+;
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             3.9  0.1  n/a 
+       temperature  293    0.1  K   
+
+   stop_
+
+save_
+
+
+save_Exp-cond_3
+   _Saveframe_category   sample_conditions
+
+   _Details             
+;
+The sample was equilibrated for at least 1 hour before the spectra were 
+collected.
+;
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH            3.9  0.1  n/a 
+       temperature  27    0.1  C   
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       DSS  H  1  'methyl protons'  ppm  0.0  internal  direct  .  .  .  1.0 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_shift_set_1
+   _Saveframe_category               assigned_chemical_shifts
+
+   _Details                         
+;
+The chemical shifts were measured at 20?C.
+;
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $Exp-cond_2
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "pen-3a monomer"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   GLN       HA    H      4.07     0.01     1
+     2     1   GLN       HB2   H      2.10     0.01     1
+     3     1   GLN       HB3   H      2.10     0.01     1
+     4     1   GLN       HG2   H      2.25     0.01     1
+     5     1   GLN       HG3   H      2.25     0.01     1
+     6     1   GLN       HE21  H      7.53     0.01     2
+     7     1   GLN       HE22  H      6.91     0.01     2
+     8     2   VAL       H     H      8.59     0.01     1
+     9     2   VAL       HA    H      4.11     0.01     1
+    10     2   VAL       HB    H      1.97     0.01     1
+    11     2   VAL       HG1   H      0.88     0.01     2
+    12     2   VAL       HG2   H      0.86     0.01     2
+    13     3   TYR       H     H      8.60     0.01     1
+    14     3   TYR       HA    H      4.57     0.01     1
+    15     3   TYR       HB2   H      2.94     0.01     1
+    16     3   TYR       HB3   H      2.94     0.01     1
+    17     3   TYR       HD1   H      7.10     0.01     1
+    18     3   TYR       HD2   H      7.10     0.01     1
+    19     3   TYR       HE1   H      6.76     0.01     1
+    20     3   TYR       HE2   H      6.76     0.01     1
+    21     4   LYS       H     H      8.43     0.01     1
+    22     4   LYS       HA    H      4.25     0.01     1
+    23     4   LYS       HB2   H      1.80     0.01     2
+    24     4   LYS       HB3   H      1.64     0.01     2
+    25     4   LYS       HG2   H      1.63     0.01     1
+    26     4   LYS       HG3   H      1.63     0.01     1
+    27     4   LYS       HD2   H      1.36     0.01     1
+    28     4   LYS       HD3   H      1.36     0.01     1
+    29     4   LYS       HE2   H      2.93     0.01     1
+    30     4   LYS       HE3   H      2.93     0.01     1
+    31     5   GLY       H     H      7.80     0.01     1
+    32     5   GLY       HA2   H      3.86     0.01     1
+    33     5   GLY       HA3   H      3.86     0.01     1
+    34     6   GLY       H     H      8.22     0.01     1
+    35     6   GLY       HA2   H      3.89     0.01     1
+    36     6   GLY       HA3   H      3.89     0.01     1
+    37     7   TYR       H     H      8.04     0.01     1
+    38     7   TYR       HA    H      4.52     0.01     1
+    39     7   TYR       HB2   H      3.00     0.01     2
+    40     7   TYR       HB3   H      2.92     0.01     2
+    41     7   TYR       HD1   H      7.08     0.01     1
+    42     7   TYR       HD2   H      7.08     0.01     1
+    43     7   TYR       HE1   H      6.79     0.01     1
+    44     7   TYR       HE2   H      6.79     0.01     1
+    45     8   ALA       H     H      8.18     0.01     1
+    46     8   ALA       HA    H      4.24     0.01     1
+    47     8   ALA       HB    H      1.26     0.01     1
+    48     9   ARG       H     H      8.16     0.01     1
+    49     9   ARG       HA    H      4.50     0.01     1
+    50     9   ARG       HB2   H      1.80     0.01     1
+    51     9   ARG       HB3   H      1.80     0.01     1
+    52     9   ARG       HG2   H      1.65     0.01     1
+    53     9   ARG       HG3   H      1.65     0.01     1
+    54     9   ARG       HD2   H      3.16     0.01     1
+    55     9   ARG       HD3   H      3.16     0.01     1
+    56     9   ARG       HE    H      7.17     0.01     1
+    57    10   PRO       HA    H      4.41     0.01     1
+    58    10   PRO       HB2   H      2.25     0.01     2
+    59    10   PRO       HB3   H      1.83     0.01     2
+    60    10   PRO       HG2   H      2.02     0.01     1
+    61    10   PRO       HG3   H      2.02     0.01     1
+    62    10   PRO       HD2   H      3.80     0.01     2
+    63    10   PRO       HD3   H      3.60     0.01     2
+    64    11   ILE       H     H      8.30     0.01     1
+    65    11   ILE       HA    H      4.41     0.01     1
+    66    11   ILE       HB    H      1.82     0.01     1
+    67    11   ILE       HG12  H      1.50     0.01     2
+    68    11   ILE       HG13  H      1.16     0.01     2
+    69    11   ILE       HG2   H      0.92     0.01     1
+    70    11   ILE       HD1   H      0.83     0.01     1
+    71    12   PRO       HA    H      4.38     0.01     1
+    72    12   PRO       HB2   H      2.27     0.01     2
+    73    12   PRO       HB3   H      1.86     0.01     2
+    74    12   PRO       HG2   H      1.97     0.01     1
+    75    12   PRO       HG3   H      1.97     0.01     1
+    76    12   PRO       HD2   H      3.67     0.01     1
+    77    12   PRO       HD3   H      3.67     0.01     1
+    78    13   ARG       H     H      8.40     0.01     1
+    79    13   ARG       HA    H      4.58     0.01     1
+    80    13   ARG       HB2   H      1.81     0.01     1
+    81    13   ARG       HB3   H      1.81     0.01     1
+    82    13   ARG       HG2   H      1.70     0.01     1
+    83    13   ARG       HG3   H      1.70     0.01     1
+    84    13   ARG       HD2   H      3.20     0.01     1
+    85    13   ARG       HD3   H      3.20     0.01     1
+    86    13   ARG       HE    H      7.17     0.01     1
+    87    14   PRO       HA    H      4.68     0.01     1
+    88    14   PRO       HB2   H      2.34     0.01     2
+    89    14   PRO       HB3   H      1.86     0.01     2
+    90    14   PRO       HG2   H      2.02     0.01     1
+    91    14   PRO       HG3   H      2.02     0.01     1
+    92    14   PRO       HD2   H      3.82     0.01     2
+    93    14   PRO       HD3   H      3.60     0.01     2
+    94    15   PRO       HA    H      4.66     0.01     1
+    95    15   PRO       HB2   H      2.34     0.01     2
+    96    15   PRO       HB3   H      1.86     0.01     2
+    97    15   PRO       HG2   H      1.86     0.01     2
+    98    15   PRO       HG3   H      2.02     0.01     2
+    99    15   PRO       HD2   H      3.82     0.01     2
+   100    15   PRO       HD3   H      3.60     0.01     2
+   101    16   PRO       HA    H      4.36     0.01     1
+   102    16   PRO       HB2   H      2.23     0.01     2
+   103    16   PRO       HB3   H      1.83     0.01     2
+   104    16   PRO       HG2   H      1.97     0.01     1
+   105    16   PRO       HG3   H      1.97     0.01     1
+   106    16   PRO       HD2   H      3.75     0.01     2
+   107    16   PRO       HD3   H      3.61     0.01     2
+   108    17   PHE       H     H      8.16     0.01     1
+   109    17   PHE       HA    H      4.58     0.01     1
+   110    17   PHE       HB2   H      3.08     0.01     2
+   111    17   PHE       HB3   H      3.01     0.01     2
+   112    17   PHE       HD1   H      7.21     0.01     1
+   113    17   PHE       HD2   H      7.21     0.01     1
+   114    17   PHE       HE1   H      7.32     0.01     1
+   115    17   PHE       HE2   H      7.32     0.01     1
+   116    18   VAL       H     H      8.01     0.01     1
+   117    18   VAL       HA    H      3.98     0.01     1
+   118    18   VAL       HB    H      1.87     0.01     1
+   119    18   VAL       HG1   H      0.82     0.01     1
+   120    18   VAL       HG2   H      0.82     0.01     1
+   121    19   ARG       H     H      8.31     0.01     1
+   122    19   ARG       HA    H      4.43     0.01     1
+   123    19   ARG       HB2   H      1.79     0.01     1
+   124    19   ARG       HB3   H      1.79     0.01     1
+   125    19   ARG       HG2   H      1.68     0.01     1
+   126    19   ARG       HG3   H      1.68     0.01     1
+   127    19   ARG       HD2   H      3.18     0.01     1
+   128    19   ARG       HD3   H      3.18     0.01     1
+   129    19   ARG       HE    H      7.23     0.01     1
+   130    20   PRO       HA    H      4.39     0.01     2
+   131    20   PRO       HB2   H      2.28     0.01     2
+   132    20   PRO       HB3   H      1.87     0.01     2
+   133    20   PRO       HG2   H      2.04     0.01     1
+   134    20   PRO       HG3   H      2.04     0.01     1
+   135    20   PRO       HD2   H      3.83     0.01     2
+   136    20   PRO       HD3   H      3.67     0.01     2
+   137    21   LEU       H     H      8.38     0.01     1
+   138    21   LEU       HA    H      4.57     0.01     1
+   139    21   LEU       HB2   H      1.70     0.01     2
+   140    21   LEU       HB3   H      1.56     0.01     2
+   141    21   LEU       HG    H      1.54     0.01     1
+   142    21   LEU       HD1   H      0.90     0.01     1
+   143    21   LEU       HD2   H      0.90     0.01     1
+   144    22   PRO       HA    H      4.40     0.01     1
+   145    22   PRO       HB2   H      2.29     0.01     2
+   146    22   PRO       HB3   H      2.04     0.01     2
+   147    22   PRO       HG2   H      1.96     0.01     1
+   148    22   PRO       HG3   H      1.96     0.01     1
+   149    22   PRO       HD2   H      3.84     0.01     2
+   150    22   PRO       HD3   H      3.66     0.01     2
+   151    23   GLY       H     H      8.49     0.01     1
+   152    23   GLY       HA2   H      3.96     0.01     1
+   153    23   GLY       HA3   H      3.96     0.01     1
+   154    24   GLY       H     H      8.10     0.01     1
+   155    24   GLY       HA2   H      4.14     0.01     2
+   156    24   GLY       HA3   H      4.06     0.01     2
+   157    25   PRO       HA    H      4.46     0.01     1
+   158    25   PRO       HB2   H      2.23     0.01     2
+   159    25   PRO       HB3   H      1.70     0.01     2
+   160    25   PRO       HG2   H      2.00     0.01     2
+   161    25   PRO       HG3   H      1.91     0.01     2
+   162    25   PRO       HD2   H      3.60     0.01     1
+   163    25   PRO       HD3   H      3.60     0.01     1
+   164    26   ILE       H     H      8.31     0.01     1
+   165    26   ILE       HA    H      4.21     0.01     1
+   166    26   ILE       HB    H      1.86     0.01     1
+   167    26   ILE       HG12  H      1.48     0.01     2
+   168    26   ILE       HG13  H      1.18     0.01     2
+   169    26   ILE       HG2   H      0.91     0.01     1
+   170    26   ILE       HD1   H      0.83     0.01     1
+   171    27   GLY       H     H      8.29     0.01     1
+   172    27   GLY       HA2   H      4.07     0.01     1
+   173    27   GLY       HA3   H      4.07     0.01     1
+   174    28   PRO       HA    H      4.34     0.01     1
+   175    28   PRO       HB2   H      2.13     0.01     2
+   176    28   PRO       HB3   H      1.66     0.01     2
+   177    28   PRO       HG2   H      1.92     0.01     2
+   178    28   PRO       HG3   H      1.75     0.01     2
+   179    28   PRO       HD2   H      3.55     0.01     1
+   180    28   PRO       HD3   H      3.55     0.01     1
+   181    29   TYR       H     H      8.35     0.01     1
+   182    29   TYR       HA    H      4.49     0.01     1
+   183    29   TYR       HB2   H      3.02     0.01     2
+   184    29   TYR       HB3   H      2.93     0.01     2
+   185    29   TYR       HD1   H      7.08     0.01     1
+   186    29   TYR       HD2   H      7.08     0.01     1
+   187    29   TYR       HE1   H      6.79     0.01     1
+   188    29   TYR       HE2   H      6.79     0.01     1
+   189    30   ASN       H     H      8.16     0.01     1
+   190    30   ASN       HA    H      4.48     0.01     1
+   191    30   ASN       HB2   H      2.74     0.01     2
+   192    30   ASN       HB3   H      2.68     0.01     2
+   193    30   ASN       HD21  H      7.57     0.01     2
+   194    30   ASN       HD22  H      6.83     0.01     2
+   195    31   GLY       H     H      7.83     0.01     1
+   196    31   GLY       HA2   H      3.87     0.01     2
+   197    31   GLY       HA3   H      3.77     0.01     2
+   198    32   CYS       H     H      7.98     0.01     1
+   199    32   CYS       HA    H      5.08     0.01     1
+   200    32   CYS       HB2   H      2.73     0.01     2
+   201    32   CYS       HB3   H      2.66     0.01     2
+   202    33   PRO       HA    H      4.48     0.01     1
+   203    33   PRO       HB2   H      2.31     0.01     2
+   204    33   PRO       HB3   H      2.11     0.01     2
+   205    33   PRO       HG2   H      2.09     0.01     2
+   206    33   PRO       HG3   H      1.93     0.01     2
+   207    33   PRO       HD2   H      3.58     0.01     2
+   208    33   PRO       HD3   H      3.48     0.01     2
+   209    34   VAL       H     H      8.52     0.01     1
+   210    34   VAL       HA    H      3.67     0.01     1
+   211    34   VAL       HB    H      2.04     0.01     1
+   212    34   VAL       HG1   H      0.95     0.01     1
+   213    34   VAL       HG2   H      1.00     0.01     1
+   214    35   SER       H     H      8.13     0.01     1
+   215    35   SER       HA    H      4.25     0.01     1
+   216    35   SER       HB2   H      3.91     0.01     1
+   217    35   SER       HB3   H      3.91     0.01     1
+   218    36   CYS       H     H      8.43     0.01     1
+   219    36   CYS       HA    H      3.92     0.01     1
+   220    36   CYS       HB2   H      3.25     0.01     1
+   221    36   CYS       HB3   H      3.12     0.01     1
+   222    37   ARG       H     H      7.75     0.01     1
+   223    37   ARG       HA    H      4.41     0.01     1
+   224    37   ARG       HB2   H      1.76     0.01     2
+   225    37   ARG       HB3   H      1.65     0.01     2
+   226    37   ARG       HG2   H      1.63     0.01     2
+   227    37   ARG       HG3   H      1.54     0.01     2
+   228    37   ARG       HD2   H      3.17     0.01     1
+   229    37   ARG       HD3   H      3.17     0.01     1
+   230    37   ARG       HE    H      7.20     0.01     1
+   231    38   GLY       H     H      8.77     0.01     1
+   232    38   GLY       HA2   H      3.97     0.01     2
+   233    38   GLY       HA3   H      3.73     0.01     2
+   234    39   ILE       H     H      7.06     0.01     1
+   235    39   ILE       HA    H      4.72     0.01     1
+   236    39   ILE       HB    H      1.92     0.01     1
+   237    39   ILE       HG12  H      1.38     0.01     2
+   238    39   ILE       HG13  H      0.91     0.01     2
+   239    39   ILE       HG2   H      0.84     0.01     1
+   240    39   ILE       HD1   H      0.81     0.01     1
+   241    40   SER       H     H      8.83     0.01     1
+   242    40   SER       HA    H      4.49     0.01     1
+   243    40   SER       HB2   H      4.43     0.01     2
+   244    40   SER       HB3   H      4.03     0.01     2
+   245    41   PHE       H     H      8.96     0.01     1
+   246    41   PHE       HA    H      4.33     0.01     1
+   247    41   PHE       HB2   H      3.27     0.01     1
+   248    41   PHE       HB3   H      3.13     0.01     1
+   249    41   PHE       HD1   H      7.26     0.01     1
+   250    41   PHE       HD2   H      7.26     0.01     1
+   251    41   PHE       HE1   H      7.35     0.01     1
+   252    41   PHE       HE2   H      7.35     0.01     1
+   253    42   SER       H     H      8.34     0.01     1
+   254    42   SER       HA    H      4.02     0.01     1
+   255    42   SER       HB2   H      3.89     0.01     1
+   256    42   SER       HB3   H      3.89     0.01     1
+   257    43   GLN       H     H      7.98     0.01     1
+   258    43   GLN       HA    H      4.10     0.01     1
+   259    43   GLN       HB2   H      2.29     0.01     2
+   260    43   GLN       HB3   H      2.05     0.01     2
+   261    43   GLN       HG2   H      2.44     0.01     1
+   262    43   GLN       HG3   H      2.44     0.01     1
+   263    43   GLN       HE21  H      7.41     0.01     2
+   264    43   GLN       HE22  H      7.00     0.01     2
+   265    44   ALA       H     H      8.83     0.01     1
+   266    44   ALA       HA    H      3.64     0.01     1
+   267    44   ALA       HB    H      1.53     0.01     1
+   268    45   ARG       H     H      7.96     0.01     1
+   269    45   ARG       HA    H      3.87     0.01     1
+   270    45   ARG       HB2   H      1.77     0.01     1
+   271    45   ARG       HB3   H      1.77     0.01     1
+   272    45   ARG       HG2   H      1.55     0.01     2
+   273    45   ARG       HG3   H      1.42     0.01     2
+   274    45   ARG       HD2   H      3.05     0.01     1
+   275    45   ARG       HD3   H      3.05     0.01     1
+   276    45   ARG       HE    H      7.15     0.01     1
+   277    46   SER       H     H      7.56     0.01     1
+   278    46   SER       HA    H      4.31     0.01     1
+   279    46   SER       HB2   H      4.01     0.01     1
+   280    46   SER       HB3   H      4.01     0.01     1
+   281    47   CYS       H     H      8.58     0.01     1
+   282    47   CYS       HA    H      4.13     0.01     1
+   283    47   CYS       HB2   H      2.62     0.01     1
+   284    47   CYS       HB3   H      3.06     0.01     1
+   285    48   CYS       H     H      8.83     0.01     1
+   286    48   CYS       HA    H      4.25     0.01     1
+   287    48   CYS       HB2   H      2.72     0.01     1
+   288    48   CYS       HB3   H      3.10     0.01     1
+   289    49   SER       H     H      8.42     0.01     1
+   290    49   SER       HA    H      4.13     0.01     1
+   291    49   SER       HB2   H      3.95     0.01     1
+   292    49   SER       HB3   H      3.95     0.01     1
+   293    50   ARG       H     H      8.37     0.01     1
+   294    50   ARG       HA    H      4.26     0.01     1
+   295    50   ARG       HB2   H      1.80     0.01     1
+   296    50   ARG       HB3   H      1.80     0.01     1
+   297    50   ARG       HG2   H      1.65     0.01     2
+   298    50   ARG       HG3   H      1.57     0.01     2
+   299    50   ARG       HD2   H      3.12     0.01     1
+   300    50   ARG       HD3   H      3.12     0.01     1
+   301    50   ARG       HE    H      6.97     0.01     1
+   302    51   LEU       H     H      7.84     0.01     1
+   303    51   LEU       HA    H      4.74     0.01     1
+   304    51   LEU       HB2   H      1.82     0.01     1
+   305    51   LEU       HB3   H      1.65     0.01     1
+   306    51   LEU       HG    H      1.50     0.01     1
+   307    51   LEU       HD1   H      0.90     0.01     1
+   308    51   LEU       HD2   H      0.85     0.01     1
+   309    52   GLY       H     H      8.11     0.01     1
+   310    52   GLY       HA2   H      4.12     0.01     2
+   311    52   GLY       HA3   H      3.98     0.01     2
+   312    53   ARG       H     H      7.09     0.01     1
+   313    53   ARG       HA    H      4.65     0.01     1
+   314    53   ARG       HB2   H      1.90     0.01     2
+   315    53   ARG       HB3   H      1.25     0.01     2
+   316    53   ARG       HG2   H      1.58     0.01     1
+   317    53   ARG       HG3   H      1.58     0.01     1
+   318    53   ARG       HD2   H      3.08     0.01     2
+   319    53   ARG       HD3   H      2.98     0.01     2
+   320    53   ARG       HE    H      7.32     0.01     1
+   321    54   CYS       H     H      8.87     0.01     1
+   322    54   CYS       HA    H      4.61     0.01     1
+   323    54   CYS       HB2   H      3.25     0.01     1
+   324    54   CYS       HB3   H      3.25     0.01     1
+   325    55   CYS       H     H      8.46     0.01     1
+   326    55   CYS       HA    H      4.26     0.01     1
+   327    55   CYS       HB2   H      2.70     0.01     1
+   328    55   CYS       HB3   H      2.95     0.01     1
+   329    56   HIS       H     H      8.74     0.01     1
+   330    56   HIS       HA    H      4.76     0.01     1
+   331    56   HIS       HB2   H      3.24     0.01     2
+   332    56   HIS       HB3   H      3.10     0.01     2
+   333    56   HIS       HD2   H      7.22     0.01     1
+   334    56   HIS       HE1   H      8.56     0.01     1
+   335    57   VAL       H     H      7.63     0.01     1
+   336    57   VAL       HA    H      4.07     0.01     1
+   337    57   VAL       HB    H      2.01     0.01     1
+   338    57   VAL       HG1   H      0.89     0.01     1
+   339    57   VAL       HG2   H      0.89     0.01     1
+   340    58   GLY       H     H      8.54     0.01     1
+   341    58   GLY       HA2   H      3.93     0.01     1
+   342    58   GLY       HA3   H      3.93     0.01     1
+   343    59   LYS       H     H      8.24     0.01     1
+   344    59   LYS       HA    H      4.16     0.01     1
+   345    59   LYS       HB2   H      1.73     0.01     2
+   346    59   LYS       HB3   H      1.64     0.01     2
+   347    59   LYS       HG2   H      1.30     0.01     1
+   348    59   LYS       HG3   H      1.30     0.01     1
+   349    59   LYS       HD2   H      1.33     0.01     1
+   350    59   LYS       HD3   H      1.33     0.01     1
+   351    59   LYS       HE2   H      2.90     0.01     1
+   352    59   LYS       HE3   H      2.90     0.01     1
+   353    60   GLY       H     H      8.46     0.01     1
+   354    60   GLY       HA2   H      3.88     0.01     2
+   355    60   GLY       HA3   H      3.84     0.01     2
+   356    61   TYR       H     H      8.08     0.01     1
+   357    61   TYR       HA    H      4.57     0.01     1
+   358    61   TYR       HB2   H      2.98     0.01     1
+   359    61   TYR       HB3   H      2.98     0.01     1
+   360    61   TYR       HD1   H      7.07     0.01     1
+   361    61   TYR       HD2   H      7.07     0.01     1
+   362    61   TYR       HE1   H      6.79     0.01     1
+   363    61   TYR       HE2   H      6.79     0.01     1
+   364    62   SER       H     H      8.32     0.01     1
+   365    62   SER       HA    H      4.44     0.01     1
+   366    62   SER       HB2   H      3.81     0.01     1
+   367    62   SER       HB3   H      3.81     0.01     1
+   368    63   GLY       H     H      7.54     0.01     1
+   369    63   GLY       HA2   H      3.81     0.01     1
+   370    63   GLY       HA3   H      3.81     0.01     1
+
+   stop_
+
+save_
+

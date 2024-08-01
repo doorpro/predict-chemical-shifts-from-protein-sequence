@@ -1,0 +1,917 @@
+data_2580
+
+#Corrected using PDB structure: 1BHA_
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 14   A    HA       4.01         4.89
+# 16   G    HA       3.74         2.89
+# 34   V    HA       4.01         2.82
+# 47   T    HA       4.19         2.00
+#
+#After reference correction, the following residues still 
+#have a HN chemical shift difference (obs*-pred) greater than  2.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 17   T    H        7.95         5.79
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.20     N/A     N/A     N/A     N/A   -0.35   
+#
+#bmr2580.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr2580.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.04      N/A      N/A      N/A      N/A  +/-0.10  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.477     N/A     N/A     N/A     N/A   0.301   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.174     N/A     N/A     N/A     N/A   0.392   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Sequence-specific resonance assignment and secondary structure of (1-71) 
+bacterioopsin
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Sobol      A.         G.  . 
+       2   Arseniev   Alexander  S.  . 
+       3   Abdulaeva  Galina     V.  . 
+       4   Musina     Larisa     Yu  . 
+       5   Bystrov    Vladimir   F.  . 
+
+   stop_
+
+   _BMRB_accession_number   2580
+   _BMRB_flat_file_name     bmr2580.str
+   _Entry_type              revision
+   _Submission_date         1995-07-31
+   _Accession_date          1996-04-13
+   _Entry_origination       BMRB
+   _NMR_STAR_version        2.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  382  
+
+   stop_
+
+   loop_
+      _Revision_date
+      _Revision_keyword
+      _Revision_author
+      _Revision_detail
+
+       1999-06-14  revision  BMRB 'Converted to BMRB NMR-STAR V 2.1 format'                
+       1996-04-13  revision  BMRB 'Link to the Protein Data Bank added'                    
+       1996-03-25  reformat  BMRB 'Converted to the BMRB 1996-03-01 STAR flat-file format' 
+       1995-07-31  original  BMRB 'Last release in original BMRB flat-file format'         
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_full         
+;
+ Sobol, A.G., Arseniev, Alexander S., Abdulaeva, Galina V., 
+ Musina, Larisa Yu., Bystrov, Vladimir F., 
+ "Sequence-specific resonance assignment and secondary structure of (1-71) 
+ bacterioopsin,"
+ J. Biomol. NMR 2, 161-171 (1992).
+;
+   _Citation_title        
+;
+Sequence-specific resonance assignment and secondary structure of (1-71) 
+bacterioopsin
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        ?
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Sobol      A.         G.  . 
+       2   Arseniev   Alexander  S.  . 
+       3   Abdulaeva  Galina     V.  . 
+       4   Musina     Larisa     Yu  . 
+       5   Bystrov    Vladimir   F.  . 
+
+   stop_
+
+   _Journal_abbreviation  'J. Biomol. NMR'
+   _Journal_volume         2
+   _Page_first             161
+   _Page_last              171
+   _Year                   1992
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_bacteriorhodopsin
+   _Saveframe_category      molecular_system
+
+   _Mol_system_name         bacteriorhodopsin
+   _Abbreviation_common     ?
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+       bacteriorhodopsin $bacteriorhodopsin 
+
+   stop_
+
+   _System_physical_state   ?
+   _System_oligomer_state   ?
+   _System_paramagnetic     ?
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  1C8R "A Chain A, Bacteriorhodopsin D96m Br State At 2.0 A Resolution"                                                         . 
+       PDB  1C8S "A Chain A, Bacteriorhodopsin D96n Late M State Intermediate"                                                            . 
+       PDB  1E0P "A Chain A, L Intermediate Of Bacteriorhodopsin"                                                                         . 
+       PDB  1F50 "A Chain A, Bacteriorhodopsin-Br State Of The E204q Mutant At 1.7 Angstrom Resolution"                                   . 
+       PDB  1F4Z "A Chain A, Bacteriorhodopsin-M Photointermediate State Of The E204q Mutant At 1.8 Angstrom Resolution"                  . 
+       PDB  1C3W "A Chain A, BacteriorhodopsinLIPID COMPLEX AT 1.55 A RESOLUTION"                                                         . 
+       PDB  1BRD  Bacteriorhodopsin                                                                                                       . 
+       PDB  1AP9 "X-Ray Structure Of Bacteriorhodopsin From Microcrystals Grown In Lipidic Cubic Phases"                                  . 
+       PDB  1QKP "A Chain A, High Resolution X-Ray Structure Of An Early Intermediate In The Bacteriorhodopsin Photocycle"                . 
+       PDB  1QKO "A Chain A, High Resolution X-Ray Structure Of An Early Intermediate In The Bacteriorhodopsin Photocycle"                . 
+       PDB  1QHJ "A Chain A, X-Ray Structure Of Bacteriorhodopsin Grown In Lipidic Cubic Phases"                                          . 
+       PDB  1FBB "A Chain A, Crystal Structure Of Native Conformation Of Bacteriorhodopsin"                                               . 
+       PDB  1QM8 "A Chain A, Structure Of Bacteriorhodopsin At 100 K"                                                                     . 
+       PDB  1DZE "A Chain A, Structure Of The M Intermediate Of Bacteriorhodopsin Trapped At 100k"                                        . 
+       PDB  1AT9 "Structure Of Bacteriorhodopsin At 3.0 Angstrom Determined By Electron Crystallography"                                  . 
+       PDB  1BRR "C Chain C, X-Ray Structure Of The Bacteriorhodopsin TrimerLIPID Complex"                                                . 
+       PDB  2AT9 "Structure Of Bacteriorhodopsin At 3.0 Angstrom By Electron Crystallography"                                             . 
+       PDB  2BRD "Crystal Structure Of Bacteriorhodopsin In Purple Membrane"                                                              . 
+       PDB  1BM1 "Crystal Structure Of Bacteriorhodopsin In The Light-Adapted State"                                                      . 
+       PDB  1BRX "BacteriorhodopsinLIPID COMPLEX"                                                                                         . 
+       PDB  1FBK "A Chain A, Crystal Structure Of Cytoplasmically Open Conformation Of Bacteriorhodopsin"                                 . 
+       PDB  1CWQ "A Chain A, M Intermediate Structure Of The Wild Type Bacteriorhodopsin In Combination With The Ground State Structure"  . 
+       PDB  1BHA "Bacteriorhodopsin (Proteolytic Fragment 1 - 71, Solubilized In Sds Micelles) (Nmr, 12 Structures)"                      . 
+       PDB  1BHB "Bacteriorhodopsin (Proteolytic Fragment 1 - 71, Solubilized In Methanol-Chloroform) (Nmr, 12 Structures)"               . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_bacteriorhodopsin
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                 bacteriorhodopsin
+   _Name_variant                               'chymotryptic fragment C2'
+   _Abbreviation_common                         ?
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               70
+   _Mol_residue_sequence                       
+;
+AQITGRPEWIWLALGTALMG
+LGTLYFLVKGMGVSDPDAKK
+FYAITTLVPAIAFTMYLSML
+LGYGLTMVPF
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+        1    2   ALA    2    3   GLN    3    4   ILE    4    5   THR    5    6   GLY 
+        6    7   ARG    7    8   PRO    8    9   GLU    9   10   TRP   10   11   ILE 
+       11   12   TRP   12   13   LEU   13   14   ALA   14   15   LEU   15   16   GLY 
+       16   17   THR   17   18   ALA   18   19   LEU   19   20   MET   20   21   GLY 
+       21   22   LEU   22   23   GLY   23   24   THR   24   25   LEU   25   26   TYR 
+       26   27   PHE   27   28   LEU   28   29   VAL   29   30   LYS   30   31   GLY 
+       31   32   MET   32   33   GLY   33   34   VAL   34   35   SER   35   36   ASP 
+       36   37   PRO   37   38   ASP   38   39   ALA   39   40   LYS   40   41   LYS 
+       41   42   PHE   42   43   TYR   43   44   ALA   44   45   ILE   45   46   THR 
+       46   47   THR   47   48   LEU   48   49   VAL   49   50   PRO   50   51   ALA 
+       51   52   ILE   52   53   ALA   53   54   PHE   54   55   THR   55   56   MET 
+       56   57   TYR   57   58   LEU   58   59   SER   59   60   MET   60   61   LEU 
+       61   62   LEU   62   63   GLY   63   64   TYR   64   65   GLY   65   66   LEU 
+       66   67   THR   67   68   MET   68   69   VAL   69   70   PRO   70   71   PHE 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1BHA        "Bacteriorhodopsin (Proteolytic Fragment 1 -71, Solubilized In Sds Micelles) (Nmr, 12 Structures)"                     98.59   71   100   100   3e-34  
+       PDB         1BHB        "Bacteriorhodopsin (Proteolytic Fragment 1 -71, Solubilized In Methanol-Chloroform) (Nmr, 12Structures)"               98.59   71   100   100   3e-34  
+       PDB         1C8S        "A Chain A, Bacteriorhodopsin D96n Late MState Intermediate"                                                           35.71  196   100   100   10e-33 
+       PDB         1L0M        "A Chain A, Solution Structure OfBacteriorhodopsin"                                                                    33.02  212   100   100   2e-31  
+       PDB         1C3W        "A Chain A, BacteriorhodopsinLIPID COMPLEX AT1.55 A RESOLUTION"                                                        31.53  222   100   100   10e-33 
+       PDB         1C8R        "A Chain A, Bacteriorhodopsin D96m Br State At2.0 A Resolution"                                                        31.53  222   100   100   10e-33 
+       PDB         1F4Z        "A Chain A, Bacteriorhodopsin-MPhotointermediate State Of The E204q Mutant At 1.8Angstrom Resolution"                  30.84  227   100   100   10e-33 
+       PDB         1F50        "A Chain A, Bacteriorhodopsin-Br State Of TheE204q Mutant At 1.7 Angstrom Resolution"                                  30.84  227   100   100   10e-33 
+       PDB         1S51        "A Chain A, Thr24ser Bacteriorhodopsin"                                                                                30.84  227    99   100   3e-32  
+       PDB         1S52        "A Chain A, Thr24val Bacteriorhodopsin"                                                                                30.84  227    99    99   4e-32  
+       PDB         1S53        "A Chain A, Thr46ser Bacteriorhodopsin"                                                                                30.84  227    99   100   3e-32  
+       PDB         1S54        "A Chain A, Thr24ala Bacteriorhodopsin"                                                                                30.84  227    99    99   4e-32  
+       PDB         1E0P        "A Chain A, L Intermediate OfBacteriorhodopsin"                                                                        30.70  228   100   100   10e-33 
+       PDB         1KG8        "A Chain A, X-Ray Structure Of An Early-MIntermediate Of Bacteriorhodopsin"                                            30.30  231   100   100   3e-34  
+       PDB         1KG9        "A Chain A, Structure Of A "mock-Trapped"Early-M Intermediate Of Bacteriorhosopsin"                                    30.30  231   100   100   3e-34  
+       PDB         1KGB        "A Chain A, Structure Of Ground-StateBacteriorhodopsin"                                                                30.30  231   100   100   3e-34  
+       PDB         1KME        "A Chain A, Crystal Structure OfBacteriorhodopsin Crystallized From Bicelles"                                          30.30  231   100   100   3e-34  
+       PDB         1R84        "A Chain A, Nmr Structure Of The13-Cis-15-Syn Retinal In Dark_adapted Bacteriorhodopsin"                               30.17  232   100   100   3e-34  
+       PDB         1AT9        "Structure Of Bacteriorhodopsin At 3.0Angstrom Determined By Electron Crystallography"                                 28.34  247   100   100   3e-34  
+       PDB         1BM1        "Crystal Structure Of Bacteriorhodopsin InThe Light-Adapted State"                                                     28.34  247   100   100   3e-34  
+       PDB         1BRR        "A Chain A, X-Ray Structure Of TheBacteriorhodopsin TrimerLIPID Complex"                                               28.34  247   100   100   3e-34  
+       PDB         1BRX        "BacteriorhodopsinLIPID COMPLEX"                                                                                       28.34  247   100   100   3e-34  
+       PDB         2AT9        "Structure Of Bacteriorhodopsin At 3.0Angstrom By Electron Crystallography"                                            28.34  247   100   100   3e-34  
+       PDB         2BRD        "Crystal Structure Of Bacteriorhodopsin InPurple Membrane"                                                             28.34  247   100   100   3e-34  
+       PDB         1AP9        "X-Ray Structure Of Bacteriorhodopsin FromMicrocrystals Grown In Lipidic Cubic Phases"                                 28.23  248   100   100   3e-34  
+       PDB         1BRD         Bacteriorhodopsin                                                                                                     28.23  248   100   100   3e-34  
+       PDB         1CWQ        "A Chain A, M Intermediate Structure Of TheWild Type Bacteriorhodopsin In Combination With TheGround State Structure"  28.23  248   100   100   3e-34  
+       PDB         1DZE        "A Chain A, Structure Of The M IntermediateOf Bacteriorhodopsin Trapped At 100k"                                       28.23  248   100   100   3e-34  
+       PDB         1FBB        "A Chain A, Crystal Structure Of NativeConformation Of Bacteriorhodopsin"                                              28.23  248   100   100   3e-34  
+       PDB         1FBK        "A Chain A, Crystal Structure OfCytoplasmically Open Conformation Of Bacteriorhodopsin"                                28.23  248   100   100   3e-34  
+       PDB         1IW6        "A Chain A, Crystal Structure Of The GroundState Of Bacteriorhodopsin"                                                 28.23  248   100   100   3e-34  
+       PDB         1IW9        "A Chain A, Crystal Structure Of The MIntermediate Of Bacteriorhodopsin"                                               28.23  248   100   100   3e-34  
+       PDB         1IXF        "A Chain A, Crystal Structure Of The KIntermediate Of Bacteriorhodopsin"                                               28.23  248   100   100   3e-34  
+       PDB         1QHJ        "A Chain A, X-Ray Structure OfBacteriorhodopsin Grown In Lipidic Cubic Phases"                                         28.23  248   100   100   3e-34  
+       PDB         1QKO        "A Chain A, High Resolution X-Ray Structure OfAn Early Intermediate In The BacteriorhodopsinPhotocycle"                28.23  248   100   100   3e-34  
+       PDB         1QKP        "A Chain A, High Resolution X-Ray Structure OfAn Early Intermediate In The BacteriorhodopsinPhotocycle"                28.23  248   100   100   3e-34  
+       PDB         1QM8        "A Chain A, Structure Of Bacteriorhodopsin At100 K"                                                                    28.23  248   100   100   3e-34  
+       PDB         1JV6        "A Chain A, Bacteriorhodopsin D85sF219LDOUBLE MUTANT AT 2.00 ANGSTROM Resolution"                                      28.11  249   100   100   3e-34  
+       PDB         1JV7        "A Chain A, Bacteriorhodopsin O-LikeIntermediate State Of The D85s Mutant At 2.25 AngstromResolution"                  28.11  249   100   100   3e-34  
+       PDB         1MGY        "A Chain A, Structure Of The D85s Mutant OfBacteriorhodopsin With Bromide Bound"                                       28.11  249   100   100   3e-34  
+       PDB         1O0A        "A Chain A, Bacteriorhodopsin L IntermediateAt 1.62 A Resolution"                                                      28.11  249   100   100   3e-34  
+       PDB         1P8H        "A Chain A, Bacteriorhodopsin M1 IntermediateProduced At Room Temperature"                                             28.11  249   100   100   3e-34  
+       PDB         1P8I        "A Chain A, F219l Bacteriorhodopsin Mutant"                                                                            28.11  249   100   100   3e-34  
+       PDB         1PY6        "A Chain A, Bacteriorhodopsin CrystallizedFrom Bicells"                                                                28.11  249   100   100   3e-34  
+       PDB         1Q5I        "A Chain A, Crystal Structure OfBacteriorhodopsin Mutant P186a Crystallized FromBicelles"                              28.11  249   100   100   3e-34  
+       PDB         1Q5J        "A Chain A, Crystal Structure OfBacteriorhodopsin Mutant P91a Crystallized FromBicelles"                               28.11  249   100   100   3e-34  
+       PDB         1R2N        "A Chain A, Nmr Structure Of The All-TransRetinal In Dark-Adapted Bacteriorhodopsin"                                   28.11  249   100   100   3e-34  
+       PDB         1S8J        "A Chain A, Nitrate-Bound D85s Mutant OfBacteriorhodopsin"                                                             28.11  249   100   100   3e-34  
+       PDB         1S8L        "A Chain A, Anion-Free Form Of The D85sMutant Of Bacteriorhodopsin From Crystals Grown In ThePresence Of Halide"       28.11  249   100   100   3e-34  
+       PDB         1UCQ        "A Chain A, Crystal Structure Of The LIntermediate Of Bacteriorhodopsin"                                               28.11  249   100   100   3e-34  
+       PDB         1VJM        "A Chain A, Deformation Of Helix C In TheLow-Temperature L- Intermediate Of Bacteriorhodopsin"                         28.11  249   100   100   3e-34  
+       PDB         1P8U        "A Chain A, Bacteriorhodopsin N' IntermediateAt 1.62 A Resolution"                                                     28.11  249    99    99   1e-33  
+       PDB         1PXR        "A Chain A, Structure Of Pro50ala Mutant OfBacteriorhodopsin"                                                          28.11  249    99    99   3e-33  
+       PDB         1PXS        "A Chain A, Structure Of Met56ala Mutant OfBacteriorhodopsin"                                                          28.11  249    99    99   2e-33  
+       PDB         1M0K        "A Chain A, Bacteriorhodopsin K IntermediateAt 1.43 A Resolution"                                                      26.72  262   100   100   3e-34  
+       PDB         1M0L        "A Chain A, BacteriorhodopsinLIPID COMPLEX AT1.47 A RESOLUTION"                                                        26.72  262   100   100   3e-34  
+       PDB         1M0M        "A Chain A, Bacteriorhodopsin M1 IntermediateAt 1.43 A Resolution"                                                     26.72  262   100   100   3e-34  
+       EMBL        CAA49762.1  "bacterioopsin [synthetic construct]"                                                                                  27.03  259   100   100   3e-34  
+       EMBL        CAA23744.1  "reading frame bacteriorhodopsin[Halobacterium salinarum]"                                                             26.72  262   100   100   3e-34  
+       EMBL        CAA49774.1  "bacterio-opsin [Halobacterium sp. GRB]"                                                                               26.72  262   100   100   3e-34  
+       GenBank     AAA72184.1   bacteriorhodopsin                                                                                                     28.11  249   100   100   3e-34  
+       GenBank     AAA72603.1   bacteriorhodopsin                                                                                                     28.11  249   100   100   3e-34  
+       GenBank     AAA72504.1   bacteriorhodopsin                                                                                                     26.72  262   100   100   3e-34  
+       GenBank     AAG19772.1  "bacteriorhodopsin; Bop [Halobacteriumsp. NRC-1]"                                                                      26.72  262   100   100   3e-34  
+       PIR         H84300      "bacteriorhodopsin [imported] -Halobacterium sp. NRC-1"                                                                26.72  262   100   100   3e-34  
+       PIR         RAHSB       "bacteriorhodopsin precursor - Halobacteriumsalinarum"                                                                 26.72  262   100   100   3e-34  
+       PRF         0502635B    "bacteriorhodopsin N term fragment"                                                                                    48.61  144   100   100   3e-34  
+       PRF         0501217A     bacteriorhodopsin                                                                                                     28.34  247   100   100   3e-34  
+       PRF         0712242A    "bacteriorhodopsin precursor"                                                                                          26.72  262   100   100   3e-34  
+       REF         NP_280292.1 "bacteriorhodopsin; Bop[Halobacterium sp. NRC-1]"                                                                      26.72  262   100   100   3e-34  
+       SWISS-PROT  P02945      "BACR_HALN1 Bacteriorhodopsin precursor (BR)"                                                                          26.72  262   100   100   3e-34  
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Genus
+      _Species
+      _Strain
+
+      $bacteriorhodopsin  .  ?  Halobacterium  halobium  R1M1 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+
+      $bacteriorhodopsin 'not available' 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_one
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+       ?  ?  ?  ? 
+
+   stop_
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_condition_set_one
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             6.8  .  na 
+       temperature  303    .  K  
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chem_shift_reference_par_set_one
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Chem_shift_units
+      _Chem_shift_value
+
+       TMS  H  ppm  0  
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_assignment_data_set_one
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_label         $sample_condition_set_one
+   _Chem_shift_reference_set_label  $chem_shift_reference_par_set_one
+   _Mol_system_component_name       'bacteriorhodopsin'
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     2   ALA       H     H      8.43        .     1
+     2     2   ALA       HA    H      4.40        .     1
+     3     2   ALA       HB    H      1.57        .     1
+     4     3   GLN       H     H      9.19        .     1
+     5     3   GLN       HA    H      4.33        .     1
+     6     3   GLN       HB2   H      2.23        .     1
+     7     3   GLN       HB3   H      2.23        .     1
+     8     3   GLN       HG2   H      2.58        .     1
+     9     3   GLN       HG3   H      2.58        .     1
+    10     3   GLN       HE21  H      7.57        .     2
+    11     3   GLN       HE22  H      6.96        .     2
+    12     4   ILE       H     H      7.87        .     1
+    13     4   ILE       HA    H      4.34        .     1
+    14     4   ILE       HB    H      2.13        .     1
+    15     4   ILE       HG12  H      1.67        .     2
+    16     4   ILE       HG13  H      1.41        .     2
+    17     4   ILE       HG2   H      1.08        .     1
+    18     4   ILE       HD1   H      1.05        .     1
+    19     5   THR       H     H      7.78        .     1
+    20     5   THR       HA    H      4.22        .     1
+    21     5   THR       HB    H      4.36        .     1
+    22     5   THR       HG2   H      1.24        .     1
+    23     6   GLY       H     H      8.07        .     1
+    24     6   GLY       HA2   H      4.23        .     2
+    25     6   GLY       HA3   H      3.97        .     2
+    26     7   ARG       H     H      7.40        .     1
+    27     7   ARG       HA    H      4.69        .     1
+    28     7   ARG       HB2   H      2.28        .     1
+    29     7   ARG       HB3   H      2.28        .     1
+    30     7   ARG       HG2   H      1.77        .     2
+    31     7   ARG       HG3   H      1.73        .     2
+    32     7   ARG       HD2   H      3.36        .     2
+    33     7   ARG       HD3   H      3.29        .     2
+    34     7   ARG       HE    H      8.36        .     1
+    35     8   PRO       HA    H      4.38        .     1
+    36     8   PRO       HB2   H      2.37        .     2
+    37     8   PRO       HB3   H      1.93        .     2
+    38     8   PRO       HG2   H      2.14        .     1
+    39     8   PRO       HG3   H      2.14        .     1
+    40     8   PRO       HD2   H      3.97        .     1
+    41     8   PRO       HD3   H      3.97        .     1
+    42     9   GLU       H     H     10.05        .     1
+    43     9   GLU       HA    H      4.08        .     1
+    44     9   GLU       HB2   H      2.15        .     2
+    45     9   GLU       HB3   H      2.05        .     2
+    46     9   GLU       HG2   H      2.59        .     2
+    47     9   GLU       HG3   H      2.42        .     2
+    48    10   TRP       H     H      7.63        .     1
+    49    10   TRP       HA    H      4.63        .     1
+    50    10   TRP       HB2   H      3.58        .     2
+    51    10   TRP       HB3   H      3.51        .     2
+    52    10   TRP       HD1   H      7.47        .     1
+    53    10   TRP       HE1   H     10.20        .     1
+    54    10   TRP       HE3   H      7.72        .     1
+    55    10   TRP       HZ2   H      7.52        .     1
+    56    10   TRP       HZ3   H      7.18        .     1
+    57    10   TRP       HH2   H      7.28        .     1
+    58    11   ILE       H     H      7.70        .     1
+    59    11   ILE       HA    H      3.83        .     1
+    60    11   ILE       HB    H      2.05        .     1
+    61    11   ILE       HG12  H      1.69        .     2
+    62    11   ILE       HG13  H      1.27        .     2
+    63    11   ILE       HG2   H      0.93        .     1
+    64    11   ILE       HD1   H      1.00        .     1
+    65    12   TRP       H     H      7.86        .     1
+    66    12   TRP       HA    H      4.57        .     1
+    67    12   TRP       HB2   H      3.54        .     2
+    68    12   TRP       HB3   H      3.48        .     2
+    69    12   TRP       HD1   H      7.25        .     1
+    70    12   TRP       HE1   H     10.18        .     1
+    71    12   TRP       HE3   H      7.72        .     1
+    72    12   TRP       HZ2   H      7.52        .     1
+    73    12   TRP       HZ3   H      7.18        .     1
+    74    12   TRP       HH2   H      7.28        .     1
+    75    13   LEU       H     H      8.19        .     1
+    76    13   LEU       HA    H      4.29        .     1
+    77    13   LEU       HB2   H      2.04        .     2
+    78    13   LEU       HB3   H      1.92        .     2
+    79    13   LEU       HD1   H      1.10        .     1
+    80    13   LEU       HD2   H      1.10        .     1
+    81    14   ALA       H     H      8.52        .     1
+    82    14   ALA       HA    H      4.21        .     1
+    83    14   ALA       HB    H      1.66        .     1
+    84    15   LEU       H     H      8.63        .     1
+    85    15   LEU       HA    H      4.24        .     1
+    86    15   LEU       HB2   H      2.00        .     2
+    87    15   LEU       HB3   H      1.86        .     2
+    88    16   GLY       H     H      8.79        .     1
+    89    16   GLY       HA2   H      3.96        .     2
+    90    16   GLY       HA3   H      3.92        .     2
+    91    17   THR       H     H      8.30        .     1
+    92    17   THR       HA    H      4.06        .     1
+    93    17   THR       HB    H      4.49        .     1
+    94    17   THR       HG1   H      5.09        .     1
+    95    17   THR       HG2   H      1.32        .     1
+    96    18   ALA       H     H      8.26        .     1
+    97    18   ALA       HA    H      4.29        .     1
+    98    18   ALA       HB    H      1.75        .     1
+    99    19   LEU       H     H      8.56        .     1
+   100    19   LEU       HA    H      4.22        .     1
+   101    19   LEU       HB2   H      2.12        .     2
+   102    19   LEU       HB3   H      1.80        .     2
+   103    19   LEU       HD1   H      1.10        .     1
+   104    19   LEU       HD2   H      1.10        .     1
+   105    20   MET       H     H      8.46        .     1
+   106    20   MET       HA    H      4.44        .     1
+   107    20   MET       HB2   H      2.46        .     2
+   108    20   MET       HB3   H      2.32        .     2
+   109    20   MET       HG2   H      2.87        .     2
+   110    20   MET       HG3   H      2.76        .     2
+   111    21   GLY       H     H      8.85        .     1
+   112    21   GLY       HA2   H      4.06        .     1
+   113    21   GLY       HA3   H      4.06        .     1
+   114    22   LEU       H     H      8.69        .     1
+   115    22   LEU       HA    H      4.29        .     1
+   116    22   LEU       HB2   H      2.06        .     2
+   117    22   LEU       HB3   H      1.88        .     2
+   118    22   LEU       HD1   H      1.10        .     1
+   119    22   LEU       HD2   H      1.10        .     1
+   120    23   GLY       H     H      8.80        .     1
+   121    23   GLY       HA2   H      4.03        .     1
+   122    23   GLY       HA3   H      4.03        .     1
+   123    24   THR       H     H      8.23        .     1
+   124    24   THR       HA    H      4.21        .     1
+   125    24   THR       HB    H      4.60        .     1
+   126    24   THR       HG2   H      1.48        .     1
+   127    25   LEU       H     H      8.19        .     1
+   128    25   LEU       HA    H      4.28        .     1
+   129    25   LEU       HB2   H      1.67        .     2
+   130    25   LEU       HB3   H      2.04        .     2
+   131    26   TYR       H     H      8.52        .     1
+   132    26   TYR       HA    H      4.21        .     1
+   133    26   TYR       HB2   H      3.30        .     1
+   134    26   TYR       HB3   H      3.30        .     1
+   135    26   TYR       HD1   H      6.98        .     1
+   136    26   TYR       HD2   H      6.98        .     1
+   137    26   TYR       HE1   H      6.78        .     1
+   138    26   TYR       HE2   H      6.78        .     1
+   139    27   PHE       H     H      8.31        .     1
+   140    27   PHE       HA    H      4.22        .     1
+   141    27   PHE       HB2   H      3.46        .     2
+   142    27   PHE       HB3   H      3.41        .     2
+   143    27   PHE       HD1   H      7.50        .     1
+   144    27   PHE       HD2   H      7.50        .     1
+   145    27   PHE       HE1   H      7.41        .     1
+   146    27   PHE       HE2   H      7.41        .     1
+   147    28   LEU       H     H      8.52        .     1
+   148    28   LEU       HA    H      4.21        .     1
+   149    28   LEU       HB2   H      1.82        .     2
+   150    28   LEU       HB3   H      2.08        .     2
+   151    29   VAL       H     H      8.59        .     1
+   152    29   VAL       HA    H      3.83        .     1
+   153    29   VAL       HB    H      2.27        .     1
+   154    29   VAL       HG1   H      1.22        .     2
+   155    29   VAL       HG2   H      1.09        .     2
+   156    30   LYS       H     H      8.34        .     1
+   157    30   LYS       HA    H      4.12        .     1
+   158    30   LYS       HB2   H      1.78        .     1
+   159    30   LYS       HB3   H      1.78        .     1
+   160    30   LYS       HG2   H      1.39        .     1
+   161    30   LYS       HG3   H      1.39        .     1
+   162    30   LYS       HD2   H      1.65        .     1
+   163    30   LYS       HD3   H      1.65        .     1
+   164    30   LYS       HE2   H      2.99        .     2
+   165    30   LYS       HE3   H      2.93        .     2
+   166    31   GLY       H     H      8.40        .     1
+   167    31   GLY       HA2   H      3.96        .     2
+   168    31   GLY       HA3   H      3.90        .     2
+   169    32   MET       H     H      8.27        .     1
+   170    32   MET       HA    H      4.42        .     1
+   171    32   MET       HB2   H      2.40        .     2
+   172    32   MET       HB3   H      2.29        .     2
+   173    32   MET       HG2   H      2.90        .     2
+   174    32   MET       HG3   H      2.71        .     2
+   175    33   GLY       H     H      8.26        .     1
+   176    33   GLY       HA2   H      4.04        .     1
+   177    33   GLY       HA3   H      4.04        .     1
+   178    34   VAL       H     H      7.89        .     1
+   179    34   VAL       HA    H      4.21        .     1
+   180    34   VAL       HB    H      2.37        .     1
+   181    34   VAL       HG1   H      1.16        .     2
+   182    34   VAL       HG2   H      1.13        .     2
+   183    35   SER       H     H      7.89        .     1
+   184    35   SER       HA    H      4.55        .     1
+   185    35   SER       HB2   H      4.12        .     2
+   186    35   SER       HB3   H      3.95        .     2
+   187    36   ASP       H     H      8.02        .     1
+   188    36   ASP       HA    H      5.04        .     1
+   189    36   ASP       HB2   H      3.11        .     2
+   190    36   ASP       HB3   H      2.94        .     2
+   191    37   PRO       HA    H      4.49        .     1
+   192    37   PRO       HB2   H      2.53        .     2
+   193    37   PRO       HB3   H      2.15        .     2
+   194    37   PRO       HG2   H      2.15        .     1
+   195    37   PRO       HG3   H      2.15        .     1
+   196    37   PRO       HD2   H      4.18        .     2
+   197    37   PRO       HD3   H      4.09        .     2
+   198    38   ASP       H     H      8.13        .     1
+   199    38   ASP       HA    H      4.65        .     1
+   200    38   ASP       HB2   H      2.98        .     2
+   201    38   ASP       HB3   H      2.80        .     2
+   202    39   ALA       H     H      8.19        .     1
+   203    39   ALA       HA    H      4.29        .     1
+   204    39   ALA       HB    H      1.74        .     1
+   205    40   LYS       H     H      8.12        .     1
+   206    40   LYS       HA    H      4.21        .     1
+   207    40   LYS       HB2   H      2.21        .     2
+   208    40   LYS       HB3   H      2.06        .     2
+   209    40   LYS       HG2   H      1.67        .     1
+   210    40   LYS       HG3   H      1.67        .     1
+   211    40   LYS       HD2   H      1.89        .     1
+   212    40   LYS       HD3   H      1.89        .     1
+   213    40   LYS       HE2   H      3.15        .     1
+   214    40   LYS       HE3   H      3.15        .     1
+   215    41   LYS       H     H      8.15        .     1
+   216    41   LYS       HA    H      4.17        .     1
+   217    41   LYS       HB2   H      2.17        .     2
+   218    41   LYS       HB3   H      2.05        .     2
+   219    41   LYS       HG2   H      1.61        .     1
+   220    41   LYS       HG3   H      1.61        .     1
+   221    41   LYS       HD2   H      1.92        .     2
+   222    41   LYS       HD3   H      1.87        .     2
+   223    41   LYS       HE2   H      3.09        .     2
+   224    41   LYS       HE3   H      3.06        .     2
+   225    42   PHE       H     H      8.24        .     1
+   226    42   PHE       HA    H      4.35        .     1
+   227    42   PHE       HB2   H      3.36        .     1
+   228    42   PHE       HB3   H      3.36        .     1
+   229    42   PHE       HD1   H      7.25        .     1
+   230    42   PHE       HD2   H      7.25        .     1
+   231    43   TYR       H     H      8.65        .     1
+   232    43   TYR       HA    H      4.26        .     1
+   233    43   TYR       HB2   H      3.33        .     1
+   234    43   TYR       HB3   H      3.33        .     1
+   235    43   TYR       HD1   H      7.26        .     1
+   236    43   TYR       HD2   H      7.26        .     1
+   237    43   TYR       HE1   H      6.91        .     1
+   238    43   TYR       HE2   H      6.91        .     1
+   239    44   ALA       H     H      8.59        .     1
+   240    44   ALA       HA    H      4.19        .     1
+   241    44   ALA       HB    H      1.67        .     1
+   242    45   ILE       H     H      8.37        .     1
+   243    45   ILE       HA    H      3.93        .     1
+   244    45   ILE       HB    H      2.05        .     1
+   245    45   ILE       HG12  H      1.89        .     2
+   246    45   ILE       HG13  H      1.43        .     2
+   247    45   ILE       HG2   H      1.09        .     1
+   248    45   ILE       HD1   H      1.02        .     1
+   249    46   THR       H     H      7.84        .     1
+   250    46   THR       HA    H      4.08        .     1
+   251    46   THR       HB    H      4.20        .     1
+   252    46   THR       HG2   H      1.12        .     1
+   253    47   THR       H     H      7.61        .     1
+   254    47   THR       HA    H      4.39        .     1
+   255    47   THR       HB    H      4.15        .     1
+   256    47   THR       HG1   H      4.62        .     1
+   257    47   THR       HG2   H      1.27        .     1
+   258    48   LEU       H     H      7.89        .     1
+   259    48   LEU       HA    H      4.38        .     1
+   260    48   LEU       HB2   H      1.84        .     2
+   261    48   LEU       HB3   H      2.03        .     2
+   262    48   LEU       HD1   H      1.14        .     1
+   263    48   LEU       HD2   H      1.14        .     1
+   264    49   VAL       H     H      8.17        .     1
+   265    49   VAL       HA    H      3.94        .     1
+   266    49   VAL       HB    H      2.55        .     1
+   267    49   VAL       HG1   H      1.28        .     2
+   268    49   VAL       HG2   H      1.12        .     2
+   269    50   PRO       HA    H      4.38        .     1
+   270    50   PRO       HB2   H      2.02        .     1
+   271    50   PRO       HB3   H      2.02        .     1
+   272    50   PRO       HG2   H      2.38        .     1
+   273    50   PRO       HG3   H      2.38        .     1
+   274    50   PRO       HD2   H      3.76        .     2
+   275    50   PRO       HD3   H      3.71        .     2
+   276    51   ALA       H     H      7.47        .     1
+   277    51   ALA       HA    H      4.37        .     1
+   278    51   ALA       HB    H      1.76        .     1
+   279    52   ILE       H     H      8.66        .     1
+   280    52   ILE       HA    H      3.97        .     1
+   281    52   ILE       HB    H      2.22        .     1
+   282    52   ILE       HG2   H      1.13        .     1
+   283    53   ALA       H     H      8.71        .     1
+   284    53   ALA       HA    H      4.21        .     1
+   285    53   ALA       HB    H      1.66        .     1
+   286    54   PHE       H     H      8.89        .     1
+   287    54   PHE       HA    H      4.53        .     1
+   288    54   PHE       HB2   H      3.51        .     2
+   289    54   PHE       HB3   H      3.37        .     2
+   290    54   PHE       HD1   H      7.43        .     1
+   291    54   PHE       HD2   H      7.43        .     1
+   292    55   THR       H     H      8.27        .     1
+   293    55   THR       HA    H      3.97        .     1
+   294    55   THR       HB    H      4.57        .     1
+   295    55   THR       HG1   H      5.31        .     1
+   296    55   THR       HG2   H      1.47        .     1
+   297    56   MET       H     H      8.79        .     1
+   298    56   MET       HA    H      4.27        .     1
+   299    56   MET       HB2   H      2.47        .     2
+   300    56   MET       HB3   H      2.31        .     2
+   301    56   MET       HG2   H      2.90        .     2
+   302    56   MET       HG3   H      2.70        .     2
+   303    57   TYR       H     H      8.53        .     1
+   304    57   TYR       HA    H      4.38        .     1
+   305    57   TYR       HB2   H      2.32        .     1
+   306    57   TYR       HB3   H      2.32        .     1
+   307    57   TYR       HD1   H      7.12        .     1
+   308    57   TYR       HD2   H      7.12        .     1
+   309    57   TYR       HE1   H      6.84        .     1
+   310    57   TYR       HE2   H      6.84        .     1
+   311    58   LEU       H     H      8.62        .     1
+   312    58   LEU       HA    H      3.94        .     1
+   313    58   LEU       HB2   H      1.64        .     2
+   314    58   LEU       HB3   H      1.76        .     2
+   315    58   LEU       HD1   H      1.00        .     1
+   316    58   LEU       HD2   H      1.00        .     1
+   317    59   SER       H     H      8.26        .     1
+   318    59   SER       HA    H      4.08        .     1
+   319    59   SER       HB2   H      4.26        .     1
+   320    59   SER       HB3   H      4.26        .     1
+   321    59   SER       HG    H      4.90        .     1
+   322    60   MET       H     H      8.18        .     1
+   323    60   MET       HA    H      4.27        .     1
+   324    60   MET       HB2   H      2.41        .     2
+   325    60   MET       HB3   H      2.28        .     2
+   326    60   MET       HG2   H      2.90        .     2
+   327    60   MET       HG3   H      2.64        .     2
+   328    61   LEU       H     H      8.22        .     1
+   329    61   LEU       HA    H      4.13        .     1
+   330    61   LEU       HB2   H      1.71        .     2
+   331    61   LEU       HB3   H      1.84        .     2
+   332    61   LEU       HD1   H      0.97        .     1
+   333    61   LEU       HD2   H      0.97        .     1
+   334    62   LEU       H     H      8.49        .     1
+   335    62   LEU       HA    H      4.24        .     1
+   336    62   LEU       HB2   H      1.80        .     2
+   337    62   LEU       HB3   H      1.96        .     2
+   338    63   GLY       H     H      8.44        .     1
+   339    63   GLY       HA2   H      3.95        .     2
+   340    63   GLY       HA3   H      3.90        .     2
+   341    64   TYR       H     H      8.65        .     1
+   342    64   TYR       HA    H      4.39        .     1
+   343    64   TYR       HB2   H      3.29        .     1
+   344    64   TYR       HB3   H      3.29        .     1
+   345    64   TYR       HD1   H      7.20        .     1
+   346    64   TYR       HD2   H      7.20        .     1
+   347    64   TYR       HE1   H      6.86        .     1
+   348    64   TYR       HE2   H      6.86        .     1
+   349    65   GLY       H     H      8.68        .     1
+   350    65   GLY       HA2   H      4.02        .     2
+   351    65   GLY       HA3   H      3.91        .     2
+   352    66   LEU       H     H      8.44        .     1
+   353    66   LEU       HA    H      4.33        .     1
+   354    66   LEU       HB2   H      1.71        .     2
+   355    66   LEU       HB3   H      2.09        .     2
+   356    67   THR       H     H      7.86        .     1
+   357    67   THR       HA    H      4.26        .     1
+   358    67   THR       HB    H      4.40        .     1
+   359    67   THR       HG1   H      5.11        .     1
+   360    67   THR       HG2   H      1.42        .     1
+   361    68   MET       H     H      7.84        .     1
+   362    68   MET       HA    H      4.61        .     1
+   363    68   MET       HB2   H      2.15        .     1
+   364    68   MET       HB3   H      2.15        .     1
+   365    68   MET       HG2   H      2.62        .     2
+   366    68   MET       HG3   H      2.55        .     2
+   367    69   VAL       H     H      7.45        .     1
+   368    69   VAL       HA    H      4.48        .     1
+   369    69   VAL       HB    H      2.25        .     1
+   370    69   VAL       HG1   H      1.11        .     2
+   371    69   VAL       HG2   H      1.04        .     2
+   372    70   PRO       HA    H      4.61        .     1
+   373    70   PRO       HB2   H      2.17        .     2
+   374    70   PRO       HB3   H      1.97        .     2
+   375    70   PRO       HG2   H      2.07        .     1
+   376    70   PRO       HG3   H      2.07        .     1
+   377    70   PRO       HD2   H      3.98        .     2
+   378    70   PRO       HD3   H      3.68        .     2
+   379    71   PHE       H     H      7.22        .     1
+   380    71   PHE       HA    H      4.64        .     1
+   381    71   PHE       HB2   H      3.35        .     2
+   382    71   PHE       HB3   H      3.22        .     2
+
+   stop_
+
+   loop_
+      _Chem_shift_value_error
+
+       .01 
+
+   stop_
+
+save_
+

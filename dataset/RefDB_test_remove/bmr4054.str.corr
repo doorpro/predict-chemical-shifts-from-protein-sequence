@@ -1,0 +1,740 @@
+data_4054
+
+#Corrected using PDB structure: 1AQ5A
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+#  7   D    HA       4.88         4.16
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.01     N/A     N/A     N/A   -1.31   -0.18   
+#
+#bmr4054.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr4054.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A    -1.31     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.04      N/A      N/A      N/A  +/-0.57  +/-0.08  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.610     N/A     N/A     N/A   0.529   0.401   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.134     N/A     N/A     N/A   1.815   0.238   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+  Alpha-Helical Coiled Coil Trimerization Domain of Chicken Cartilage 
+  Matrix Protein (Reduced C5-C7 Disulfide Bonds)
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Wiltscheck    Ronald   .     . 
+       2   Kammerer      Richard  A.    . 
+       3   Dames         Sonja    A.    . 
+       4   Schulthess    Therese  .     . 
+       5   Blommers      Marcel   J.J.  . 
+       6   Engel         Jurgen   .     . 
+       7   Alexandrescu  Andrei   T.    . 
+
+   stop_
+
+   _BMRB_accession_number   4054
+   _BMRB_flat_file_name     bmr4054.str
+   _Entry_type              new
+   _Submission_date         1997-08-07
+   _Accession_date          1997-08-08
+   _Entry_origination       author
+   _NMR_STAR_version        2.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'   164  
+      '15N chemical shifts'   40  
+
+   stop_
+
+   loop_
+      _Revision_date
+      _Revision_keyword
+      _Revision_author
+      _Revision_detail
+
+       1998-02-25  reformat  BMRB 'converted to NMR-STAR version 2.1' 
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_full         
+;
+Wiltscheck, R., Kammerer, R. A., Dames, S. A., Schulthess, T., 
+Blommers, M. J.J., Engel, J., and  Alexandrescu, A. T., 
+"Heteronuclear NMR Assignments and Secondary Structure of the Coiled
+Coil Trimerization Domain from Cartilage Matrix Protein in Oxidized and
+Reduced Forms," Protein Sci. 6, 1734-1745 (1997).
+;
+   _Citation_title        
+;
+  
+Heteronuclear NMR Assignments and Secondary Structure of the Coiled
+Coil Trimerization Domain from Cartilage Matrix Protein in Oxidized and
+Reduced Forms. 
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        97406913
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Wiltscheck    Ronald   .     . 
+       2   Kammerer      Richard  A.    . 
+       3   Dames         Sonja    A.    . 
+       4   Schulthess    Therese  .     . 
+       5   Blommers      Marcel   J.J.  . 
+       6   Engel         Jurgen   .     . 
+       7   Alexandrescu  Andrei   T.    . 
+
+   stop_
+
+   _Journal_abbreviation  'Protein Sci.'
+   _Journal_name_full     'Protein Science'
+   _Journal_volume         6
+   _Journal_issue          8
+   _Page_first             1734
+   _Page_last              1745
+   _Year                   1997
+
+   loop_
+      _Keyword
+
+       alpha-helix             
+      'coiled coil'            
+      'disulfide bonds'        
+       flexibility             
+      'heteronuclear NMR'      
+       hydrogen-exchange       
+      'oligomerization domain' 
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_CMPcc
+   _Saveframe_category      molecular_system
+
+   _Mol_system_name        'Cartilage Matrix Protein'
+   _Abbreviation_common     CMPcc
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      'subunit A' $CMPcc_reduced 
+      'subunit B' $CMPcc_reduced 
+      'subunit C' $CMPcc_reduced 
+
+   stop_
+
+   _System_physical_state   reduced
+   _System_oligomer_state   trimer
+   _System_paramagnetic     no
+
+   loop_
+      _Magnetic_equivalence_ID
+      _Magnetically_equivalent_system_component
+
+       1  'subunit A' 
+       1  'subunit B' 
+       1  'subunit C' 
+
+   stop_
+
+   _Details                
+;
+    This molecule is a parallel homo-trimer!!  
+    However because of 3-fold symmetry (e.g. magnetic equivalence) 
+    the chemical shifts of each of the three monomer chains are 
+    equivalent. 
+
+    Cartilage matrix protein is a parallel trimeric coiled coil,
+    linked by inter-monomer disulfide bonds between Cys 5 and Cys 7.  
+    The present entry gives NMR data for the protein when the C5-C7 
+    disulfide bonds are broken by a 10-fold excess of DTT per monomer 
+    (1 mM protein, 32 mM DTT).                               
+;
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  1AQ5 "A Chain A, High-Resolution Solution Nmr Structure Of The Trimeric Coiled-Coil Domain Of Chicken Cartilage Matrix Protein, 20 Structures"  . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_CMPcc_reduced
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                'Coiled Coil domain of Chicken Cartilage Matrix Protein'
+   _Abbreviation_common                         CMPcc
+   _Molecular_mass                              5386
+   _Details                                    
+;
+   
+    Molecule corresponds to the C-terminal domain (residues 451 to 492) 
+    of chicken cartilage matrix protein.  The molecule is an alpha-helical 
+    coiled coil trimer with 3-fold symmetry.  Because monomers have equivalent 
+    magnetic environments, NMR spectra contain resonances corresponding
+    to the sequence of the monomers.  The Swiss-Prot index for CMP is 
+    P05099.  A separate BMRB deposit has been made for the chemical shifts 
+    of the oxidized (native) form of the protein.
+
+    Inter-chain-disulfide between residue 9 and 11 is broken by 10 fold 
+    excess of DTT per monomer
+
+    The protein contains 4 extra residues that are a cloning artefact.  The
+    following numbering scheme has been used:
+
+    G(-4), S(-3), H(-2), M(-1), E(1), E(2).
+
+    While the 2nd residue in the protein is Ser, and residue 3 His, these are
+    not found in nature.  The wild type protein begins EEAP..., and the extra
+    four residues GSHM have been numbered using negative numbers from the C- to
+    the N-terminus.
+;
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               47
+   _Mol_residue_sequence                       
+;
+GSHMEEDPCECKSIVKFQTK             
+VEELINTLQQKLEAVAKRIE           
+ALENKII            
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+        1   -4   GLY    2   -3   SER    3   -2   HIS    4   -1   MET    5    1   GLU 
+        6    2   GLU    7    3   ASP    8    4   PRO    9    5   CYS   10    6   GLU 
+       11    7   CYS   12    8   LYS   13    9   SER   14   10   ILE   15   11   VAL 
+       16   12   LYS   17   13   PHE   18   14   GLN   19   15   THR   20   16   LYS 
+       21   17   VAL   22   18   GLU   23   19   GLU   24   20   LEU   25   21   ILE 
+       26   22   ASN   27   23   THR   28   24   LEU   29   25   GLN   30   26   GLN 
+       31   27   LYS   32   28   LEU   33   29   GLU   34   30   ALA   35   31   VAL 
+       36   32   ALA   37   33   LYS   38   34   ARG   39   35   ILE   40   36   GLU 
+       41   37   ALA   42   38   LEU   43   39   GLU   44   40   ASN   45   41   LYS 
+       46   42   ILE   47   43   ILE 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1AQ5       "A Chain A, High-Resolution Solution NmrStructure Of The Trimeric Coiled-Coil Domain Of ChickenCartilage Matrix Protein, 20 Structures"  100.00   47   100   100   3e-19 
+       EMBL        CAA30915.1 "cartilage matrix protein [Gallus gallus]"                                                                                                 9.53  493    98   100   9e-17 
+       GenBank     AAA48695.1 "cartilage matrix protein"                                                                                                                11.30  416    98   100   9e-17 
+       PIR         A33809     "cartilage matrix protein precursor - chicken"                                                                                             9.53  493    98   100   9e-17 
+       SWISS-PROT  P05099     "CAMA_CHICK Cartilage matrix protein precursor(Matrilin-1)"                                                                                9.53  493    98   100   9e-17 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+      _Organ
+      _Tissue
+
+      $CMPcc_reduced  chicken  9031   Eukaryota  Metazoa  Gallus  gallus  endoskeleton 'cartilage matrix' 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_type
+      _Vector_name
+      _Gene_source
+      _Details
+
+      $CMPcc_reduced 'recombinant technology' 'E. coli'  Escherichia  coli  BL21(DE3)  plasmid  pET-15b  synthetic  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_CMPcc_reduced
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Concentration_min_value
+      _Concentration_max_value
+      _Isotopic_labeling
+
+      $CMPcc_reduced    1   mM  .  . '[U-15N]' 
+       DTT             32   mM  .  .  .        
+       NaCl           150   mM  .  .  .        
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer_one
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                AMX600
+   _Field_strength       600
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_experimental_conditions_CMPcc_reduced
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             5.8  0.1  n/a 
+       temperature  373    1    K   
+       pressure       1     .   atm 
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chem_shift_reference_CMPcc_reduced
+   _Saveframe_category   chemical_shift_reference
+
+   _Details             
+;
+  DSS in water as described in Wishart D.S., Bigam C.G., Yao J., Abildgaard F., 
+  Dyson H.J., Oldfield E., Markley J.L., Sykes B.D. 1H, 13C and 15N chemical
+  shift referencing in biomolecular NMR. J. Biomol. NMR 6, 135-140 (1995).
+;
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _Indirect_shift_ratio
+
+       DSS  H   1   ppm  0.000  direct    .   .          
+       DSS  C  13   ppm  0.000  indirect  .  0.251449528 
+       DSS  N  15   ppm  0.000  indirect  .  0.101329118 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_assignment_CMPcc_reduced
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_CMPcc_reduced 
+
+   stop_
+
+   _Sample_conditions_label         $reporting_conditions_CMPcc_reduced
+   _Chem_shift_reference_set_label  $chem_shift_reference_CMPcc_reduced
+   _Mol_system_component_name       'subunit A'
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     6   GLU       HA    H      4.29        .     1
+     2     7   ASP       H     H      8.26        .     1
+     3     7   ASP       HA    H      4.89        .     1
+     4     7   ASP       HB2   H      2.78        .     2
+     5     7   ASP       HB3   H      2.56        .     2
+     6     7   ASP       N     N    121.59        .     1
+     7     9   CYS       H     H      8.13        .     1
+     8     9   CYS       HA    H      4.35        .     1
+     9     9   CYS       HB2   H      3.62        .     2
+    10     9   CYS       N     N    114.09        .     1
+    11    10   GLU       H     H      8.33        .     1
+    12    10   GLU       HA    H      4.29        .     1
+    13    10   GLU       HB2   H      1.97        .     2
+    14    10   GLU       HB3   H      2.11        .     2
+    15    10   GLU       HG2   H      2.28        .     1
+    16    10   GLU       N     N    120.29        .     1
+    17    11   CYS       H     H      8.41        .     1
+    18    11   CYS       HA    H      4.40        .     1
+    19    11   CYS       HB2   H      2.99        .     2
+    20    11   CYS       HB3   H      3.83        .     2
+    21    11   CYS       N     N    116.69        .     1
+    22    12   LYS       H     H      8.25        .     1
+    23    12   LYS       HA    H      4.24        .     1
+    24    12   LYS       N     N    120.89        .     1
+    25    13   SER       H     H      8.20        .     1
+    26    13   SER       HA    H      4.11        .     1
+    27    13   SER       HB2   H      2.99        .     2
+    28    13   SER       N     N    118.39        .     1
+    29    14   ILE       H     H      7.67        .     1
+    30    14   ILE       HA    H      3.80        .     1
+    31    14   ILE       HB    H      2.10        .     1
+    32    14   ILE       N     N    120.09        .     1
+    33    15   VAL       H     H      7.88        .     1
+    34    15   VAL       HA    H      4.12        .     1
+    35    15   VAL       HB    H      1.93        .     1
+    36    15   VAL       HG1   H      1.02        .     2
+    37    15   VAL       N     N    119.89        .     1
+    38    16   LYS       H     H      8.01        .     1
+    39    16   LYS       HA    H      4.39        .     1
+    40    16   LYS       N     N    121.49        .     1
+    41    17   PHE       H     H      7.87        .     1
+    42    17   PHE       HA    H      4.17        .     1
+    43    17   PHE       HB2   H      3.37        .     2
+    44    17   PHE       HB3   H      3.16        .     2
+    45    17   PHE       HD1   H      7.31        .     3
+    46    17   PHE       N     N    119.09        .     1
+    47    18   GLN       H     H      8.46        .     1
+    48    18   GLN       HA    H      3.59        .     1
+    49    18   GLN       HB2   H      1.93        .     2
+    50    18   GLN       N     N    117.29        .     1
+    51    19   THR       H     H      7.95        .     1
+    52    19   THR       HA    H      4.01        .     1
+    53    19   THR       HB    H      4.22        .     1
+    54    19   THR       HG2   H      1.26        .     1
+    55    19   THR       N     N    111.99        .     1
+    56    20   LYS       H     H      7.68        .     1
+    57    20   LYS       HA    H      4.12        .     1
+    58    20   LYS       HB2   H      1.96        .     2
+    59    20   LYS       N     N    121.29        .     1
+    60    21   VAL       H     H      8.18        .     1
+    61    21   VAL       HA    H      3.52        .     1
+    62    21   VAL       HB    H      2.00        .     1
+    63    21   VAL       HG1   H      0.88        .     2
+    64    21   VAL       HG2   H      0.67        .     2
+    65    21   VAL       N     N    117.19        .     1
+    66    22   GLU       H     H      8.28        .     1
+    67    22   GLU       HA    H      3.84        .     1
+    68    22   GLU       HB2   H      2.07        .     2
+    69    22   GLU       N     N    118.19        .     1
+    70    23   GLU       H     H      7.87        .     1
+    71    23   GLU       HA    H      4.12        .     1
+    72    23   GLU       HB2   H      2.21        .     2
+    73    23   GLU       HG2   H      2.46        .     1
+    74    23   GLU       N     N    118.09        .     1
+    75    24   LEU       H     H      8.13        .     1
+    76    24   LEU       HA    H      4.11        .     1
+    77    24   LEU       HB2   H      1.44        .     2
+    78    24   LEU       HD1   H      0.91        .     2
+    79    24   LEU       N     N    119.99        .     1
+    80    25   ILE       H     H      8.56        .     1
+    81    25   ILE       HA    H      3.62        .     1
+    82    25   ILE       HB    H      2.03        .     1
+    83    25   ILE       HG12  H      1.05        .     2
+    84    25   ILE       HD1   H      0.74        .     1
+    85    25   ILE       N     N    118.09        .     1
+    86    26   ASN       H     H      8.33        .     1
+    87    26   ASN       HA    H      4.50        .     1
+    88    26   ASN       HB2   H      2.99        .     2
+    89    26   ASN       HB3   H      2.88        .     2
+    90    26   ASN       N     N    118.19        .     1
+    91    27   THR       H     H      8.23        .     1
+    92    27   THR       HA    H      4.01        .     1
+    93    27   THR       HB    H      4.39        .     1
+    94    27   THR       HG2   H      1.30        .     1
+    95    27   THR       N     N    115.49        .     1
+    96    28   LEU       H     H      8.03        .     1
+    97    28   LEU       HA    H      4.01        .     1
+    98    28   LEU       HB2   H      2.04        .     2
+    99    28   LEU       HB3   H      1.44        .     2
+   100    28   LEU       HG    H      1.93        .     1
+   101    28   LEU       HD1   H      0.91        .     2
+   102    28   LEU       N     N    121.59        .     1
+   103    29   GLN       H     H      8.72        .     1
+   104    29   GLN       HA    H      3.90        .     1
+   105    29   GLN       HB2   H      2.24        .     2
+   106    29   GLN       HG2   H      2.50        .     2
+   107    29   GLN       HG3   H      2.35        .     2
+   108    29   GLN       N     N    117.29        .     1
+   109    30   GLN       H     H      8.01        .     1
+   110    30   GLN       HA    H      4.11        .     1
+   111    30   GLN       HB2   H      2.25        .     2
+   112    30   GLN       HG2   H      2.64        .     2
+   113    30   GLN       HG3   H      2.46        .     2
+   114    30   GLN       N     N    117.39        .     1
+   115    31   LYS       H     H      8.16        .     1
+   116    31   LYS       HA    H      4.15        .     1
+   117    31   LYS       HB2   H      2.14        .     2
+   118    31   LYS       HB3   H      2.03        .     2
+   119    31   LYS       N     N    119.79        .     1
+   120    32   LEU       H     H      8.55        .     1
+   121    32   LEU       HA    H      4.05        .     1
+   122    32   LEU       HB2   H      1.93        .     2
+   123    32   LEU       HB3   H      1.72        .     2
+   124    32   LEU       HD1   H      0.91        .     1
+   125    32   LEU       N     N    120.19        .     1
+   126    33   GLU       H     H      8.12        .     1
+   127    33   GLU       HA    H      4.08        .     1
+   128    33   GLU       HB2   H      2.15        .     2
+   129    33   GLU       HG2   H      2.43        .     1
+   130    33   GLU       HG3   H      2.32        .     2
+   131    33   GLU       N     N    118.49        .     1
+   132    34   ALA       H     H      7.71        .     1
+   133    34   ALA       HA    H      4.19        .     1
+   134    34   ALA       HB    H      1.58        .     1
+   135    34   ALA       N     N    120.09        .     1
+   136    35   VAL       H     H      8.08        .     1
+   137    35   VAL       HA    H      3.73        .     1
+   138    35   VAL       HB    H      2.32        .     1
+   139    35   VAL       HG1   H      1.09        .     2
+   140    35   VAL       HG2   H      0.91        .     2
+   141    35   VAL       N     N    116.69        .     1
+   142    36   ALA       H     H      8.47        .     1
+   143    36   ALA       HA    H      3.97        .     1
+   144    36   ALA       HB    H      1.54        .     1
+   145    36   ALA       N     N    122.19        .     1
+   146    37   LYS       H     H      7.90        .     1
+   147    37   LYS       HA    H      4.12        .     1
+   148    37   LYS       HB2   H      1.97        .     2
+   149    37   LYS       N     N    116.39        .     1
+   150    38   ARG       H     H      7.65        .     1
+   151    38   ARG       HA    H      4.15        .     1
+   152    38   ARG       HB2   H      2.04        .     2
+   153    38   ARG       N     N    119.09        .     1
+   154    39   ILE       H     H      8.11        .     1
+   155    39   ILE       HA    H      3.73        .     1
+   156    39   ILE       HB    H      1.93        .     1
+   157    39   ILE       HG12  H      1.76        .     2
+   158    39   ILE       HG2   H      0.91        .     1
+   159    39   ILE       HD1   H      0.88        .     1
+   160    39   ILE       N     N    118.89        .     1
+   161    40   GLU       H     H      7.97        .     1
+   162    40   GLU       HA    H      4.11        .     1
+   163    40   GLU       HB2   H      2.14        .     2
+   164    40   GLU       N     N    120.49        .     1
+   165    41   ALA       H     H      7.53        .     1
+   166    41   ALA       HA    H      4.18        .     1
+   167    41   ALA       HB    H      1.51        .     1
+   168    41   ALA       N     N    117.89        .     1
+   169    42   LEU       H     H      7.43        .     1
+   170    42   LEU       HA    H      4.08        .     1
+   171    42   LEU       HB2   H      2.04        .     2
+   172    42   LEU       HB3   H      1.47        .     2
+   173    42   LEU       HD1   H      0.88        .     2
+   174    42   LEU       N     N    116.89        .     1
+   175    43   GLU       H     H      8.52        .     1
+   176    43   GLU       HA    H      3.87        .     1
+   177    43   GLU       HB2   H      2.32        .     2
+   178    43   GLU       HB3   H      1.97        .     2
+   179    43   GLU       HG2   H      2.53        .     1
+   180    43   GLU       HG3   H      2.25        .     2
+   182    44   ASN       H     H      7.63        .     1
+   183    44   ASN       HA    H      4.64        .     1
+   184    44   ASN       HB2   H      2.85        .     2
+   186    45   LYS       H     H      7.56        .     1
+   187    45   LYS       HA    H      4.36        .     1
+   188    45   LYS       HB2   H      1.93        .     2
+   189    45   LYS       HG2   H      1.51        .     2
+   190    45   LYS       HD2   H      1.65        .     2
+   192    46   ILE       H     H      7.51        .     1
+   193    46   ILE       HA    H      4.26        .     1
+   194    46   ILE       HB    H      1.93        .     1
+   195    46   ILE       HG12  H      1.26        .     2
+   196    46   ILE       HG2   H      0.91        .     1
+   198    47   ILE       H     H      7.41        .     1
+   199    47   ILE       HA    H      4.05        .     1
+   200    47   ILE       HB    H      1.86        .     1
+   201    47   ILE       HG12  H      1.48        .     2
+   202    47   ILE       HG13  H      1.19        .     2
+   203    47   ILE       HG2   H      0.91        .     1
+
+   stop_
+
+save_
+

@@ -1,0 +1,851 @@
+data_916
+
+#Corrected using PDB structure: 1P6ZN
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 29   Y    HA       4.64         3.89
+# 43   T    HA       5.14         4.28
+# 84   G    HA       2.76         3.58
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.05     N/A     N/A     N/A     N/A   0.01    
+#
+#bmr916.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr916.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.03      N/A      N/A      N/A      N/A  +/-0.06  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.752     N/A     N/A     N/A     N/A   0.616   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.143     N/A     N/A     N/A     N/A   0.264   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Sequence-Specific 1H NMR Assignments and Secondary Structure in Solution of 
+Escherichia coli trp Repressor
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Arrowsmith  Cheryl  H.  . 
+       2   Pachter     R.      .   . 
+       3   Altman      R.      B.  . 
+       4   Iyer        S.      B.  . 
+       5   Jardetzky   Oleg    .   . 
+
+   stop_
+
+   _BMRB_accession_number   916
+   _BMRB_flat_file_name     bmr916.str
+   _Entry_type              revision
+   _Submission_date         1995-07-31
+   _Accession_date          1996-04-13
+   _Entry_origination       BMRB
+   _NMR_STAR_version        2.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  361  
+
+   stop_
+
+   loop_
+      _Revision_date
+      _Revision_keyword
+      _Revision_author
+      _Revision_detail
+
+       1999-06-14  revision  BMRB 'Converted to BMRB NMR-STAR V 2.1 format'                
+       1996-04-13  revision  BMRB 'Link to the Protein Data Bank added'                    
+       1996-03-25  reformat  BMRB 'Converted to the BMRB 1996-03-01 STAR flat-file format' 
+       1995-07-31  original  BMRB 'Last release in original BMRB flat-file format'         
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_full         
+;
+ Arrowsmith, Cheryl H., Pachter, R., Altman, R.B., Iyer, S.B., 
+ Jardetzky, Oleg, 
+ "Sequence-Specific 1H NMR Assignments and Secondary Structure in Solution 
+ of Escherichia coli trp Repressor,"
+ Biochemistry 29, 6332-6341 (1990).
+;
+   _Citation_title        
+;
+Sequence-Specific 1H NMR Assignments and Secondary Structure in Solution of 
+Escherichia coli trp Repressor
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        ?
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Arrowsmith  Cheryl  H.  . 
+       2   Pachter     R.      .   . 
+       3   Altman      R.      B.  . 
+       4   Iyer        S.      B.  . 
+       5   Jardetzky   Oleg    .   . 
+
+   stop_
+
+   _Journal_abbreviation   Biochemistry
+   _Journal_volume         29
+   _Page_first             6332
+   _Page_last              6341
+   _Year                   1990
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_trp_repressor
+   _Saveframe_category      molecular_system
+
+   _Mol_system_name        'trp repressor'
+   _Abbreviation_common     ?
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      'trp repressor' $trp_repressor 
+
+   stop_
+
+   _System_physical_state   ?
+   _System_oligomer_state   ?
+   _System_paramagnetic     ?
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  3WRP  "   trp Aporepressor"                                        . 
+       PDB  2WRPR " Chain R, trp Repressor (Orthorhombic Form)"                . 
+       PDB  1WRPR " Chain R, trp Repressor (Trigonal Form)"                    . 
+       PDB  1TROA " Chain A, Trp Repressor Complex With Operator"              . 
+       PDB  1TROG " Chain G, Trp Repressor Complex With Operator"              . 
+       PDB  1TROC " Chain C, Trp Repressor Complex With Operator"              . 
+       PDB  1TROE " Chain E, Trp Repressor Complex With Operator"              . 
+       PDB  1TRRA " Chain A, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRB " Chain B, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRD " Chain D, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRE " Chain E, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRG " Chain G, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRH " Chain H, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRJ " Chain J, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1TRRK " Chain K, Trp RepressorOPERATOR HALF-Site Tandem Complex"   . 
+       PDB  1RCSA " Chain A, Nmr Study Of Trp Repressor-Operator Dna Complex"  . 
+       PDB  1RCSB " Chain B, Nmr Study Of Trp Repressor-Operator Dna Complex"  . 
+       PDB  1WRSR " Chain R, Nmr Study Of Holo Trp Repressor"                  . 
+       PDB  1WRSS " Chain S, Nmr Study Of Holo Trp Repressor"                  . 
+       PDB  1WRTR " Chain R, Nmr Study Of Apo Trp Repressor"                   . 
+       PDB  1WRTS " Chain S, Nmr Study Of Apo Trp Repressor"                   . 
+       PDB  1JHGA " Chain A, Trp Repressor Mutant V58i"                        . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_trp_repressor
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                'trp repressor'
+   _Abbreviation_common                         ?
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               107
+   _Mol_residue_sequence                       
+;
+AQQSPYSAAMAEQRHQEWLR
+FVDLLKNAYQNDLHLPLLNL
+MLTPDEREALGTRVRIVEEL
+LRGEMSQRELKNELGAGIAT
+ITRGSNSLKAAPVELRQWLE
+EVLLKSD
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+
+         1   ALA     2   GLN     3   GLN     4   SER     5   PRO 
+         6   TYR     7   SER     8   ALA     9   ALA    10   MET 
+        11   ALA    12   GLU    13   GLN    14   ARG    15   HIS 
+        16   GLN    17   GLU    18   TRP    19   LEU    20   ARG 
+        21   PHE    22   VAL    23   ASP    24   LEU    25   LEU 
+        26   LYS    27   ASN    28   ALA    29   TYR    30   GLN 
+        31   ASN    32   ASP    33   LEU    34   HIS    35   LEU 
+        36   PRO    37   LEU    38   LEU    39   ASN    40   LEU 
+        41   MET    42   LEU    43   THR    44   PRO    45   ASP 
+        46   GLU    47   ARG    48   GLU    49   ALA    50   LEU 
+        51   GLY    52   THR    53   ARG    54   VAL    55   ARG 
+        56   ILE    57   VAL    58   GLU    59   GLU    60   LEU 
+        61   LEU    62   ARG    63   GLY    64   GLU    65   MET 
+        66   SER    67   GLN    68   ARG    69   GLU    70   LEU 
+        71   LYS    72   ASN    73   GLU    74   LEU    75   GLY 
+        76   ALA    77   GLY    78   ILE    79   ALA    80   THR 
+        81   ILE    82   THR    83   ARG    84   GLY    85   SER 
+        86   ASN    87   SER    88   LEU    89   LYS    90   ALA 
+        91   ALA    92   PRO    93   VAL    94   GLU    95   LEU 
+        96   ARG    97   GLN    98   TRP    99   LEU   100   GLU 
+       101   GLU   102   VAL   103   LEU   104   LEU   105   LYS 
+       106   SER   107   ASP 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1JHG        "A Chain A, Trp Repressor Mutant V58i"                                                                                                           105.94  101    99   100   5e-50 
+       PDB         1RCS        "A Chain A, Nmr Study Of Trp Repressor-OperatorDna Complex"                                                                                      101.90  105   100   100   3e-53 
+       PDB         1WRS        "R Chain R, Nmr Study Of Holo Trp Repressor"                                                                                                     101.90  105   100   100   3e-53 
+       PDB         1WRT        "R Chain R, Nmr Study Of Apo Trp Repressor"                                                                                                      101.90  105   100   100   3e-53 
+       PDB         1CO0        "A Chain A, Nmr Study Of Trp Repressor-MtrOperator Dna Complex"                                                                                  100.00  107   100   100   3e-54 
+       PDB         1MI7        "R Chain R, Crystal Structure Of Domain SwappedTrp Aporepressor In 30%(VV) ISOPROPANOL"                                                          100.00  107   100   100   3e-54 
+       PDB         1P6Z        "N Chain N, E. Coli Trp Apo-Repressor,Monoclinic Crystal Form"                                                                                   100.00  107   100   100   3e-54 
+       PDB         1WRP        "R Chain R, trp Repressor (Trigonal Form)"                                                                                                       100.00  107   100   100   3e-54 
+       PDB         2WRP        "R Chain R, E Coli Trp Repressor, OrthorhombicCrystal Form"                                                                                      100.00  107   100   100   3e-54 
+       PDB         1TRR        "A Chain A, Trp RepressorOPERATOR HALF-SiteTandem Complex"                                                                                       100.00  107    99   100   6e-54 
+       PDB         3WRP        "trp Aporepressor"                                                                                                                                99.07  108   100   100   3e-54 
+       PDB         1TRO        "A Chain A, Trp Repressor Complex With Operator"                                                                                                  99.07  108    99   100   6e-54 
+       DBJ         BAB38774.1  "regulator for trp operon and aroH[Escherichia coli O157:H7]"                                                                                     99.07  108   100   100   3e-54 
+       GenBank     AAA72140.1  "trp operon repressor protein (trpR)"                                                                                                             99.07  108   100   100   3e-54 
+       GenBank     AAA97289.1  "CG Site No. 68; alternate gene name Rtry[Escherichia coli]"                                                                                      99.07  108   100   100   3e-54 
+       GenBank     AAC77346.1  "regulator for trp operon and aroH; trpaporepressor; transcriptional repressor for tryptophanbiosynthesis (TrpR family) [Escherichia coli K12]"   99.07  108   100   100   3e-54 
+       GenBank     AAG59573.1  "regulator for trp operon and aroH; trpaporepressor [Escherichia coli O157:H7 EDL933]"                                                            99.07  108   100   100   3e-54 
+       GenBank     AAN45839.1  "regulator for trp operon and aroH; trpaporepressor [Shigella flexneri 2a str. 301]"                                                              99.07  108   100   100   3e-54 
+       PIR         A86139      "trp operon repressor - Escherichia coli(strain O157:H7, substrain EDL933)"                                                                       99.07  108   100   100   3e-54 
+       PIR         G91297      "regulator for trp operon and aroH[imported] - Escherichia coli (strain O157:H7, substrainRIMD 0509952)"                                          99.07  108   100   100   3e-54 
+       PIR         RPECW       "trp operon repressor - Escherichia coli (strainK-12)"                                                                                            99.07  108   100   100   3e-54 
+       REF         NP_291006.1 "regulator for trp operon and aroH; trpaporepressor [Escherichia coli O157:H7 EDL933]"                                                            99.07  108   100   100   3e-54 
+       REF         NP_313378.1 "TrpR [Escherichia coli O157:H7]"                                                                                                                 99.07  108   100   100   3e-54 
+       REF         NP_418810.1 "regulator for trp operon and aroH; trpaporepressor; transcriptional repressor for tryptophanbiosynthesis (TrpR family) [Escherichia coli K12]"   99.07  108   100   100   3e-54 
+       REF         NP_710132.1 "regulator for trp operon and aroH; trpaporepressor [Shigella flexneri 2a str. 301]"                                                              99.07  108   100   100   3e-54 
+       REF         NP_757326.1 "Trp operon repressor [Escherichia coliCFT073]"                                                                                                   99.07  108    99   100   6e-54 
+       SWISS-PROT  P03032      "TRPR_ECOLI Trp operon repressor"                                                                                                                 99.07  108   100   100   3e-54 
+       SWISS-PROT  Q8FA42      "TRPR_ECOL6 Trp operon repressor"                                                                                                                 99.07  108    99   100   6e-54 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Genus
+      _Species
+
+       ?  ?  ?  ?  ? 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+
+      $trp_repressor 'not available' 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_one
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+       ?  ?  ?  ? 
+
+   stop_
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_condition_set_one
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             5.7  .  na 
+       temperature  320    .  K  
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chem_shift_reference_par_set_one
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Chem_shift_value
+
+       TSP  H  0  
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_assignment_data_set_one
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_one 
+
+   stop_
+
+   _Sample_conditions_label         $sample_condition_set_one
+   _Chem_shift_reference_set_label  $chem_shift_reference_par_set_one
+   _Mol_system_component_name       'trp repressor'
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   ALA       HA    H      4.16        .     1
+     2     1   ALA       HB    H      1.56        .     1
+     3     2   GLN       H     H      8.43        .     1
+     4     2   GLN       HA    H      4.42        .     1
+     5     2   GLN       HG2   H      2.39        .     1
+     6     2   GLN       HG3   H      2.39        .     1
+     7     3   GLN       H     H      8.43        .     1
+     8     3   GLN       HA    H      4.42        .     1
+     9     3   GLN       HG2   H      2.39        .     1
+    10     3   GLN       HG3   H      2.39        .     1
+    11     4   SER       H     H      8.34        .     1
+    12     4   SER       HA    H      4.80        .     1
+    13     5   PRO       HA    H      4.40        .     1
+    14     6   TYR       H     H      7.91        .     1
+    15     6   TYR       HA    H      4.57        .     1
+    16     6   TYR       HD1   H      7.12        .     1
+    17     6   TYR       HD2   H      7.12        .     1
+    18     6   TYR       HE1   H      6.84        .     1
+    19     6   TYR       HE2   H      6.84        .     1
+    20    11   ALA       H     H      8.19        .     1
+    21    11   ALA       HA    H      4.22        .     1
+    22    11   ALA       HB    H      1.46        .     1
+    23    12   GLU       H     H      8.29        .     1
+    24    12   GLU       HA    H      4.22        .     1
+    25    12   GLU       HG2   H      2.38        .     1
+    26    12   GLU       HG3   H      2.38        .     1
+    27    13   GLN       H     H      8.22        .     1
+    28    13   GLN       HA    H      4.22        .     1
+    29    14   ARG       HA    H      4.27        .     1
+    30    14   ARG       HB2   H      1.98        .     1
+    31    14   ARG       HB3   H      1.98        .     1
+    32    14   ARG       HG2   H      1.78        .     1
+    33    14   ARG       HG3   H      1.78        .     1
+    34    14   ARG       HD2   H      3.18        .     1
+    35    14   ARG       HD3   H      3.18        .     1
+    36    15   HIS       H     H      8.34        .     1
+    37    15   HIS       HA    H      4.70        .     1
+    38    15   HIS       HD2   H      7.35        .     1
+    39    15   HIS       HE1   H      8.50        .     1
+    40    16   GLN       H     H      8.34        .     1
+    41    16   GLN       HA    H      4.00        .     1
+    42    16   GLN       HG2   H      2.57        .     1
+    43    16   GLN       HG3   H      2.57        .     1
+    44    17   GLU       H     H      8.43        .     1
+    45    17   GLU       HA    H      4.11        .     1
+    46    17   GLU       HG2   H      2.59        .     1
+    47    17   GLU       HG3   H      2.59        .     1
+    48    18   TRP       H     H      8.09        .     1
+    49    18   TRP       HA    H      4.79        .     1
+    50    18   TRP       HD1   H      7.08        .     1
+    51    18   TRP       HE1   H      9.98        .     1
+    52    18   TRP       HE3   H      7.78        .     1
+    53    18   TRP       HZ2   H      7.33        .     1
+    54    18   TRP       HZ3   H      6.94        .     1
+    55    18   TRP       HH2   H      7.06        .     1
+    56    19   LEU       H     H      7.99        .     1
+    57    19   LEU       HA    H      3.00        .     1
+    58    19   LEU       HG    H      1.60        .     1
+    59    20   ARG       HA    H      4.14        .     1
+    60    20   ARG       HB2   H      1.86        .     1
+    61    20   ARG       HB3   H      1.86        .     1
+    62    20   ARG       HG2   H      1.62        .     1
+    63    20   ARG       HG3   H      1.62        .     1
+    64    20   ARG       HD2   H      3.25        .     1
+    65    20   ARG       HD3   H      3.25        .     1
+    66    21   PHE       H     H      7.78        .     1
+    67    21   PHE       HA    H      4.03        .     1
+    68    21   PHE       HD1   H      6.95        .     1
+    69    21   PHE       HD2   H      6.95        .     1
+    70    21   PHE       HE1   H      7.08        .     1
+    71    21   PHE       HE2   H      7.08        .     1
+    72    21   PHE       HZ    H      7.08        .     1
+    73    22   VAL       H     H      7.78        .     1
+    74    22   VAL       HA    H      2.92        .     1
+    75    22   VAL       HB    H      1.93        .     1
+    76    23   ASP       H     H      8.05        .     1
+    77    23   ASP       HA    H      4.47        .     1
+    78    24   LEU       H     H      8.10        .     1
+    79    25   LEU       H     H      8.22        .     1
+    80    25   LEU       HA    H      3.82        .     1
+    81    26   LYS       H     H      7.49        .     1
+    82    26   LYS       HA    H      4.42        .     1
+    83    26   LYS       HD2   H      1.58        .     1
+    84    26   LYS       HD3   H      1.58        .     1
+    85    26   LYS       HE2   H      2.87        .     1
+    86    26   LYS       HE3   H      2.87        .     1
+    87    27   ASN       H     H      7.71        .     1
+    88    27   ASN       HA    H      4.42        .     1
+    89    27   ASN       HB2   H      3.08        .     1
+    90    27   ASN       HB3   H      3.08        .     1
+    91    27   ASN       HD21  H      7.28        .     1
+    92    27   ASN       HD22  H      7.28        .     1
+    93    28   ALA       H     H      8.89        .     1
+    94    28   ALA       HA    H      3.35        .     1
+    95    28   ALA       HB    H      1.13        .     1
+    96    29   TYR       H     H      8.40        .     1
+    97    29   TYR       HA    H      4.69        .     1
+    98    29   TYR       HD1   H      6.39        .     1
+    99    29   TYR       HD2   H      6.39        .     1
+   100    29   TYR       HE1   H      6.28        .     1
+   101    29   TYR       HE2   H      6.28        .     1
+   102    30   GLN       H     H      7.40        .     1
+   103    30   GLN       HA    H      4.08        .     1
+   104    30   GLN       HB2   H      2.20        .     1
+   105    30   GLN       HB3   H      2.20        .     1
+   106    30   GLN       HG2   H      2.51        .     1
+   107    30   GLN       HG3   H      2.51        .     1
+   108    31   ASN       H     H      7.32        .     1
+   109    31   ASN       HA    H      4.75        .     1
+   110    32   ASP       H     H      7.88        .     1
+   111    32   ASP       HA    H      4.78        .     1
+   112    33   LEU       H     H      8.28        .     1
+   113    33   LEU       HA    H      4.25        .     1
+   114    33   LEU       HG    H      1.18        .     1
+   115    34   HIS       H     H      9.02        .     1
+   116    34   HIS       HA    H      3.58        .     1
+   117    34   HIS       HD2   H      6.35        .     1
+   118    34   HIS       HE1   H      8.01        .     1
+   119    35   LEU       H     H      7.42        .     1
+   120    35   LEU       HA    H      4.24        .     1
+   121    35   LEU       HB2   H      1.70        .     1
+   122    35   LEU       HB3   H      1.70        .     1
+   123    35   LEU       HG    H      1.30        .     1
+   124    35   LEU       HD1   H      0.98        .     1
+   125    35   LEU       HD2   H      0.98        .     1
+   126    36   PRO       HA    H      4.46        .     1
+   127    36   PRO       HG2   H      2.04        .     1
+   128    36   PRO       HG3   H      2.04        .     1
+   129    37   LEU       H     H      7.97        .     1
+   130    37   LEU       HA    H      4.33        .     1
+   131    38   LEU       H     H      8.89        .     1
+   132    38   LEU       HA    H      4.20        .     1
+   133    38   LEU       HB2   H      2.49        .     1
+   134    38   LEU       HB3   H      2.49        .     1
+   135    38   LEU       HG    H      1.92        .     1
+   136    39   ASN       H     H      8.18        .     1
+   137    39   ASN       HA    H      4.64        .     1
+   138    40   LEU       H     H      7.69        .     1
+   139    41   MET       H     H      8.64        .     1
+   140    41   MET       HA    H      4.62        .     1
+   141    42   LEU       H     H      7.64        .     1
+   142    42   LEU       HA    H      4.80        .     1
+   143    42   LEU       HD1   H      0.90        .     1
+   144    42   LEU       HD2   H      0.90        .     1
+   145    43   THR       H     H      9.50        .     1
+   146    43   THR       HA    H      5.19        .     1
+   147    43   THR       HB    H      4.72        .     1
+   148    43   THR       HG2   H      1.46        .     1
+   149    44   PRO       HG2   H      1.96        .     1
+   150    44   PRO       HG3   H      1.96        .     1
+   151    45   ASP       H     H      7.95        .     1
+   152    45   ASP       HA    H      4.32        .     1
+   153    46   GLU       H     H      7.80        .     1
+   154    46   GLU       HA    H      3.88        .     1
+   155    46   GLU       HG2   H      1.63        .     1
+   156    46   GLU       HG3   H      1.63        .     1
+   157    47   ARG       H     H      7.57        .     1
+   158    47   ARG       HA    H      3.52        .     1
+   159    47   ARG       HG2   H      1.62        .     1
+   160    47   ARG       HG3   H      1.62        .     1
+   161    47   ARG       HD2   H      2.63        .     1
+   162    47   ARG       HD3   H      2.63        .     1
+   163    48   GLU       H     H      7.70        .     1
+   164    48   GLU       HA    H      4.03        .     1
+   165    48   GLU       HG2   H      2.37        .     1
+   166    48   GLU       HG3   H      2.37        .     1
+   167    50   LEU       H     H      8.10        .     1
+   168    50   LEU       HA    H      3.63        .     1
+   169    50   LEU       HG    H      1.60        .     1
+   170    51   GLY       H     H      8.13        .     1
+   171    52   THR       H     H      8.03        .     1
+   172    52   THR       HA    H      3.97        .     1
+   173    52   THR       HB    H      4.32        .     1
+   174    52   THR       HG2   H      1.25        .     1
+   175    53   ARG       H     H      8.63        .     1
+   176    53   ARG       HA    H      3.71        .     1
+   177    53   ARG       HG2   H      1.98        .     1
+   178    53   ARG       HG3   H      1.98        .     1
+   179    53   ARG       HD2   H      3.56        .     1
+   180    53   ARG       HD3   H      3.56        .     1
+   181    54   VAL       H     H      7.78        .     1
+   182    54   VAL       HA    H      3.56        .     1
+   183    54   VAL       HB    H      2.48        .     1
+   184    55   ARG       H     H      7.08        .     1
+   185    55   ARG       HA    H      4.30        .     1
+   186    55   ARG       HG2   H      1.81        .     1
+   187    55   ARG       HG3   H      1.81        .     1
+   188    56   ILE       H     H      8.35        .     1
+   189    56   ILE       HA    H      3.56        .     1
+   190    56   ILE       HB    H      2.32        .     1
+   191    56   ILE       HG2   H      1.09        .     1
+   192    56   ILE       HD1   H      0.92        .     1
+   193    57   VAL       H     H      8.46        .     1
+   194    57   VAL       HA    H      3.57        .     1
+   195    57   VAL       HB    H      2.35        .     1
+   196    58   GLU       H     H      8.65        .     1
+   197    58   GLU       HA    H      3.70        .     1
+   198    58   GLU       HG2   H      2.39        .     1
+   199    58   GLU       HG3   H      2.39        .     1
+   200    59   GLU       H     H      8.25        .     1
+   201    59   GLU       HA    H      4.51        .     1
+   202    60   LEU       H     H      9.00        .     1
+   203    60   LEU       HA    H      4.20        .     1
+   204    60   LEU       HB2   H      1.98        .     1
+   205    60   LEU       HB3   H      1.98        .     1
+   206    60   LEU       HG    H      1.33        .     1
+   207    61   LEU       H     H      8.28        .     1
+   208    62   ARG       H     H      8.24        .     1
+   209    62   ARG       HA    H      3.95        .     1
+   210    62   ARG       HG2   H      1.60        .     1
+   211    62   ARG       HG3   H      1.60        .     1
+   212    62   ARG       HD2   H      3.36        .     1
+   213    62   ARG       HD3   H      3.36        .     1
+   214    63   GLY       H     H      7.63        .     1
+   215    63   GLY       HA2   H      3.94        .     1
+   216    63   GLY       HA3   H      3.94        .     1
+   217    64   GLU       H     H      7.82        .     1
+   218    64   GLU       HA    H      4.32        .     1
+   219    64   GLU       HB2   H      1.87        .     1
+   220    64   GLU       HB3   H      1.87        .     1
+   221    65   MET       H     H      8.60        .     1
+   222    66   SER       H     H      8.76        .     1
+   223    66   SER       HA    H      4.51        .     1
+   224    67   GLN       H     H      8.37        .     1
+   225    67   GLN       HA    H      4.13        .     1
+   226    67   GLN       HG2   H      2.37        .     1
+   227    67   GLN       HG3   H      2.37        .     1
+   228    68   ARG       H     H      7.65        .     1
+   229    68   ARG       HA    H      4.00        .     1
+   230    68   ARG       HD2   H      3.24        .     1
+   231    68   ARG       HD3   H      3.24        .     1
+   232    69   GLU       H     H      8.13        .     1
+   233    69   GLU       HA    H      3.92        .     1
+   234    69   GLU       HB2   H      2.15        .     1
+   235    69   GLU       HB3   H      2.15        .     1
+   236    71   LYS       H     H      7.94        .     1
+   237    71   LYS       HA    H      4.21        .     1
+   238    71   LYS       HG2   H      1.41        .     1
+   239    71   LYS       HG3   H      1.41        .     1
+   240    71   LYS       HD2   H      1.73        .     1
+   241    71   LYS       HD3   H      1.73        .     1
+   242    71   LYS       HE2   H      3.04        .     1
+   243    71   LYS       HE3   H      3.04        .     1
+   244    72   ASN       H     H      7.83        .     1
+   245    72   ASN       HA    H      4.51        .     1
+   246    72   ASN       HB2   H      2.90        .     1
+   247    72   ASN       HB3   H      2.90        .     1
+   248    73   GLU       H     H      8.54        .     1
+   249    73   GLU       HA    H      4.25        .     1
+   250    73   GLU       HG2   H      2.32        .     1
+   251    73   GLU       HG3   H      2.32        .     1
+   252    74   LEU       H     H      7.99        .     1
+   253    75   GLY       H     H      7.87        .     1
+   254    76   ALA       H     H      7.01        .     1
+   255    76   ALA       HA    H      4.59        .     1
+   256    76   ALA       HB    H      1.25        .     1
+   257    77   GLY       H     H      8.29        .     1
+   258    78   ILE       H     H      8.29        .     1
+   259    78   ILE       HA    H      3.86        .     1
+   260    78   ILE       HB    H      1.98        .     1
+   261    78   ILE       HG2   H      0.87        .     1
+   262    78   ILE       HD1   H      0.82        .     1
+   263    79   ALA       H     H      8.08        .     1
+   264    79   ALA       HA    H      4.25        .     1
+   265    79   ALA       HB    H      1.51        .     1
+   266    80   THR       H     H      7.58        .     1
+   267    80   THR       HA    H      4.24        .     1
+   268    80   THR       HB    H      4.43        .     1
+   269    80   THR       HG2   H      1.55        .     1
+   270    81   ILE       H     H      7.90        .     1
+   271    81   ILE       HA    H      3.60        .     1
+   272    81   ILE       HB    H      1.93        .     1
+   273    81   ILE       HG2   H      0.91        .     1
+   274    81   ILE       HD1   H      0.76        .     1
+   275    82   THR       H     H      8.50        .     1
+   276    82   THR       HA    H      4.18        .     1
+   277    82   THR       HB    H      4.39        .     1
+   278    82   THR       HG2   H      1.20        .     1
+   279    83   ARG       H     H      7.68        .     1
+   280    83   ARG       HA    H      3.88        .     1
+   281    83   ARG       HG2   H      1.34        .     1
+   282    83   ARG       HG3   H      1.34        .     1
+   283    83   ARG       HD2   H      3.23        .     1
+   284    83   ARG       HD3   H      3.23        .     1
+   285    84   GLY       H     H      7.61        .     1
+   286    84   GLY       HA2   H      2.81        .     1
+   287    84   GLY       HA3   H      2.81        .     1
+   288    85   SER       H     H      8.24        .     1
+   289    86   ASN       H     H      8.40        .     1
+   290    86   ASN       HA    H      4.36        .     1
+   291    87   SER       H     H      8.06        .     1
+   292    87   SER       HA    H      4.38        .     1
+   293    88   LEU       H     H      8.30        .     1
+   294    88   LEU       HA    H      4.03        .     1
+   295    88   LEU       HG    H      1.65        .     1
+   296    88   LEU       HD1   H      0.93        .     1
+   297    88   LEU       HD2   H      0.93        .     1
+   298    89   LYS       H     H      7.74        .     1
+   299    89   LYS       HA    H      4.00        .     1
+   300    89   LYS       HB2   H      1.92        .     1
+   301    89   LYS       HB3   H      1.92        .     1
+   302    89   LYS       HE2   H      2.98        .     1
+   303    89   LYS       HE3   H      2.98        .     1
+   304    90   ALA       H     H      7.09        .     1
+   305    90   ALA       HA    H      4.37        .     1
+   306    90   ALA       HB    H      1.45        .     1
+   307    91   ALA       H     H      7.31        .     1
+   308    91   ALA       HA    H      4.55        .     1
+   309    91   ALA       HB    H      1.54        .     1
+   310    92   PRO       HA    H      4.65        .     1
+   311    92   PRO       HG2   H      2.11        .     1
+   312    92   PRO       HG3   H      2.11        .     1
+   313    92   PRO       HD2   H      3.70        .     1
+   314    92   PRO       HD3   H      3.70        .     1
+   315    93   VAL       H     H      8.80        .     1
+   316    93   VAL       HA    H      3.72        .     1
+   317    93   VAL       HB    H      2.16        .     1
+   318    94   GLU       H     H      9.62        .     1
+   319    94   GLU       HA    H      4.17        .     1
+   320    94   GLU       HG2   H      2.38        .     1
+   321    94   GLU       HG3   H      2.38        .     1
+   322    95   LEU       H     H      7.24        .     1
+   323    96   ARG       H     H      7.89        .     1
+   324    96   ARG       HA    H      3.80        .     1
+   325    97   GLN       H     H      8.70        .     1
+   326    97   GLN       HA    H      4.10        .     1
+   327    97   GLN       HG2   H      2.58        .     1
+   328    97   GLN       HG3   H      2.58        .     1
+   329    98   TRP       H     H      7.48        .     1
+   330    98   TRP       HA    H      4.36        .     1
+   331    98   TRP       HD1   H      7.23        .     1
+   332    98   TRP       HE1   H      9.65        .     1
+   333    98   TRP       HE3   H      7.41        .     1
+   334    98   TRP       HZ2   H      7.04        .     1
+   335    98   TRP       HZ3   H      6.66        .     1
+   336    98   TRP       HH2   H      7.13        .     1
+   337    99   LEU       H     H      8.83        .     1
+   338    99   LEU       HA    H      3.52        .     1
+   339    99   LEU       HG    H      1.12        .     1
+   340   100   GLU       H     H      7.99        .     1
+   341   100   GLU       HA    H      3.69        .     1
+   342   101   GLU       H     H      7.41        .     1
+   343   101   GLU       HA    H      3.94        .     1
+   344   102   VAL       H     H      7.93        .     1
+   345   102   VAL       HA    H      3.75        .     1
+   346   102   VAL       HG1   H      0.31        .     1
+   347   102   VAL       HG2   H      0.31        .     1
+   348   103   LEU       H     H      8.35        .     1
+   349   104   LEU       H     H      7.12        .     1
+   350   105   LYS       H     H      7.19        .     1
+   351   105   LYS       HA    H      4.37        .     1
+   352   105   LYS       HB2   H      1.88        .     1
+   353   105   LYS       HB3   H      1.88        .     1
+   354   105   LYS       HG2   H      1.40        .     1
+   355   105   LYS       HG3   H      1.40        .     1
+   356   105   LYS       HD2   H      1.63        .     1
+   357   105   LYS       HD3   H      1.63        .     1
+   358   105   LYS       HE2   H      2.95        .     1
+   359   105   LYS       HE3   H      2.95        .     1
+   360   107   ASP       H     H      7.92        .     1
+   361   107   ASP       HA    H      4.42        .     1
+
+   stop_
+
+   loop_
+      _Chem_shift_value_error
+
+       .03 
+
+   stop_
+
+save_
+

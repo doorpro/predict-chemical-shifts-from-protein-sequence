@@ -1,0 +1,791 @@
+data_5405
+
+#Corrected using PDB structure: 1M25A
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+#  9   Y    HA       4.11         2.91
+# 13   M    HA       4.05         3.06
+# 25   V    HA       4.02         2.51
+#
+#After reference correction, the following residues still 
+#have a HN chemical shift difference (obs*-pred) greater than  2.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+#  8   Y    H       10.16         8.06
+# 20   V    H        7.85        10.45
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.20     N/A     N/A     N/A     N/A   0.19    
+#
+#bmr5405.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr5405.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.07      N/A      N/A      N/A      N/A  +/-0.21  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.450     N/A     N/A     N/A     N/A   -0.138  
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.165     N/A     N/A     N/A     N/A   0.499   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+STRUCTURE OF SYNTHETIC 26-MER PEPTIDE CONTAINING 145-169 SHEEP PRION PROTEIN 
+SEGMENT AND C-TERMINAL CYSTEINE IN TFE SOLUTION
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Megy          Simon        .   . 
+       2   Bertho        Gildas       .   . 
+       4   Coadou        Gael         .   . 
+       3   Kozin         Sergey       A.  . 
+       5   Debey         Pascale      .   . 
+       6  "Hui Bon Hoa"  Gaston       .   . 
+       7   Girault       Jean-Pierre  .   . 
+
+   stop_
+
+   _BMRB_accession_number   5405
+   _BMRB_flat_file_name     bmr5405.str
+   _Entry_type              new
+   _Submission_date         2002-06-25
+   _Accession_date          2002-06-25
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+       coupling_constants        1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  191  
+      'coupling constants'   41  
+
+   stop_
+
+   loop_
+      _Related_BMRB_accession_number
+      _Relationship
+
+       4650  "Same protein in H2O/D2O solution." 
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Structural duality of a peptide fragment from sheep prion protein spanning helix
+ 1 and beta-strand 2: a potential nucleation site for conformational transition 
+to PrPSc
+;
+   _Citation_status       'in preparation'
+   _Citation_type          journal
+   _MEDLINE_UI_code        .
+   _PubMed_ID              .
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Megy          Simon        .   . 
+       2   Bertho        Gildas       .   . 
+       4   Coadou        Gael         .   . 
+       3   Kozin         Sergey       A.  . 
+       5   Debey         Pascale      .   . 
+       6  "Hui Bon Hoa"  Gaston       .   . 
+       7   Girault       Jean-Pierre  .   . 
+
+   stop_
+
+   _Journal_abbreviation   ?
+   _Journal_volume         ?
+   _Journal_issue          ?
+   _Page_first             ?
+   _Page_last              ?
+   _Year                   ?
+
+   loop_
+      _Keyword
+
+      "peptide"            
+      "prion"              
+      "beta hairpin"       
+      "helix"              
+       TFE                 
+      "solution structure" 
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_PrP
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name           "peptide n3"
+   _Abbreviation_common        n3
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "peptide n3" $PrP 
+
+   stop_
+
+   _System_physical_state     'molten globule'
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all free'
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  1M25  ?  . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_PrP
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                "Major Prion Protein"
+   _Name_variant                                .
+   _Abbreviation_common                         .
+   _Mol_thiol_state                            'all free'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               26
+   _Mol_residue_sequence                       
+;
+GNDYEDRYYRENMYRYPNQV
+YYRPVC
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+        1   145   GLY    2   146   ASN    3   147   ASP    4   148   TYR    5   149   GLU 
+        6   150   ASP    7   151   ARG    8   152   TYR    9   153   TYR   10   154   ARG 
+       11   155   GLU   12   156   ASN   13   157   MET   14   158   TYR   15   159   ARG 
+       16   160   TYR   17   161   PRO   18   162   ASN   19   163   GLN   20   164   VAL 
+       21   165   TYR   22   166   TYR   23   167   ARG   24   168   PRO   25   169   VAL 
+       26   ?     CYS 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1S4T       "A Chain A, Solution Structure Of Synthetic21mer Peptide Spanning Region 135-155 (In HumanNumbering) Of Sheep Prion Protein"             123.81   21   100   100       0.15 
+       PDB         1G04       "A Chain A, Solution Structure Of Synthetic26-Mer Peptide Containing 145-169 Sheep Prion ProteinSegment And C-Terminal Cysteine"         100.00   26   100   100   5e-10    
+       PDB         1M25       "A Chain A, Structure Of Synthetic 26-MerPeptide Containing 145-169 Sheep Prion Protein SegmentAnd C-Terminal Cysteine In Tfe Solution"  100.00   26   100   100   5e-10    
+       DBJ         BAA07376.1 "PrP [Ovis sp.]"                                                                                                                          10.16  256   100   100   6e-09    
+       DBJ         BAB69955.1 "prion protein [Ovis aries musimon]"                                                                                                      10.16  256   100   100   6e-09    
+       DBJ         BAB69956.1 "prion protein [Ovis aries musimon]"                                                                                                      10.16  256   100   100   6e-09    
+       EMBL        CAA04235.1 "Prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       EMBL        CAA04236.1 "Prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       EMBL        CAA04274.1 "Prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       EMBL        CAE00187.1 "prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       EMBL        CAE00188.2 "prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       GenBank     AAC33165.1 "prion protein [Odocoileus hemionushemionus]"                                                                                             11.82  220   100   100   6e-09    
+       GenBank     AAB97765.1 "prion protein (PrP) precursor [Ovis aries]"                                                                                              10.16  256   100   100   6e-09    
+       GenBank     AAD19986.1 "prion protein [Capra hircus]"                                                                                                            10.16  256   100   100   6e-09    
+       GenBank     AAL93184.1 "prion protein variant 37V [Capra hircus]"                                                                                                10.16  256   100   100   6e-09    
+       GenBank     AAR14214.1 "prion protein [Ovis aries]"                                                                                                              10.16  256   100   100   6e-09    
+       PIR         S71056     "major prion protein - mandrill (fragment)"                                                                                               10.79  241   100   100   6e-09    
+       PIR         I84423     "major prion protein precursor - rhesusmacaque"                                                                                           10.28  253   100   100   6e-09    
+       PIR         S53616     "major prion protein - orangutan"                                                                                                         10.28  253   100   100   6e-09    
+       PIR         S53618     "major prion protein - Colobus guereza"                                                                                                   10.28  253   100   100   6e-09    
+       PIR         S53619     "major prion protein - Presbytis francoisi"                                                                                               10.28  253   100   100   6e-09    
+       PRF         1921132A   "PrP protein"                                                                                                                             10.16  256   100   100   6e-09    
+       SWISS-PROT  P40255     "PRIO_MANSP Major prion protein precursor (PrP)(PrP27-30) (PrP33-35C)"                                                                    10.79  241   100   100   6e-09    
+       SWISS-PROT  P40256     "PRIO_PONPY Major prion protein precursor (PrP)(PrP27-30) (PrP33-35C)"                                                                    10.28  253   100   100   6e-09    
+       SWISS-PROT  P40257     "PRIO_PREFR Major prion protein precursor (PrP)(PrP27-30) (PrP33-35C)"                                                                    10.28  253   100   100   6e-09    
+       SWISS-PROT  P23907     "PRIO_SHEEP Major prion protein precursor (PrP)"                                                                                          10.16  256   100   100   6e-09    
+       SWISS-PROT  P47852     "PRIO_ODOHE Major prion protein precursor (PrP)"                                                                                          10.16  256   100   100   6e-09    
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+
+      $PrP  Sheep  9940   Eukaryota  Metazoa  Ovis  aries 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $PrP 'chemical synthesis'  .  .  .  .  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $PrP                 4.5  mM  . 
+      "sodium phosphate"  10    mM  . 
+       TFE                87    %   . 
+       D2O                13    %   . 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_XWINNMR
+   _Saveframe_category   software
+
+   _Name                 XWINNMR
+   _Version              2.1
+
+   loop_
+      _Task
+
+       collection 
+
+   stop_
+
+   _Details             "Bruker software"
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                AMX
+   _Field_strength       500
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+2D 1H-1H DQF-COSY
+2D 1H-1H NOESY
+2D 1H-1H ROESY
+2D 1H-1H TOCSY
+2D 1H-13C HSQC
+2D 1H-13C HMBC
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_cond_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH                 6.5  .  n/a 
+       temperature      278    .  K   
+      'ionic strength'   15    .  mM  
+       pressure           1    .  atm 
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       DSS  H  1  'methyl protons'  ppm  0.0  internal  direct  .  .  .  1.0 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_set_TFE
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $sample_cond_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "peptide n3"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   GLY       HA2   H      3.92     0.01     1
+     2     1   GLY       HA3   H      3.92     0.01     1
+     3     2   ASN       H     H      8.33     0.01     1
+     4     2   ASN       HA    H      4.86     0.01     1
+     5     2   ASN       HB2   H      2.94     0.01     1
+     6     2   ASN       HB3   H      2.94     0.01     1
+     7     2   ASN       HD21  H      7.26     0.01     2
+     8     2   ASN       HD22  H      6.45     0.01     2
+     9     3   ASP       H     H      8.38     0.01     1
+    10     3   ASP       HA    H      4.65     0.01     1
+    11     3   ASP       HB2   H      2.87     0.01     1
+    12     3   ASP       HB3   H      2.87     0.01     1
+    13     4   TYR       H     H      7.94     0.01     1
+    14     4   TYR       HA    H      4.32     0.01     1
+    15     4   TYR       HB2   H      3.13     0.01     1
+    16     4   TYR       HB3   H      3.13     0.01     1
+    17     4   TYR       HD1   H      7.12     0.01     1
+    18     4   TYR       HD2   H      7.12     0.01     1
+    19     4   TYR       HE1   H      6.87     0.01     1
+    20     4   TYR       HE2   H      6.87     0.01     1
+    21     5   GLU       H     H      8.16     0.01     1
+    22     5   GLU       HA    H      4.12     0.01     1
+    23     5   GLU       HB2   H      2.18     0.01     1
+    24     5   GLU       HB3   H      2.18     0.01     1
+    25     5   GLU       HG2   H      2.56     0.01     1
+    26     5   GLU       HG3   H      2.56     0.01     1
+    27     6   ASP       H     H      8.11     0.01     1
+    28     6   ASP       HA    H      4.62     0.01     1
+    29     6   ASP       HB2   H      3.00     0.01     2
+    30     6   ASP       HB3   H      2.95     0.01     2
+    31     7   ARG       H     H      7.83     0.01     1
+    32     7   ARG       HA    H      4.07     0.01     1
+    33     7   ARG       HB2   H      1.89     0.01     1
+    34     7   ARG       HB3   H      1.89     0.01     1
+    35     7   ARG       HG2   H      1.68     0.01     2
+    36     7   ARG       HG3   H      1.61     0.01     2
+    37     7   ARG       HD2   H      3.16     0.01     1
+    38     7   ARG       HD3   H      3.16     0.01     1
+    39     7   ARG       HE    H      7.05     0.01     1
+    40     7   ARG       HH11  H      6.51     0.01     1
+    41     7   ARG       HH12  H      6.51     0.01     1
+    42     7   ARG       HH21  H      6.51     0.01     1
+    43     7   ARG       HH22  H      6.51     0.01     1
+    44     8   TYR       H     H      9.97     0.01     1
+    45     8   TYR       HA    H      4.24     0.01     1
+    46     8   TYR       HB2   H      3.09     0.01     2
+    47     8   TYR       HB3   H      2.98     0.01     2
+    48     8   TYR       HD1   H      6.99     0.01     1
+    49     8   TYR       HD2   H      6.99     0.01     1
+    50     8   TYR       HE1   H      6.82     0.01     1
+    51     8   TYR       HE2   H      6.82     0.01     1
+    52     9   TYR       H     H      8.15     0.01     1
+    53     9   TYR       HA    H      4.31     0.01     1
+    54     9   TYR       HB2   H      3.20     0.01     1
+    55     9   TYR       HB3   H      3.20     0.01     1
+    56     9   TYR       HD1   H      7.18     0.01     1
+    57     9   TYR       HD2   H      7.18     0.01     1
+    58     9   TYR       HE1   H      6.88     0.01     1
+    59     9   TYR       HE2   H      6.88     0.01     1
+    60    10   ARG       H     H      8.06     0.01     1
+    61    10   ARG       HA    H      4.08     0.01     1
+    62    10   ARG       HB2   H      1.99     0.01     2
+    63    10   ARG       HB3   H      1.89     0.01     2
+    64    10   ARG       HG2   H      1.74     0.01     1
+    65    10   ARG       HG3   H      1.74     0.01     1
+    66    10   ARG       HD2   H      3.26     0.01     1
+    67    10   ARG       HD3   H      3.26     0.01     1
+    68    10   ARG       HE    H      7.16     0.01     1
+    69    10   ARG       HH11  H      6.55     0.01     1
+    70    10   ARG       HH12  H      6.55     0.01     1
+    71    10   ARG       HH21  H      6.55     0.01     1
+    72    10   ARG       HH22  H      6.55     0.01     1
+    73    11   GLU       H     H      8.17     0.01     1
+    74    11   GLU       HA    H      4.22     0.01     1
+    75    11   GLU       HB2   H      2.18     0.01     1
+    76    11   GLU       HB3   H      2.18     0.01     1
+    77    11   GLU       HG2   H      2.58     0.01     2
+    78    11   GLU       HG3   H      2.62     0.01     2
+    79    12   ASN       H     H      7.75     0.01     1
+    80    12   ASN       HA    H      4.61     0.01     1
+    81    12   ASN       HB2   H      2.67     0.01     1
+    82    12   ASN       HB3   H      2.67     0.01     1
+    83    12   ASN       HD21  H      6.98     0.01     2
+    84    12   ASN       HD22  H      6.02     0.01     2
+    85    13   MET       H     H      7.82     0.01     1
+    86    13   MET       HA    H      4.25     0.01     1
+    87    13   MET       HB2   H      1.96     0.01     1
+    88    13   MET       HB3   H      1.96     0.01     1
+    89    13   MET       HG2   H      2.40     0.01     1
+    90    13   MET       HG3   H      2.40     0.01     1
+    91    13   MET       HE    H      2.03     0.01     1
+    92    14   TYR       H     H      7.57     0.01     1
+    93    14   TYR       HA    H      4.53     0.01     1
+    94    14   TYR       HB2   H      3.01     0.01     1
+    95    14   TYR       HB3   H      3.01     0.01     1
+    96    14   TYR       HD1   H      7.13     0.01     1
+    97    14   TYR       HD2   H      7.13     0.01     1
+    98    14   TYR       HE1   H      6.84     0.01     1
+    99    14   TYR       HE2   H      6.84     0.01     1
+   100    15   ARG       H     H      7.48     0.01     1
+   101    15   ARG       HA    H      4.30     0.01     1
+   102    15   ARG       HB2   H      1.70     0.01     1
+   103    15   ARG       HB3   H      1.70     0.01     1
+   104    15   ARG       HG2   H      1.48     0.01     1
+   105    15   ARG       HG3   H      1.48     0.01     1
+   106    15   ARG       HD2   H      3.15     0.01     1
+   107    15   ARG       HD3   H      3.15     0.01     1
+   108    15   ARG       HE    H      6.98     0.01     1
+   109    15   ARG       HH11  H      6.51     0.01     1
+   110    15   ARG       HH12  H      6.51     0.01     1
+   111    15   ARG       HH21  H      6.51     0.01     1
+   112    15   ARG       HH22  H      6.51     0.01     1
+   113    16   TYR       H     H      7.68     0.01     1
+   114    16   TYR       HA    H      4.92     0.01     1
+   115    16   TYR       HB2   H      3.15     0.01     2
+   116    16   TYR       HB3   H      2.96     0.01     2
+   117    16   TYR       HD1   H      7.17     0.01     1
+   118    16   TYR       HD2   H      7.17     0.01     1
+   119    16   TYR       HE1   H      6.85     0.01     1
+   120    16   TYR       HE2   H      6.85     0.01     1
+   121    17   PRO       HA    H      4.89     0.01     1
+   122    17   PRO       HB2   H      2.31     0.01     2
+   123    17   PRO       HB3   H      2.07     0.01     2
+   124    17   PRO       HG2   H      2.05     0.01     1
+   125    17   PRO       HG3   H      2.05     0.01     1
+   126    17   PRO       HD2   H      3.84     0.01     1
+   127    17   PRO       HD3   H      3.62     0.01     1
+   128    18   ASN       H     H      7.91     0.01     1
+   129    18   ASN       HA    H      4.69     0.01     1
+   130    18   ASN       HB2   H      2.88     0.01     1
+   131    18   ASN       HB3   H      2.88     0.01     1
+   132    18   ASN       HD21  H      7.22     0.01     2
+   133    18   ASN       HD22  H      6.42     0.01     2
+   134    19   GLN       H     H      8.19     0.01     1
+   135    19   GLN       HA    H      4.28     0.01     1
+   136    19   GLN       HB2   H      2.13     0.01     1
+   137    19   GLN       HB3   H      2.13     0.01     1
+   138    19   GLN       HG2   H      2.42     0.01     1
+   139    19   GLN       HG3   H      2.42     0.01     1
+   140    19   GLN       HE21  H      6.42     0.01     2
+   141    19   GLN       HE22  H      7.17     0.01     2
+   142    20   VAL       H     H      7.66     0.01     1
+   143    20   VAL       HA    H      3.98     0.01     1
+   144    20   VAL       HB    H      2.05     0.01     1
+   145    20   VAL       HG1   H      0.89     0.01     2
+   146    20   VAL       HG2   H      0.80     0.01     2
+   147    21   TYR       H     H      7.46     0.01     1
+   148    21   TYR       HA    H      4.54     0.01     1
+   149    21   TYR       HB2   H      3.06     0.01     2
+   150    21   TYR       HB3   H      2.89     0.01     2
+   151    21   TYR       HD1   H      7.06     0.01     1
+   152    21   TYR       HD2   H      7.06     0.01     1
+   153    21   TYR       HE1   H      6.83     0.01     1
+   154    21   TYR       HE2   H      6.83     0.01     1
+   155    22   TYR       H     H      7.52     0.01     1
+   156    22   TYR       HA    H      4.56     0.01     1
+   157    22   TYR       HB2   H      3.03     0.01     1
+   158    22   TYR       HB3   H      3.03     0.01     1
+   159    22   TYR       HD1   H      7.10     0.01     1
+   160    22   TYR       HD2   H      7.10     0.01     1
+   161    22   TYR       HE1   H      6.83     0.01     1
+   162    22   TYR       HE2   H      6.83     0.01     1
+   163    23   ARG       H     H      7.39     0.01     1
+   164    23   ARG       HA    H      4.48     0.01     1
+   165    23   ARG       HB2   H      1.86     0.01     2
+   166    23   ARG       HB3   H      1.75     0.01     2
+   167    23   ARG       HG2   H      1.67     0.01     1
+   168    23   ARG       HG3   H      1.67     0.01     1
+   169    23   ARG       HD2   H      3.26     0.01     2
+   170    23   ARG       HD3   H      3.20     0.01     2
+   171    23   ARG       HE    H      7.04     0.01     1
+   172    23   ARG       HH11  H      6.55     0.01     1
+   173    23   ARG       HH12  H      6.55     0.01     1
+   174    23   ARG       HH21  H      6.55     0.01     1
+   175    23   ARG       HH22  H      6.55     0.01     1
+   176    24   PRO       HA    H      4.49     0.01     1
+   177    24   PRO       HB2   H      2.07     0.01     2
+   178    24   PRO       HB3   H      2.31     0.01     2
+   179    24   PRO       HG2   H      2.05     0.01     1
+   180    24   PRO       HG3   H      2.05     0.01     1
+   181    24   PRO       HD2   H      3.64     0.01     1
+   182    24   PRO       HD3   H      3.64     0.01     1
+   183    25   VAL       H     H      7.48     0.01     1
+   184    25   VAL       HA    H      4.22     0.01     1
+   185    25   VAL       HB    H      2.17     0.01     1
+   186    25   VAL       HG1   H      1.01     0.01     1
+   187    25   VAL       HG2   H      1.01     0.01     1
+   188    26   CYS       H     H      7.68     0.01     1
+   189    26   CYS       HA    H      4.65     0.01     1
+   190    26   CYS       HB2   H      3.02     0.01     2
+   191    26   CYS       HB3   H      2.10     0.01     2
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Coupling constants  #
+    ########################
+
+save_coupling_constant_set_TFE
+   _Saveframe_category          coupling_constants
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $sample_cond_1
+   _Spectrometer_frequency_1H   500
+   _Mol_system_component_name  "peptide n3"
+
+   loop_
+      _Coupling_constant_ID
+      _Coupling_constant_code
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_name
+      _Coupling_constant_value
+      _Coupling_constant_value_error
+
+        1   3JHNHA   2   ASN  H   2   ASN  HA  7.4  0.1 
+        2   3JHNHA   3   ASP  H   3   ASP  HA  3.9  0.1 
+        3   3JHNHA   4   TYR  H   4   TYR  HA  3.4  0.1 
+        4   3JHNHA   5   GLU  H   5   GLU  HA  3.1  0.1 
+        5   3JHNHA   6   ASP  H   6   ASP  HA  3.4  0.1 
+        6   3JHNHA   7   ARG  H   7   ARG  HA  3.1  0.1 
+        7   3JHNHA   8   TYR  H   8   TYR  HA  3.1  0.1 
+        8   3JHNHA  10   ARG  H  10   ARG  HA  2.8  0.1 
+        9   3JHNHA  11   GLU  H  11   GLU  HA  3.7  0.1 
+       10   3JHNHA  12   ASN  H  12   ASN  HA  4.9  0.1 
+       11   3JHNHA  13   MET  H  13   MET  HA  4.3  0.1 
+       12   3JHNHA  14   TYR  H  14   TYR  HA  4.9  0.1 
+       13   3JHNHA  15   ARG  H  15   ARG  HA  7.4  0.1 
+       14   3JHNHA  16   TYR  H  16   TYR  HA  5.9  0.1 
+       15   3JHNHA  18   ASN  H  18   ASN  HA  4.9  0.1 
+       16   3JHNHA  19   GLN  H  19   GLN  HA  4.3  0.1 
+       17   3JHNHA  20   VAL  H  20   VAL  HA  6.5  0.1 
+       18   3JHNHA  21   TYR  H  21   TYR  HA  5.6  0.1 
+       19   3JHNHA  22   TYR  H  22   TYR  HA  5.6  0.1 
+       20   3JHNHA  23   ARG  H  23   ARG  HA  6.8  0.1 
+       21   3JHNHA  25   VAL  H  25   VAL  HA  7.7  0.1 
+       22   3JHNHA  26   CYS  H  26   CYS  HA  7.1  0.1 
+
+   stop_
+
+save_
+
