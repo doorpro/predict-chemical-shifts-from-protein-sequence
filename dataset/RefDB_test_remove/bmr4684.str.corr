@@ -1,0 +1,845 @@
+data_4684
+
+#Corrected using PDB structure: 1MHU_
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+#  9   P    HA       4.88         4.16
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.03     N/A     N/A     N/A     N/A   0.03    
+#
+#bmr4684.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr4684.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.08      N/A      N/A      N/A      N/A  +/-0.17  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.555     N/A     N/A     N/A     N/A   0.353   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.202     N/A     N/A     N/A     N/A   0.396   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Three-Dimensional Solution Structure of the Isolated Cd4-alpha Domain of 
+Metallothionein 2. Determination by Homonuclear and Heteronuclear Magnetic 
+Resonance Spectroscopy
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Ejnik     John    W.     .   
+       2   Munoz     Amalia  .      .   
+       3   DeRose    Eugene  .      .   
+       4   Shaw      C.      Frank  III 
+       5   Petering  David   H.     .   
+
+   stop_
+
+   _BMRB_accession_number   4684
+   _BMRB_flat_file_name     bmr4684.str
+   _Entry_type              new
+   _Submission_date         2000-03-09
+   _Accession_date          2000-03-09
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+       coupling_constants        2  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  155  
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Structural Consequences of Metallothionein Dimerization: Solution Structure
+of the Isolated Cd4-alpha Domain and Comparison with the Holoprotein Dimer
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        22744254
+   _PubMed_ID              12859185
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Ejnik     John    W.     .   
+       2   Munoz     Amalia  .      .   
+       3   DeRose    Eugene  .      .   
+       4   Shaw      C.      Frank  III 
+       5   Petering  David   H.     .   
+
+   stop_
+
+   _Journal_abbreviation   Biochemistry
+   _Journal_name_full      Biochemistry
+   _Journal_volume         42
+   _Journal_issue          28
+   _Page_first             8403
+   _Page_last              8410
+   _Year                   2003
+
+   loop_
+      _Keyword
+
+       111Cd-NMR       
+       Metallothionein 
+       Alpha-domain    
+       Isolated        
+       domain          
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_MT
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name           'alpha MT'
+   _Abbreviation_common        MT
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      'alpha domain' $alpha_domain 
+      'Cd I'         $Cd           
+      'Cd V'         $Cd           
+      'Cd VI'        $Cd           
+      'Cd VII'       $Cd           
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all other bound'
+
+   loop_
+      _Biological_function
+
+      'Metal detoxification' 
+      'Metal regulation'     
+      'Metal donation'       
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_alpha_domain
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                 Metallothionein
+   _Name_variant                                .
+   _Abbreviation_common                         MT
+   _Mol_thiol_state                            'all other bound'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               32
+   _Mol_residue_sequence                       
+;
+KKSCCSCCPPGCAKCAQGCI
+CKGASDKCSCCA
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+        1   30   LYS    2   31   LYS    3   32   SER    4   33   CYS    5   34   CYS 
+        6   35   SER    7   36   CYS    8   37   CYS    9   38   PRO   10   39   PRO 
+       11   40   GLY   12   41   CYS   13   42   ALA   14   43   LYS   15   44   CYS 
+       16   45   ALA   17   46   GLN   18   47   GLY   19   48   CYS   20   49   ILE 
+       21   50   CYS   22   51   LYS   23   52   GLY   24   53   ALA   25   54   SER 
+       26   55   ASP   27   56   LYS   28   57   CYS   29   58   SER   30   59   CYS 
+       31   60   CYS   32   61   ALA 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1MRB       "Cd-7 Metallothionein-2a (Alpha Domain)(NMR)"                103.23  31   100   100   3e-14 
+       GenBank     AAB21306.1 "MT-2A, metallothionein 2A [rabbits,liver, Peptide, 62 aa]"   51.61  62   100   100   2e-15 
+       PIR         A37425     "metallothionein 2 - rabbit"                                  52.46  61   100   100   2e-15 
+       PIR         S54335     "metallothionein-2c - rabbit"                                 51.61  62   100   100   2e-15 
+       PIR         S54336     "metallothionein-2a - rabbit"                                 51.61  62   100   100   2e-15 
+       SWISS-PROT  P18055     "MT2A_RABIT Metallothionein-IIA (MT-2A)"                      51.61  62   100   100   2e-15 
+       SWISS-PROT  P80290     "MT2C_RABIT Metallothionein-IIC (MT-2C)"                      51.61  62   100   100   2e-15 
+
+   stop_
+
+save_
+
+
+    #############
+    #  Ligands  #
+    #############
+
+save_Cd
+   _Saveframe_category    ligand
+
+   _Mol_type              non-polymer
+   _Name_common           Cadmium
+   _Abbreviation_common   Cd
+   _Mol_charge            +2+
+   _Mol_paramagnetic      no
+   _Mol_aromatic          no
+
+save_
+
+
+    ########################################
+    #  Molecular bond linkage definitions  #
+    ########################################
+
+save_crosslink_bond_definitions
+   _Saveframe_category   crosslink_bonds
+
+
+   loop_
+      _Bond_order
+      _Bond_type
+      _Atom_one_mol_system_component_name
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_atom_name
+      _Atom_two_mol_system_component_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_atom_name
+
+       single  coordinative 'Cd I'    .  .  CD 'alpha domain'  50   CYS  SG 
+       single  coordinative 'Cd I'    .  .  CD 'alpha domain'  57   CYS  SG 
+       single  coordinative 'Cd I'    .  .  CD 'alpha domain'  59   CYS  SG 
+       single  coordinative 'Cd I'    .  .  CD 'alpha domain'  60   CYS  SG 
+       single  coordinative 'Cd V'    .  .  CD 'alpha domain'  33   CYS  SG 
+       single  coordinative 'Cd V'    .  .  CD 'alpha domain'  34   CYS  SG 
+       single  coordinative 'Cd V'    .  .  CD 'alpha domain'  44   CYS  SG 
+       single  coordinative 'Cd V'    .  .  CD 'alpha domain'  48   CYS  SG 
+       single  coordinative 'Cd VI'   .  .  CD 'alpha domain'  37   CYS  SG 
+       single  coordinative 'Cd VI'   .  .  CD 'alpha domain'  41   CYS  SG 
+       single  coordinative 'Cd VI'   .  .  CD 'alpha domain'  44   CYS  SG 
+       single  coordinative 'Cd VI'   .  .  CD 'alpha domain'  60   CYS  SG 
+       single  coordinative 'Cd VII'  .  .  CD 'alpha domain'  34   CYS  SG 
+       single  coordinative 'Cd VII'  .  .  CD 'alpha domain'  36   CYS  SG 
+       single  coordinative 'Cd VII'  .  .  CD 'alpha domain'  37   CYS  SG 
+       single  coordinative 'Cd VII'  .  .  CD 'alpha domain'  50   CYS  SG 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+      _Organ
+
+      $alpha_domain "New Zeland White Rabbit"  9986   Eukaryota  Metazoa  Oryctolagus  cuniculus  kidney 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $alpha_domain 'purified from the natural source'  .  .  .  .  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Concentration_min_value
+      _Concentration_max_value
+      _Isotopic_labeling
+
+      $alpha_domain  3   mM  .  . '[U-99.5% 111Cd]' 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_Felix
+   _Saveframe_category   software
+
+   _Name                 Felix
+   _Version              2.3
+
+   loop_
+      _Task
+
+      "processing and peak assignments" 
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         GE
+   _Model                GN
+   _Field_strength       500
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+DQF COSY
+PE COSY
+TOCSY MLEV-17 (41 ms and 80 ms)
+1H-111Cd HMQC
+NOESY (60 ms,120 ms and 250 ms) for 10% D2O
+NOESY (50 ms and 100 ms) for 100% D2O
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_Ex-cond_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             7.0  0.1  n/a 
+       temperature  298    0.1  K   
+       pressure       1     .   atm 
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       H2O  H  1  'protons'  ppm  4.8  internal  direct  .  .  .  . 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_assigned_chemical_shifts
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $Ex-cond_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       'alpha domain'
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   LYS       HA    H      4.38     0.03     1
+     2     1   LYS       HB2   H      1.75     0.03     2
+     3     1   LYS       HB3   H      1.84     0.03     2
+     4     1   LYS       HG2   H      1.47     0.03     1
+     5     1   LYS       HG3   H      1.47     0.03     1
+     6     1   LYS       HD2   H      1.71     0.03     1
+     7     1   LYS       HD3   H      1.71     0.03     1
+     8     1   LYS       HE2   H      3.01     0.03     1
+     9     1   LYS       HE3   H      3.01     0.03     1
+    10     2   LYS       HA    H      4.46     0.03     1
+    11     2   LYS       HB2   H      1.79     0.03     2
+    12     2   LYS       HB3   H      1.88     0.03     2
+    13     2   LYS       HG2   H      1.51     0.03     1
+    14     2   LYS       HG3   H      1.51     0.03     1
+    15     2   LYS       HD2   H      1.72     0.03     1
+    16     2   LYS       HD3   H      1.72     0.03     1
+    17     2   LYS       HE2   H      3.03     0.03     1
+    18     2   LYS       HE3   H      3.03     0.03     1
+    19     3   SER       HA    H      4.61     0.03     1
+    20     3   SER       HB2   H      3.75     0.03     2
+    21     3   SER       HB3   H      4.05     0.03     2
+    22     4   CYS       H     H      8.22     0.03     1
+    23     4   CYS       HA    H      4.51     0.03     1
+    24     4   CYS       HB2   H      3.25     0.03     2
+    25     4   CYS       HB3   H      3.27     0.03     2
+    26     5   CYS       H     H      8.37     0.03     1
+    27     5   CYS       HA    H      5.08     0.03     1
+    28     5   CYS       HB2   H      3.55     0.03     2
+    29     5   CYS       HB3   H      3.62     0.03     2
+    30     6   SER       HA    H      4.46     0.03     1
+    31     6   SER       HB2   H      3.88     0.03     2
+    32     6   SER       HB3   H      4.00     0.03     2
+    33     7   CYS       H     H      8.54     0.03     1
+    34     7   CYS       HA    H      4.51     0.03     1
+    35     7   CYS       HB2   H      2.77     0.03     2
+    36     7   CYS       HB3   H      3.18     0.03     2
+    37     8   CYS       H     H      7.20     0.03     1
+    38     8   CYS       HA    H      5.16     0.03     1
+    39     8   CYS       HB2   H      3.06     0.03     1
+    40     8   CYS       HB3   H      3.06     0.03     1
+    41     9   PRO       HA    H      4.91     0.03     1
+    42     9   PRO       HB2   H      2.02     0.03     3
+    43     9   PRO       HB3   H      2.39     0.03     3
+    44     9   PRO       HG2   H      1.95     0.03     3
+    45     9   PRO       HG3   H      2.11     0.03     3
+    46     9   PRO       HD2   H      3.80     0.03     3
+    47     9   PRO       HD3   H      3.88     0.03     3
+    48    10   PRO       HA    H      4.39     0.03     3
+    49    10   PRO       HB2   H      1.84     0.03     3
+    50    10   PRO       HB3   H      2.16     0.03     3
+    51    10   PRO       HG2   H      2.00     0.03     3
+    52    10   PRO       HG3   H      2.17     0.03     3
+    53    10   PRO       HD2   H      3.69     0.03     3
+    54    10   PRO       HD3   H      3.91     0.03     3
+    55    11   GLY       HA2   H      3.71     0.03     2
+    56    11   GLY       HA3   H      4.03     0.03     2
+    57    12   CYS       H     H      7.00     0.03     1
+    58    12   CYS       HA    H      4.08     0.03     1
+    59    12   CYS       HB2   H      3.17     0.03     1
+    60    12   CYS       HB3   H      3.17     0.03     1
+    61    13   ALA       H     H      9.38     0.03     1
+    62    13   ALA       HA    H      4.16     0.03     1
+    63    13   ALA       HB    H      1.57     0.03     1
+    64    14   LYS       H     H      8.34     0.03     1
+    65    14   LYS       HA    H      4.23     0.03     1
+    66    14   LYS       HB2   H      2.09     0.03     1
+    67    14   LYS       HB3   H      2.09     0.03     1
+    68    14   LYS       HG2   H      1.56     0.03     1
+    69    14   LYS       HG3   H      1.56     0.03     1
+    70    14   LYS       HD2   H      1.72     0.03     1
+    71    14   LYS       HD3   H      1.72     0.03     1
+    72    14   LYS       HE2   H      3.06     0.03     1
+    73    14   LYS       HE3   H      3.06     0.03     1
+    74    15   CYS       H     H      7.56     0.03     1
+    75    15   CYS       HA    H      4.67     0.03     1
+    76    15   CYS       HB2   H      2.62     0.03     2
+    77    15   CYS       HB3   H      3.77     0.03     2
+    78    16   ALA       H     H      7.11     0.03     1
+    79    16   ALA       HA    H      4.14     0.03     1
+    80    16   ALA       HB    H      1.52     0.03     1
+    81    17   GLN       H     H      8.16     0.03     1
+    82    17   GLN       HA    H      4.58     0.03     1
+    83    17   GLN       HB2   H      1.99     0.03     2
+    84    17   GLN       HB3   H      2.43     0.03     2
+    85    17   GLN       HG2   H      2.39     0.03     1
+    86    17   GLN       HG3   H      2.39     0.03     1
+    87    17   GLN       HE21  H      6.88     0.03     2
+    88    17   GLN       HE22  H      7.56     0.03     2
+    89    18   GLY       H     H      7.38     0.03     1
+    90    18   GLY       HA2   H      3.61     0.03     2
+    91    18   GLY       HA3   H      4.40     0.03     2
+    92    19   CYS       HA    H      4.36     0.03     1
+    93    19   CYS       HB2   H      2.93     0.03     2
+    94    19   CYS       HB3   H      3.00     0.03     2
+    95    20   ILE       H     H      7.21     0.03     1
+    96    20   ILE       HA    H      4.73     0.03     1
+    97    20   ILE       HB    H      2.27     0.03     1
+    98    20   ILE       HG12  H      1.03     0.03     2
+    99    20   ILE       HG13  H      1.06     0.03     2
+   100    20   ILE       HG2   H      0.96     0.03     1
+   101    20   ILE       HD1   H      0.96     0.03     1
+   102    21   CYS       H     H      9.12     0.03     1
+   103    21   CYS       HA    H      4.45     0.03     1
+   104    21   CYS       HB2   H      2.65     0.03     2
+   105    21   CYS       HB3   H      3.13     0.03     2
+   106    22   LYS       H     H      8.53     0.03     1
+   107    22   LYS       HA    H      4.32     0.03     1
+   108    22   LYS       HB2   H      1.84     0.03     1
+   109    22   LYS       HB3   H      1.84     0.03     1
+   110    22   LYS       HG2   H      1.51     0.03     2
+   111    22   LYS       HG3   H      1.72     0.03     2
+   112    22   LYS       HD2   H      1.72     0.03     1
+   113    22   LYS       HD3   H      1.72     0.03     1
+   114    22   LYS       HE2   H      3.03     0.03     1
+   115    22   LYS       HE3   H      3.03     0.03     1
+   116    23   GLY       HA2   H      3.89     0.03     2
+   117    23   GLY       HA3   H      4.09     0.03     2
+   118    24   ALA       HA    H      4.49     0.03     1
+   119    24   ALA       HB    H      1.46     0.03     1
+   120    25   SER       H     H      8.18     0.03     1
+   121    25   SER       HA    H      4.64     0.03     1
+   122    25   SER       HB2   H      3.88     0.03     1
+   123    25   SER       HB3   H      3.92     0.03     1
+   124    26   ASP       H     H      8.55     0.03     1
+   125    26   ASP       HA    H      4.40     0.03     1
+   126    26   ASP       HB2   H      2.72     0.03     2
+   127    26   ASP       HB3   H      2.77     0.03     2
+   128    27   LYS       H     H      7.87     0.03     1
+   129    27   LYS       HA    H      4.73     0.03     1
+   130    27   LYS       HB2   H      1.75     0.03     2
+   131    27   LYS       HB3   H      1.82     0.03     2
+   132    27   LYS       HG2   H      1.44     0.03     1
+   133    27   LYS       HG3   H      1.44     0.03     1
+   134    27   LYS       HD2   H      1.71     0.03     1
+   135    27   LYS       HD3   H      1.71     0.03     1
+   136    27   LYS       HE2   H      3.04     0.03     1
+   137    27   LYS       HE3   H      3.04     0.03     1
+   138    28   CYS       H     H      8.50     0.03     1
+   139    28   CYS       HA    H      5.20     0.03     1
+   140    28   CYS       HB2   H      3.60     0.03     1
+   141    28   CYS       HB3   H      3.60     0.03     1
+   142    29   SER       HA    H      4.68     0.03     1
+   143    29   SER       HB2   H      3.91     0.03     2
+   144    29   SER       HB3   H      3.98     0.03     2
+   145    30   CYS       H     H      8.39     0.03     1
+   146    30   CYS       HA    H      4.60     0.03     1
+   147    30   CYS       HB2   H      3.24     0.03     2
+   148    30   CYS       HB3   H      3.31     0.03     2
+   149    31   CYS       H     H      7.71     0.03     1
+   150    31   CYS       HA    H      4.75     0.03     1
+   151    31   CYS       HB2   H      2.69     0.03     2
+   152    31   CYS       HB3   H      2.83     0.03     2
+   153    32   ALA       H     H      7.14     0.03     1
+   154    32   ALA       HA    H      4.14     0.03     1
+   155    32   ALA       HB    H      1.42     0.03     1
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Coupling constants  #
+    ########################
+
+save_coupling_constants_1
+   _Saveframe_category          coupling_constants
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $Ex-cond_1
+   _Spectrometer_frequency_1H   500
+   _Mol_system_component_name  'alpha domain'
+
+   loop_
+      _Coupling_constant_ID
+      _Coupling_constant_code
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_name
+      _Coupling_constant_value
+      _Coupling_constant_value_error
+
+        4   3JHNHA   4   CYS  H   4   CYS  HA   7.8  . 
+        5   3JHNHA   5   CYS  H   5   CYS  HA   8.4  . 
+        7   3JHNHA   7   CYS  H   7   CYS  HA   9.2  . 
+        8   3JHNHA   8   CYS  H   8   CYS  HA  10.1  . 
+       14   3JHNHA  14   LYS  H  14   LYS  HA   7.2  . 
+       15   3JHNHA  15   CYS  H  15   CYS  HA   9.8  . 
+       16   3JHNHA  16   ALA  H  16   ALA  HA   6.5  . 
+       17   3JHNHA  17   GLN  H  17   GLN  HA  12.7  . 
+       18   3JHNHA  18   GLY  H  18   GLY  HA  10.2  . 
+       20   3JHNHA  20   ILE  H  20   ILE  HA   9.9  . 
+       21   3JHNHA  21   CYS  H  21   CYS  HA   8.1  . 
+       25   3JHNHA  25   SER  H  25   SER  HA   9.5  . 
+       27   3JHNHA  27   LYS  H  27   LYS  HA   8.5  . 
+       28   3JHNHA  28   CYS  H  28   CYS  HA   9.8  . 
+       30   3JHNHA  30   CYS  H  30   CYS  HA   8.7  . 
+       31   3JHNHA  31   CYS  H  31   CYS  HA  10.6  . 
+       32   3JHNHA  32   ALA  H  32   ALA  HA   8.1  . 
+
+   stop_
+
+save_
+
+
+save_coupling_constants_2
+   _Saveframe_category          coupling_constants
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $Ex-cond_1
+   _Spectrometer_frequency_1H   500
+   _Mol_system_component_name  'alpha domain'
+
+   loop_
+      _Coupling_constant_ID
+      _Coupling_constant_code
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_name
+      _Coupling_constant_value
+      _Coupling_constant_value_error
+
+       35   3JHAHB   2   LYS  HA   2   LYS  HB2   7.4  . 
+       36   3JHAHB   2   LYS  HA   2   LYS  HB3   6.2  . 
+       37   3JHAHB   3   SER  HA   3   SER  HB2  10.0  . 
+       38   3JHAHB   3   SER  HA   3   SER  HB3   5.6  . 
+       39   3JHAHB   4   CYS  HA   4   CYS  HB2   6.2  . 
+       40   3JHAHB   4   CYS  HA   4   CYS  HB3   2.0  . 
+       41   3JHAHB   5   CYS  HA   5   CYS  HB2   5.8  . 
+       42   3JHAHB   5   CYS  HA   5   CYS  HB3   2.0  . 
+       43   3JHAHB   6   SER  HA   6   SER  HB2   5.2  . 
+       44   3JHAHB   6   SER  HA   6   SER  HB3   2.7  . 
+       45   3JHAHB   7   CYS  HA   7   CYS  HB2   7.7  . 
+       46   3JHAHB   7   CYS  HA   7   CYS  HB3   2.3  . 
+       49   3JHAHB   9   PRO  HA   9   PRO  HB2   9.3  . 
+       50   3JHAHB   9   PRO  HA   9   PRO  HB3   5.6  . 
+       51   3JHAHB  10   PRO  HA  10   PRO  HB2   7.6  . 
+       52   3JHAHB  10   PRO  HA  10   PRO  HB3   7.5  . 
+       53   3JHAHB  12   CYS  HA  12   CYS  HB2  10.9  . 
+       54   3JHAHB  12   CYS  HA  12   CYS  HB3   7.0  . 
+       56   3JHAHB  14   LYS  HA  14   LYS  HB2  10.5  . 
+       57   3JHAHB  14   LYS  HA  14   LYS  HB3   3.6  . 
+       58   3JHAHB  15   CYS  HA  15   CYS  HB2  10.6  . 
+       59   3JHAHB  15   CYS  HA  15   CYS  HB3   6.5  . 
+       61   3JHAHB  17   GLN  HA  17   GLN  HB2  11.3  . 
+       62   3JHAHB  17   GLN  HA  17   GLN  HB3   5.0  . 
+       63   3JHAHB  19   CYS  HA  19   CYS  HB2  11.8  . 
+       64   3JHAHB  19   CYS  HA  19   CYS  HB3   5.0  . 
+       65   3JHAHB  20   ILE  HA  20   ILE  HB2   5.8  . 
+       67   3JHAHB  21   CYS  HA  21   CYS  HB2  12.5  . 
+       68   3JHAHB  21   CYS  HA  21   CYS  HB3   5.5  . 
+       69   3JHAHB  22   LYS  HA  22   LYS  HB2   8.4  . 
+       70   3JHAHB  22   LYS  HA  22   LYS  HB3   5.6  . 
+       72   3JHAHB  25   SER  HA  25   SER  HB2   5.0  . 
+       73   3JHAHB  25   SER  HA  25   SER  HB3   5.3  . 
+       74   3JHAHB  26   ASP  HA  26   ASP  HB2   6.2  . 
+       75   3JHAHB  26   ASP  HA  26   ASP  HB3   5.4  . 
+       76   3JHAHB  27   LYS  HA  27   LYS  HB2   6.8  . 
+       77   3JHAHB  27   LYS  HA  27   LYS  HB3   6.3  . 
+       80   3JHAHB  29   SER  HA  29   SER  HB2   4.6  . 
+       81   3JHAHB  29   SER  HA  29   SER  HB3   4.0  . 
+       82   3JHAHB  30   CYS  HA  30   CYS  HB2   6.9  . 
+       83   3JHAHB  30   CYS  HA  30   CYS  HB3   2.5  . 
+       84   3JHAHB  31   CYS  HA  31   CYS  HB2  12.3  . 
+       85   3JHAHB  31   CYS  HA  31   CYS  HB3   4.3  . 
+
+   stop_
+
+save_
+

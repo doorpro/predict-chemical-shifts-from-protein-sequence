@@ -1,0 +1,968 @@
+data_5295
+
+#Corrected using PDB structure: 2BRZ_
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 24   D    HA       4.65         3.70
+# 36   C    HA       6.14         5.06
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.01     N/A     N/A     N/A     N/A   0.03    
+#
+#bmr5295.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr5295.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.05      N/A      N/A      N/A      N/A  +/-0.12  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.714     N/A     N/A     N/A     N/A   0.555   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.169     N/A     N/A     N/A     N/A   0.411   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+
+save_entry_information
+   _Saveframe_category       entry_information
+
+   _Entry_title             
+;
+1H Resonance Assignments at 310K and pH 4.93 for E.coli recombinant Brazzein, an
+ Intensely Sweet Protein
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Zhao     Qin    .   . 
+       2   Song     Jikui  .   . 
+       3   Markley  John   L.  . 
+
+   stop_
+
+   _BMRB_accession_number    5295
+   _BMRB_flat_file_name      bmr5295.str
+   _Entry_type               new
+   _Submission_date          2002-01-18
+   _Accession_date           2002-01-18
+   _Entry_origination        author
+   _NMR_STAR_version         2.1.1
+   _Experimental_method      NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+       pKa_value_data_set        1  
+       pH_NMR_parameter_list     1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  261  
+      "pKa value data"        6  
+
+   stop_
+
+   loop_
+      _Related_BMRB_accession_number
+      _Relationship
+
+       5296  "Non-Sweet variant of Brazzein [brazzein-ins(R18a-I18b)]" 
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Probing the sweet determinants of brazzein: Wild-type brazzein and a tasteless
+variant, brazzein-ins(R(18a)-I(18b)), exhibit different pH-dependent NMR
+chemical shifts
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        .
+   _PubMed_ID              .
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Zhao       Qin        .   . 
+       2   Song       Jikui      .   . 
+       3   Jin        Zheyuan    .   . 
+       4.  Danilova   Vicktoria  .   . 
+       5   Hellekant  Goran      .   . 
+       6   Markley    John       L.  . 
+
+   stop_
+
+   _Journal_abbreviation  'Biochem. Biophys. Res. Commun.'
+   _Journal_volume         335
+   _Journal_issue          1
+   _Page_first             256
+   _Page_last              263
+   _Year                   2005
+
+   loop_
+      _Keyword
+
+       brazzien       
+      'sweet protein' 
+       NMR            
+       pKa            
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+
+save_system_brazzein
+   _Saveframe_category      molecular_system
+
+   _Mol_system_name         brazzein
+   _Abbreviation_common     brazzein
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+       brazzein $brazzein 
+
+   stop_
+
+   _System_physical_state   native
+   _System_oligomer_state   monomer
+   _System_paramagnetic     no
+   _System_thiol_state     'all disulfide bound'
+
+   loop_
+      _Biological_function
+
+      'Elicits intense sweet-tasting response' 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+
+save_brazzein
+   _Saveframe_category     monomeric_polymer
+
+   _Mol_type               polymer
+   _Mol_polymer_class      protein
+   _Name_common            brazzein
+   _Name_variant          'sweet protein'
+   _Abbreviation_common    bz
+   _Mol_thiol_state       'all disulfide bound'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   
+   _Residue_count          53
+   _Mol_residue_sequence  
+;
+DKCKKVYENYPVSKCQLANQ
+CNYDCKLDKHARSGECFYDE
+KRNLQCICDYCEY
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+  1    2   ASP    2    3   LYS    3    4   CYS    4    5   LYS    5    6   LYS 
+  6    7   VAL    7    8   TYR    8    9   GLU    9   10   ASN   10   11   TYR 
+ 11   12   PRO   12   13   VAL   13   14   SER   14   15   LYS   15   16   CYS 
+ 16   17   GLN   17   18   LEU   18   19   ALA   19   20   ASN   20   21   GLN 
+ 21   22   CYS   22   23   ASN   23   24   TYR   24   25   ASP   25   26   CYS 
+ 26   27   LYS   27   28   LEU   28   29   ASP   29   30   LYS   30   31   HIS 
+ 31   32   ALA   32   33   ARG   33   34   SER   34   35   GLY   35   36   GLU 
+ 36   37   CYS   37   38   PHE   38   39   TYR   39   40   ASP   40   41   GLU 
+ 41   42   LYS   42   43   ARG   43   44   ASN   44   45   LEU   45   46   GLN 
+ 46   47   CYS   47   48   ILE   48   49   CYS   49   50   ASP   50   51   TYR 
+ 51   52   CYS   52   53   GLU   53   54   TYR 
+
+stop_
+
+save_
+
+
+    ########################################
+    #  Molecular bond linkage definitions  #
+    ########################################
+
+
+save_crosslink_bond_definitions
+   _Saveframe_category   crosslink_bonds
+
+
+   loop_
+      _Bond_order
+      _Bond_type
+      _Atom_one_mol_system_component_name
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_atom_name
+      _Atom_two_mol_system_component_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_atom_name
+
+       single  disulfide  brazzein   3   CYS  SG  brazzein  51   CYS  SG 
+       single  disulfide  brazzein  15   CYS  SG  brazzein  36   CYS  SG 
+       single  disulfide  brazzein  21   CYS  SG  brazzein  46   CYS  SG 
+       single  disulfide  brazzein  25   CYS  SG  brazzein  48   CYS  SG 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+      _Organ
+      _Tissue
+
+      $brazzein 
+      'Joublie fruit' 
+       43545  
+       Eukaryota 
+       Viridiplantae 
+       Pentadiplandra 
+       brazzeana 
+       fruit 
+       pulp 
+      
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $brazzein 
+      'recombinant technology' 
+       . 
+       . 
+       . 
+       . 
+       . 
+      
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $brazzein    1    mM  . 
+       KCl       100    mM  . 
+       DSS         0.1  mM  . 
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+
+save_spectrometer_one
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                DMX
+   _Field_strength       500
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+
+save_nmr_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+TOCSY
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+
+save_conditions_set_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH                 4.93  0.02  pH 
+       temperature      310     1     K   
+      'ionic strength'  100      .    mM  
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+
+save_chem_shift_reference_1
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       DSS  H  1  'methyl protons'  ppm  0.0  internal  direct  .  .  .  1.0 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+
+save_chemical_shift_assignment_brazzein_ph37310as
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $conditions_set_1
+   _Chem_shift_reference_set_label  $chem_shift_reference_1
+   _Mol_system_component_name        brazzein
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     3   CYS       H     H      8.43        .     .
+     2     3   CYS       HA    H      4.71        .     .
+     3     3   CYS       HB2   H      3.04        .     .
+     4     3   CYS       HB3   H      3.32        .     .
+     5     4   LYS       H     H      7.97        .     .
+     6     4   LYS       HA    H      5.55        .     .
+     7     4   LYS       HB2   H      1.74        .     .
+     8     4   LYS       HB3   H      1.74        .     .
+     9     4   LYS       HD2   H      1.50        .     .
+    10     4   LYS       HD3   H      1.50        .     .
+    11     4   LYS       HE2   H      2.89        .     .
+    12     4   LYS       HE3   H      2.89        .     .
+    13     4   LYS       HG2   H      1.30        .     .
+    14     4   LYS       HG3   H      1.35        .     .
+    15     5   LYS       H     H      8.96        .     .
+    16     5   LYS       HA    H      4.76        .     .
+    17     5   LYS       HB2   H      1.81        .     .
+    18     5   LYS       HB3   H      1.91        .     .
+    19     5   LYS       HE2   H      2.82        .     .
+    20     5   LYS       HE3   H      2.82        .     .
+    21     5   LYS       HG2   H      1.37        .     .
+    22     5   LYS       HG3   H      1.47        .     .
+    23     6   VAL       H     H      8.78        .     .
+    24     6   VAL       HA    H      3.98        .     .
+    25     6   VAL       HB    H      2.03        .     .
+    26     6   VAL       HG1   H      1.04        .     .
+    27     6   VAL       HG2   H      0.90        .     .
+    28     7   TYR       H     H      9.21        .     .
+    29     7   TYR       HA    H      4.43        .     .
+    30     7   TYR       HB2   H      2.74        .     .
+    31     7   TYR       HB3   H      3.11        .     .
+    32     7   TYR       HD1   H      6.79        .     .
+    33     7   TYR       HD2   H      6.79        .     .
+    34     7   TYR       HE1   H      6.89        .     .
+    35     7   TYR       HE2   H      6.89        .     .
+    36     8   GLU       H     H      8.96        .     .
+    37     8   GLU       HA    H      4.19        .     .
+    38     8   GLU       HB2   H      2.01        .     .
+    39     8   GLU       HB3   H      2.01        .     .
+    40     8   GLU       HG2   H      2.40        .     .
+    41     8   GLU       HG3   H      2.40        .     .
+    42     9   ASN       H     H      9.25        .     .
+    43     9   ASN       HA    H      4.41        .     .
+    44     9   ASN       HB2   H      3.04        .     .
+    45     9   ASN       HB3   H      3.10        .     .
+    46     9   ASN       HD21  H      6.95        .     .
+    47     9   ASN       HD22  H      7.59        .     .
+    48    10   TYR       H     H      7.51        .     .
+    49    10   TYR       HA    H      4.21        .     .
+    50    10   TYR       HB2   H      2.77        .     .
+    51    10   TYR       HB3   H      2.84        .     .
+    52    10   TYR       HD1   H      7.15        .     .
+    53    10   TYR       HD2   H      7.15        .     .
+    54    10   TYR       HE1   H      6.84        .     .
+    55    10   TYR       HE2   H      6.84        .     .
+    56    11   PRO       HA    H      4.47        .     .
+    57    11   PRO       HD2   H      3.54        .     .
+    58    12   VAL       H     H      8.07        .     .
+    59    12   VAL       HA    H      3.81        .     .
+    60    13   SER       H     H      8.37        .     .
+    61    13   SER       HA    H      4.15        .     .
+    62    13   SER       HB2   H      3.84        .     .
+    63    13   SER       HB3   H      3.84        .     .
+    64    14   LYS       H     H      7.84        .     .
+    65    14   LYS       HA    H      4.06        .     .
+    66    14   LYS       HB2   H      1.83        .     .
+    67    14   LYS       HB3   H      1.91        .     .
+    68    15   CYS       H     H      7.86        .     .
+    69    15   CYS       HA    H      4.77        .     .
+    70    15   CYS       HB2   H      3.02        .     .
+    71    15   CYS       HB3   H      3.23        .     .
+    72    16   GLN       H     H      7.38        .     .
+    73    16   GLN       HA    H      4.24        .     .
+    74    16   GLN       HB2   H      2.03        .     .
+    75    16   GLN       HB3   H      2.28        .     .
+    76    16   GLN       HE21  H      6.72        .     .
+    77    16   GLN       HE22  H      7.29        .     .
+    78    16   GLN       HG3   H      2.41        .     .
+    79    17   LEU       H     H      7.29        .     .
+    80    17   LEU       HA    H      4.53        .     .
+    81    17   LEU       HB2   H      1.95        .     .
+    82    17   LEU       HB3   H      1.53        .     .
+    83    17   LEU       HG    H      1.70        .     .
+    84    18   ALA       H     H      8.54        .     .
+    85    18   ALA       HA    H      4.12        .     .
+    86    18   ALA       HB    H      1.39        .     .
+    87    19   ASN       H     H      9.01        .     .
+    88    19   ASN       HA    H      4.67        .     .
+    89    19   ASN       HB2   H      2.83        .     .
+    90    19   ASN       HB3   H      2.99        .     .
+    91    19   ASN       HD21  H      7.04        .     .
+    92    19   ASN       HD22  H      7.59        .     .
+    93    20   GLN       H     H      7.66        .     .
+    94    20   GLN       HA    H      3.85        .     .
+    95    20   GLN       HB2   H      2.44        .     .
+    96    20   GLN       HB3   H      2.05        .     .
+    97    20   GLN       HE21  H      6.72        .     .
+    98    20   GLN       HE22  H      7.98        .     .
+    99    21   CYS       H     H      8.48        .     .
+   100    21   CYS       HA    H      4.33        .     .
+   101    21   CYS       HB2   H      2.54        .     .
+   102    21   CYS       HB3   H      2.87        .     .
+   103    22   ASN       H     H      7.93        .     .
+   104    22   ASN       HA    H      3.83        .     .
+   105    22   ASN       HB2   H      2.74        .     .
+   106    22   ASN       HD21  H      6.73        .     .
+   107    22   ASN       HD22  H      7.32        .     .
+   108    23   TYR       H     H      8.09        .     .
+   109    23   TYR       HA    H      3.96        .     .
+   110    23   TYR       HB2   H      3.15        .     .
+   111    23   TYR       HB3   H      3.20        .     .
+   112    23   TYR       HD1   H      7.19        .     .
+   113    23   TYR       HD2   H      7.19        .     .
+   114    23   TYR       HE1   H      6.85        .     .
+   115    23   TYR       HE2   H      6.85        .     .
+   116    24   ASP       H     H      9.07        .     .
+   117    24   ASP       HA    H      4.66        .     .
+   118    24   ASP       HB2   H      2.85        .     .
+   119    24   ASP       HB3   H      3.16        .     .
+   120    25   CYS       H     H      9.28        .     .
+   121    25   CYS       HA    H      4.15        .     .
+   122    25   CYS       HB2   H      2.32        .     .
+   123    25   CYS       HB3   H      2.90        .     .
+   124    26   LYS       H     H      7.66        .     .
+   125    26   LYS       HA    H      4.10        .     .
+   126    26   LYS       HB2   H      1.43        .     .
+   127    26   LYS       HB3   H      1.71        .     .
+   128    26   LYS       HG2   H      1.14        .     .
+   129    27   LEU       H     H      8.22        .     .
+   130    27   LEU       HA    H      4.08        .     .
+   131    27   LEU       HB2   H      1.65        .     .
+   132    28   ASP       H     H      8.97        .     .
+   133    28   ASP       HA    H      4.53        .     .
+   134    28   ASP       HB2   H      2.82        .     .
+   135    28   ASP       HB3   H      3.04        .     .
+   136    29   LYS       H     H      6.63        .     .
+   137    29   LYS       HA    H      4.53        .     .
+   138    29   LYS       HB2   H      2.26        .     .
+   139    29   LYS       HB3   H      2.35        .     .
+   140    29   LYS       HD2   H      1.24        .     .
+   141    29   LYS       HG2   H      0.87        .     .
+   142    30   HIS       H     H      7.03        .     .
+   143    30   HIS       HA    H      4.60        .     .
+   144    30   HIS       HB3   H      3.54        .     .
+   145    30   HIS       HD2   H      7.23        .     .
+   146    30   HIS       HE1   H      8.61        .     .
+   147    31   ALA       H     H      7.66        .     .
+   148    31   ALA       HA    H      4.10        .     .
+   149    31   ALA       HB    H      0.54        .     .
+   150    32   ARG       H     H      8.22        .     .
+   151    32   ARG       HA    H      4.16        .     .
+   152    32   ARG       HB2   H      1.49        .     .
+   153    32   ARG       HB3   H      1.39        .     .
+   154    32   ARG       HG2   H      1.37        .     .
+   155    32   ARG       HG3   H      1.48        .     .
+   156    33   SER       H     H      7.99        .     .
+   157    33   SER       HA    H      4.63        .     .
+   158    33   SER       HB2   H      3.39        .     .
+   159    33   SER       HB3   H      4.11        .     .
+   160    34   GLY       H     H      8.64        .     .
+   161    34   GLY       HA2   H      4.86        .     .
+   162    34   GLY       HA3   H      4.02        .     .
+   163    35   GLU       H     H      8.28        .     .
+   164    35   GLU       HA    H      4.30        .     .
+   165    35   GLU       HB2   H      1.86        .     .
+   166    35   GLU       HB3   H      2.05        .     .
+   167    36   CYS       H     H      8.73        .     .
+   168    36   CYS       HA    H      6.15        .     .
+   169    36   CYS       HB2   H      2.53        .     .
+   170    36   CYS       HB3   H      3.69        .     .
+   171    37   PHE       H     H      9.03        .     .
+   172    37   PHE       HA    H      4.74        .     .
+   173    37   PHE       HB2   H      2.75        .     .
+   174    37   PHE       HB3   H      3.15        .     .
+   175    37   PHE       HD1   H      7.24        .     .
+   176    37   PHE       HD2   H      7.24        .     .
+   177    37   PHE       HE1   H      7.34        .     .
+   178    37   PHE       HE2   H      7.30        .     .
+   179    37   PHE       HZ    H      7.10        .     .
+   180    38   TYR       H     H      8.60        .     .
+   181    38   TYR       HA    H      4.92        .     .
+   182    38   TYR       HB2   H      2.86        .     .
+   183    38   TYR       HB3   H      2.86        .     .
+   184    39   ASP       H     H      8.57        .     .
+   185    39   ASP       HA    H      4.76        .     .
+   186    39   ASP       HB2   H      3.34        .     .
+   187    39   ASP       HB3   H      2.78        .     .
+   188    40   GLU       H     H      8.96        .     .
+   189    40   GLU       HA    H      4.18        .     .
+   190    41   LYS       H     H      8.12        .     .
+   191    41   LYS       HA    H      4.41        .     .
+   192    41   LYS       HB2   H      1.84        .     .
+   193    41   LYS       HB3   H      2.03        .     .
+   194    42   ARG       H     H      8.30        .     .
+   195    42   ARG       HA    H      3.64        .     .
+   196    42   ARG       HB2   H      2.05        .     .
+   197    42   ARG       HB3   H      2.05        .     .
+   198    42   ARG       HD2   H      3.04        .     .
+   199    42   ARG       HD3   H      3.04        .     .
+   200    42   ARG       HE    H      6.90        .     .
+   201    42   ARG       HG3   H      1.50        .     .
+   202    43   ASN       H     H      8.69        .     .
+   203    43   ASN       HA    H      4.96        .     .
+   204    43   ASN       HB2   H      2.70        .     .
+   205    43   ASN       HB3   H      2.96        .     .
+   206    43   ASN       HD21  H      6.95        .     .
+   207    43   ASN       HD22  H      8.14        .     .
+   208    44   LEU       H     H      8.46        .     .
+   209    44   LEU       HA    H      4.22        .     .
+   210    44   LEU       HB2   H      1.28        .     .
+   211    44   LEU       HB3   H      1.51        .     .
+   212    44   LEU       HD1   H      0.30        .     .
+   213    44   LEU       HD2   H      0.43        .     .
+   214    45   GLN       H     H      8.47        .     .
+   215    45   GLN       HA    H      4.71        .     .
+   216    45   GLN       HB2   H      1.88        .     .
+   217    45   GLN       HB3   H      2.33        .     .
+   218    45   GLN       HE21  H      7.41        .     .
+   219    45   GLN       HE22  H      6.69        .     .
+   220    45   GLN       HG2   H      2.07        .     .
+   221    45   GLN       HG3   H      2.07        .     .
+   222    46   CYS       H     H      9.19        .     .
+   223    46   CYS       HA    H      4.82        .     .
+   224    46   CYS       HB2   H      1.69        .     .
+   225    46   CYS       HB3   H      2.52        .     .
+   226    47   ILE       H     H      8.71        .     .
+   227    47   ILE       HA    H      4.35        .     .
+   228    47   ILE       HB    H      2.16        .     .
+   229    47   ILE       HD1   H      0.76        .     .
+   230    47   ILE       HG12  H      1.17        .     .
+   231    47   ILE       HG13  H      1.60        .     .
+   232    48   CYS       H     H      8.52        .     .
+   233    48   CYS       HA    H      5.30        .     .
+   234    48   CYS       HB2   H      2.60        .     .
+   235    48   CYS       HB3   H      2.66        .     .
+   236    49   ASP       H     H      8.83        .     .
+   237    49   ASP       HA    H      5.50        .     .
+   238    49   ASP       HB2   H      2.36        .     .
+   239    49   ASP       HB3   H      3.11        .     .
+   240    50   TYR       H     H      9.72        .     .
+   241    50   TYR       HA    H      4.23        .     .
+   242    50   TYR       HB2   H      2.91        .     .
+   243    50   TYR       HB3   H      3.46        .     .
+   244    50   TYR       HD1   H      7.31        .     .
+   245    50   TYR       HD2   H      7.31        .     .
+   246    50   TYR       HE1   H      6.71        .     .
+   247    50   TYR       HE2   H      7.31        .     .
+   248    51   CYS       H     H      9.35        .     .
+   249    51   CYS       HA    H      4.47        .     .
+   250    51   CYS       HB2   H      3.09        .     .
+   251    51   CYS       HB3   H      3.53        .     .
+   252    52   GLU       H     H      8.38        .     .
+   253    52   GLU       HA    H      4.28        .     .
+   254    52   GLU       HB2   H      1.79        .     .
+   255    52   GLU       HB3   H      2.00        .     .
+   256    52   GLU       HG2   H      2.19        .     .
+   257    52   GLU       HG3   H      2.27        .     .
+   258    53   TYR       H     H      7.68        .     .
+   259    53   TYR       HA    H      4.23        .     .
+   260    53   TYR       HB2   H      2.78        .     .
+   261    53   TYR       HB3   H      3.13        .     .
+
+stop_
+
+save_
+
+
+save_pKa_brazzein_wt
+   _Saveframe_category          pKa_value_data_set
+
+
+   loop_
+      _Experiment_label
+
+      $nmr_applied_experiment 
+
+   stop_
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $conditions_set_1
+   _Expt_observed_parameter    'chemical shift'
+   _Mol_system_component_name   brazzein
+
+   loop_
+      _pKa_list_number
+      _Atom_observed_residue_seq_code
+      _Atom_observed_residue_label
+      _Atom_observed_atom_name
+      _pKa_hill_coeff_value
+      _pKa_hill_coeff_value_fit_error
+      _High_pH_parameter_fit_value
+      _High_pH_parameter_fit_value_error
+      _Low_pH_parameter_fit_value
+      _Low_pH_parameter_fit_value_error
+      _pKa_value
+      _pKa_value_fit_error
+      _Atom_titr_residue_seq_code
+      _Atom_titr_residue_label
+      _Atom_titr_atom_name
+
+       1   30   HIS  HE1  0.92  0.03  7.23  .  6.86  .  7.25  0.02  31   HIS  .   
+       2   30   HIS  HD2  0.87  0.01  8.61  .  7.68  .  7.29  0.01  31   HIS  .   
+       3   49   ASP  HB2  0.66  0.08  3.44  .  3.20  .  4.61  0.08  50   ASP  HD2 
+       4   49   ASP  HB3  0.45  0.04  2.72  .  2.25  .  3.64  0.10  50   ASP  HD2 
+       5   52   GLU  HB2  0.63  0.05  2.35  .  2.22  .  4.80  0.09  53   GLU  HE2 
+       6   52   GLU  H    0.87  0.09  2.29  .  2.10  .  4.86  0.06  53   GLU  HE2 
+
+   stop_
+
+save_
+
+
+save_pKa_chemical_shifts
+   _Saveframe_category         pH_NMR_parameter_list
+
+   _pKa_value_data_set_label  $pKa_brazzein_wt
+
+   loop_
+      _pKa_list_number
+      _pH_value
+      _pH_value_error
+      _Observed_NMR_parameter_value
+      _Observed_NMR_parameter_value_error
+
+       1   10.57   0.02  6.864  0.02 
+       1   10.18   0.02  6.860  0.02 
+       1    9.79   0.02  6.857  0.02 
+       1    9.34   0.02  6.862  0.02 
+       1    8.93   0.02  6.863  0.02 
+       1    8.47   0.02  6.885  0.02 
+       1    8.12   0.02  6.909  0.02 
+       1    7.83   0.02  6.948  0.02 
+       1    7.58   0.02  6.984  0.02 
+       1    7.18   0.02  7.045  0.02 
+       1    6.89   0.02  7.105  0.02 
+       1    6.515  0.02  7.169  0.02 
+       1    6.065  0.02  7.203  0.02 
+       1    5.73   0.02  7.210  0.02 
+       1    5.41   0.02  7.211  0.02 
+       1    5.07   0.02  7.228  0.02 
+       1    4.90   0.02  7.221  0.02 
+       1    4.45   0.02  7.225  0.02 
+       1    4.12   0.02  7.227  0.02 
+       1    3.82   0.02  7.228  0.02 
+       1    3.07   0.02  7.222  0.02 
+       1    2.755  0.02  7.226  0.02 
+       1    2.31   0.02  7.222  0.02 
+       2   10.57   0.02  7.690  0.02 
+       2   10.18   0.02  7.690  0.02 
+       2    9.79   0.02  7.690  0.02 
+       2    9.34   0.02  7.696  0.02 
+       2    8.93   0.02  7.712  0.02 
+       2    8.47   0.02  7.752  0.02 
+       2    8.12   0.02  7.828  0.02 
+       2    7.83   0.02  7.912  0.02 
+       2    7.58   0.02  8.016  0.02 
+       2    7.18   0.02  8.212  0.02 
+       2    6.89   0.02  8.315  0.02 
+       2    6.515  0.02  8.453  0.02 
+       2    6.065  0.02  8.538  0.02 
+       2    5.73   0.02  8.563  0.02 
+       2    5.41   0.02  8.582  0.02 
+       2    5.07   0.02  8.607  0.02 
+       2    4.90   0.02  8.612  0.02 
+       2    4.45   0.02  8.610  0.02 
+       2    4.12   0.02  8.614  0.02 
+       2    3.82   0.02  8.616  0.02 
+       2    3.07   0.02  8.616  0.02 
+       2    2.755  0.02  8.618  0.02 
+       2    2.31   0.02  8.618  0.02 
+       3    8.93   0.02  3.046  0.02 
+       3    8.12   0.02  3.051  0.02 
+       3    7.83   0.02  3.046  0.02 
+       3    7.575  0.02  3.061  0.02 
+       3    7.18   0.02  3.027  0.02 
+       3    6.89   0.02  3.046  0.02 
+       3    6.515  0.02  3.049  0.02 
+       3    6.065  0.02  3.062  0.02 
+       3    5.73   0.02  3.061  0.02 
+       3    5.41   0.02  3.074  0.02 
+       3    5.07   0.02  3.105  0.02 
+       3    4.90   0.02  3.115  0.02 
+       3    4.45   0.02  3.135  0.02 
+       3    4.12   0.02  3.153  0.02 
+       3    3.82   0.02  3.169  0.02 
+       3    3.52   0.02  3.172  0.02 
+       3    3.07   0.02  3.186  0.02 
+       3    2.755  0.02  3.203  0.02 
+       3    2.31   0.02  3.203  0.02 
+       3    1.92   0.02  3.208  0.02 
+       3    1.50   0.02  3.204  0.02 
+       4    7.83   0.02  2.262  0.02 
+       4    7.575  0.02  2.268  0.02 
+       4    7.18   0.02  2.231  0.02 
+       4    6.89   0.02  2.270  0.02 
+       4    6.515  0.02  2.267  0.02 
+       4    6.065  0.02  2.283  0.02 
+       4    5.73   0.02  2.293  0.02 
+       4    5.41   0.02  2.306  0.02 
+       4    5.07   0.02  2.344  0.02 
+       4    4.90   0.02  2.362  0.02 
+       4    4.45   0.02  2.390  0.02 
+       4    4.12   0.02  2.424  0.02 
+       4    3.82   0.02  2.462  0.02 
+       4    3.52   0.02  2.491  0.02 
+       4    3.07   0.02  2.548  0.02 
+       4    2.755  0.02  2.596  0.02 
+       4    2.31   0.02  2.635  0.02 
+       4    1.92   0.02  2.663  0.02 
+       4    1.50   0.02  2.667  0.02 
+       5    6.89   0.02  2.224  0.02 
+       5    6.515  0.02  2.224  0.02 
+       5    6.065  0.02  2.237  0.02 
+       5    5.73   0.02  2.235  0.02 
+       5    5.41   0.02  2.266  0.02 
+       5    5.07   0.02  2.270  0.02 
+       5    4.90   0.02  2.278  0.02 
+       5    4.45   0.02  2.309  0.02 
+       5    4.12   0.02  2.328  0.02 
+       5    3.82   0.02  2.344  0.02 
+       5    3.52   0.02  2.348  0.02 
+       5    3.07   0.02  2.358  0.02 
+       5    2.755  0.02  2.364  0.02 
+       5    2.31   0.02  2.36   0.02 
+       5    1.92   0.02  2.35   0.02 
+       5    1.50   0.02  2.337  0.02 
+       6    6.89   0.02  2.107  0.02 
+       6    6.515  0.02  2.119  0.02 
+       6    6.065  0.02  2.122  0.02 
+       6    5.73   0.02  2.136  0.02 
+       6    5.41   0.02  2.160  0.02 
+       6    5.07   0.02  2.181  0.02 
+       6    4.90   0.02  2.194  0.02 
+       6    4.45   0.02  2.232  0.02 
+       6    4.12   0.02  2.257  0.02 
+       6    3.82   0.02  2.279  0.02 
+       6    3.52   0.02  2.276  0.02 
+       6    3.07   0.02  2.295  0.02 
+       6    2.755  0.02  2.302  0.02 
+       6    2.31   0.02  2.285  0.02 
+       6    1.92   0.02  2.292  0.02 
+       6    1.50   0.02  2.279  0.02 
+
+   stop_
+
+save_
+

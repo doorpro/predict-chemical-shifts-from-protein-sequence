@@ -1,0 +1,2620 @@
+data_5746
+
+#Corrected using PDB structure: 1E4VA
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a N chemical shift difference (obs*-pred) greater than 10.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 46   G    N      106.56       117.87
+#
+#After reference correction, the following residues still 
+#have a HN chemical shift difference (obs*-pred) greater than  2.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 14   G    H       11.94         7.93
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#N/A       N/A     N/A     N/A   -0.01   0.01    
+#
+#bmr5746.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr5746.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A    -0.01     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#    N/A      N/A      N/A      N/A  +/-0.22  +/-0.05  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#N/A       N/A     N/A     N/A   0.878   0.510   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#N/A       N/A     N/A     N/A   1.551   0.369   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+15N Relaxation Data of Escherichia coli Adenylate Kinase in Complex with 
+Inhibitor Ap5A Obtained at Magnetic Fields of 14.10 and 18.79 T
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Shapiro     Yury     E.  . 
+       2   Kahana      Edith    .   . 
+       3   Tugarinov   Vitali   .   . 
+       4   Liang       Zhichun  .   . 
+       5   Freed       Jack     H.  . 
+       6   Meirovitch  Eva      .   . 
+
+   stop_
+
+   _BMRB_accession_number   5746
+   _BMRB_flat_file_name     bmr5746.str
+   _Entry_type              new
+   _Submission_date         2003-03-09
+   _Accession_date          2003-03-10
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+   _Details                
+;
+This depositions contains 15N T1, 15N T2,
+15N-{1H} NOE and eta(xy) data for Adenylate
+kinase from E. coli in the ligand-free form
+and in complex with two-substrate mimicking
+inhibitor Ap5A, obtained at two magnetic fields
+of 14.10 T and 18.79 T.
+15N-{1H} NOE values were corrected for incomplete 
+1H T1 recovery with equation by S. Grzeciek & 
+A. Bax. JACS, 1993, 115, 12593-12594. (The values 
+of corrections were significantly less than 
+experimental errors.) 
+The cross-correlation rates, eta(xy), between 
+15N CSA and 15N-1H dipolar interaction were 
+calculated as the median values obtained with 
+dephasing delays 2*delta of 14 ms (<15NT2>/8) 
+and 32 ms.
+;
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+       T1_relaxation             2  
+       T2_relaxation             2  
+       heteronuclear_NOE         2  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'   202  
+      '15N chemical shifts'  202  
+      'T1 relaxation'        404  
+      'T2 relaxation'        404  
+      'heteronuclear NOE'    400  
+
+   stop_
+
+   loop_
+      _Related_BMRB_accession_number
+      _Relationship
+
+       5720  "adenylate kinase in free form" 
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Domain Flexibility in Ligand-Free and Inhibitor-Bound Escherichia coli Adenylate
+ Kinase Based on a Mode-Coupling Analysis of 15N Spin Relaxation
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        .
+   _PubMed_ID              12009888
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Shapiro     Yury     E.  . 
+       2   Kahana      Edith    .   . 
+       3   Tugarinov   Vitali   .   . 
+       4   Liang       Zhichun  .   . 
+       5   Freed       Jack     H.  . 
+       6   Meirovitch  Eva      .   . 
+
+   stop_
+
+   _Journal_abbreviation   Biochemistry
+   _Journal_volume         41
+   _Journal_issue          20
+   _Page_first             6271
+   _Page_last              6281
+   _Year                   2002
+
+   loop_
+      _Keyword
+
+      "adenylate kinase"    
+      "15N spin relaxation" 
+       SRLS                 
+      "backbone dynamics"   
+      "domain motion"       
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_AKeco
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name           "Adenylate Kinase from Escherichia coli"
+   _Abbreviation_common        AKeco
+   _Enzyme_commission_number   2.7.4.3
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "AKeco kinase"   $AKeco 
+      "inhibitor Ap5A" $AP5A  
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all free'
+
+   loop_
+      _Biological_function
+
+      "transfer of a phosphoryl group from ATP to AMP" 
+
+   stop_
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  4AKE  ?  . 
+       PDB  1AKE  ?  . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_AKeco
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                "Adenylate Kinase from Escherichia coli"
+   _Name_variant                                .
+   _Abbreviation_common                         AKeco
+   _Molecular_mass                              23571
+   _Mol_thiol_state                            'all free'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               214
+   _Mol_residue_sequence                       
+;
+MRIILLGAPGAGKGTQAQFI
+MEKYGIPQISTGDMLRAAVK
+SGSELGKQAKDIMDAGKLVT
+DELVIALVKERIAQEDCRNG
+FLLDGFPRTIPQADAMKEAG
+INVDYVLEFDVPDELIVDRI
+VGRRVHAPSGRVYHVKFNPP
+KVEGKDDVTGEELTTRKDDQ
+EETVRKRLVEYHQMTAPLIG
+YYSKEAEAGNTKYAKVDGTK
+PVAEVRADLEKILG
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+
+         1   MET     2   ARG     3   ILE     4   ILE     5   LEU 
+         6   LEU     7   GLY     8   ALA     9   PRO    10   GLY 
+        11   ALA    12   GLY    13   LYS    14   GLY    15   THR 
+        16   GLN    17   ALA    18   GLN    19   PHE    20   ILE 
+        21   MET    22   GLU    23   LYS    24   TYR    25   GLY 
+        26   ILE    27   PRO    28   GLN    29   ILE    30   SER 
+        31   THR    32   GLY    33   ASP    34   MET    35   LEU 
+        36   ARG    37   ALA    38   ALA    39   VAL    40   LYS 
+        41   SER    42   GLY    43   SER    44   GLU    45   LEU 
+        46   GLY    47   LYS    48   GLN    49   ALA    50   LYS 
+        51   ASP    52   ILE    53   MET    54   ASP    55   ALA 
+        56   GLY    57   LYS    58   LEU    59   VAL    60   THR 
+        61   ASP    62   GLU    63   LEU    64   VAL    65   ILE 
+        66   ALA    67   LEU    68   VAL    69   LYS    70   GLU 
+        71   ARG    72   ILE    73   ALA    74   GLN    75   GLU 
+        76   ASP    77   CYS    78   ARG    79   ASN    80   GLY 
+        81   PHE    82   LEU    83   LEU    84   ASP    85   GLY 
+        86   PHE    87   PRO    88   ARG    89   THR    90   ILE 
+        91   PRO    92   GLN    93   ALA    94   ASP    95   ALA 
+        96   MET    97   LYS    98   GLU    99   ALA   100   GLY 
+       101   ILE   102   ASN   103   VAL   104   ASP   105   TYR 
+       106   VAL   107   LEU   108   GLU   109   PHE   110   ASP 
+       111   VAL   112   PRO   113   ASP   114   GLU   115   LEU 
+       116   ILE   117   VAL   118   ASP   119   ARG   120   ILE 
+       121   VAL   122   GLY   123   ARG   124   ARG   125   VAL 
+       126   HIS   127   ALA   128   PRO   129   SER   130   GLY 
+       131   ARG   132   VAL   133   TYR   134   HIS   135   VAL 
+       136   LYS   137   PHE   138   ASN   139   PRO   140   PRO 
+       141   LYS   142   VAL   143   GLU   144   GLY   145   LYS 
+       146   ASP   147   ASP   148   VAL   149   THR   150   GLY 
+       151   GLU   152   GLU   153   LEU   154   THR   155   THR 
+       156   ARG   157   LYS   158   ASP   159   ASP   160   GLN 
+       161   GLU   162   GLU   163   THR   164   VAL   165   ARG 
+       166   LYS   167   ARG   168   LEU   169   VAL   170   GLU 
+       171   TYR   172   HIS   173   GLN   174   MET   175   THR 
+       176   ALA   177   PRO   178   LEU   179   ILE   180   GLY 
+       181   TYR   182   TYR   183   SER   184   LYS   185   GLU 
+       186   ALA   187   GLU   188   ALA   189   GLY   190   ASN 
+       191   THR   192   LYS   193   TYR   194   ALA   195   LYS 
+       196   VAL   197   ASP   198   GLY   199   THR   200   LYS 
+       201   PRO   202   VAL   203   ALA   204   GLU   205   VAL 
+       206   ARG   207   ALA   208   ASP   209   LEU   210   GLU 
+       211   LYS   212   ILE   213   LEU   214   GLY 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1AKE        "A Chain A, Adenylate Kinase (E.C.2.7.4.3)Complex With The Inhibitor Ap5a"                                                                100.00  214   100   100   10e-119 
+       PDB         1ANK        "A Chain A, Adenylate Kinase (Adk) (E.C.2.7.4.3)"                                                                                         100.00  214   100   100   10e-119 
+       PDB         2ECK        "A Chain A, Structure Of Phosphotransferase"                                                                                              100.00  214   100   100   10e-119 
+       PDB         4AKE        "A Chain A, Adenylate Kinase"                                                                                                             100.00  214   100   100   10e-119 
+       PDB         1E4V        "A Chain A, Mutant G10v Of Adenylate KinaseFrom E. Coli, Modified In The Gly-Loop"                                                        100.00  214   100   100   10e-118 
+       PDB         1E4Y        "A Chain A, Mutant P9l Of Adenylate Kinase FromE. Coli, Modified In The Gly-Loop"                                                         100.00  214    99    99   1e-115  
+       DBJ         BAA14303.1  "adenylate kinase [Escherichia coli]"                                                                                                     200.00  107   100   100   7e-56   
+       DBJ         BAB33950.1  "adenylate kinase [Escherichia coliO157:H7]"                                                                                              100.00  214   100   100   10e-119 
+       EMBL        CAA26840.1  "unnamed protein product [Escherichia coli]"                                                                                              100.00  214   100   100   10e-119 
+       GenBank     AAA23461.1  "adk ORF"                                                                                                                                 100.00  214   100   100   10e-119 
+       GenBank     AAC73576.1  "adenylate kinase activity; pleiotropiceffects on glycerol-3-phosphate acyltransferaseactivity; adenylate kinase [Escherichia coli K12]"  100.00  214   100   100   10e-119 
+       GenBank     AAG54823.1  "adenylate kinase activity; pleiotropiceffects on glycerol-3-phosphate acyltransferase activity[Escherichia coli O157:H7 EDL933]"         100.00  214   100   100   10e-119 
+       GenBank     AAB40228.1  "adenylate kinase [Escherichia coli]"                                                                                                      91.85  233   100   100   10e-119 
+       GenBank     AAN42074.1  "adenylate kinase [Shigella flexneri 2astr. 301]"                                                                                          91.45  234   100   100   10e-118 
+       PIR         C85545      "adenylate kinase (EC 2.7.4.3) [similarity]- Escherichia coli (strain O157:H7, substrain EDL933)"                                         100.00  214   100   100   10e-119 
+       PIR         G90694      "adenylate kinase (EC 2.7.4.3) [similarity]- Escherichia coli (strain O157:H7, substrain RIMD0509952)"                                    100.00  214   100   100   10e-119 
+       PIR         KIECA       "adenylate kinase (EC 2.7.4.3) [validated] -Escherichia coli (strain K-12)"                                                               100.00  214   100   100   10e-119 
+       REF         NP_286215.1 "adenylate kinase activity; pleiotropiceffects on glycerol-3-phosphate acyltransferase activity[Escherichia coli O157:H7 EDL933]"         100.00  214   100   100   10e-119 
+       REF         NP_308554.1 "adenylate kinase [Escherichia coliO157:H7]"                                                                                              100.00  214   100   100   10e-119 
+       REF         NP_415007.1 "adenylate kinase activity; pleiotropiceffects on glycerol-3-phosphate acyltransferaseactivity; adenylate kinase [Escherichia coli K12]"  100.00  214   100   100   10e-119 
+       REF         NP_836145.1 "adenylate kinase [Shigella flexneri 2astr. 2457T]"                                                                                       100.00  214   100   100   10e-118 
+       REF         NP_706367.1 "adenylate kinase [Shigella flexneri 2astr. 301]"                                                                                          91.45  234   100   100   10e-118 
+       SWISS-PROT  P05082      "KAD_ECOLI Adenylate kinase (ATP-AMPtransphosphorylase)"                                                                                  100.00  214   100   100   10e-119 
+       SWISS-PROT  Q8FK84      "KAD_ECOL6 Adenylate kinase (ATP-AMPtransphosphorylase)"                                                                                  100.00  214   100   100   10e-118 
+
+   stop_
+
+save_
+
+
+    #############
+    #  Ligands  #
+    #############
+
+save_AP5A
+   _Saveframe_category      ligand
+
+   _Mol_type                non-polymer
+   _Name_common            "BIS(ADENOSINE)-5'-PENTAPHOSPHATE"
+   _Abbreviation_common     AP5A
+   _Name_IUPAC             "P1,P5-di(adenosine-5')pentaphosphate"
+   _BMRB_code               AP5A
+   _PDB_code                AP5
+   _Mol_empirical_formula  'C20 H29 N10 O22 P5'
+   _Mol_charge              0
+   _Mol_paramagnetic        no
+   _Mol_aromatic            yes
+   _Details                 .
+
+   loop_
+      _Atom_name
+      _PDB_atom_name
+      _Atom_type
+      _Atom_chirality
+      _Atom_charge
+      _Atom_oxidation_number
+      _Atom_unpaired_electrons
+
+       PA    PA    P  ?  0   ?  ? 
+       O1A   O1A   O  ?  0   ?  ? 
+       O2A   O2A   O  ?  0   ?  ? 
+       O3A   O3A   O  ?  0   ?  ? 
+       PB    PB    P  ?  0   ?  ? 
+       O1B   O1B   O  ?  0   ?  ? 
+       O2B   O2B   O  ?  0   ?  ? 
+       O3B   O3B   O  ?  0   ?  ? 
+       PG    PG    P  ?  0   ?  ? 
+       O1G   O1G   O  ?  0   ?  ? 
+       O2G   O2G   O  ?  0   ?  ? 
+       O3G   O3G   O  ?  0   ?  ? 
+       PD    PD    P  ?  0   ?  ? 
+       O1D   O1D   O  ?  0   ?  ? 
+       O2D   O2D   O  ?  0   ?  ? 
+       O3D   O3D   O  ?  0   ?  ? 
+       PE    PE    P  ?  0   ?  ? 
+       O1E   O1E   O  ?  0   ?  ? 
+       O2E   O2E   O  ?  0   ?  ? 
+       AO5*  AO5*  O  ?  0   ?  ? 
+       AC5*  AC5*  C  ?  0   ?  ? 
+       AC4*  AC4*  C  ?  0   ?  ? 
+       AO4*  AO4*  O  ?  0   ?  ? 
+       AC3*  AC3*  C  ?  0   ?  ? 
+       AO3*  AO3*  O  ?  0   ?  ? 
+       AC2*  AC2*  C  ?  0   ?  ? 
+       AO2*  AO2*  O  ?  0   ?  ? 
+       AC1*  AC1*  C  ?  0   ?  ? 
+       AN9   AN9   N  ?  0   ?  ? 
+       AC8   AC8   C  ?  0   ?  ? 
+       AN7   AN7   N  ?  0   ?  ? 
+       AC5   AC5   C  ?  0   ?  ? 
+       AC6   AC6   C  ?  0   ?  ? 
+       AN6   AN6   N  ?  0   ?  ? 
+       AN1   AN1   N  ?  0   ?  ? 
+       AC2   AC2   C  ?  0   ?  ? 
+       AN3   AN3   N  ?  0   ?  ? 
+       AC4   AC4   C  ?  0   ?  ? 
+       BO5*  BO5*  O  ?  0   ?  ? 
+       BC5*  BC5*  C  ?  0   ?  ? 
+       BC4*  BC4*  C  ?  0   ?  ? 
+       BO4*  BO4*  O  ?  0   ?  ? 
+       BC3*  BC3*  C  ?  0   ?  ? 
+       BO3*  BO3*  O  ?  0   ?  ? 
+       BC2*  BC2*  C  ?  0   ?  ? 
+       BO2*  BO2*  O  ?  0   ?  ? 
+       BC1*  BC1*  C  ?  0   ?  ? 
+       BN9   BN9   N  ?  0   ?  ? 
+       BC8   BC8   C  ?  0   ?  ? 
+       BN7   BN7   N  ?  0   ?  ? 
+       BC5   BC5   C  ?  0   ?  ? 
+       BC6   BC6   C  ?  0   ?  ? 
+       BN6   BN6   N  ?  0   ?  ? 
+       BN1   BN1   N  ?  0   ?  ? 
+       BC2   BC2   C  ?  0   ?  ? 
+       BN3   BN3   N  ?  0   ?  ? 
+       BC4   BC4   C  ?  0   ?  ? 
+       2HOA  2HOA  H  ?  0   ?  ? 
+       2HOB  2HOB  H  ?  0   ?  ? 
+       2HOG  2HOG  H  ?  0   ?  ? 
+       2HOD  2HOD  H  ?  0   ?  ? 
+       2HOE  2HOE  H  ?  0   ?  ? 
+       AH51  AH51  H  ?  0   ?  ? 
+       AH52  AH52  H  ?  0   ?  ? 
+       AH4*  AH4*  H  ?  0   ?  ? 
+       AH3*  AH3*  H  ?  0   ?  ? 
+       AHO3  AHO3  H  ?  0   ?  ? 
+       AH2*  AH2*  H  ?  0   ?  ? 
+       AHO2  AHO2  H  ?  0   ?  ? 
+       AH1*  AH1*  H  ?  0   ?  ? 
+       AH8   AH8   H  ?  0   ?  ? 
+       AH61  AH61  H  ?  0   ?  ? 
+       AH62  AH62  H  ?  0   ?  ? 
+       AH2   AH2   H  ?  0   ?  ? 
+       BH51  BH51  H  ?  0   ?  ? 
+       BH52  BH52  H  ?  0   ?  ? 
+       BH4*  BH4*  H  ?  0   ?  ? 
+       BH3*  BH3*  H  ?  0   ?  ? 
+       BHO3  BHO3  H  ?  0   ?  ? 
+       BH2*  BH2*  H  ?  0   ?  ? 
+       BHO2  BHO2  H  ?  0   ?  ? 
+       BH1*  BH1*  H  ?  0   ?  ? 
+       BH8   BH8   H  ?  0   ?  ? 
+       BH61  BH61  H  ?  0   ?  ? 
+       BH62  BH62  H  ?  0   ?  ? 
+       BH2   BH2   H  ?  0   ?  ? 
+
+   stop_
+
+   loop_
+      _Bond_order
+      _Bond_atom_one_atom_name
+      _Bond_atom_two_atom_name
+      _PDB_bond_atom_one_atom_name
+      _PDB_bond_atom_two_atom_name
+
+       DOUB  PA    O1A   PA    O1A  
+       SING  PA    O2A   PA    O2A  
+       SING  PA    O3A   PA    O3A  
+       SING  PA    AO5*  PA    AO5* 
+       SING  O2A   2HOA  O2A   2HOA 
+       SING  O3A   PB    O3A   PB   
+       DOUB  PB    O1B   PB    O1B  
+       SING  PB    O2B   PB    O2B  
+       SING  PB    O3B   PB    O3B  
+       SING  O2B   2HOB  O2B   2HOB 
+       SING  O3B   PG    O3B   PG   
+       DOUB  PG    O1G   PG    O1G  
+       SING  PG    O2G   PG    O2G  
+       SING  PG    O3G   PG    O3G  
+       SING  O2G   2HOG  O2G   2HOG 
+       SING  O3G   PD    O3G   PD   
+       DOUB  PD    O1D   PD    O1D  
+       SING  PD    O2D   PD    O2D  
+       SING  PD    O3D   PD    O3D  
+       SING  O2D   2HOD  O2D   2HOD 
+       SING  O3D   PE    O3D   PE   
+       DOUB  PE    O1E   PE    O1E  
+       SING  PE    O2E   PE    O2E  
+       SING  PE    BO5*  PE    BO5* 
+       SING  O2E   2HOE  O2E   2HOE 
+       SING  AO5*  AC5*  AO5*  AC5* 
+       SING  AC5*  AC4*  AC5*  AC4* 
+       SING  AC5*  AH51  AC5*  AH51 
+       SING  AC5*  AH52  AC5*  AH52 
+       SING  AC4*  AO4*  AC4*  AO4* 
+       SING  AC4*  AC3*  AC4*  AC3* 
+       SING  AC4*  AH4*  AC4*  AH4* 
+       SING  AO4*  AC1*  AO4*  AC1* 
+       SING  AC3*  AC2*  AC3*  AC2* 
+       SING  AC3*  AO3*  AC3*  AO3* 
+       SING  AC3*  AH3*  AC3*  AH3* 
+       SING  AO3*  AHO3  AO3*  AHO3 
+       SING  AC2*  AC1*  AC2*  AC1* 
+       SING  AC2*  AO2*  AC2*  AO2* 
+       SING  AC2*  AH2*  AC2*  AH2* 
+       SING  AO2*  AHO2  AO2*  AHO2 
+       SING  AC1*  AN9   AC1*  AN9  
+       SING  AC1*  AH1*  AC1*  AH1* 
+       SING  AN9   AC4   AN9   AC4  
+       SING  AN9   AC8   AN9   AC8  
+       DOUB  AC8   AN7   AC8   AN7  
+       SING  AC8   AH8   AC8   AH8  
+       SING  AN7   AC5   AN7   AC5  
+       DOUB  AC5   AC4   AC5   AC4  
+       SING  AC5   AC6   AC5   AC6  
+       DOUB  AC6   AN1   AC6   AN1  
+       SING  AC6   AN6   AC6   AN6  
+       SING  AN6   AH61  AN6   AH61 
+       SING  AN6   AH62  AN6   AH62 
+       SING  AN1   AC2   AN1   AC2  
+       DOUB  AC2   AN3   AC2   AN3  
+       SING  AC2   AH2   AC2   AH2  
+       SING  AN3   AC4   AN3   AC4  
+       SING  BO5*  BC5*  BO5*  BC5* 
+       SING  BC5*  BC4*  BC5*  BC4* 
+       SING  BC5*  BH51  BC5*  BH51 
+       SING  BC5*  BH52  BC5*  BH52 
+       SING  BC4*  BO4*  BC4*  BO4* 
+       SING  BC4*  BC3*  BC4*  BC3* 
+       SING  BC4*  BH4*  BC4*  BH4* 
+       SING  BO4*  BC1*  BO4*  BC1* 
+       SING  BC3*  BC2*  BC3*  BC2* 
+       SING  BC3*  BO3*  BC3*  BO3* 
+       SING  BC3*  BH3*  BC3*  BH3* 
+       SING  BO3*  BHO3  BO3*  BHO3 
+       SING  BC2*  BC1*  BC2*  BC1* 
+       SING  BC2*  BO2*  BC2*  BO2* 
+       SING  BC2*  BH2*  BC2*  BH2* 
+       SING  BO2*  BHO2  BO2*  BHO2 
+       SING  BC1*  BN9   BC1*  BN9  
+       SING  BC1*  BH1*  BC1*  BH1* 
+       SING  BN9   BC4   BN9   BC4  
+       SING  BN9   BC8   BN9   BC8  
+       DOUB  BC8   BN7   BC8   BN7  
+       SING  BC8   BH8   BC8   BH8  
+       SING  BN7   BC5   BN7   BC5  
+       DOUB  BC5   BC4   BC5   BC4  
+       SING  BC5   BC6   BC5   BC6  
+       DOUB  BC6   BN1   BC6   BN1  
+       SING  BC6   BN6   BC6   BN6  
+       SING  BN6   BH61  BN6   BH61 
+       SING  BN6   BH62  BN6   BH62 
+       SING  BN1   BC2   BN1   BC2  
+       DOUB  BC2   BN3   BC2   BN3  
+       SING  BC2   BH2   BC2   BH2  
+       SING  BN3   BC4   BN3   BC4  
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+      _Strain
+      _Cell_line
+      _Plasmid
+
+      $AKeco "E. coli"  562   Eubacteria  .  Escherichia  coli  HfrP4x8  HB101  pEAK91 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $AKeco 'recombinant technology'  .  .  .  .  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $AKeco  1.75  mM "[U-15N]" 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_nmrPipe
+   _Saveframe_category   software
+
+   _Name                 nmrPipe
+
+   loop_
+      _Task
+
+       processing 
+
+   stop_
+
+   _Details             
+;
+Delaglio, F., Grzesiek, S., Vuister, G.W.,
+Zhu, G., Pfeifer, J., and Bax, A. (1995)
+J. Biomol. NMR 6, 277-293.
+;
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer_1
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                DMX
+   _Field_strength       600
+
+save_
+
+
+save_NMR_spectrometer_2
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                DRX
+   _Field_strength       800
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+15N R1 inversion recovery
+15N R2 CPMG
+15N-{1H} steady-state NOE
+15N CSA - 15N-1H cross-correlation rate, eta(xy)
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_condition_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             6.8  0.1   n/a 
+       temperature  303    0.05  K   
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       H2O  H   1   protons   ppm    4.725  .  indirect  .  .  .  1.0 
+       NH3  N  15   nitrogen  ppm  117.5    .  indirect  .  .  .  1.0 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_1
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $condition_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "AKeco kinase"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     2   ARG       H     H      9.56    0.002     .
+     2     2   ARG       N     N    124.28    0.010     .
+     3     3   ILE       H     H      8.17    0.002     .
+     4     3   ILE       N     N    122.99    0.010     .
+     5     4   ILE       H     H      8.70    0.002     .
+     6     4   ILE       N     N    125.14    0.010     .
+     7     5   LEU       H     H      8.38    0.002     .
+     8     5   LEU       N     N    123.62    0.010     .
+     9     6   LEU       H     H      9.37    0.002     .
+    10     6   LEU       N     N    125.69    0.010     .
+    11     7   GLY       H     H      8.98    0.002     .
+    12     7   GLY       N     N    109.24    0.010     .
+    13     8   ALA       H     H      8.87    0.002     .
+    15    10   GLY       H     H      8.25    0.002     .
+    16    10   GLY       N     N    115.85    0.010     .
+    17    11   ALA       H     H      7.91    0.002     .
+    18    11   ALA       N     N    119.83    0.010     .
+    19    12   GLY       H     H      8.00    0.002     .
+    20    12   GLY       N     N    104.50    0.010     .
+    21    13   LYS       H     H      8.29    0.002     .
+    22    13   LYS       N     N    120.53    0.010     .
+    23    14   GLY       H     H     11.93    0.002     .
+    24    14   GLY       N     N    108.40    0.010     .
+    25    15   THR       H     H      8.28    0.002     .
+    26    15   THR       N     N    118.95    0.010     .
+    27    16   GLN       H     H      7.59    0.002     .
+    28    16   GLN       N     N    116.69    0.010     .
+    29    17   ALA       H     H      9.16    0.002     .
+    30    17   ALA       N     N    123.42    0.010     .
+    31    18   GLN       H     H      7.20    0.002     .
+    32    18   GLN       N     N    113.59    0.010     .
+    33    19   PHE       H     H      6.73    0.002     .
+    34    19   PHE       N     N    117.34    0.010     .
+    35    20   ILE       H     H      7.92    0.002     .
+    36    20   ILE       N     N    120.67    0.010     .
+    37    21   MET       H     H      8.45    0.002     .
+    38    21   MET       N     N    119.65    0.010     .
+    39    22   GLU       H     H      8.03    0.002     .
+    40    22   GLU       N     N    118.40    0.010     .
+    41    23   LYS       H     H      7.64    0.002     .
+    42    23   LYS       N     N    120.39    0.010     .
+    43    24   TYR       H     H      8.18    0.002     .
+    44    24   TYR       N     N    112.73    0.010     .
+    45    25   GLY       H     H      7.72    0.002     .
+    46    25   GLY       N     N    108.90    0.010     .
+    47    26   ILE       H     H      8.11    0.002     .
+    49    28   GLN       H     H      8.03    0.002     .
+    50    28   GLN       N     N    120.87    0.010     .
+    51    29   ILE       H     H      9.68    0.002     .
+    52    29   ILE       N     N    131.60    0.010     .
+    53    30   SER       H     H      8.72    0.002     .
+    54    30   SER       N     N    120.84    0.010     .
+    55    31   THR       H     H      7.89    0.002     .
+    56    31   THR       N     N    118.02    0.010     .
+    57    32   GLY       H     H      9.76    0.002     .
+    58    32   GLY       N     N    110.71    0.010     .
+    59    33   ASP       H     H      6.82    0.002     .
+    60    33   ASP       N     N    112.03    0.010     .
+    61    34   MET       H     H      8.31    0.002     .
+    62    34   MET       N     N    119.21    0.010     .
+    63    35   LEU       H     H      8.60    0.002     .
+    64    35   LEU       N     N    121.52    0.010     .
+    65    36   ARG       H     H      8.57    0.002     .
+    66    36   ARG       N     N    118.72    0.010     .
+    67    37   ALA       H     H      8.11    0.002     .
+    68    37   ALA       N     N    122.04    0.010     .
+    69    38   ALA       H     H      7.80    0.002     .
+    70    38   ALA       N     N    122.73    0.010     .
+    71    39   VAL       H     H      8.21    0.002     .
+    72    39   VAL       N     N    119.05    0.010     .
+    73    40   LYS       H     H      7.88    0.002     .
+    74    40   LYS       N     N    120.09    0.010     .
+    75    41   SER       H     H      8.00    0.002     .
+    76    41   SER       N     N    112.24    0.010     .
+    77    42   GLY       H     H      7.77    0.002     .
+    78    42   GLY       N     N    109.41    0.010     .
+    79    43   SER       H     H      7.63    0.002     .
+    80    43   SER       N     N    113.84    0.010     .
+    81    44   GLU       H     H      8.94    0.002     .
+    82    44   GLU       N     N    121.37    0.010     .
+    83    45   LEU       H     H      8.16    0.002     .
+    84    45   LEU       N     N    119.66    0.010     .
+    85    46   GLY       H     H      7.80    0.002     .
+    87    48   GLN       H     H      7.65    0.002     .
+    88    48   GLN       N     N    116.65    0.010     .
+    89    49   ALA       H     H      8.21    0.002     .
+    90    49   ALA       N     N    119.05    0.010     .
+    91    50   LYS       H     H      7.94    0.002     .
+    92    50   LYS       N     N    117.67    0.010     .
+    93    51   ASP       H     H      8.14    0.002     .
+    94    51   ASP       N     N    115.78    0.010     .
+    95    52   ILE       H     H      7.25    0.002     .
+    96    52   ILE       N     N    120.59    0.010     .
+    97    53   MET       H     H      8.27    0.002     .
+    98    53   MET       N     N    117.94    0.010     .
+    99    54   ASP       H     H      8.49    0.002     .
+   100    54   ASP       N     N    119.88    0.010     .
+   101    55   ALA       H     H      7.20    0.002     .
+   102    55   ALA       N     N    118.80    0.010     .
+   103    56   GLY       H     H      7.99    0.002     .
+   104    56   GLY       N     N    105.63    0.010     .
+   105    57   LYS       H     H      7.26    0.002     .
+   106    57   LYS       N     N    117.44    0.010     .
+   107    58   LEU       H     H      8.98    0.002     .
+   108    58   LEU       N     N    120.20    0.010     .
+   109    59   VAL       H     H      8.85    0.002     .
+   110    59   VAL       N     N    121.18    0.010     .
+   111    60   THR       H     H      7.21    0.002     .
+   112    60   THR       N     N    118.13    0.010     .
+   113    61   ASP       H     H      8.87    0.002     .
+   114    61   ASP       N     N    125.60    0.010     .
+   115    62   GLU       H     H      9.34    0.002     .
+   116    62   GLU       N     N    116.10    0.010     .
+   117    63   LEU       H     H      6.96    0.002     .
+   118    63   LEU       N     N    116.68    0.010     .
+   119    64   VAL       H     H      7.11    0.002     .
+   120    64   VAL       N     N    115.08    0.010     .
+   121    65   ILE       H     H      8.85    0.002     .
+   122    65   ILE       N     N    119.64    0.010     .
+   123    66   ALA       H     H      7.14    0.002     .
+   124    66   ALA       N     N    119.01    0.010     .
+   125    67   LEU       H     H      7.15    0.002     .
+   126    67   LEU       N     N    117.60    0.010     .
+   127    68   VAL       H     H      7.84    0.002     .
+   128    68   VAL       N     N    118.77    0.010     .
+   129    69   LYS       H     H      8.36    0.002     .
+   130    69   LYS       N     N    117.62    0.010     .
+   131    70   GLU       H     H      7.35    0.002     .
+   132    70   GLU       N     N    115.94    0.010     .
+   133    71   ARG       H     H      7.44    0.002     .
+   134    71   ARG       N     N    119.69    0.010     .
+   135    72   ILE       H     H      8.20    0.002     .
+   136    72   ILE       N     N    111.50    0.010     .
+   137    73   ALA       H     H      6.85    0.002     .
+   138    73   ALA       N     N    120.84    0.010     .
+   139    74   GLN       H     H      7.19    0.002     .
+   140    74   GLN       N     N    115.99    0.010     .
+   141    75   GLU       H     H      8.94    0.002     .
+   142    75   GLU       N     N    121.37    0.010     .
+   143    76   ASP       H     H      8.46    0.002     .
+   144    76   ASP       N     N    117.02    0.010     .
+   145    77   CYS       H     H      7.66    0.002     .
+   146    77   CYS       N     N    117.47    0.010     .
+   147    78   ARG       H     H      7.70    0.002     .
+   148    78   ARG       N     N    121.36    0.010     .
+   149    79   ASN       H     H      8.40    0.002     .
+   150    79   ASN       N     N    114.79    0.010     .
+   151    80   GLY       H     H      7.37    0.002     .
+   152    80   GLY       N     N    106.99    0.010     .
+   153    81   PHE       H     H      7.59    0.002     .
+   154    81   PHE       N     N    108.99    0.010     .
+   155    82   LEU       H     H      8.71    0.002     .
+   156    82   LEU       N     N    121.15    0.010     .
+   157    83   LEU       H     H      9.66    0.002     .
+   158    83   LEU       N     N    127.34    0.010     .
+   159    84   ASP       H     H      8.66    0.002     .
+   160    84   ASP       N     N    123.52    0.010     .
+   161    85   GLY       H     H      7.91    0.002     .
+   162    85   GLY       N     N    109.11    0.010     .
+   163    86   PHE       H     H      7.36    0.002     .
+   165    88   ARG       H     H      7.95    0.002     .
+   166    88   ARG       N     N    118.78    0.010     .
+   167    89   THR       H     H      7.05    0.002     .
+   168    89   THR       N     N    106.96    0.010     .
+   169    90   ILE       H     H      9.73    0.002     .
+   171    92   GLN       H     H      7.18    0.002     .
+   172    92   GLN       N     N    114.98    0.010     .
+   173    93   ALA       H     H      7.52    0.002     .
+   174    93   ALA       N     N    123.53    0.010     .
+   175    94   ASP       H     H      9.13    0.002     .
+   176    94   ASP       N     N    120.38    0.010     .
+   177    95   ALA       H     H      7.94    0.002     .
+   178    95   ALA       N     N    121.73    0.010     .
+   179    96   MET       H     H      7.52    0.002     .
+   180    96   MET       N     N    116.72    0.010     .
+   181    97   LYS       H     H      7.46    0.002     .
+   182    97   LYS       N     N    117.99    0.010     .
+   183    98   GLU       H     H      7.44    0.002     .
+   184    98   GLU       N     N    119.09    0.010     .
+   185    99   ALA       H     H      7.31    0.002     .
+   186    99   ALA       N     N    117.79    0.010     .
+   187   100   GLY       H     H      7.88    0.002     .
+   188   100   GLY       N     N    107.44    0.010     .
+   189   101   ILE       H     H      8.08    0.002     .
+   190   101   ILE       N     N    120.93    0.010     .
+   191   102   ASN       H     H      8.01    0.002     .
+   192   102   ASN       N     N    124.65    0.010     .
+   193   103   VAL       H     H      8.80    0.002     .
+   194   103   VAL       N     N    113.01    0.010     .
+   195   104   ASP       H     H      8.55    0.002     .
+   196   104   ASP       N     N    122.70    0.010     .
+   197   105   TYR       H     H      7.54    0.002     .
+   198   105   TYR       N     N    114.62    0.010     .
+   199   106   VAL       H     H      8.74    0.002     .
+   200   106   VAL       N     N    122.74    0.010     .
+   201   107   LEU       H     H      8.55    0.002     .
+   202   107   LEU       N     N    124.71    0.010     .
+   203   108   GLU       H     H      8.65    0.002     .
+   204   108   GLU       N     N    124.89    0.010     .
+   205   109   PHE       H     H      9.28    0.002     .
+   206   109   PHE       N     N    127.93    0.010     .
+   207   110   ASP       H     H      8.84    0.002     .
+   208   110   ASP       N     N    125.13    0.010     .
+   209   111   VAL       H     H      7.53    0.002     .
+   211   113   ASP       H     H      8.71    0.002     .
+   212   113   ASP       N     N    121.15    0.010     .
+   213   114   GLU       H     H      9.09    0.002     .
+   214   114   GLU       N     N    114.67    0.010     .
+   215   115   LEU       H     H      7.16    0.002     .
+   216   115   LEU       N     N    117.85    0.010     .
+   217   116   ILE       H     H      7.37    0.002     .
+   218   116   ILE       N     N    119.12    0.010     .
+   219   117   VAL       H     H      8.03    0.002     .
+   220   117   VAL       N     N    117.94    0.010     .
+   221   118   ASP       H     H      7.75    0.002     .
+   222   118   ASP       N     N    116.33    0.010     .
+   223   119   ARG       H     H      8.07    0.002     .
+   224   119   ARG       N     N    118.66    0.010     .
+   225   120   ILE       H     H      8.15    0.002     .
+   226   120   ILE       N     N    116.56    0.010     .
+   227   121   VAL       H     H      8.36    0.002     .
+   228   121   VAL       N     N    115.85    0.010     .
+   229   122   GLY       H     H      7.23    0.002     .
+   230   122   GLY       N     N    104.22    0.010     .
+   231   123   ARG       H     H      7.66    0.002     .
+   232   123   ARG       N     N    121.65    0.010     .
+   233   124   ARG       H     H      8.41    0.002     .
+   234   124   ARG       N     N    128.42    0.010     .
+   235   125   VAL       H     H      9.30    0.002     .
+   236   125   VAL       N     N    116.15    0.010     .
+   237   126   HIS       H     H      9.15    0.002     .
+   238   126   HIS       N     N    125.32    0.010     .
+   239   127   ALA       H     H      8.99    0.002     .
+   241   129   SER       H     H      6.77    0.002     .
+   242   129   SER       N     N    107.23    0.010     .
+   243   130   GLY       H     H      8.51    0.002     .
+   244   130   GLY       N     N    112.48    0.010     .
+   245   131   ARG       H     H      8.43    0.002     .
+   246   131   ARG       N     N    121.50    0.010     .
+   247   132   VAL       H     H      7.99    0.002     .
+   248   132   VAL       N     N    118.58    0.010     .
+   249   133   TYR       H     H      9.28    0.002     .
+   250   133   TYR       N     N    124.94    0.010     .
+   251   134   HIS       H     H      8.46    0.002     .
+   252   134   HIS       N     N    121.80    0.010     .
+   253   135   VAL       H     H      7.96    0.002     .
+   254   135   VAL       N     N    119.77    0.010     .
+   255   136   LYS       H     H      9.53    0.002     .
+   256   136   LYS       N     N    119.60    0.010     .
+   257   137   PHE       H     H      9.07    0.002     .
+   258   137   PHE       N     N    117.60    0.010     .
+   259   138   ASN       H     H      8.01    0.002     .
+   261   141   LYS       H     H     10.11    0.002     .
+   262   141   LYS       N     N    123.47    0.010     .
+   263   142   VAL       H     H      8.80    0.002     .
+   264   142   VAL       N     N    120.23    0.010     .
+   265   143   GLU       H     H      8.12    0.002     .
+   266   143   GLU       N     N    125.12    0.010     .
+   267   144   GLY       H     H      8.74    0.002     .
+   268   144   GLY       N     N    111.07    0.010     .
+   269   145   LYS       H     H      7.97    0.002     .
+   270   145   LYS       N     N    119.04    0.010     .
+   271   146   ASP       H     H      9.04    0.002     .
+   272   146   ASP       N     N    119.46    0.010     .
+   273   147   ASP       H     H      7.93    0.002     .
+   274   147   ASP       N     N    126.58    0.010     .
+   275   148   VAL       H     H      6.35    0.002     .
+   276   148   VAL       N     N    114.80    0.010     .
+   277   149   THR       H     H      7.51    0.002     .
+   278   149   THR       N     N    105.16    0.010     .
+   279   150   GLY       H     H      7.84    0.002     .
+   280   150   GLY       N     N    110.65    0.010     .
+   281   151   GLU       H     H      7.63    0.002     .
+   282   151   GLU       N     N    118.27    0.010     .
+   283   152   GLU       H     H      8.67    0.002     .
+   284   152   GLU       N     N    119.37    0.010     .
+   285   153   LEU       H     H      7.92    0.002     .
+   286   153   LEU       N     N    120.67    0.010     .
+   287   154   THR       H     H      9.33    0.002     .
+   288   154   THR       N     N    113.30    0.010     .
+   289   155   THR       H     H      8.29    0.002     .
+   290   155   THR       N     N    113.13    0.010     .
+   291   156   ARG       H     H      9.76    0.002     .
+   292   156   ARG       N     N    126.09    0.010     .
+   293   157   LYS       H     H      8.65    0.002     .
+   294   157   LYS       N     N    121.28    0.010     .
+   295   158   ASP       H     H      8.71    0.002     .
+   296   158   ASP       N     N    112.62    0.010     .
+   297   159   ASP       H     H      7.32    0.002     .
+   298   159   ASP       N     N    121.44    0.010     .
+   299   160   GLN       H     H      7.07    0.002     .
+   300   160   GLN       N     N    117.37    0.010     .
+   301   161   GLU       H     H      9.20    0.002     .
+   302   161   GLU       N     N    124.48    0.010     .
+   303   162   GLU       H     H      9.16    0.002     .
+   304   162   GLU       N     N    116.07    0.010     .
+   305   163   THR       H     H      7.31    0.002     .
+   306   163   THR       N     N    115.44    0.010     .
+   307   164   VAL       H     H      8.52    0.002     .
+   308   164   VAL       N     N    123.36    0.010     .
+   309   165   ARG       H     H      8.17    0.002     .
+   310   165   ARG       N     N    117.26    0.010     .
+   311   166   LYS       H     H      7.49    0.002     .
+   312   166   LYS       N     N    119.19    0.010     .
+   313   167   ARG       H     H      8.48    0.002     .
+   314   167   ARG       N     N    119.44    0.010     .
+   315   168   LEU       H     H      8.60    0.002     .
+   316   168   LEU       N     N    123.09    0.010     .
+   317   169   VAL       H     H      8.28    0.002     .
+   318   169   VAL       N     N    118.95    0.010     .
+   319   170   GLU       H     H      7.99    0.002     .
+   320   170   GLU       N     N    118.58    0.010     .
+   321   171   TYR       H     H      8.24    0.002     .
+   322   171   TYR       N     N    119.37    0.010     .
+   323   172   HIS       H     H      8.53    0.002     .
+   324   172   HIS       N     N    119.27    0.010     .
+   325   173   GLN       H     H      8.02    0.002     .
+   326   173   GLN       N     N    115.10    0.010     .
+   327   174   MET       H     H      8.60    0.002     .
+   328   174   MET       N     N    112.38    0.010     .
+   329   175   THR       H     H      7.89    0.002     .
+   330   175   THR       N     N    116.61    0.010     .
+   331   176   ALA       H     H      7.84    0.002     .
+   333   178   LEU       H     H      8.68    0.002     .
+   334   178   LEU       N     N    116.96    0.010     .
+   335   179   ILE       H     H      8.11    0.002     .
+   336   179   ILE       N     N    122.62    0.010     .
+   337   180   GLY       H     H      7.72    0.002     .
+   338   180   GLY       N     N    108.69    0.010     .
+   339   181   TYR       H     H      7.60    0.002     .
+   340   181   TYR       N     N    122.53    0.010     .
+   341   182   TYR       H     H      9.04    0.002     .
+   342   182   TYR       N     N    116.30    0.010     .
+   343   183   SER       H     H      8.31    0.002     .
+   344   183   SER       N     N    119.21    0.010     .
+   345   184   LYS       H     H      7.70    0.002     .
+   346   184   LYS       N     N    122.75    0.010     .
+   347   185   GLU       H     H      8.63    0.002     .
+   348   185   GLU       N     N    120.47    0.010     .
+   349   186   ALA       H     H      8.30    0.002     .
+   350   186   ALA       N     N    122.24    0.010     .
+   351   187   GLU       H     H      8.11    0.002     .
+   352   187   GLU       N     N    122.04    0.010     .
+   353   188   ALA       H     H      7.46    0.002     .
+   354   188   ALA       N     N    118.20    0.010     .
+   355   189   GLY       H     H      7.88    0.002     .
+   356   189   GLY       N     N    104.79    0.010     .
+   357   190   ASN       H     H      8.18    0.002     .
+   358   190   ASN       N     N    116.41    0.010     .
+   359   191   THR       H     H      7.50    0.002     .
+   360   191   THR       N     N    112.27    0.010     .
+   361   192   LYS       H     H      7.80    0.002     .
+   362   192   LYS       N     N    122.73    0.010     .
+   363   193   TYR       H     H      8.64    0.002     .
+   364   193   TYR       N     N    125.14    0.010     .
+   365   194   ALA       H     H      8.56    0.002     .
+   366   194   ALA       N     N    130.91    0.010     .
+   367   195   LYS       H     H      8.40    0.002     .
+   368   195   LYS       N     N    121.95    0.010     .
+   369   196   VAL       H     H      9.29    0.002     .
+   370   196   VAL       N     N    124.77    0.010     .
+   371   197   ASP       H     H      8.75    0.002     .
+   372   197   ASP       N     N    123.59    0.010     .
+   373   198   GLY       H     H      8.40    0.002     .
+   374   198   GLY       N     N    111.53    0.010     .
+   375   199   THR       H     H      8.79    0.002     .
+   376   199   THR       N     N    111.59    0.010     .
+   377   200   LYS       H     H      6.40    0.002     .
+   379   202   VAL       H     H      8.21    0.002     .
+   380   202   VAL       N     N    122.25    0.010     .
+   381   203   ALA       H     H      8.86    0.002     .
+   382   203   ALA       N     N    117.79    0.010     .
+   383   204   GLU       H     H      7.40    0.002     .
+   384   204   GLU       N     N    117.91    0.010     .
+   385   205   VAL       H     H      7.96    0.002     .
+   386   205   VAL       N     N    121.31    0.010     .
+   387   206   ARG       H     H      7.77    0.002     .
+   388   206   ARG       N     N    118.14    0.010     .
+   389   207   ALA       H     H      7.23    0.002     .
+   390   207   ALA       N     N    119.85    0.010     .
+   391   208   ASP       H     H      8.07    0.002     .
+   392   208   ASP       N     N    120.67    0.010     .
+   393   209   LEU       H     H      8.35    0.002     .
+   394   209   LEU       N     N    120.55    0.010     .
+   395   210   GLU       H     H      7.87    0.002     .
+   396   210   GLU       N     N    120.85    0.010     .
+   397   211   LYS       H     H      7.46    0.002     .
+   398   211   LYS       N     N    117.62    0.010     .
+   399   212   ILE       H     H      7.31    0.002     .
+   400   212   ILE       N     N    118.79    0.010     .
+   401   213   LEU       H     H      7.96    0.002     .
+   402   213   LEU       N     N    117.04    0.010     .
+   403   214   GLY       H     H      7.70    0.002     .
+
+   stop_
+
+save_
+
+
+save_15N_T1_600
+   _Saveframe_category          T1_relaxation
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   600
+   _T1_coherence_type           Nz
+   _T1_value_units              ms
+   _Mol_system_component_name  "AKeco kinase"
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _T1_value
+      _T1_value_error
+
+         2   ARG  N  966.2  19.9 
+         3   ILE  N  910.3  19.1 
+         4   ILE  N  920.8  18.4 
+         5   LEU  N  871.7  18.3 
+         6   LEU  N  890.4  18.0 
+         7   GLY  N  873.6  18.4 
+         8   ALA  N  873.9  18.1 
+        10   GLY  N  884.6  18.4 
+        11   ALA  N  857.0  18.0 
+        12   GLY  N  844.0  17.3 
+        13   LYS  N  838.5  18.1 
+        14   GLY  N  800.0  24.8 
+        15   THR  N  900.2  19.2 
+        16   GLN  N  852.2  18.2 
+        17   ALA  N  843.3  18.0 
+        18   GLN  N  870.7  17.7 
+        19   PHE  N  863.9  18.2 
+        20   ILE  N  896.3  26.8 
+        21   MET  N  858.5  18.3 
+        22   GLU  N  870.9  18.2 
+        23   LYS  N  892.1  19.2 
+        24   TYR  N  894.1  18.8 
+        25   GLY  N  912.1  19.4 
+        26   ILE  N  883.6  18.7 
+        28   GLN  N  903.0  18.7 
+        29   ILE  N  892.7  18.6 
+        30   SER  N  914.6  18.3 
+        31   THR  N  850.5  17.7 
+        32   GLY  N  874.9  24.8 
+        33   ASP  N  977.3  19.9 
+        34   MET  N  867.0  18.5 
+        35   LEU  N  877.4  18.0 
+        36   ARG  N  878.9  17.7 
+        37   ALA  N  883.6  18.7 
+        38   ALA  N  914.2  19.2 
+        39   VAL  N  882.7  18.8 
+        40   LYS  N  904.8  19.0 
+        41   SER  N  905.8  18.9 
+        42   GLY  N  835.8  18.1 
+        43   SER  N  873.4  18.9 
+        44   GLU  N  896.4  18.9 
+        45   LEU  N  863.9  18.9 
+        46   GLY  N  845.5  17.8 
+        48   GLN  N  866.2  18.9 
+        49   ALA  N  882.7  18.8 
+        50   LYS  N  884.9  18.3 
+        51   ASP  N  881.4  18.9 
+        52   ILE  N  895.4  18.2 
+        53   MET  N  852.9  18.5 
+        54   ASP  N  864.0  18.0 
+        55   ALA  N  901.3  18.3 
+        56   GLY  N  852.8  17.8 
+        57   LYS  N  886.0  18.0 
+        58   LEU  N  890.4  18.3 
+        59   VAL  N  882.4  18.0 
+        60   THR  N  902.1  18.0 
+        61   ASP  N  860.4  17.7 
+        62   GLU  N  866.0  18.0 
+        63   LEU  N  860.3  17.8 
+        64   VAL  N  877.1  17.8 
+        65   ILE  N  847.3  17.3 
+        66   ALA  N  856.7  17.5 
+        67   LEU  N  877.4  17.7 
+        68   VAL  N  856.1  17.8 
+        69   LYS  N  851.5  18.4 
+        70   GLU  N  880.9  18.3 
+        71   ARG  N  869.5  18.2 
+        72   ILE  N  849.5  18.1 
+        73   ALA  N  863.9  18.3 
+        74   GLN  N  927.1  18.7 
+        75   GLU  N  896.4  18.9 
+        76   ASP  N  879.1  18.4 
+        77   CYS  N  902.1  19.4 
+        78   ARG  N  886.9  19.1 
+        79   ASN  N  948.5  19.8 
+        80   GLY  N  940.4  19.3 
+        81   PHE  N  910.4  19.3 
+        82   LEU  N  919.8  27.4 
+        83   LEU  N  911.2  19.1 
+        84   ASP  N  913.3  18.4 
+        85   GLY  N  887.4  17.8 
+        86   PHE  N  846.1  17.5 
+        88   ARG  N  925.8  19.4 
+        89   THR  N  865.1  17.7 
+        90   ILE  N  880.6  18.9 
+        92   GLN  N  888.7  17.9 
+        93   ALA  N  856.7  18.6 
+        94   ASP  N  870.0  18.1 
+        95   ALA  N  885.6  18.4 
+        96   MET  N  872.6  18.6 
+        97   LYS  N  885.1  19.0 
+        98   GLU  N  918.6  19.3 
+        99   ALA  N  925.6  18.8 
+       100   GLY  N  876.5  18.3 
+       101   ILE  N  903.0  18.7 
+       102   ASN  N  926.7  19.1 
+       103   VAL  N  948.7  18.9 
+       104   ASP  N  905.1  18.5 
+       105   TYR  N  905.6  19.3 
+       106   VAL  N  952.1  19.1 
+       107   LEU  N  900.4  18.4 
+       108   GLU  N  920.0  18.4 
+       109   PHE  N  906.4  18.5 
+       110   ASP  N  940.3  19.4 
+       111   VAL  N  947.4  20.1 
+       113   ASP  N  919.3  18.4 
+       114   GLU  N  883.8  18.9 
+       115   LEU  N  904.1  18.3 
+       116   ILE  N  880.8  18.2 
+       117   VAL  N  864.4  18.0 
+       118   ASP  N  873.6  18.5 
+       119   ARG  N  884.7  18.3 
+       120   ILE  N  889.5  19.2 
+       121   VAL  N  839.4  17.9 
+       122   GLY  N  882.5  17.8 
+       123   ARG  N  838.2  18.6 
+       124   ARG  N  872.7  18.6 
+       125   VAL  N  866.0  18.0 
+       126   HIS  N  903.8  18.9 
+       127   ALA  N  931.4  19.7 
+       129   SER  N  922.1  19.3 
+       130   GLY  N  890.4  18.4 
+       131   ARG  N  862.1  18.2 
+       132   VAL  N  914.8  18.7 
+       133   TYR  N  899.7  18.5 
+       134   HIS  N  871.5  18.2 
+       135   VAL  N  879.5  18.4 
+       136   LYS  N  892.6  18.4 
+       137   PHE  N  943.9  19.7 
+       138   ASN  N  919.4  18.8 
+       141   LYS  N  908.2  18.6 
+       142   VAL  N  927.3  18.6 
+       143   GLU  N  952.1  19.8 
+       144   GLY  N  925.4  18.6 
+       145   LYS  N  856.2  18.0 
+       146   ASP  N  890.9  18.9 
+       147   ASP  N  893.3  18.5 
+       148   VAL  N  916.8  19.2 
+       149   THR  N  908.6  19.3 
+       150   GLY  N  867.8  18.4 
+       151   GLU  N  884.0  19.1 
+       152   GLU  N  924.8  18.5 
+       153   LEU  N  883.9  18.2 
+       154   THR  N  911.8  18.6 
+       155   THR  N  907.6  19.2 
+       156   ARG  N  841.8  18.1 
+       157   LYS  N  934.9  28.1 
+       158   ASP  N  818.4  16.9 
+       159   ASP  N  884.2  18.2 
+       160   GLN  N  947.0  19.1 
+       161   GLU  N  939.4  19.7 
+       162   GLU  N  889.6  18.8 
+       163   THR  N  941.3  19.3 
+       164   VAL  N  903.6  18.6 
+       165   ARG  N  904.1  19.0 
+       166   LYS  N  924.6  19.4 
+       167   ARG  N  911.9  18.7 
+       168   LEU  N  914.6  18.5 
+       169   VAL  N  900.2  19.2 
+       170   GLU  N  914.8  18.7 
+       171   TYR  N  905.4  19.0 
+       172   HIS  N  903.1  18.6 
+       173   GLN  N  941.3  19.4 
+       174   MET  N  957.9  19.1 
+       175   THR  N  931.1  19.2 
+       176   ALA  N  873.4  18.3 
+       178   LEU  N  903.1  18.0 
+       179   ILE  N  891.3  19.3 
+       180   GLY  N  921.5  19.6 
+       181   TYR  N  902.6  19.5 
+       182   TYR  N  900.2  19.1 
+       183   SER  N  867.0  18.5 
+       184   LYS  N  876.1  18.7 
+       185   GLU  N  898.9  18.3 
+       186   ALA  N  879.6  19.0 
+       187   GLU  N  883.6  18.7 
+       188   ALA  N  930.0  19.6 
+       189   GLY  N  914.5  18.9 
+       190   ASN  N  816.5  17.8 
+       191   THR  N  874.2  18.7 
+       192   LYS  N  914.2  19.2 
+       193   TYR  N  946.0  18.8 
+       194   ALA  N  902.2  18.4 
+       195   LYS  N  990.1  20.6 
+       196   VAL  N  900.0  18.5 
+       197   ASP  N  922.3  18.6 
+       198   GLY  N  938.4  19.6 
+       199   THR  N  870.2  17.6 
+       200   LYS  N  916.3  18.9 
+       202   VAL  N  921.2  19.4 
+       203   ALA  N  895.0  18.5 
+       204   GLU  N  898.8  18.7 
+       205   VAL  N  915.6  18.6 
+       206   ARG  N  923.2  19.4 
+       207   ALA  N  912.2  18.6 
+       208   ASP  N  925.2  19.3 
+       209   LEU  N  925.6  19.8 
+       210   GLU  N  946.7  19.8 
+       211   LYS  N  911.3  19.2 
+       212   ILE  N  994.1  20.3 
+       213   LEU  N  911.6  18.5 
+       214   GLY  N  833.6  18.1 
+
+   stop_
+
+save_
+
+
+save_15N_T2_600
+   _Saveframe_category          T2_relaxation
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   600
+   _T2_coherence_type           Ny
+   _T2_value_units              ms
+   _Mol_system_component_name  "AKeco kinase"
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _T2_value
+      _T2_value_error
+
+         2   ARG  N  64.86  1.09 
+         3   ILE  N  66.10  1.11 
+         4   ILE  N  68.03  1.15 
+         5   LEU  N  63.74  1.06 
+         6   LEU  N  66.78  1.11 
+         7   GLY  N  69.32  1.19 
+         8   ALA  N  58.01  0.96 
+        10   GLY  N  48.49  0.89 
+        11   ALA  N  55.33  0.91 
+        12   GLY  N  62.16  1.04 
+        13   LYS  N  67.85  1.14 
+        14   GLY  N  59.75  1.05 
+        15   THR  N  61.05  1.00 
+        16   GLN  N  63.84  1.05 
+        17   ALA  N  62.78  1.06 
+        18   GLN  N  67.57  1.13 
+        19   PHE  N  64.44  1.08 
+        20   ILE  N  68.96  0.95 
+        21   MET  N  62.90  1.04 
+        22   GLU  N  67.66  1.12 
+        23   LYS  N  66.30  1.09 
+        24   TYR  N  66.68  1.12 
+        25   GLY  N  66.58  1.10 
+        26   ILE  N  64.23  1.07 
+        28   GLN  N  69.04  1.16 
+        29   ILE  N  48.85  0.89 
+        30   SER  N  66.90  1.11 
+        31   THR  N  63.53  1.05 
+        32   GLY  N  48.38  0.91 
+        33   ASP  N  75.03  1.33 
+        34   MET  N  59.75  0.99 
+        35   LEU  N  65.03  1.09 
+        36   ARG  N  64.04  1.07 
+        37   ALA  N  64.23  1.07 
+        38   ALA  N  69.51  1.16 
+        39   VAL  N  69.84  1.19 
+        40   LYS  N  66.25  1.09 
+        41   SER  N  70.76  1.19 
+        42   GLY  N  70.46  1.18 
+        43   SER  N  72.56  1.23 
+        44   GLU  N  65.53  1.11 
+        45   LEU  N  69.97  1.19 
+        46   GLY  N  70.28  1.16 
+        48   GLN  N  71.61  1.20 
+        49   ALA  N  69.84  1.19 
+        50   LYS  N  67.99  1.12 
+        51   ASP  N  68.93  1.16 
+        52   ILE  N  70.80  1.20 
+        53   MET  N  64.18  1.07 
+        54   ASP  N  63.49  1.06 
+        55   ALA  N  66.88  1.11 
+        56   GLY  N  68.15  1.14 
+        57   LYS  N  62.06  1.03 
+        58   LEU  N  69.83  1.20 
+        59   VAL  N  66.48  1.13 
+        60   THR  N  67.13  1.12 
+        61   ASP  N  64.89  1.10 
+        62   GLU  N  66.26  1.10 
+        63   LEU  N  62.71  1.04 
+        64   VAL  N  64.71  1.06 
+        65   ILE  N  62.04  1.06 
+        66   ALA  N  63.76  1.06 
+        67   LEU  N  66.81  1.12 
+        68   VAL  N  64.94  1.02 
+        69   LYS  N  63.54  1.06 
+        70   GLU  N  65.68  1.10 
+        71   ARG  N  65.66  1.10 
+        72   ILE  N  56.60  0.94 
+        73   ALA  N  60.51  1.00 
+        74   GLN  N  70.44  1.19 
+        75   GLU  N  65.53  1.11 
+        76   ASP  N  63.25  1.05 
+        77   CYS  N  60.72  1.00 
+        78   ARG  N  65.47  1.08 
+        79   ASN  N  69.42  1.17 
+        80   GLY  N  75.01  1.28 
+        81   PHE  N  67.44  1.14 
+        82   LEU  N  65.01  1.08 
+        83   LEU  N  62.93  1.05 
+        84   ASP  N  46.92  0.88 
+        85   GLY  N  57.73  0.93 
+        86   PHE  N  62.77  1.01 
+        88   ARG  N  61.20  1.00 
+        89   THR  N  66.58  1.10 
+        90   ILE  N  65.75  1.10 
+        92   GLN  N  65.03  1.08 
+        93   ALA  N  65.12  1.09 
+        94   ASP  N  62.84  1.06 
+        95   ALA  N  63.09  1.05 
+        96   MET  N  65.03  1.11 
+        97   LYS  N  63.98  1.05 
+        98   GLU  N  62.09  1.03 
+        99   ALA  N  66.99  1.13 
+       100   GLY  N  71.33  1.18 
+       101   ILE  N  69.04  1.16 
+       102   ASN  N  83.39  1.52 
+       103   VAL  N  77.98  1.37 
+       104   ASP  N  61.59  1.01 
+       105   TYR  N  65.65  1.10 
+       106   VAL  N  69.55  1.15 
+       107   LEU  N  67.79  1.13 
+       108   GLU  N  66.23  1.10 
+       109   PHE  N  68.13  1.15 
+       110   ASP  N  69.32  1.19 
+       111   VAL  N  66.59  1.12 
+       113   ASP  N  63.71  1.06 
+       114   GLU  N  64.16  1.07 
+       115   LEU  N  63.41  1.04 
+       116   ILE  N  62.80  1.05 
+       117   VAL  N  62.37  1.03 
+       118   ASP  N  68.95  1.15 
+       119   ARG  N  59.74  0.98 
+       120   ILE  N  67.09  0.94 
+       121   VAL  N  57.60  0.95 
+       122   GLY  N  57.23  0.93 
+       123   ARG  N  59.66  0.97 
+       124   ARG  N  57.96  0.94 
+       125   VAL  N  66.26  1.10 
+       126   HIS  N  65.56  1.09 
+       127   ALA  N  66.27  1.11 
+       129   SER  N  68.15  1.14 
+       130   GLY  N  65.47  1.09 
+       131   ARG  N  64.68  1.06 
+       132   VAL  N  64.41  1.05 
+       133   TYR  N  64.88  1.08 
+       134   HIS  N  66.85  1.11 
+       135   VAL  N  64.34  1.05 
+       136   LYS  N  64.29  1.07 
+       137   PHE  N  69.10  1.18 
+       138   ASN  N  70.17  1.17 
+       141   LYS  N  70.81  1.19 
+       142   VAL  N  68.05  1.15 
+       143   GLU  N  71.50  1.21 
+       144   GLY  N  68.07  1.18 
+       145   LYS  N  65.87  1.09 
+       146   ASP  N  65.64  1.11 
+       147   ASP  N  67.28  1.12 
+       148   VAL  N  70.38  1.17 
+       149   THR  N  68.15  1.14 
+       150   GLY  N  64.88  1.07 
+       151   GLU  N  63.44  1.05 
+       152   GLU  N  73.09  1.24 
+       153   LEU  N  65.57  1.09 
+       154   THR  N  68.97  1.15 
+       155   THR  N  59.35  0.98 
+       156   ARG  N  67.01  1.13 
+       157   LYS  N  67.53  0.95 
+       158   ASP  N  66.33  1.11 
+       159   ASP  N  37.65  0.65 
+       160   GLN  N  83.44  1.50 
+       161   GLU  N  63.90  1.06 
+       162   GLU  N  64.41  1.07 
+       163   THR  N  65.15  1.09 
+       164   VAL  N  60.74  1.00 
+       165   ARG  N  58.78  0.97 
+       166   LYS  N  59.80  0.98 
+       167   ARG  N  60.04  0.98 
+       168   LEU  N  66.01  1.10 
+       169   VAL  N  61.05  1.00 
+       170   GLU  N  64.41  1.05 
+       171   TYR  N  60.66  1.00 
+       172   HIS  N  58.61  0.96 
+       173   GLN  N  62.96  1.04 
+       174   MET  N  64.49  1.07 
+       175   THR  N  64.48  1.05 
+       176   ALA  N  61.65  1.01 
+       178   LEU  N  60.64  1.01 
+       179   ILE  N  62.56  1.05 
+       180   GLY  N  68.15  1.14 
+       181   TYR  N  61.18  1.01 
+       182   TYR  N  59.50  0.96 
+       183   SER  N  59.75  0.99 
+       184   LYS  N  63.94  1.06 
+       185   GLU  N  64.80  1.07 
+       186   ALA  N  61.85  1.02 
+       187   GLU  N  64.23  1.07 
+       188   ALA  N  64.55  1.07 
+       189   GLY  N  69.64  1.15 
+       190   ASN  N  68.95  1.15 
+       191   THR  N  70.76  1.19 
+       192   LYS  N  69.51  1.16 
+       193   TYR  N  71.67  1.21 
+       194   ALA  N  66.25  1.11 
+       195   LYS  N  71.94  1.22 
+       196   VAL  N  64.88  1.08 
+       197   ASP  N  69.73  1.19 
+       198   GLY  N  68.69  1.16 
+       199   THR  N  59.41  0.95 
+       200   LYS  N  62.72  1.04 
+       202   VAL  N  64.07  1.06 
+       203   ALA  N  59.84  0.99 
+       204   GLU  N  64.47  1.06 
+       205   VAL  N  62.79  1.04 
+       206   ARG  N  60.86  1.01 
+       207   ALA  N  61.58  1.01 
+       208   ASP  N  62.80  1.04 
+       209   LEU  N  60.44  1.00 
+       210   GLU  N  61.91  1.00 
+       211   LYS  N  63.57  1.05 
+       212   ILE  N  66.08  1.11 
+       213   LEU  N  65.12  1.07 
+       214   GLY  N  82.37  1.49 
+
+   stop_
+
+save_
+
+
+save_heteronuclear_NOE_600
+   _Saveframe_category          heteronuclear_NOE
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   600
+   _Mol_system_component_name  "AKeco kinase"
+   _Atom_one_atom_name          H
+   _Atom_two_atom_name          N
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Heteronuclear_NOE_value
+      _Heteronuclear_NOE_value_error
+
+         2   ARG  0.786  0.007 
+         3   ILE  0.797  0.007 
+         4   ILE  0.809  0.007 
+         5   LEU  0.806  0.014 
+         6   LEU  0.810  0.008 
+         7   GLY  0.752  0.007 
+         8   ALA  0.821  0.009 
+        10   GLY  0.825  0.023 
+        11   ALA  0.797  0.009 
+        12   GLY  0.834  0.015 
+        13   LYS  0.728  0.007 
+        15   THR  0.809  0.008 
+        16   GLN  0.832  0.012 
+        17   ALA  0.827  0.008 
+        18   GLN  0.791  0.007 
+        19   PHE  0.792  0.007 
+        21   MET  0.802  0.011 
+        22   GLU  0.792  0.011 
+        23   LYS  0.783  0.007 
+        24   TYR  0.795  0.007 
+        25   GLY  0.796  0.007 
+        26   ILE  0.805  0.007 
+        28   GLN  0.766  0.007 
+        29   ILE  0.798  0.007 
+        30   SER  0.800  0.007 
+        31   THR  0.828  0.008 
+        32   GLY  0.835  0.025 
+        33   ASP  0.613  0.018 
+        34   MET  0.822  0.008 
+        35   LEU  0.819  0.010 
+        36   ARG  0.811  0.008 
+        37   ALA  0.805  0.007 
+        38   ALA  0.773  0.007 
+        39   VAL  0.702  0.016 
+        40   LYS  0.784  0.007 
+        41   SER  0.746  0.007 
+        42   GLY  0.763  0.007 
+        43   SER  0.669  0.006 
+        44   GLU  0.759  0.009 
+        45   LEU  0.697  0.006 
+        46   GLY  0.754  0.007 
+        48   GLN  0.671  0.009 
+        49   ALA  0.755  0.009 
+        50   LYS  0.788  0.007 
+        51   ASP  0.724  0.007 
+        52   ILE  0.742  0.007 
+        53   MET  0.796  0.007 
+        54   ASP  0.797  0.009 
+        55   ALA  0.783  0.007 
+        56   GLY  0.794  0.007 
+        57   LYS  0.796  0.007 
+        58   LEU  0.695  0.008 
+        59   VAL  0.789  0.011 
+        60   THR  0.730  0.014 
+        61   ASP  0.796  0.008 
+        62   GLU  0.781  0.007 
+        63   LEU  0.793  0.008 
+        64   VAL  0.721  0.019 
+        65   ILE  0.823  0.008 
+        66   ALA  0.813  0.011 
+        67   LEU  0.801  0.011 
+        68   VAL  0.817  0.008 
+        69   LYS  0.824  0.008 
+        70   GLU  0.808  0.007 
+        71   ARG  0.806  0.007 
+        72   ILE  0.818  0.009 
+        73   ALA  0.816  0.009 
+        74   GLN  0.791  0.007 
+        75   GLU  0.759  0.009 
+        76   ASP  0.790  0.007 
+        77   CYS  0.807  0.007 
+        78   ARG  0.790  0.007 
+        79   ASN  0.733  0.007 
+        80   GLY  0.728  0.007 
+        81   PHE  0.816  0.008 
+        82   LEU  0.807  0.007 
+        83   LEU  0.813  0.008 
+        84   ASP  0.810  0.013 
+        85   GLY  0.759  0.011 
+        86   PHE  0.837  0.008 
+        88   ARG  0.787  0.011 
+        89   THR  0.832  0.008 
+        90   ILE  0.817  0.008 
+        92   GLN  0.828  0.008 
+        93   ALA  0.836  0.008 
+        94   ASP  0.826  0.008 
+        95   ALA  0.818  0.008 
+        96   MET  0.811  0.008 
+        97   LYS  0.793  0.007 
+        98   GLU  0.801  0.011 
+        99   ALA  0.768  0.007 
+       100   GLY  0.794  0.007 
+       101   ILE  0.787  0.007 
+       102   ASN  0.649  0.006 
+       103   VAL  0.627  0.006 
+       104   ASP  0.807  0.016 
+       105   TYR  0.803  0.007 
+       106   VAL  0.803  0.009 
+       107   LEU  0.812  0.008 
+       108   GLU  0.817  0.008 
+       109   PHE  0.808  0.007 
+       110   ASP  0.795  0.007 
+       111   VAL  0.764  0.007 
+       113   ASP  0.817  0.017 
+       114   GLU  0.795  0.007 
+       115   LEU  0.792  0.008 
+       116   ILE  0.790  0.016 
+       117   VAL  0.789  0.008 
+       118   ASP  0.761  0.007 
+       119   ARG  0.787  0.007 
+       120   ILE  0.794  0.014 
+       121   VAL  0.814  0.008 
+       122   GLY  0.823  0.010 
+       123   ARG  0.814  0.008 
+       124   ARG  0.809  0.011 
+       125   VAL  0.781  0.007 
+       126   HIS  0.782  0.007 
+       127   ALA  0.746  0.007 
+       129   SER  0.776  0.010 
+       130   GLY  0.771  0.007 
+       131   ARG  0.800  0.009 
+       132   VAL  0.766  0.008 
+       133   TYR  0.759  0.007 
+       134   HIS  0.805  0.012 
+       135   VAL  0.798  0.007 
+       136   LYS  0.787  0.007 
+       137   PHE  0.775  0.019 
+       138   ASN  0.776  0.007 
+       141   LYS  0.784  0.007 
+       142   VAL  0.768  0.007 
+       143   GLU  0.755  0.008 
+       144   GLY  0.775  0.007 
+       145   LYS  0.786  0.007 
+       146   ASP  0.794  0.007 
+       147   ASP  0.802  0.007 
+       148   VAL  0.781  0.007 
+       149   THR  0.799  0.007 
+       150   GLY  0.797  0.007 
+       151   GLU  0.791  0.007 
+       152   GLU  0.734  0.007 
+       153   LEU  0.742  0.009 
+       154   THR  0.777  0.007 
+       155   THR  0.757  0.008 
+       156   ARG  0.773  0.013 
+       158   ASP  0.730  0.007 
+       159   ASP  0.780  0.013 
+       160   GLN  0.593  0.006 
+       161   GLU  0.781  0.007 
+       162   GLU  0.754  0.007 
+       163   THR  0.781  0.007 
+       164   VAL  0.817  0.009 
+       165   ARG  0.816  0.008 
+       166   LYS  0.816  0.008 
+       167   ARG  0.821  0.010 
+       168   LEU  0.799  0.010 
+       169   VAL  0.807  0.007 
+       170   GLU  0.766  0.008 
+       171   TYR  0.835  0.014 
+       172   HIS  0.832  0.008 
+       173   GLN  0.820  0.008 
+       174   MET  0.809  0.007 
+       175   THR  0.823  0.008 
+       176   ALA  0.820  0.008 
+       178   LEU  0.823  0.009 
+       179   ILE  0.826  0.008 
+       180   GLY  0.829  0.008 
+       181   TYR  0.831  0.008 
+       182   TYR  0.839  0.008 
+       183   SER  0.822  0.008 
+       184   LYS  0.815  0.008 
+       185   GLU  0.786  0.008 
+       186   ALA  0.809  0.008 
+       187   GLU  0.805  0.007 
+       188   ALA  0.786  0.007 
+       189   GLY  0.796  0.007 
+       190   ASN  0.813  0.009 
+       191   THR  0.771  0.007 
+       192   LYS  0.773  0.007 
+       193   TYR  0.756  0.007 
+       194   ALA  0.823  0.008 
+       195   LYS  0.772  0.007 
+       196   VAL  0.759  0.007 
+       197   ASP  0.785  0.007 
+       198   GLY  0.804  0.007 
+       199   THR  0.828  0.009 
+       200   LYS  0.801  0.008 
+       202   VAL  0.818  0.009 
+       203   ALA  0.822  0.008 
+       204   GLU  0.793  0.007 
+       205   VAL  0.818  0.008 
+       206   ARG  0.821  0.008 
+       207   ALA  0.818  0.008 
+       208   ASP  0.801  0.009 
+       209   LEU  0.796  0.007 
+       210   GLU  0.831  0.009 
+       211   LYS  0.789  0.007 
+       212   ILE  0.765  0.007 
+       213   LEU  0.783  0.008 
+       214   GLY  0.572  0.005 
+
+   stop_
+
+save_
+
+
+save_15N_T1_800
+   _Saveframe_category          T1_relaxation
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   800
+   _T1_coherence_type           Nz
+   _T1_value_units              ms
+   _Mol_system_component_name  "AKeco kinase"
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _T1_value
+      _T1_value_error
+
+         2   ARG  N  1510.5  33.7 
+         3   ILE  N  1409.5  31.0 
+         4   ILE  N  1406.3  30.5 
+         5   LEU  N  1412.8  31.1 
+         6   LEU  N  1374.6  29.5 
+         7   GLY  N  1330.8  28.2 
+         8   ALA  N  1305.7  27.5 
+        10   GLY  N  1352.7  29.6 
+        11   ALA  N  1265.2  26.7 
+        12   GLY  N  1237.7  14.6 
+        13   LYS  N  1231.4  25.3 
+        14   GLY  N  1190.7  13.3 
+        15   THR  N  1393.7  30.2 
+        16   GLN  N  1341.7  28.5 
+        17   ALA  N  1277.9  26.9 
+        18   GLN  N  1311.8  27.8 
+        19   PHE  N  1306.8  27.5 
+        20   ILE  N  1364.1  29.4 
+        21   MET  N  1314.2  27.8 
+        22   GLU  N  1316.2  27.8 
+        23   LYS  N  1360.2  29.1 
+        24   TYR  N  1380.0  29.7 
+        25   GLY  N  1366.8  29.4 
+        26   ILE  N  1354.4  28.9 
+        28   GLN  N  1369.1  29.3 
+        29   ILE  N  1378.1  29.9 
+        30   SER  N  1373.4  29.6 
+        31   THR  N  1244.0  26.0 
+        32   GLY  N  1366.2  17.7 
+        33   ASP  N  1423.4  31.0 
+        34   MET  N  1311.5  27.7 
+        35   LEU  N  1336.6  28.3 
+        36   ARG  N  1358.6  29.0 
+        37   ALA  N  1354.4  28.9 
+        38   ALA  N  1402.1  30.4 
+        39   VAL  N  1344.4  28.6 
+        40   LYS  N  1356.1  29.1 
+        41   SER  N  1347.6  28.8 
+        42   GLY  N  1223.3  25.4 
+        43   SER  N  1250.9  25.9 
+        44   GLU  N  1278.1  27.5 
+        45   LEU  N  1216.2  25.3 
+        46   GLY  N  1275.6  26.6 
+        48   GLN  N  1266.3  26.3 
+        49   ALA  N  1319.3  27.9 
+        50   LYS  N  1342.2  28.6 
+        51   ASP  N  1288.3  27.2 
+        52   ILE  N  1339.0  28.5 
+        53   MET  N  1307.2  27.7 
+        54   ASP  N  1304.6  27.4 
+        55   ALA  N  1341.7  28.5 
+        56   GLY  N  1316.4  27.8 
+        57   LYS  N  1305.1  27.7 
+        58   LEU  N  1314.4  27.9 
+        59   VAL  N  1365.9  29.4 
+        60   THR  N  1342.2  28.8 
+        61   ASP  N  1412.5  30.8 
+        62   GLU  N  1283.2  26.9 
+        63   LEU  N  1321.4  27.8 
+        64   VAL  N  1331.8  28.4 
+        65   ILE  N  1318.2  28.1 
+        66   ALA  N  1273.8  26.5 
+        67   LEU  N  1317.0  27.8 
+        68   VAL  N  1296.5  27.1 
+        69   LYS  N  1307.2  27.5 
+        70   GLU  N  1343.1  28.6 
+        71   ARG  N  1351.1  29.1 
+        72   ILE  N  1307.5  27.5 
+        73   ALA  N  1298.4  27.1 
+        74   GLN  N  1412.9  30.8 
+        75   GLU  N  1278.1  27.5 
+        76   ASP  N  1311.4  27.6 
+        77   CYS  N  1397.2  30.3 
+        78   ARG  N  1339.3  28.5 
+        79   ASN  N  1361.6  29.8 
+        80   GLY  N  1416.4  30.8 
+        81   PHE  N  1413.7  30.7 
+        82   LEU  N  1373.4  29.6 
+        83   LEU  N  1429.2  31.2 
+        84   ASP  N  1396.2  30.1 
+        85   GLY  N  1325.6  16.3 
+        86   PHE  N  1289.6  26.9 
+        88   ARG  N  1275.1  26.4 
+        89   THR  N  1356.2  29.0 
+        90   ILE  N  1334.6  28.3 
+        92   GLN  N  1363.8  29.3 
+        93   ALA  N  1321.2  28.0 
+        94   ASP  N  1332.6  28.3 
+        95   ALA  N  1342.4  28.6 
+        96   MET  N  1313.3  27.5 
+        97   LYS  N  1382.8  29.8 
+        98   GLU  N  1427.5  31.4 
+        99   ALA  N  1398.2  30.3 
+       100   GLY  N  1327.5  28.2 
+       101   ILE  N  1369.1  29.3 
+       102   ASN  N  1354.4  29.0 
+       103   VAL  N  1385.6  30.1 
+       104   ASP  N  1401.8  30.4 
+       105   TYR  N  1426.8  31.2 
+       106   VAL  N  1486.7  33.2 
+       107   LEU  N  1418.1  31.0 
+       108   GLU  N  1429.9  31.5 
+       109   PHE  N  1433.3  32.0 
+       110   ASP  N  1412.5  30.8 
+       111   VAL  N  1461.4  32.2 
+       113   ASP  N  1408.5  30.5 
+       114   GLU  N  1353.8  29.0 
+       115   LEU  N  1324.7  28.2 
+       116   ILE  N  1363.6  29.4 
+       117   VAL  N  1337.5  28.4 
+       118   ASP  N  1329.5  28.2 
+       119   ARG  N  1364.1  30.0 
+       120   ILE  N  1208.8  24.6 
+       121   VAL  N  1343.4  28.7 
+       122   GLY  N  1323.1  27.9 
+       123   ARG  N  1247.8  25.7 
+       124   ARG  N  1381.6  29.5 
+       125   VAL  N  1305.3  27.6 
+       126   HIS  N  1378.7  29.7 
+       127   ALA  N  1419.8  31.2 
+       129   SER  N  1395.6  30.2 
+       130   GLY  N  1335.6  28.3 
+       131   ARG  N  1298.0  27.3 
+       132   VAL  N  1304.1  27.6 
+       133   TYR  N  1386.3  30.1 
+       134   HIS  N  1396.6  30.2 
+       135   VAL  N  1358.4  29.6 
+       136   LYS  N  1353.4  29.0 
+       137   PHE  N  1433.0  32.7 
+       138   ASN  N  1309.6  28.0 
+       141   LYS  N  1377.5  29.7 
+       142   VAL  N  1423.8  31.2 
+       143   GLU  N  1452.5  32.0 
+       144   GLY  N  1415.7  30.9 
+       145   LYS  N  1275.1  26.4 
+       146   ASP  N  1374.2  29.7 
+       147   ASP  N  1371.5  29.5 
+       148   VAL  N  1375.0  29.6 
+       149   THR  N  1410.6  30.7 
+       150   GLY  N  1307.8  27.5 
+       151   GLU  N  1328.6  28.3 
+       152   GLU  N  1402.5  30.5 
+       153   LEU  N  1364.1  29.4 
+       154   THR  N  1365.9  29.3 
+       155   THR  N  1365.5  29.6 
+       156   ARG  N  1226.2  25.6 
+       157   LYS  N  1408.5  30.5 
+       158   ASP  N  1246.3  25.8 
+       159   ASP  N  1389.7  31.0 
+       160   GLN  N  1369.8  29.4 
+       161   GLU  N  1366.4  30.0 
+       162   GLU  N  1333.0  28.3 
+       163   THR  N  1394.4  30.2 
+       164   VAL  N  1371.5  29.7 
+       165   ARG  N  1392.1  29.9 
+       166   LYS  N  1427.5  31.4 
+       167   ARG  N  1314.2  27.8 
+       168   LEU  N  1401.8  30.4 
+       169   VAL  N  1393.7  30.2 
+       170   GLU  N  1304.1  27.6 
+       171   TYR  N  1376.2  29.8 
+       172   HIS  N  1391.9  30.2 
+       173   GLN  N  1449.8  31.8 
+       174   MET  N  1458.7  32.1 
+       175   THR  N  1455.5  32.2 
+       176   ALA  N  1300.6  27.2 
+       178   LEU  N  1403.6  31.1 
+       179   ILE  N  1326.2  28.0 
+       180   GLY  N  1397.9  30.4 
+       181   TYR  N  1380.0  29.8 
+       182   TYR  N  1387.2  29.9 
+       183   SER  N  1311.5  27.7 
+       184   LYS  N  1348.7  28.9 
+       185   GLU  N  1358.9  29.1 
+       186   ALA  N  1342.7  28.6 
+       187   GLU  N  1354.4  28.9 
+       188   ALA  N  1428.2  31.3 
+       189   GLY  N  1391.5  30.2 
+       190   ASN  N  1208.8  24.7 
+       191   THR  N  1329.2  28.2 
+       192   LYS  N  1402.1  30.4 
+       193   TYR  N  1446.8  31.8 
+       194   ALA  N  1386.6  29.8 
+       195   LYS  N  1522.5  34.4 
+       196   VAL  N  1386.3  30.1 
+       197   ASP  N  1420.6  31.1 
+       198   GLY  N  1444.5  32.0 
+       199   THR  N  1305.9  27.6 
+       200   LYS  N  1371.2  29.4 
+       202   VAL  N  1417.9  31.0 
+       203   ALA  N  1352.0  29.0 
+       204   GLU  N  1398.2  30.3 
+       205   VAL  N  1411.1  30.7 
+       206   ARG  N  1403.6  30.6 
+       207   ALA  N  1373.3  29.6 
+       208   ASP  N  1414.8  30.8 
+       209   LEU  N  1419.4  31.0 
+       210   GLU  N  1414.5  30.6 
+       211   LYS  N  1387.8  29.9 
+       212   ILE  N  1476.0  32.9 
+       213   LEU  N  1412.2  30.8 
+       214   GLY  N  1146.1  22.9 
+
+   stop_
+
+save_
+
+
+save_15N_T2_800
+   _Saveframe_category          T2_relaxation
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   800
+   _T2_coherence_type           Ny
+   _T2_value_units              ms
+   _Mol_system_component_name  "AKeco kinase"
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _T2_value
+      _T2_value_error
+
+         2   ARG  N  55.73  0.59 
+         3   ILE  N  59.49  0.59 
+         4   ILE  N  56.44  0.59 
+         5   LEU  N  49.96  0.62 
+         6   LEU  N  52.04  0.60 
+         7   GLY  N  59.09  0.59 
+         8   ALA  N  43.30  0.62 
+        10   GLY  N  49.93  0.61 
+        11   ALA  N  49.88  0.61 
+        12   GLY  N  54.25  1.20 
+        13   LYS  N  57.70  0.59 
+        14   GLY  N  39.95  0.88 
+        15   THR  N  52.28  0.60 
+        16   GLN  N  52.60  0.62 
+        17   ALA  N  52.52  0.59 
+        18   GLN  N  57.06  0.59 
+        19   PHE  N  53.83  0.60 
+        20   ILE  N  57.33  0.59 
+        21   MET  N  52.51  0.60 
+        22   GLU  N  55.85  0.59 
+        23   LYS  N  56.85  0.59 
+        24   TYR  N  59.44  0.58 
+        25   GLY  N  53.49  0.60 
+        26   ILE  N  56.28  0.59 
+        28   GLN  N  60.29  0.59 
+        29   ILE  N  35.01  0.54 
+        30   SER  N  64.96  1.56 
+        31   THR  N  49.92  0.61 
+        32   GLY  N  40.51  0.77 
+        33   ASP  N  67.39  0.80 
+        34   MET  N  49.36  0.61 
+        35   LEU  N  55.66  0.59 
+        36   ARG  N  52.12  0.60 
+        37   ALA  N  56.28  0.59 
+        38   ALA  N  60.47  0.60 
+        39   VAL  N  53.10  0.60 
+        40   LYS  N  54.78  0.59 
+        41   SER  N  59.90  0.59 
+        42   GLY  N  58.23  0.58 
+        43   SER  N  60.38  0.61 
+        44   GLU  N  57.37  0.58 
+        45   LEU  N  60.67  0.61 
+        46   GLY  N  58.74  0.58 
+        48   GLN  N  59.86  0.59 
+        49   ALA  N  61.50  0.63 
+        50   LYS  N  55.25  0.59 
+        51   ASP  N  56.11  0.59 
+        52   ILE  N  59.50  0.59 
+        53   MET  N  54.28  0.60 
+        54   ASP  N  51.63  0.60 
+        55   ALA  N  54.12  0.60 
+        56   GLY  N  53.10  0.60 
+        57   LYS  N  49.05  0.62 
+        58   LEU  N  59.51  0.58 
+        59   VAL  N  59.22  0.59 
+        60   THR  N  53.61  0.59 
+        61   ASP  N  58.82  1.39 
+        62   GLU  N  54.76  0.59 
+        63   LEU  N  42.42  0.62 
+        64   VAL  N  46.72  0.61 
+        65   ILE  N  51.98  0.60 
+        66   ALA  N  48.99  0.61 
+        67   LEU  N  54.32  0.59 
+        68   VAL  N  50.26  0.61 
+        69   LYS  N  55.41  0.59 
+        70   GLU  N  55.62  0.59 
+        71   ARG  N  55.22  0.60 
+        72   ILE  N  45.81  0.61 
+        73   ALA  N  51.29  0.60 
+        74   GLN  N  59.34  0.59 
+        75   GLU  N  60.38  0.61 
+        76   ASP  N  51.96  0.61 
+        77   CYS  N  50.78  0.61 
+        78   ARG  N  54.73  0.60 
+        79   ASN  N  61.10  0.62 
+        80   GLY  N  62.58  0.65 
+        81   PHE  N  56.66  0.59 
+        82   LEU  N  55.13  0.59 
+        83   LEU  N  54.72  0.59 
+        84   ASP  N  38.56  0.60 
+        85   GLY  N  54.87  1.21 
+        86   PHE  N  50.97  0.60 
+        88   ARG  N  54.49  0.60 
+        89   THR  N  55.55  0.59 
+        90   ILE  N  55.46  0.59 
+        92   GLN  N  54.92  0.60 
+        93   ALA  N  57.72  0.58 
+        94   ASP  N  53.17  0.60 
+        95   ALA  N  53.13  0.60 
+        96   MET  N  52.27  0.60 
+        97   LYS  N  59.87  1.40 
+        98   GLU  N  53.85  0.60 
+        99   ALA  N  57.26  0.59 
+       100   GLY  N  57.39  0.59 
+       101   ILE  N  60.29  0.59 
+       102   ASN  N  71.82  0.98 
+       103   VAL  N  66.86  0.80 
+       104   ASP  N  47.85  0.60 
+       105   TYR  N  57.50  0.59 
+       106   VAL  N  62.12  0.64 
+       107   LEU  N  58.99  0.58 
+       108   GLU  N  59.34  0.58 
+       109   PHE  N  54.18  0.60 
+       110   ASP  N  58.14  0.58 
+       111   VAL  N  56.92  0.59 
+       113   ASP  N  55.13  0.59 
+       114   GLU  N  54.25  0.60 
+       115   LEU  N  52.18  0.60 
+       116   ILE  N  52.13  0.60 
+       117   VAL  N  51.86  0.60 
+       118   ASP  N  58.31  0.59 
+       119   ARG  N  48.86  0.61 
+       120   ILE  N  59.51  0.59 
+       121   VAL  N  43.79  0.63 
+       122   GLY  N  44.54  0.62 
+       123   ARG  N  46.00  0.61 
+       124   ARG  N  41.55  0.63 
+       125   VAL  N  53.47  0.60 
+       126   HIS  N  55.56  0.59 
+       127   ALA  N  56.52  0.60 
+       129   SER  N  57.37  0.59 
+       130   GLY  N  55.60  0.59 
+       131   ARG  N  54.31  0.60 
+       132   VAL  N  51.63  0.60 
+       133   TYR  N  52.20  0.60 
+       134   HIS  N  56.12  0.59 
+       135   VAL  N  53.27  0.61 
+       136   LYS  N  56.29  0.59 
+       137   PHE  N  67.99  1.64 
+       138   ASN  N  59.77  0.59 
+       141   LYS  N  60.21  0.59 
+       142   VAL  N  59.01  0.59 
+       143   GLU  N  62.53  0.65 
+       144   GLY  N  61.04  0.61 
+       145   LYS  N  54.49  0.60 
+       146   ASP  N  57.53  0.59 
+       147   ASP  N  55.85  0.59 
+       148   VAL  N  58.49  0.58 
+       149   THR  N  58.77  0.58 
+       150   GLY  N  53.59  0.60 
+       151   GLU  N  53.65  0.60 
+       152   GLU  N  62.36  0.65 
+       153   LEU  N  57.33  0.59 
+       154   THR  N  58.79  0.58 
+       155   THR  N  43.00  0.61 
+       156   ARG  N  47.69  0.60 
+       157   LYS  N  51.38  0.60 
+       158   ASP  N  51.86  0.58 
+       159   ASP  N  23.82  0.39 
+       160   GLN  N  67.80  0.84 
+       161   GLU  N  55.23  0.59 
+       162   GLU  N  55.21  0.59 
+       163   THR  N  54.39  0.60 
+       164   VAL  N  50.88  0.60 
+       165   ARG  N  48.82  0.62 
+       166   LYS  N  56.59  1.30 
+       167   ARG  N  54.28  1.23 
+       168   LEU  N  54.92  0.59 
+       169   VAL  N  52.28  0.60 
+       170   GLU  N  51.63  0.60 
+       171   TYR  N  48.21  0.61 
+       172   HIS  N  47.95  0.62 
+       173   GLN  N  50.62  0.60 
+       174   MET  N  51.40  0.60 
+       175   THR  N  48.23  0.61 
+       176   ALA  N  49.70  0.61 
+       178   LEU  N  49.88  0.60 
+       179   ILE  N  53.47  0.60 
+       180   GLY  N  53.29  0.60 
+       181   TYR  N  52.59  0.60 
+       182   TYR  N  50.65  0.61 
+       183   SER  N  49.36  0.61 
+       184   LYS  N  54.52  0.59 
+       185   GLU  N  55.39  0.59 
+       186   ALA  N  54.11  0.60 
+       187   GLU  N  56.28  0.59 
+       188   ALA  N  55.26  0.60 
+       189   GLY  N  58.96  0.59 
+       190   ASN  N  59.51  0.59 
+       191   THR  N  61.06  0.62 
+       192   LYS  N  60.47  0.60 
+       193   TYR  N  60.00  0.59 
+       194   ALA  N  54.81  0.60 
+       195   LYS  N  63.08  0.67 
+       196   VAL  N  52.20  0.60 
+       197   ASP  N  60.68  0.60 
+       198   GLY  N  59.86  0.59 
+       199   THR  N  49.22  0.61 
+       200   LYS  N  51.95  0.60 
+       202   VAL  N  55.43  0.59 
+       203   ALA  N  50.76  0.61 
+       204   GLU  N  55.73  0.59 
+       205   VAL  N  52.45  0.60 
+       206   ARG  N  51.63  0.60 
+       207   ALA  N  51.68  0.61 
+       208   ASP  N  53.47  0.60 
+       209   LEU  N  52.48  0.60 
+       210   GLU  N  52.63  0.59 
+       211   LYS  N  54.63  0.59 
+       212   ILE  N  55.90  0.59 
+       213   LEU  N  55.35  0.59 
+       214   GLY  N  71.88  0.99 
+
+   stop_
+
+save_
+
+
+save_heteronuclear_NOE_800
+   _Saveframe_category          heteronuclear_NOE
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $condition_1
+   _Spectrometer_frequency_1H   800
+   _Mol_system_component_name  "AKeco kinase"
+   _Atom_one_atom_name          H
+   _Atom_two_atom_name          N
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+      _Heteronuclear_NOE_value
+      _Heteronuclear_NOE_value_error
+
+         2   ARG  0.810  0.012 
+         3   ILE  0.812  0.012 
+         4   ILE  0.845  0.013 
+         5   LEU  0.801  0.012 
+         6   LEU  0.824  0.012 
+         7   GLY  0.773  0.012 
+         8   ALA  0.842  0.013 
+        10   GLY  0.807  0.012 
+        11   ALA  0.866  0.013 
+        12   GLY  0.682  0.010 
+        13   LYS  0.746  0.011 
+        14   GLY  0.784  0.012 
+        15   THR  0.839  0.013 
+        16   GLN  0.822  0.012 
+        17   ALA  0.867  0.013 
+        18   GLN  0.837  0.013 
+        19   PHE  0.816  0.012 
+        20   ILE  0.735  0.011 
+        21   MET  0.830  0.013 
+        22   GLU  0.820  0.012 
+        23   LYS  0.800  0.012 
+        24   TYR  0.831  0.013 
+        25   GLY  0.824  0.012 
+        26   ILE  0.819  0.012 
+        28   GLN  0.810  0.012 
+        29   ILE  0.884  0.013 
+        30   SER  0.825  0.012 
+        31   THR  0.854  0.013 
+        33   ASP  0.720  0.011 
+        34   MET  0.859  0.013 
+        35   LEU  0.846  0.013 
+        36   ARG  0.835  0.013 
+        37   ALA  0.819  0.012 
+        38   ALA  0.772  0.012 
+        39   VAL  0.811  0.012 
+        40   LYS  0.795  0.012 
+        41   SER  0.774  0.012 
+        42   GLY  0.775  0.012 
+        43   SER  0.703  0.012 
+        44   GLU  0.762  0.012 
+        45   LEU  0.715  0.011 
+        46   GLY  0.770  0.012 
+        48   GLN  0.685  0.010 
+        49   ALA  0.707  0.011 
+        50   LYS  0.812  0.012 
+        51   ASP  0.746  0.011 
+        52   ILE  0.753  0.011 
+        53   MET  0.832  0.013 
+        54   ASP  0.823  0.012 
+        55   ALA  0.791  0.012 
+        56   GLY  0.817  0.012 
+        57   LYS  0.803  0.019 
+        58   LEU  0.723  0.011 
+        59   VAL  0.815  0.012 
+        60   THR  0.783  0.020 
+        61   ASP  0.813  0.012 
+        62   GLU  0.829  0.013 
+        63   LEU  0.835  0.016 
+        64   VAL  0.828  0.022 
+        65   ILE  0.837  0.015 
+        66   ALA  0.855  0.013 
+        67   LEU  0.816  0.012 
+        68   VAL  0.808  0.012 
+        69   LYS  0.856  0.013 
+        70   GLU  0.819  0.012 
+        71   ARG  0.825  0.012 
+        72   ILE  0.849  0.013 
+        73   ALA  0.839  0.013 
+        74   GLN  0.800  0.012 
+        75   GLU  0.762  0.012 
+        76   ASP  0.813  0.012 
+        77   CYS  0.823  0.012 
+        78   ARG  0.806  0.012 
+        79   ASN  0.751  0.011 
+        80   GLY  0.740  0.011 
+        81   PHE  0.826  0.012 
+        82   LEU  0.843  0.013 
+        83   LEU  0.847  0.013 
+        84   ASP  0.820  0.022 
+        86   PHE  0.851  0.013 
+        88   ARG  0.812  0.012 
+        89   THR  0.839  0.013 
+        90   ILE  0.854  0.013 
+        92   GLN  0.848  0.013 
+        93   ALA  0.853  0.013 
+        94   ASP  0.859  0.013 
+        95   ALA  0.853  0.013 
+        96   MET  0.813  0.012 
+        97   LYS  0.815  0.012 
+        98   GLU  0.843  0.013 
+        99   ALA  0.787  0.012 
+       100   GLY  0.810  0.012 
+       101   ILE  0.810  0.012 
+       102   ASN  0.681  0.010 
+       103   VAL  0.640  0.010 
+       104   ASP  0.804  0.013 
+       105   TYR  0.830  0.013 
+       106   VAL  0.822  0.012 
+       107   LEU  0.836  0.013 
+       108   GLU  0.840  0.013 
+       109   PHE  0.829  0.013 
+       110   ASP  0.813  0.012 
+       111   VAL  0.791  0.012 
+       113   ASP  0.843  0.013 
+       114   GLU  0.817  0.012 
+       115   LEU  0.785  0.016 
+       116   ILE  0.810  0.012 
+       117   VAL  0.835  0.013 
+       118   ASP  0.796  0.014 
+       119   ARG  0.810  0.021 
+       120   ILE  0.830  0.013 
+       121   VAL  0.772  0.012 
+       122   GLY  0.827  0.012 
+       123   ARG  0.866  0.014 
+       124   ARG  0.774  0.012 
+       125   VAL  0.811  0.012 
+       126   HIS  0.792  0.012 
+       127   ALA  0.773  0.012 
+       129   SER  0.802  0.012 
+       130   GLY  0.800  0.012 
+       131   ARG  0.826  0.012 
+       132   VAL  0.755  0.011 
+       133   TYR  0.789  0.012 
+       134   HIS  0.838  0.013 
+       135   VAL  0.829  0.013 
+       136   LYS  0.812  0.012 
+       137   PHE  0.791  0.013 
+       138   ASN  0.701  0.028 
+       141   LYS  0.799  0.012 
+       142   VAL  0.786  0.012 
+       143   GLU  0.776  0.012 
+       144   GLY  0.789  0.012 
+       145   LYS  0.812  0.012 
+       146   ASP  0.815  0.012 
+       147   ASP  0.827  0.012 
+       148   VAL  0.798  0.012 
+       149   THR  0.813  0.012 
+       150   GLY  0.823  0.012 
+       151   GLU  0.816  0.012 
+       152   GLU  0.751  0.011 
+       153   LEU  0.735  0.011 
+       154   THR  0.795  0.012 
+       155   THR  0.783  0.012 
+       156   ARG  0.769  0.013 
+       157   LYS  0.804  0.012 
+       158   ASP  0.804  0.012 
+       159   ASP  0.839  0.013 
+       160   GLN  0.603  0.009 
+       161   GLU  0.799  0.012 
+       162   GLU  0.774  0.012 
+       163   THR  0.798  0.012 
+       164   VAL  0.839  0.013 
+       165   ARG  0.845  0.018 
+       166   LYS  0.843  0.013 
+       167   ARG  0.830  0.013 
+       168   LEU  0.799  0.012 
+       169   VAL  0.839  0.013 
+       170   GLU  0.829  0.013 
+       171   TYR  0.859  0.013 
+       172   HIS  0.866  0.013 
+       173   GLN  0.840  0.013 
+       174   MET  0.832  0.013 
+       175   THR  0.848  0.013 
+       176   ALA  0.861  0.020 
+       178   LEU  0.851  0.013 
+       179   ILE  0.853  0.013 
+       180   GLY  0.849  0.013 
+       181   TYR  0.830  0.013 
+       182   TYR  0.862  0.013 
+       183   SER  0.859  0.013 
+       184   LYS  0.865  0.013 
+       185   GLU  0.805  0.012 
+       186   ALA  0.840  0.013 
+       187   GLU  0.819  0.012 
+       188   ALA  0.817  0.012 
+       189   GLY  0.816  0.012 
+       190   ASN  0.830  0.013 
+       191   THR  0.780  0.012 
+       192   LYS  0.772  0.012 
+       193   TYR  0.765  0.012 
+       194   ALA  0.842  0.013 
+       195   LYS  0.797  0.012 
+       196   VAL  0.789  0.012 
+       197   ASP  0.821  0.012 
+       198   GLY  0.824  0.012 
+       199   THR  0.843  0.013 
+       200   LYS  0.830  0.013 
+       202   VAL  0.810  0.012 
+       203   ALA  0.849  0.013 
+       204   GLU  0.807  0.012 
+       205   VAL  0.837  0.013 
+       206   ARG  0.855  0.013 
+       207   ALA  0.842  0.013 
+       208   ASP  0.831  0.013 
+       209   LEU  0.843  0.013 
+       210   GLU  0.835  0.030 
+       211   LYS  0.817  0.012 
+       212   ILE  0.787  0.012 
+       213   LEU  0.808  0.012 
+       214   GLY  0.627  0.010 
+
+   stop_
+
+save_
+

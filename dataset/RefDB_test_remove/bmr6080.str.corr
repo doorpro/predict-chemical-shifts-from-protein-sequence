@@ -1,0 +1,1516 @@
+data_6080
+
+#Corrected using PDB structure: 1XM2A
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 15   K    HA       3.45         4.16
+# 18   R    HA       4.96         4.03
+# 76   P    HA       4.06         3.22
+# 86   S    HA       4.99         4.06
+# 95   E    HA       3.57         4.59
+#101   A    HA       6.03         5.03
+#
+#After reference correction, the following residues still 
+#have a CB chemical shift difference (obs*-pred) greater than  5.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 15   K    CB      29.27        34.52
+# 49   C    CB      37.95        32.78
+#
+#After reference correction, the following residues still 
+#have a N chemical shift difference (obs*-pred) greater than 10.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 14   Y    N      124.45       134.74
+# 48   V    N      112.51       126.07
+# 50   E    N      127.07       116.56
+#
+#After reference correction, the following residues still 
+#have a HN chemical shift difference (obs*-pred) greater than  2.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+#127   E    H        9.31         7.11
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.09   2.71    2.74      N/A   -0.30   -0.08   
+#
+#bmr6080.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr6080.str file):
+#HA       CA       CB      CO       N      HN
+#N/A    +2.73   +2.73    N/A    -0.30     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.03  +/-0.18  +/-0.22      N/A  +/-0.35  +/-0.06  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.839   0.972   0.991     N/A   0.778   0.584   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.150   0.947   1.072     N/A   1.917   0.318   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+1H, 15N, 13C resonance assignments of the human protein tyrosine phosphatase 
+PRL-1 
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Laurence     Jennifer  S.  . 
+       2   Hallenga     Klaas     .   . 
+       3   Stauffacher  Cynthia   V.  . 
+
+   stop_
+
+   _BMRB_accession_number   6080
+   _BMRB_flat_file_name     bmr6080.str
+   _Entry_type              new
+   _Submission_date         2004-01-14
+   _Accession_date          2004-01-15
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'   543  
+      '15N chemical shifts'  129  
+      '13C chemical shifts'  314  
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+Letter to the Editor: 1H, 15N, 13C resonance assignments of the human protein 
+tyrosine phosphatase PRL-1 
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        .
+   _PubMed_ID              15213447
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Laurence     Jennifer  S.  . 
+       2   Hallenga     Klaas     .   . 
+       3   Stauffacher  Cynthia   V.  . 
+
+   stop_
+
+   _Journal_abbreviation  "J. Biomol. NMR"
+   _Journal_volume         29
+   _Journal_issue          3
+   _Page_first             417
+   _Page_last              418
+   _Year                   2004
+
+   loop_
+      _Keyword
+
+       PRL-1                         
+       PTP(CaaX)                     
+      "protein tyrosine phosphatase" 
+       PTPase                        
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_PRL-1
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name            PRL-1
+   _Abbreviation_common        PRL-1
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "PRL-1 monomer" $PRL-1_monomer 
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all free'
+
+   loop_
+      _Biological_function
+
+      "protein tyrosine phosphatase" 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_PRL-1_monomer
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                 PRL-1
+   _Name_variant                                .
+   _Abbreviation_common                         PRL-1
+   _Molecular_mass                              19815
+   _Mol_thiol_state                            'all free'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               173
+   _Mol_residue_sequence                       
+;
+MARMNRPAPVEVTYKNMRFL
+ITHNPTNATLNKFIEELKKY
+GVTTIVRVCEATYDTTLVEK
+EGIHVLDWPFDDGAPPSNQI
+VDDWLSLVKIKFREEPGCCI
+AVHCVAGLGRAPVLVALALI
+EGGMKYEDAVQFIRQKRRGA
+FNSKQLLYLEKYRPKMRLRF
+KDSNGHRNNCCIQ
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_label
+
+         1   MET     2   ALA     3   ARG     4   MET     5   ASN 
+         6   ARG     7   PRO     8   ALA     9   PRO    10   VAL 
+        11   GLU    12   VAL    13   THR    14   TYR    15   LYS 
+        16   ASN    17   MET    18   ARG    19   PHE    20   LEU 
+        21   ILE    22   THR    23   HIS    24   ASN    25   PRO 
+        26   THR    27   ASN    28   ALA    29   THR    30   LEU 
+        31   ASN    32   LYS    33   PHE    34   ILE    35   GLU 
+        36   GLU    37   LEU    38   LYS    39   LYS    40   TYR 
+        41   GLY    42   VAL    43   THR    44   THR    45   ILE 
+        46   VAL    47   ARG    48   VAL    49   CYS    50   GLU 
+        51   ALA    52   THR    53   TYR    54   ASP    55   THR 
+        56   THR    57   LEU    58   VAL    59   GLU    60   LYS 
+        61   GLU    62   GLY    63   ILE    64   HIS    65   VAL 
+        66   LEU    67   ASP    68   TRP    69   PRO    70   PHE 
+        71   ASP    72   ASP    73   GLY    74   ALA    75   PRO 
+        76   PRO    77   SER    78   ASN    79   GLN    80   ILE 
+        81   VAL    82   ASP    83   ASP    84   TRP    85   LEU 
+        86   SER    87   LEU    88   VAL    89   LYS    90   ILE 
+        91   LYS    92   PHE    93   ARG    94   GLU    95   GLU 
+        96   PRO    97   GLY    98   CYS    99   CYS   100   ILE 
+       101   ALA   102   VAL   103   HIS   104   CYS   105   VAL 
+       106   ALA   107   GLY   108   LEU   109   GLY   110   ARG 
+       111   ALA   112   PRO   113   VAL   114   LEU   115   VAL 
+       116   ALA   117   LEU   118   ALA   119   LEU   120   ILE 
+       121   GLU   122   GLY   123   GLY   124   MET   125   LYS 
+       126   TYR   127   GLU   128   ASP   129   ALA   130   VAL 
+       131   GLN   132   PHE   133   ILE   134   ARG   135   GLN 
+       136   LYS   137   ARG   138   ARG   139   GLY   140   ALA 
+       141   PHE   142   ASN   143   SER   144   LYS   145   GLN 
+       146   LEU   147   LEU   148   TYR   149   LEU   150   GLU 
+       151   LYS   152   TYR   153   ARG   154   PRO   155   LYS 
+       156   MET   157   ARG   158   LEU   159   ARG   160   PHE 
+       161   LYS   162   ASP   163   SER   164   ASN   165   GLY 
+       166   HIS   167   ARG   168   ASN   169   ASN   170   CYS 
+       171   CYS   172   ILE   173   GLN 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       DBJ      BAC38233.1  "unnamed protein product [Mus musculus]"                                                           100.00  173   100   100   9e-99 
+       EMBL     CAC12761.1  "dJ1148A21.2 (protein tyrosinephosphatase type IVA member 1) [Homo sapiens]"                       100.00  173   100   100   9e-99 
+       GenBank  AAA41935.1  "tyrosine phosphatase [Rattus norvegicus]"                                                         100.00  173   100   100   9e-99 
+       GenBank  AAB40597.1  "protein tyrosine phosphatase PTPCAAX1[Homo sapiens]"                                              100.00  173   100   100   9e-99 
+       GenBank  AAB58913.1  "protein tyrosine phosphatase [Musmusculus]"                                                       100.00  173   100   100   9e-99 
+       GenBank  AAC39836.1  "tyrosine phosphatase [Homo sapiens]"                                                              100.00  173   100   100   9e-99 
+       GenBank  AAF05715.1  "protein tyrosine phosphatase [Macacafascicularis]"                                                100.00  173   100   100   9e-99 
+       PIR      A56059      "protein-tyrosine-phosphatase (EC 3.1.3.48)PRL-1 - rat"                                            100.00  173   100   100   9e-99 
+       REF      NP_003454.1 "protein tyrosine phosphatase type IVA,member 1; Protein tyrosine phosphatase IVA1 [Homosapiens]"  100.00  173   100   100   9e-99 
+       REF      NP_035330.1 "protein tyrosine phosphatase 4a1 [Musmusculus]"                                                   100.00  173   100   100   9e-99 
+       REF      NP_113767.1 "protein tyrosine phosphatase 4a1[Rattus norvegicus]"                                              100.00  173   100   100   9e-99 
+       REF      XP_124808.1 "similar to protein tyrosinephosphatase 4a1 [Mus musculus]"                                        100.00  173    99    99   4e-98 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+      _Tissue
+
+      $PRL-1_monomer  Human  9606   Eukaryota  Metazoa  Homo  sapiens "regenerating liver" 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+      _Details
+
+      $PRL-1_monomer 'recombinant technology'  .  .  .  .  . "The gene was provided by P. Crowell." 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Concentration_min_value
+      _Concentration_max_value
+      _Isotopic_labeling
+
+      $PRL-1_monomer  .  mM  1.3  2.0 "[U-95% 13C; U-98% 15N]" 
+
+   stop_
+
+save_
+
+
+save_sample_2
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Concentration_min_value
+      _Concentration_max_value
+      _Isotopic_labeling
+
+      $PRL-1_monomer  .  mM  1.5  2.0 "[U-98% 15N]" 
+
+   stop_
+
+save_
+
+
+save_sample_3
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $PRL-1_monomer  2.0  mM "[1H methyl only, 2H U-98%; U-95% 13C; U-98% 15N]" 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_SPARKY
+   _Saveframe_category   software
+
+   _Name                 SPARKY
+   _Version              3
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer_1
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Varian
+   _Model                INOVA
+   _Field_strength       600
+
+save_
+
+
+save_NMR_spectrometer_2
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Varian
+   _Model                INOVA
+   _Field_strength       800
+
+save_
+
+
+save_NMR_spectrometer_3
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Varian
+   _Model                INOVA
+   _Field_strength       600
+   _Details             "Chili Probe"
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+CBCACONH
+HNCACB
+CCONH
+HCCONH
+CCCONH
+HNCO
+1H-15N NOESY
+1H-13C NOESY
+15N-HSQC
+13C-HSQC
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_Ex-cond_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             6.5  0.2  n/a 
+       temperature  310    1    K   
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+      _Reference_correction_type
+
+       water  H   1   protons  ppm  4.667  internal  direct    cylindrical  internal  parallel  1.0  temperature 
+       water  C  13   protons  ppm  0.0    external  indirect  .            .         .          .   .           
+       water  N  15   protons  ppm  0.0    external  indirect  .            .         .          .   .           
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_shift_set_1
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+      $sample_2 
+
+   stop_
+
+   _Sample_conditions_label         $Ex-cond_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "PRL-1 monomer"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     7   PRO       CA    C     62.23      0.2     1
+     2     7   PRO       CB    C     31.24      0.2     1
+     3     7   PRO       CD    C     50.00      0.2     1
+     4     7   PRO       CG    C     26.51      0.2     1
+     5     7   PRO       HA    H      4.43     0.02     1
+     6     7   PRO       HB2   H      2.12     0.02     1
+     7     7   PRO       HB3   H      1.52     0.02     1
+     8     7   PRO       HD2   H      3.79     0.02     1
+     9     7   PRO       HD3   H      3.35     0.02     1
+    10     7   PRO       HG2   H      1.84     0.02     1
+    11     7   PRO       HG3   H      1.69     0.02     1
+    12     8   ALA       H     H      8.45     0.02     1
+    13     8   ALA       N     N    125.66      0.2     1
+    14     9   PRO       CA    C     62.47      0.2     1
+    15     9   PRO       CB    C     32.28      0.2     1
+    16    10   VAL       CA    C     61.00      0.2     1
+    17    10   VAL       CB    C     33.91      0.2     1
+    18    10   VAL       CG2   C     20.83      0.2     2
+    19    10   VAL       HA    H      4.34     0.02     1
+    20    10   VAL       HB    H      2.14     0.02     1
+    21    10   VAL       HG1   H      1.04     0.02     2
+    22    10   VAL       HG2   H      0.95     0.02     2
+    23    10   VAL       H     H      8.52     0.02     1
+    24    10   VAL       N     N    118.55      0.2     1
+    25    11   GLU       CA    C     54.77      0.2     1
+    26    11   GLU       CB    C     31.88      0.2     1
+    27    11   GLU       HA    H      5.17     0.02     1
+    28    11   GLU       HB2   H      2.26     0.02     4
+    29    11   GLU       H     H      8.90     0.02     1
+    30    11   GLU       N     N    130.04      0.2     1
+    31    12   VAL       CA    C     61.35      0.2     1
+    32    12   VAL       CB    C     34.59      0.2     1
+    33    12   VAL       CG1   C     21.19      0.2     1
+    34    12   VAL       CG2   C     20.01      0.2     1
+    35    12   VAL       HA    H      4.49     0.02     1
+    36    12   VAL       HB    H      2.28     0.02     1
+    37    12   VAL       HG1   H      1.10     0.02     2
+    38    12   VAL       HG2   H      0.99     0.02     2
+    39    12   VAL       H     H      9.29     0.02     1
+    40    12   VAL       N     N    126.58      0.2     1
+    41    13   THR       CA    C     60.29      0.2     1
+    42    13   THR       CB    C     70.35      0.2     1
+    43    13   THR       HA    H      5.27     0.02     1
+    44    13   THR       HB    H      4.26     0.02     1
+    45    13   THR       HG2   H      1.33     0.02     1
+    46    13   THR       H     H      8.75     0.02     1
+    47    13   THR       N     N    122.69      0.2     1
+    48    14   TYR       CA    C     57.74      0.2     1
+    49    14   TYR       CB    C     41.29      0.2     1
+    50    14   TYR       HA    H      4.72     0.02     1
+    51    14   TYR       HB2   H      3.19     0.02     1
+    52    14   TYR       HB3   H      2.51     0.02     1
+    53    14   TYR       H     H      8.49     0.02     1
+    54    14   TYR       N     N    124.45      0.2     1
+    55    15   LYS       CA    C     58.02      0.2     1
+    56    15   LYS       CB    C     29.25      0.2     1
+    57    15   LYS       HA    H      3.54     0.02     1
+    58    15   LYS       HB2   H      1.47     0.02     4
+    59    15   LYS       HE2   H      2.94     0.02     2
+    60    15   LYS       H     H      9.00     0.02     1
+    61    15   LYS       N     N    125.25      0.2     1
+    62    16   ASN       CA    C     53.43      0.2     1
+    64    16   ASN       HA    H      4.65     0.02     1
+    65    16   ASN       HB2   H      2.79     0.02     1
+    66    16   ASN       HB3   H      3.13     0.02     1
+    67    16   ASN       H     H      8.29     0.02     1
+    68    16   ASN       N     N    119.30      0.2     1
+    69    17   MET       CA    C     54.76      0.2     1
+    70    17   MET       CB    C     34.38      0.2     1
+    71    17   MET       HB2   H      2.11     0.02     2
+    72    17   MET       HG2   H      2.51     0.02     1
+    73    17   MET       HG3   H      2.35     0.02     1
+    74    17   MET       H     H      8.52     0.02     1
+    75    17   MET       N     N    119.15      0.2     1
+    78    18   ARG       CG    C     27.19      0.2     1
+    79    18   ARG       HA    H      5.04     0.02     1
+    80    18   ARG       HB2   H      2.00     0.02     2
+    81    18   ARG       HD2   H      3.51     0.02     1
+    82    18   ARG       HD3   H      3.11     0.02     1
+    83    18   ARG       HG2   H      1.69     0.02     2
+    84    18   ARG       H     H      6.03     0.02     1
+    85    18   ARG       N     N    122.07      0.2     1
+    88    19   PHE       HA    H      6.16     0.02     1
+    89    19   PHE       HB2   H      3.27     0.02     1
+    90    19   PHE       HB3   H      2.93     0.02     1
+    91    19   PHE       H     H      9.36     0.02     1
+    95    20   LEU       CD1   C     25.40      0.2     1
+    96    20   LEU       CD2   C     22.08      0.2     1
+    97    20   LEU       CG    C     26.56      0.2     1
+    98    20   LEU       HA    H      5.25     0.02     1
+    99    20   LEU       HB2   H      1.75     0.02     1
+   100    20   LEU       HB3   H      1.24     0.02     1
+   101    20   LEU       HD1   H      0.53     0.02     2
+   102    20   LEU       HD2   H      0.13     0.02     2
+   103    20   LEU       HG    H      1.05     0.02     1
+   104    20   LEU       H     H      8.94     0.02     1
+   108    21   ILE       H     H      9.47     0.02     1
+   111    22   THR       HA    H      4.97     0.02     1
+   112    22   THR       HG2   H      1.27     0.02     1
+   113    22   THR       H     H      8.01     0.02     1
+   117    23   HIS       HA    H      4.35     0.02     1
+   118    23   HIS       HB2   H      3.28     0.02     1
+   119    23   HIS       HB3   H      2.97     0.02     1
+   120    23   HIS       H     H      8.53     0.02     1
+   122    24   ASN       H     H      8.66     0.02     1
+   123    24   ASN       N     N    120.01      0.2     1
+   124    30   LEU       CA    C     57.71      0.2     1
+   125    30   LEU       CB    C     42.13      0.2     1
+   126    30   LEU       CD1   C     24.85      0.2     4
+   127    30   LEU       HA    H      4.06     0.02     1
+   128    30   LEU       HB2   H      1.91     0.02     2
+   129    30   LEU       HD1   H      0.98     0.02     2
+   130    30   LEU       HD2   H      0.92     0.02     2
+   131    30   LEU       HG    H      1.80     0.02     1
+   132    30   LEU       H     H      7.50     0.02     1
+   133    30   LEU       N     N    124.31      0.2     1
+   134    31   ASN       CA    C     57.19      0.2     1
+   136    31   ASN       HA    H      4.49     0.02     1
+   137    31   ASN       HB2   H      2.97     0.02     2
+   138    31   ASN       H     H      8.80     0.02     1
+   139    31   ASN       N     N    115.90      0.2     1
+   140    32   LYS       CA    C     58.00      0.2     1
+   141    32   LYS       CB    C     31.79      0.2     1
+   142    32   LYS       HA    H      4.28     0.02     1
+   143    32   LYS       HB2   H      2.06     0.02     2
+   144    32   LYS       HD2   H      1.81     0.02     2
+   145    32   LYS       HE2   H      3.13     0.02     2
+   146    32   LYS       HG2   H      1.65     0.02     2
+   147    32   LYS       H     H      7.83     0.02     1
+   148    32   LYS       N     N    120.80      0.2     1
+   149    33   PHE       CA    C     60.34      0.2     1
+   150    33   PHE       CB    C     39.56      0.2     1
+   151    33   PHE       HA    H      4.54     0.02     1
+   152    33   PHE       HB2   H      3.43     0.02     1
+   153    33   PHE       HB3   H      3.23     0.02     1
+   154    33   PHE       H     H      8.15     0.02     1
+   155    33   PHE       N     N    122.47      0.2     1
+   156    34   ILE       CA    C     65.58      0.2     1
+   157    34   ILE       CB    C     37.94      0.2     1
+   158    34   ILE       CD1   C     13.73      0.2     1
+   159    34   ILE       HA    H      3.39     0.02     1
+   160    34   ILE       HB    H      2.09     0.02     1
+   161    34   ILE       HD1   H      0.95     0.02     1
+   162    34   ILE       HG12  H      0.98     0.02     4
+   163    34   ILE       H     H      8.71     0.02     1
+   164    34   ILE       N     N    118.56      0.2     1
+   165    35   GLU       CA    C     59.57      0.2     1
+   167    35   GLU       CG    C     36.21      0.2     1
+   168    35   GLU       HA    H      4.00     0.02     1
+   169    35   GLU       HB2   H      2.32     0.02     2
+   170    35   GLU       HG2   H      2.55     0.02     2
+   171    35   GLU       H     H      7.79     0.02     1
+   172    35   GLU       N     N    118.07      0.2     1
+   173    36   GLU       CA    C     59.43      0.2     1
+   174    36   GLU       CB    C     30.29      0.2     1
+   175    36   GLU       HA    H      4.17     0.02     1
+   176    36   GLU       HB2   H      2.33     0.02     2
+   177    36   GLU       HG2   H      2.54     0.02     2
+   178    36   GLU       H     H      7.97     0.02     1
+   179    36   GLU       N     N    120.70      0.2     1
+   180    37   LEU       CA    C     62.62      0.2     1
+   181    37   LEU       HA    H      4.23     0.02     1
+   182    37   LEU       H     H      8.26     0.02     1
+   183    37   LEU       N     N    117.70      0.2     1
+   184    38   LYS       CA    C     59.55      0.2     1
+   185    38   LYS       CB    C     32.06      0.2     1
+   186    38   LYS       HA    H      4.26     0.02     1
+   187    38   LYS       HB2   H      1.98     0.02     2
+   188    38   LYS       HD2   H      1.79     0.02     2
+   189    38   LYS       HE2   H      3.07     0.02     2
+   190    38   LYS       HG2   H      1.63     0.02     2
+   191    38   LYS       H     H      8.24     0.02     1
+   192    38   LYS       N     N    121.93      0.2     1
+   193    39   LYS       CA    C     59.10      0.2     1
+   194    39   LYS       CB    C     31.72      0.2     1
+   195    39   LYS       HA    H      4.09     0.02     1
+   196    39   LYS       HB2   H      2.01     0.02     2
+   197    39   LYS       HD2   H      1.68     0.02     1
+   198    39   LYS       HD3   H      1.65     0.02     1
+   199    39   LYS       HE2   H      2.93     0.02     2
+   200    39   LYS       HG2   H      1.50     0.02     1
+   201    39   LYS       HG3   H      1.19     0.02     1
+   202    39   LYS       H     H      7.98     0.02     1
+   203    39   LYS       N     N    121.92      0.2     1
+   204    40   TYR       CA    C     59.37      0.2     1
+   205    40   TYR       CB    C     40.09      0.2     1
+   206    40   TYR       HA    H      4.59     0.02     1
+   207    40   TYR       HB2   H      3.42     0.02     1
+   208    40   TYR       HB3   H      2.81     0.02     1
+   209    40   TYR       H     H      7.54     0.02     1
+   210    40   TYR       N     N    114.32      0.2     1
+   211    41   GLY       CA    C     46.71      0.2     1
+   212    41   GLY       HA2   H      4.14     0.02     1
+   213    41   GLY       HA3   H      4.06     0.02     1
+   214    41   GLY       H     H      8.07     0.02     1
+   215    41   GLY       N     N    109.35      0.2     1
+   216    42   VAL       CA    C     61.99      0.2     1
+   217    42   VAL       CB    C     32.20      0.2     1
+   218    42   VAL       HA    H      4.59     0.02     1
+   219    42   VAL       HB    H      1.99     0.02     1
+   220    42   VAL       HG1   H      1.09     0.02     4
+   221    42   VAL       H     H      8.03     0.02     1
+   222    42   VAL       N     N    120.06      0.2     1
+   223    43   THR       CA    C     60.84      0.2     1
+   224    43   THR       CB    C     69.98      0.2     1
+   225    43   THR       CG2   C     22.57      0.2     1
+   226    43   THR       HA    H      4.81     0.02     1
+   227    43   THR       HB    H      2.52     0.02     1
+   228    43   THR       HG2   H      1.37     0.02     1
+   229    43   THR       H     H      7.95     0.02     1
+   230    43   THR       N     N    112.09      0.2     1
+   233    44   THR       HA    H      5.49     0.02     1
+   234    44   THR       HB    H      3.88     0.02     1
+   235    44   THR       HG2   H      1.24     0.02     1
+   236    44   THR       H     H      7.53     0.02     1
+   237    44   THR       N     N    119.96      0.2     1
+   238    45   ILE       CA    C     59.08      0.2     1
+   239    45   ILE       CB    C     42.64      0.2     1
+   240    45   ILE       HA    H      5.08     0.02     1
+   241    45   ILE       HB    H      1.59     0.02     1
+   242    45   ILE       HD1   H      1.14     0.02     1
+   243    45   ILE       HG2   H      0.94     0.02     4
+   244    45   ILE       HG12  H      1.79     0.02     4
+   245    45   ILE       H     H      9.45     0.02     1
+   246    45   ILE       N     N    126.84      0.2     1
+   247    46   VAL       CA    C     61.01      0.2     1
+   248    46   VAL       CB    C     37.63      0.2     1
+   249    46   VAL       HA    H      4.64     0.02     1
+   250    46   VAL       HB    H      2.13     0.02     1
+   251    46   VAL       HG1   H      0.89     0.02     2
+   252    46   VAL       HG2   H      0.74     0.02     2
+   253    46   VAL       H     H      9.33     0.02     1
+   254    46   VAL       N     N    126.96      0.2     1
+   255    47   ARG       CA    C     56.39      0.2     1
+   256    47   ARG       CB    C     29.76      0.2     1
+   257    47   ARG       CD    C     49.92      0.2     1
+   258    47   ARG       CG    C     26.83      0.2     1
+   259    47   ARG       HA    H      4.33     0.02     1
+   260    47   ARG       HB2   H      1.96     0.02     1
+   261    47   ARG       HB3   H      1.66     0.02     1
+   262    47   ARG       HD2   H      3.78     0.02     1
+   263    47   ARG       HD3   H      3.68     0.02     1
+   264    47   ARG       HG2   H      2.13     0.02     1
+   265    47   ARG       HG3   H      1.98     0.02     1
+   266    47   ARG       H     H      9.05     0.02     1
+   267    47   ARG       N     N    126.50      0.2     1
+   268    48   VAL       CA    C     60.18      0.2     1
+   269    48   VAL       CB    C     30.80      0.2     1
+   270    48   VAL       HA    H      4.01     0.02     1
+   271    48   VAL       HB    H      2.70     0.02     1
+   272    48   VAL       HG1   H      1.00     0.02     2
+   273    48   VAL       HG2   H      0.77     0.02     2
+   274    48   VAL       H     H      7.66     0.02     1
+   275    48   VAL       N     N    112.51      0.2     1
+   276    49   CYS       CA    C     55.38      0.2     1
+   277    49   CYS       CB    C     37.94      0.2     1
+   278    49   CYS       HA    H      4.95     0.02     1
+   279    49   CYS       H     H      8.18     0.02     1
+   280    49   CYS       N     N    121.39      0.2     1
+   281    50   GLU       H     H      8.57     0.02     1
+   282    50   GLU       N     N    127.07      0.2     1
+   283    50   GLU       HA    H      4.14     0.02     1
+   284    50   GLU       HB2   H      2.37     0.02     2
+   285    50   GLU       HG2   H      2.32     0.02     2
+   286    51   ALA       CA    C     51.33      0.2     1
+   287    51   ALA       CB    C     18.66      0.2     1
+   288    51   ALA       HA    H      4.30     0.02     1
+   289    51   ALA       HB    H      1.39     0.02     1
+   290    51   ALA       H     H      8.56     0.02     1
+   291    51   ALA       N     N    127.11      0.2     1
+   292    52   THR       CA    C     61.52      0.2     1
+   293    52   THR       CB    C     69.59      0.2     1
+   294    52   THR       HA    H      4.74     0.02     1
+   295    52   THR       HG2   H      1.16     0.02     1
+   296    52   THR       H     H      8.88     0.02     1
+   297    52   THR       N     N    112.50      0.2     1
+   298    53   TYR       CA    C     54.99      0.2     1
+   299    53   TYR       CB    C     39.26      0.2     1
+   300    53   TYR       HA    H      5.06     0.02     1
+   301    53   TYR       HB2   H      3.00     0.02     1
+   302    53   TYR       HB3   H      2.88     0.02     1
+   303    53   TYR       H     H      6.95     0.02     1
+   304    53   TYR       N     N    115.52      0.2     1
+   305    54   ASP       CA    C     54.16      0.2     1
+   306    54   ASP       CB    C     41.73      0.2     1
+   307    54   ASP       HA    H      4.80     0.02     1
+   308    54   ASP       H     H      9.15     0.02     1
+   309    54   ASP       N     N    123.40      0.2     1
+   310    55   THR       CA    C     62.96      0.2     1
+   311    55   THR       CB    C     68.88      0.2     1
+   312    55   THR       HA    H      4.34     0.02     1
+   313    55   THR       H     H      8.78     0.02     1
+   314    55   THR       N     N    115.34      0.2     1
+   315    56   THR       CA    C     67.20      0.2     1
+   317    56   THR       HA    H      4.03     0.02     1
+   318    56   THR       HG2   H      1.40     0.02     1
+   319    56   THR       H     H      8.70     0.02     1
+   320    56   THR       N     N    120.56      0.2     1
+   321    57   LEU       CA    C     57.73      0.2     1
+   322    57   LEU       CB    C     41.97      0.2     1
+   323    57   LEU       HA    H      4.20     0.02     1
+   324    57   LEU       H     H      9.01     0.02     1
+   325    57   LEU       N     N    119.97      0.2     1
+   326    58   VAL       CA    C     65.26      0.2     1
+   327    58   VAL       CB    C     32.35      0.2     1
+   328    58   VAL       HA    H      3.70     0.02     1
+   329    58   VAL       HB    H      2.42     0.02     1
+   330    58   VAL       HG1   H      1.26     0.02     2
+   331    58   VAL       HG2   H      1.10     0.02     2
+   332    58   VAL       H     H      7.15     0.02     1
+   333    58   VAL       N     N    116.81      0.2     1
+   334    59   GLU       CA    C     58.69      0.2     1
+   335    59   GLU       CB    C     28.86      0.2     1
+   336    59   GLU       CG    C     35.50      0.2     1
+   337    59   GLU       HA    H      4.59     0.02     1
+   338    59   GLU       HB2   H      2.31     0.02     1
+   339    59   GLU       HB3   H      2.17     0.02     1
+   340    59   GLU       HG2   H      2.66     0.02     2
+   341    59   GLU       H     H      8.58     0.02     1
+   342    59   GLU       N     N    118.93      0.2     1
+   343    60   LYS       CA    C     58.70      0.2     1
+   344    60   LYS       CB    C     32.30      0.2     1
+   345    60   LYS       HA    H      4.26     0.02     1
+   346    60   LYS       HB2   H      2.14     0.02     2
+   347    60   LYS       H     H      8.06     0.02     1
+   348    60   LYS       N     N    120.19      0.2     1
+   349    61   GLU       CA    C     55.22      0.2     1
+   350    61   GLU       CB    C     28.90      0.2     1
+   351    61   GLU       HA    H      4.55     0.02     1
+   352    61   GLU       HB2   H      2.47     0.02     4
+   353    61   GLU       H     H      7.49     0.02     1
+   354    61   GLU       N     N    116.28      0.2     1
+   355    62   GLY       CA    C     45.18      0.2     1
+   356    62   GLY       HA2   H      4.26     0.02     1
+   357    62   GLY       HA3   H      3.78     0.02     1
+   358    62   GLY       H     H      8.06     0.02     1
+   359    62   GLY       N     N    106.40      0.2     1
+   360    63   ILE       CA    C     59.84      0.2     1
+   361    63   ILE       CB    C     38.50      0.2     1
+   362    63   ILE       CD1   C     14.05      0.2     1
+   363    63   ILE       CG2   C     17.65      0.2     1
+   364    63   ILE       HA    H      4.20     0.02     1
+   365    63   ILE       HB    H      1.67     0.02     1
+   366    63   ILE       HD1   H      0.79     0.02     1
+   367    63   ILE       HG12  H      1.07     0.02     1
+   368    63   ILE       HG13  H      1.45     0.02     1
+   369    63   ILE       HG2   H      0.57     0.02     1
+   370    63   ILE       H     H      7.24     0.02     1
+   372    64   HIS       CA    C     54.24      0.2     1
+   373    64   HIS       CB    C     30.23      0.2     1
+   374    64   HIS       HA    H      5.20     0.02     1
+   375    64   HIS       HB2   H      3.36     0.02     1
+   376    64   HIS       HB3   H      3.30     0.02     1
+   377    64   HIS       H     H      7.67     0.02     1
+   378    64   HIS       N     N    123.22      0.2     1
+   379    65   VAL       CA    C     61.15      0.2     1
+   380    65   VAL       CB    C     32.81      0.2     1
+   381    65   VAL       HA    H      4.92     0.02     1
+   382    65   VAL       HB    H      2.10     0.02     1
+   383    65   VAL       HG1   H      1.11     0.02     2
+   384    65   VAL       HG2   H      0.84     0.02     2
+   385    65   VAL       H     H      8.71     0.02     1
+   386    65   VAL       N     N    124.84      0.2     1
+   387    66   LEU       CA    C     52.87      0.2     1
+   388    66   LEU       CB    C     43.57      0.2     1
+   389    66   LEU       CD1   C     25.17      0.2     1
+   390    66   LEU       CD2   C     23.26      0.2     1
+   391    66   LEU       HA    H      4.48     0.02     1
+   392    66   LEU       HB2   H      1.17     0.02     1
+   393    66   LEU       HB3   H      1.26     0.02     1
+   394    66   LEU       HD1   H      0.66     0.02     2
+   395    66   LEU       HD2   H      0.89     0.02     2
+   396    66   LEU       H     H      9.21     0.02     1
+   397    66   LEU       N     N    130.12      0.2     1
+   398    67   ASP       CA    C     54.07      0.2     1
+   400    67   ASP       HA    H      5.34     0.02     1
+   401    67   ASP       HB2   H      2.60     0.02     2
+   402    67   ASP       H     H      8.46     0.02     1
+   403    67   ASP       N     N    123.18      0.2     1
+   404    68   TRP       CA    C     51.34      0.2     1
+   406    68   TRP       HA    H      5.46     0.02     1
+   407    68   TRP       HB2   H      3.32     0.02     1
+   408    68   TRP       HB3   H      3.20     0.02     1
+   409    68   TRP       H     H      8.22     0.02     1
+   410    68   TRP       N     N    126.34      0.2     1
+   413    69   PRO       CD    C     50.41      0.2     1
+   414    69   PRO       CG    C     26.55      0.2     1
+   415    69   PRO       HA    H      4.58     0.02     1
+   416    69   PRO       HB2   H      2.39     0.02     2
+   417    69   PRO       HD2   H      3.90     0.02     2
+   418    69   PRO       HG2   H      2.15     0.02     1
+   419    69   PRO       HG3   H      2.06     0.02     1
+   420    70   PHE       CA    C     52.83      0.2     1
+   421    70   PHE       CB    C     37.05      0.2     1
+   422    70   PHE       HA    H      4.72     0.02     1
+   423    70   PHE       HB2   H      2.86     0.02     1
+   424    70   PHE       HB3   H      2.74     0.02     1
+   425    70   PHE       H     H      8.41     0.02     1
+   427    71   ASP       CA    C     54.04      0.2     1
+   428    71   ASP       CB    C     42.20      0.2     1
+   429    71   ASP       HA    H      4.64     0.02     1
+   430    71   ASP       HB2   H      2.83     0.02     1
+   431    71   ASP       HB3   H      2.74     0.02     1
+   432    71   ASP       H     H      8.26     0.02     1
+   433    71   ASP       N     N    122.83      0.2     1
+   434    72   ASP       CA    C     55.40      0.2     1
+   436    72   ASP       HA    H      4.54     0.02     1
+   437    72   ASP       HB2   H      2.74     0.02     2
+   438    72   ASP       H     H      8.48     0.02     1
+   439    72   ASP       N     N    120.11      0.2     1
+   440    73   GLY       CA    C     45.39      0.2     1
+   441    73   GLY       HA2   H      4.03     0.02     1
+   442    73   GLY       HA3   H      4.01     0.02     1
+   443    73   GLY       H     H      8.69     0.02     1
+   444    73   GLY       N     N    108.26      0.2     1
+   445    74   ALA       CA    C     49.41      0.2     1
+   446    74   ALA       HA    H      4.83     0.02     1
+   447    74   ALA       HB    H      1.49     0.02     1
+   448    74   ALA       H     H      7.71     0.02     1
+   449    74   ALA       N     N    123.56      0.2     1
+   450    76   PRO       CA    C     62.25      0.2     1
+   451    76   PRO       CB    C     30.39      0.2     1
+   452    76   PRO       CD    C     48.76      0.2     1
+   453    76   PRO       CG    C     26.00      0.2     1
+   454    76   PRO       HA    H      4.14     0.02     1
+   455    76   PRO       HB2   H      1.70     0.02     2
+   456    76   PRO       HD2   H      3.33     0.02     1
+   457    76   PRO       HD3   H      3.12     0.02     1
+   458    76   PRO       HG2   H      1.30     0.02     1
+   459    76   PRO       HG3   H      1.39     0.02     1
+   460    77   SER       CA    C     58.52      0.2     1
+   461    77   SER       CB    C     63.56      0.2     1
+   462    77   SER       HA    H      4.57     0.02     1
+   463    77   SER       HB2   H      4.03     0.02     2
+   464    77   SER       H     H      7.77     0.02     1
+   465    77   SER       N     N    116.49      0.2     1
+   467    78   ASN       HA    H      4.52     0.02     1
+   468    78   ASN       HB2   H      3.01     0.02     1
+   469    78   ASN       HB3   H      2.91     0.02     1
+   470    78   ASN       H     H      8.42     0.02     1
+   471    78   ASN       N     N    121.99      0.2     1
+   472    79   GLN       CA    C     58.64      0.2     1
+   473    79   GLN       CB    C     28.03      0.2     1
+   474    79   GLN       CG    C     32.91      0.2     1
+   475    79   GLN       HA    H      4.09     0.02     1
+   476    79   GLN       HB2   H      2.22     0.02     2
+   477    79   GLN       HE21  H      7.91     0.02     1
+   478    79   GLN       HE22  H      6.78     0.02     1
+   479    79   GLN       HG2   H      2.41     0.02     2
+   480    79   GLN       H     H      8.21     0.02     1
+   482    79   GLN       NE2   N    114.91      0.2     1
+   483    80   ILE       CA    C     63.81      0.2     1
+   484    80   ILE       CB    C     36.64      0.2     1
+   485    80   ILE       CG2   C     16.14      0.2     1
+   486    80   ILE       HA    H      3.59     0.02     1
+   487    80   ILE       HB    H      1.82     0.02     1
+   488    80   ILE       HG12  H      1.51     0.02     2
+   489    80   ILE       HG2   H      0.80     0.02     1
+   490    80   ILE       H     H      7.38     0.02     1
+   491    80   ILE       N     N    118.90      0.2     1
+   492    81   VAL       CA    C     68.11      0.2     1
+   493    81   VAL       CB    C     31.19      0.2     1
+   494    81   VAL       CG1   C     22.76      0.2     1
+   495    81   VAL       CG2   C     21.73      0.2     1
+   496    81   VAL       HA    H      3.48     0.02     1
+   497    81   VAL       HB    H      2.28     0.02     2
+   498    81   VAL       HG1   H      1.05     0.02     2
+   499    81   VAL       HG2   H      1.22     0.02     2
+   500    81   VAL       H     H      7.86     0.02     1
+   501    81   VAL       N     N    119.02      0.2     1
+   502    82   ASP       CA    C     57.14      0.2     1
+   503    82   ASP       CB    C     36.40      0.2     1
+   504    82   ASP       HA    H      4.51     0.02     1
+   505    82   ASP       HB2   H      2.86     0.02     1
+   506    82   ASP       HB3   H      2.80     0.02     1
+   507    82   ASP       H     H      8.35     0.02     1
+   508    82   ASP       N     N    118.91      0.2     1
+   509    83   ASP       CA    C     57.29      0.2     1
+   510    83   ASP       CB    C     38.88      0.2     1
+   511    83   ASP       HA    H      4.47     0.02     1
+   512    83   ASP       HB2   H      2.32     0.02     2
+   513    83   ASP       H     H      8.54     0.02     1
+   514    83   ASP       N     N    122.14      0.2     1
+   515    84   TRP       H     H      9.02     0.02     1
+   516    84   TRP       N     N    123.95      0.2     1
+   517    85   LEU       CA    C     57.59      0.2     1
+   518    85   LEU       CB    C     40.56      0.2     1
+   519    85   LEU       CD1   C     26.40      0.2     1
+   520    85   LEU       CD2   C     21.48      0.2     1
+   521    85   LEU       HA    H      3.91     0.02     1
+   522    85   LEU       HB2   H      2.19     0.02     1
+   523    85   LEU       HB3   H      1.42     0.02     1
+   524    85   LEU       HD1   H      1.14     0.02     2
+   525    85   LEU       HD2   H      0.96     0.02     2
+   526    85   LEU       HG    H      2.44     0.02     1
+   527    85   LEU       H     H      8.02     0.02     1
+   528    86   SER       CA    C     61.82      0.2     1
+   529    86   SER       CB    C     62.30      0.2     1
+   530    86   SER       HA    H      5.07     0.02     1
+   531    86   SER       HB2   H      3.98     0.02     1
+   532    86   SER       HB3   H      3.82     0.02     1
+   533    86   SER       H     H      8.34     0.02     1
+   534    86   SER       N     N    114.75      0.2     1
+   535    87   LEU       CA    C     58.25      0.2     1
+   536    87   LEU       CB    C     42.09      0.2     1
+   537    87   LEU       CD1   C     23.58      0.2     2
+   538    87   LEU       HA    H      4.21     0.02     1
+   539    87   LEU       HD1   H      1.04     0.02     4
+   540    87   LEU       H     H      8.07     0.02     1
+   541    87   LEU       N     N    123.35      0.2     1
+   542    88   VAL       CA    C     65.73      0.2     1
+   543    88   VAL       CB    C     31.58      0.2     1
+   544    88   VAL       CG1   C     21.86      0.2     1
+   545    88   VAL       CG2   C     21.38      0.2     1
+   546    88   VAL       HA    H      3.09     0.02     1
+   547    88   VAL       HB    H      2.09     0.02     1
+   548    88   VAL       HG1   H      1.12     0.02     2
+   549    88   VAL       HG2   H      0.39     0.02     2
+   550    88   VAL       H     H      8.21     0.02     1
+   551    88   VAL       N     N    116.70      0.2     1
+   552    89   LYS       HG2   H      1.72     0.02     4
+   555    89   LYS       HA    H      4.07     0.02     1
+   556    89   LYS       HB2   H      2.05     0.02     2
+   557    89   LYS       HE2   H      3.09     0.02     2
+   558    89   LYS       H     H      7.80     0.02     1
+   559    89   LYS       N     N    117.23      0.2     1
+   560    90   ILE       CA    C     64.16      0.2     1
+   561    90   ILE       CB    C     38.44      0.2     1
+   562    90   ILE       HA    H      3.99     0.02     1
+   563    90   ILE       H     H      8.03     0.02     1
+   565    91   LYS       CA    C     58.05      0.2     1
+   567    91   LYS       CD    C     26.47      0.2     1
+   568    91   LYS       CG    C     23.55      0.2     1
+   569    91   LYS       HA    H      4.02     0.02     1
+   570    91   LYS       HB2   H      1.55     0.02     1
+   571    91   LYS       HB3   H      1.30     0.02     1
+   572    91   LYS       HD2   H      1.69     0.02     2
+   573    91   LYS       HE2   H      2.98     0.02     1
+   574    91   LYS       HE3   H      2.86     0.02     1
+   575    91   LYS       HG2   H      1.50     0.02     1
+   576    91   LYS       HG3   H      1.16     0.02     1
+   577    91   LYS       H     H      8.92     0.02     1
+   578    91   LYS       N     N    119.84      0.2     1
+   579    92   PHE       CA    C     58.69      0.2     1
+   580    92   PHE       CB    C     36.92      0.2     1
+   581    92   PHE       HA    H      4.71     0.02     1
+   582    92   PHE       HB2   H      3.32     0.02     1
+   583    92   PHE       HB3   H      2.97     0.02     1
+   584    92   PHE       H     H      7.24     0.02     1
+   585    92   PHE       N     N    111.22      0.2     1
+   586    93   ARG       CA    C     57.80      0.2     1
+   588    93   ARG       HA    H      4.50     0.02     1
+   589    93   ARG       HB2   H      2.15     0.02     2
+   590    93   ARG       HD2   H      3.39     0.02     1
+   591    93   ARG       HD3   H      3.34     0.02     1
+   592    93   ARG       HG2   H      1.91     0.02     1
+   593    93   ARG       HG3   H      1.77     0.02     1
+   594    93   ARG       H     H      7.41     0.02     1
+   595    93   ARG       N     N    118.08      0.2     1
+   596    94   GLU       CA    C     58.23      0.2     1
+   597    94   GLU       CB    C     30.52      0.2     1
+   598    94   GLU       HA    H      4.29     0.02     1
+   599    94   GLU       HB2   H      2.24     0.02     2
+   600    94   GLU       HG2   H      2.60     0.02     1
+   601    94   GLU       HG3   H      2.50     0.02     1
+   602    94   GLU       H     H      8.64     0.02     1
+   603    94   GLU       N     N    117.19      0.2     1
+   604    95   GLU       HA    H      3.65     0.02     1
+   605    95   GLU       H     H      8.11     0.02     1
+   606    95   GLU       N     N    119.17      0.2     1
+   607    96   PRO       CA    C     63.60      0.2     1
+   608    96   PRO       CB    C     31.35      0.2     1
+   609    96   PRO       CD    C     49.54      0.2     1
+   610    96   PRO       CG    C     27.19      0.2     1
+   611    96   PRO       HA    H      4.68     0.02     1
+   612    96   PRO       HB2   H      2.46     0.02     1
+   613    96   PRO       HB3   H      2.37     0.02     1
+   614    96   PRO       HD2   H      3.66     0.02     1
+   615    96   PRO       HD3   H      3.53     0.02     1
+   616    96   PRO       HG2   H      2.24     0.02     1
+   617    96   PRO       HG3   H      2.14     0.02     1
+   618    97   GLY       CA    C     45.24      0.2     1
+   619    97   GLY       HA2   H      4.43     0.02     1
+   620    97   GLY       HA3   H      3.96     0.02     1
+   621    97   GLY       H     H      9.16     0.02     1
+   622    97   GLY       N     N    112.06      0.2     1
+   623    98   CYS       CA    C     57.84      0.2     1
+   624    98   CYS       CB    C     29.23      0.2     1
+   625    98   CYS       HA    H      4.96     0.02     1
+   626    98   CYS       HB2   H      3.36     0.02     1
+   627    98   CYS       HB3   H      3.28     0.02     1
+   628    98   CYS       H     H      8.24     0.02     1
+   629    98   CYS       N     N    117.29      0.2     1
+   631    99   CYS       HA    H      5.41     0.02     1
+   632    99   CYS       HB2   H      2.89     0.02     1
+   633    99   CYS       HB3   H      2.50     0.02     1
+   634    99   CYS       H     H      7.39     0.02     1
+   636   100   ILE       CA    C     60.71      0.2     1
+   637   100   ILE       CB    C     40.63      0.2     1
+   638   100   ILE       CD1   C     13.54      0.2     1
+   639   100   ILE       HA    H      4.88     0.02     1
+   640   100   ILE       HB    H      2.14     0.02     1
+   641   100   ILE       HD1   H      0.47     0.02     1
+   642   100   ILE       HG2   H      1.22     0.02     1
+   643   100   ILE       H     H      8.39     0.02     1
+   647   101   ALA       HA    H      6.12     0.02     1
+   648   101   ALA       HB    H      1.59     0.02     1
+   649   101   ALA       H     H      9.28     0.02     1
+   650   101   ALA       N     N    129.52      0.2     1
+   653   102   VAL       CG1   C     21.72      0.2     1
+   654   102   VAL       CG2   C     20.81      0.2     1
+   655   102   VAL       HA    H      5.62     0.02     1
+   656   102   VAL       HB    H      1.95     0.02     1
+   657   102   VAL       HG1   H      1.09     0.02     4
+   658   102   VAL       H     H      9.06     0.02     1
+   662   103   HIS       H     H      8.31     0.02     1
+   666   104   CYS       H     H      8.54     0.02     1
+   668   106   ALA       CA    C     53.03      0.2     1
+   669   106   ALA       CB    C     17.78      0.2     1
+   670   107   GLY       H     H      8.34     0.02     1
+   671   107   GLY       N     N    108.64      0.2     1
+   672   112   PRO       CA    C     65.31      0.2     1
+   673   112   PRO       CB    C     31.29      0.2     1
+   674   112   PRO       CG    C     28.76      0.2     1
+   675   112   PRO       HA    H      4.10     0.02     1
+   676   112   PRO       HB2   H      1.72     0.02     1
+   677   112   PRO       HB3   H      1.57     0.02     1
+   678   112   PRO       HD2   H      3.76     0.02     1
+   679   112   PRO       HD3   H      3.51     0.02     1
+   680   112   PRO       HG2   H      2.08     0.02     2
+   681   113   VAL       CA    C     66.93      0.2     1
+   682   113   VAL       CB    C     31.68      0.2     1
+   683   113   VAL       CG2   C     20.40      0.2     1
+   684   113   VAL       HA    H      3.79     0.02     1
+   685   113   VAL       HB    H      2.52     0.02     1
+   686   113   VAL       HG1   H      1.37     0.02     2
+   687   113   VAL       HG2   H      1.13     0.02     2
+   688   113   VAL       H     H      7.37     0.02     1
+   689   113   VAL       N     N    115.95      0.2     1
+   690   114   LEU       CA    C     57.41      0.2     1
+   691   114   LEU       CB    C     38.75      0.2     1
+   692   114   LEU       CD1   C     24.25      0.2     1
+   693   114   LEU       CD2   C     20.83      0.2     1
+   694   114   LEU       HA    H      3.77     0.02     1
+   695   114   LEU       HB2   H      1.04     0.02     1
+   696   114   LEU       HB3   H     -0.09     0.02     1
+   697   114   LEU       HD1   H      0.33     0.02     2
+   698   114   LEU       HD2   H      0.19     0.02     2
+   699   114   LEU       HG    H      1.26     0.02     1
+   700   114   LEU       H     H      7.54     0.02     1
+   701   114   LEU       N     N    115.75      0.2     1
+   702   115   VAL       CA    C     66.85      0.2     1
+   703   115   VAL       CG2   C     20.57      0.2     1
+   704   115   VAL       HA    H      3.14     0.02     1
+   705   115   VAL       HB    H      2.03     0.02     1
+   706   115   VAL       HG2   H      0.83     0.02     2
+   707   115   VAL       H     H      6.90     0.02     1
+   708   115   VAL       N     N    117.74      0.2     1
+   709   116   ALA       CA    C     55.70      0.2     1
+   711   116   ALA       HA    H      3.98     0.02     1
+   712   116   ALA       HB    H      1.60     0.02     1
+   713   116   ALA       H     H      8.42     0.02     1
+   714   116   ALA       N     N    120.32      0.2     1
+   715   117   LEU       CA    C     58.37      0.2     1
+   717   117   LEU       CD1   C     25.72      0.2     1
+   718   117   LEU       CD2   C     21.52      0.2     1
+   719   117   LEU       HA    H      3.95     0.02     1
+   720   117   LEU       HB2   H      2.13     0.02     1
+   721   117   LEU       HB3   H      1.39     0.02     1
+   722   117   LEU       HD1   H      0.88     0.02     2
+   723   117   LEU       HD2   H      0.26     0.02     2
+   724   117   LEU       HG    H      1.85     0.02     1
+   725   117   LEU       H     H      8.15     0.02     1
+   726   117   LEU       N     N    115.26      0.2     1
+   727   118   ALA       CA    C     55.19      0.2     1
+   728   118   ALA       CB    C     18.79      0.2     1
+   729   118   ALA       HA    H      4.21     0.02     1
+   730   118   ALA       HB    H      1.86     0.02     1
+   731   118   ALA       H     H      7.73     0.02     1
+   732   118   ALA       N     N    118.86      0.2     1
+   733   119   LEU       CA    C     57.02      0.2     1
+   734   119   LEU       CB    C     38.58      0.2     1
+   735   119   LEU       CD1   C     24.74      0.2     1
+   736   119   LEU       CD2   C     22.50      0.2     1
+   737   119   LEU       CG    C     26.24      0.2     1
+   738   119   LEU       HA    H      4.00     0.02     1
+   739   119   LEU       HB2   H      2.05     0.02     1
+   740   119   LEU       HB3   H      1.58     0.02     1
+   741   119   LEU       HD1   H      1.03     0.02     2
+   742   119   LEU       HD2   H      0.86     0.02     2
+   743   119   LEU       HG    H      2.10     0.02     1
+   744   119   LEU       H     H      7.90     0.02     1
+   745   119   LEU       N     N    116.89      0.2     1
+   746   120   ILE       CA    C     63.79      0.2     1
+   747   120   ILE       CB    C     39.20      0.2     1
+   748   120   ILE       CD1   C     14.25      0.2     1
+   749   120   ILE       CG2   C     16.59      0.2     1
+   750   120   ILE       HA    H      3.96     0.02     1
+   751   120   ILE       HB    H      1.81     0.02     1
+   752   120   ILE       HD1   H      1.03     0.02     1
+   753   120   ILE       HG12  H      1.99     0.02     1
+   754   120   ILE       HG13  H      1.89     0.02     1
+   755   120   ILE       HG2   H      1.31     0.02     1
+   756   120   ILE       H     H      8.51     0.02     1
+   757   120   ILE       N     N    120.60      0.2     1
+   758   121   GLU       CA    C     59.45      0.2     1
+   759   121   GLU       CB    C     28.56      0.2     1
+   760   121   GLU       CG    C     35.56      0.2     1
+   761   121   GLU       HA    H      4.48     0.02     1
+   762   121   GLU       HB2   H      2.74     0.02     4
+   763   121   GLU       H     H      8.80     0.02     1
+   764   121   GLU       N     N    121.43      0.2     1
+   765   122   GLY       CA    C     45.03      0.2     1
+   766   122   GLY       HA2   H      4.48     0.02     1
+   767   122   GLY       HA3   H      3.73     0.02     1
+   768   122   GLY       H     H      8.23     0.02     1
+   769   122   GLY       N     N    105.71      0.2     1
+   770   123   GLY       CA    C     44.90      0.2     1
+   771   123   GLY       HA2   H      4.30     0.02     1
+   772   123   GLY       HA3   H      3.80     0.02     1
+   773   123   GLY       H     H      7.95     0.02     1
+   774   123   GLY       N     N    107.31      0.2     1
+   775   124   MET       CA    C     56.65      0.2     1
+   776   124   MET       CB    C     33.54      0.2     1
+   777   124   MET       CG    C     32.54      0.2     1
+   778   124   MET       HA    H      4.49     0.02     1
+   779   124   MET       HB2   H      1.62     0.02     1
+   780   124   MET       HB3   H      1.49     0.02     1
+   781   124   MET       HG2   H      2.42     0.02     1
+   782   124   MET       HG3   H      2.27     0.02     1
+   783   124   MET       H     H      8.60     0.02     1
+   784   124   MET       N     N    123.23      0.2     1
+   785   125   LYS       CA    C     56.62      0.2     1
+   786   125   LYS       CB    C     32.67      0.2     1
+   787   125   LYS       CD    C     28.60      0.2     1
+   788   125   LYS       CG    C     24.69      0.2     1
+   789   125   LYS       HA    H      4.45     0.02     1
+   790   125   LYS       HB2   H      2.18     0.02     1
+   791   125   LYS       HB3   H      1.95     0.02     1
+   792   125   LYS       HD2   H      1.93     0.02     2
+   793   125   LYS       HE2   H      3.20     0.02     2
+   794   125   LYS       HG2   H      1.78     0.02     2
+   795   125   LYS       H     H      8.87     0.02     1
+   796   125   LYS       N     N    123.52      0.2     1
+   797   126   TYR       CA    C     61.17      0.2     1
+   798   126   TYR       CB    C     37.79      0.2     1
+   799   126   TYR       HA    H      4.14     0.02     1
+   800   126   TYR       HB2   H      3.38     0.02     1
+   801   126   TYR       HB3   H      3.06     0.02     1
+   802   126   TYR       H     H      9.32     0.02     1
+   803   126   TYR       N     N    124.07      0.2     1
+   804   127   GLU       CA    C     59.83      0.2     1
+   805   127   GLU       CB    C     28.69      0.2     1
+   806   127   GLU       CG    C     36.30      0.2     1
+   807   127   GLU       HA    H      3.33     0.02     1
+   808   127   GLU       HB2   H      1.92     0.02     1
+   809   127   GLU       HB3   H      1.89     0.02     1
+   810   127   GLU       HG2   H      2.39     0.02     1
+   811   127   GLU       HG3   H      2.19     0.02     1
+   812   127   GLU       H     H      9.39     0.02     1
+   813   127   GLU       N     N    118.46      0.2     1
+   814   128   ASP       CA    C     56.34      0.2     1
+   815   128   ASP       CB    C     40.08      0.2     1
+   816   128   ASP       HA    H      4.55     0.02     1
+   817   128   ASP       HB3   H      2.80     0.02     1
+   818   128   ASP       HB2   H      2.78     0.02     1
+   819   128   ASP       H     H      6.95     0.02     1
+   820   128   ASP       N     N    118.21      0.2     1
+   821   129   ALA       CA    C     55.20      0.2     1
+   823   129   ALA       HA    H      4.33     0.02     1
+   824   129   ALA       HB    H      1.38     0.02     1
+   825   129   ALA       H     H      8.46     0.02     1
+   826   129   ALA       N     N    125.15      0.2     1
+   829   130   VAL       CG1   C     21.48      0.2     1
+   830   130   VAL       CG2   C     20.25      0.2     1
+   831   130   VAL       HA    H      3.62     0.02     1
+   832   130   VAL       HB    H      1.82     0.02     1
+   833   130   VAL       HG1   H      0.54     0.02     2
+   834   130   VAL       HG2   H      0.77     0.02     2
+   835   130   VAL       H     H      8.03     0.02     1
+   836   130   VAL       N     N    114.61      0.2     1
+   839   131   GLN       CG    C     33.19      0.2     1
+   840   131   GLN       HA    H      4.20     0.02     1
+   841   131   GLN       HB2   H      2.35     0.02     2
+   842   131   GLN       HG2   H      2.62     0.02     2
+   843   131   GLN       H     H      7.65     0.02     1
+   844   131   GLN       N     N    118.58      0.2     1
+   847   132   PHE       HA    H      4.46     0.02     1
+   848   132   PHE       HB2   H      3.55     0.02     1
+   849   132   PHE       HB3   H      3.20     0.02     1
+   850   132   PHE       H     H      8.59     0.02     1
+   852   133   ILE       CA    C     64.54      0.2     1
+   854   133   ILE       CG2   C     16.39      0.2     1
+   855   133   ILE       HA    H      3.69     0.02     1
+   856   133   ILE       HB    H      2.14     0.02     1
+   857   133   ILE       HD1   H      1.08     0.02     1
+   858   133   ILE       HG12  H      0.63     0.02     2
+   859   133   ILE       HG2   H      0.78     0.02     1
+   860   133   ILE       H     H      7.74     0.02     1
+   862   134   ARG       CA    C     58.85      0.2     1
+   863   134   ARG       CB    C     30.68      0.2     1
+   864   134   ARG       CD    C     43.90      0.2     1
+   865   134   ARG       HA    H      4.42     0.02     1
+   866   134   ARG       HB2   H      2.03     0.02     4
+   867   134   ARG       HD2   H      3.36     0.02     2
+   868   134   ARG       H     H      8.89     0.02     1
+   869   134   ARG       N     N    119.78      0.2     1
+   870   135   GLN       CA    C     57.66      0.2     1
+   871   135   GLN       CG    C     33.71      0.2     1
+   872   135   GLN       HA    H      4.17     0.02     1
+   873   135   GLN       HB2   H      2.35     0.02     1
+   874   135   GLN       HB3   H      2.24     0.02     1
+   875   135   GLN       HG2   H      2.67     0.02     2
+   876   135   GLN       H     H      8.12     0.02     1
+   877   135   GLN       N     N    116.19      0.2     1
+   878   136   LYS       CE    C     42.01      0.2     1
+   879   136   LYS       HA    H      4.45     0.02     1
+   880   136   LYS       HE2   H      3.15     0.02     1
+   881   136   LYS       HE3   H      2.88     0.02     1
+   882   136   LYS       H     H      7.49     0.02     1
+   883   136   LYS       N     N    116.04      0.2     1
+   884   137   ARG       H     H      8.08     0.02     1
+   887   139   GLY       HA2   H      4.20     0.02     1
+   888   139   GLY       HA3   H      3.97     0.02     1
+   889   140   ALA       CA    C     53.67      0.2     1
+   890   140   ALA       CB    C     18.75      0.2     1
+   891   140   ALA       HA    H      3.86     0.02     1
+   892   140   ALA       HB    H      0.93     0.02     1
+   893   140   ALA       H     H      7.62     0.02     1
+   895   141   PHE       CA    C     56.94      0.2     1
+   896   141   PHE       CB    C     41.28      0.2     1
+   897   141   PHE       HA    H      5.15     0.02     1
+   898   141   PHE       HB2   H      3.23     0.02     2
+   899   141   PHE       H     H      8.12     0.02     1
+   900   141   PHE       N     N    110.46      0.2     1
+   901   142   ASN       CA    C     50.50      0.2     1
+   902   142   ASN       CB    C     39.00      0.2     1
+   903   142   ASN       HA    H      5.12     0.02     1
+   904   142   ASN       HB2   H      3.02     0.02     1
+   905   142   ASN       HB3   H      3.51     0.02     1
+   906   142   ASN       H     H      8.15     0.02     1
+   907   142   ASN       N     N    118.94      0.2     1
+   908   146   LEU       CA    C     58.20      0.2     1
+   909   146   LEU       CB    C     40.91      0.2     1
+   910   147   LEU       CA    C     57.81      0.2     1
+   911   147   LEU       CB    C     41.86      0.2     1
+   912   147   LEU       H     H      7.72     0.02     1
+   913   147   LEU       N     N    119.13      0.2     1
+   916   148   TYR       H     H      7.56     0.02     1
+   920   149   LEU       CD1   C     22.56      0.2     1
+   921   149   LEU       CD2   C     26.01      0.2     1
+   922   149   LEU       HA    H      3.81     0.02     1
+   923   149   LEU       HB2   H      2.07     0.02     1
+   924   149   LEU       HB3   H      1.33     0.02     1
+   925   149   LEU       HD1   H      0.88     0.02     2
+   926   149   LEU       HD2   H      0.63     0.02     2
+   927   149   LEU       H     H      8.08     0.02     1
+   931   150   GLU       CG    C     35.48      0.2     1
+   932   150   GLU       HA    H      2.64     0.02     1
+   933   150   GLU       HB2   H      1.71     0.02     2
+   934   150   GLU       HG2   H      2.02     0.02     2
+   935   150   GLU       H     H      8.15     0.02     1
+   939   151   LYS       CD    C     28.02      0.2     1
+   940   151   LYS       CG    C     24.31      0.2     1
+   941   151   LYS       HA    H      4.22     0.02     1
+   942   151   LYS       HB2   H      1.99     0.02     1
+   943   151   LYS       HB3   H      1.85     0.02     1
+   944   151   LYS       HD2   H      1.73     0.02     2
+   945   151   LYS       HE2   H      3.05     0.02     2
+   946   151   LYS       HG2   H      1.72     0.02     2
+   947   151   LYS       H     H      7.15     0.02     1
+   951   152   TYR       HA    H      4.03     0.02     1
+   952   152   TYR       HB2   H      2.94     0.02     1
+   953   152   TYR       HB3   H      2.80     0.02     1
+   954   152   TYR       H     H      7.29     0.02     1
+   958   153   ARG       HA    H      4.84     0.02     1
+   959   153   ARG       HB2   H      1.71     0.02     2
+   960   153   ARG       HD2   H      3.27     0.02     2
+   961   153   ARG       HG2   H      1.65     0.02     2
+   962   153   ARG       H     H      7.78     0.02     1
+   968   161   LYS       H     H      7.49     0.02     1
+   972   162   ASP       H     H      8.44     0.02     1
+   976   163   SER       H     H      8.27     0.02     1
+   980   164   ASN       H     H      8.24     0.02     1
+   983   165   GLY       H     H      8.47     0.02     1
+   985   166   HIS       H     H      7.83     0.02     1
+
+   stop_
+
+   loop_
+      _Atom_shift_assign_ID_ambiguity
+
+            28  
+            58  
+           126  
+           162  
+           220  
+       243,244  
+           352  
+           539  
+           552  
+           657  
+           762  
+           866  
+
+   stop_
+
+save_
+

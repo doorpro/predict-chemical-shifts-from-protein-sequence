@@ -1,0 +1,988 @@
+data_6500
+
+#Corrected using PDB structure: 1X5MA
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a CA chemical shift difference (obs*-pred) greater than  5.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 42   D    CA      56.83        51.54
+#
+#After reference correction, the following residues still 
+#have a CO chemical shift difference (obs*-pred) greater than  5.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 40   S    C      172.25       177.46
+#
+#After reference correction, the following residues still 
+#have a N chemical shift difference (obs*-pred) greater than 10.0ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 13   K    N      113.84       131.14
+# 49   N    N      126.39       108.88
+# 50   G    N      125.13       105.58
+# 57   V    N      128.42       118.27
+# 95   T    N      124.23       105.22
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#N/A     -0.08   0.38    0.12    -0.46   -0.02   
+#
+#bmr6500.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr6500.str file):
+#HA       CA       CB      CO       N      HN
+#N/A    +0.15   +0.15  +0.12    -0.46     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#    N/A  +/-0.20  +/-0.19  +/-0.19  +/-0.49  +/-0.07  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#N/A     0.935   0.994   0.528   0.545   0.703   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#N/A     0.929   0.875   0.890   2.265   0.348   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+Backbone 1H, 13C, and 15N Chemical Shift Assignments for SIP (74-178)
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Bhattacharya  Shibani    .   . 
+       2   Lee           Young-Tae  .   . 
+       3   Michowski     Wojciech   .   . 
+       4   Filipek       Anna       .   . 
+       5   Kuznicki      Jacek      .   . 
+       6   Chazin        Walter     J.  . 
+
+   stop_
+
+   _BMRB_accession_number   6500
+   _BMRB_flat_file_name     bmr6500.str
+   _Entry_type              new
+   _Submission_date         2005-02-14
+   _Accession_date          2005-02-16
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'    93  
+      '13C chemical shifts'  279  
+      '15N chemical shifts'   93  
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+The Modular Structure of SIP Facilitates Its Role in Stabilizing Multiprotein
+Assemblies
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        .
+   _PubMed_ID              15996101
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+       1   Bhattacharya  Shibani    .   . 
+       2   Lee           Young-Tae  .   . 
+       3   Michowski     Wojciech   .   . 
+       4   Filipek       Anna       .   . 
+       5   Kuznicki      Jacek      .   . 
+       6   Chazin        Walter     J.  . 
+
+   stop_
+
+   _Journal_abbreviation   Biochemistry
+   _Journal_volume         44
+   _Journal_issue          27
+   _Page_first             9462
+   _Page_last              9471
+   _Year                   2005
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_SIP_(74-178)
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name           "Siah-Interacting Protein (Residues 74-178)"
+   _Abbreviation_common       "SIP (74-178)"
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "SIP CS-Domain" $SIP_(74-178) 
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all free'
+
+   loop_
+      _Biological_function
+
+      "beta-catenin ubiquitination" 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_SIP_(74-178)
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                "SIP (74-178)"
+   _Name_variant                                .
+   _Abbreviation_common                        "SIP (74-178)"
+   _Mol_thiol_state                            'all free'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               105
+   _Mol_residue_sequence                       
+;
+VKISNYGWDQSDKFVKIYIT
+LTGVHQVPTENVQVHFTERS
+FDLLVKNLNGKNYSMIVNNL
+LKPISVESSSKKVKTDTVII
+LCRKKAENTRWDYLTQVEKE
+CKEKE
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+         1    74   VAL     2    75   LYS     3    76   ILE     4    77   SER     5    78   ASN 
+         6    79   TYR     7    80   GLY     8    81   TRP     9    82   ASP    10    83   GLN 
+        11    84   SER    12    85   ASP    13    86   LYS    14    87   PHE    15    88   VAL 
+        16    89   LYS    17    90   ILE    18    91   TYR    19    92   ILE    20    93   THR 
+        21    94   LEU    22    95   THR    23    96   GLY    24    97   VAL    25    98   HIS 
+        26    99   GLN    27   100   VAL    28   101   PRO    29   102   THR    30   103   GLU 
+        31   104   ASN    32   105   VAL    33   106   GLN    34   107   VAL    35   108   HIS 
+        36   109   PHE    37   110   THR    38   111   GLU    39   112   ARG    40   113   SER 
+        41   114   PHE    42   115   ASP    43   116   LEU    44   117   LEU    45   118   VAL 
+        46   119   LYS    47   120   ASN    48   121   LEU    49   122   ASN    50   123   GLY 
+        51   124   LYS    52   125   ASN    53   126   TYR    54   127   SER    55   128   MET 
+        56   129   ILE    57   130   VAL    58   131   ASN    59   132   ASN    60   133   LEU 
+        61   134   LEU    62   135   LYS    63   136   PRO    64   137   ILE    65   138   SER 
+        66   139   VAL    67   140   GLU    68   141   SER    69   142   SER    70   143   SER 
+        71   144   LYS    72   145   LYS    73   146   VAL    74   147   LYS    75   148   THR 
+        76   149   ASP    77   150   THR    78   151   VAL    79   152   ILE    80   153   ILE 
+        81   154   LEU    82   155   CYS    83   156   ARG    84   157   LYS    85   158   LYS 
+        86   159   ALA    87   160   GLU    88   161   ASN    89   162   THR    90   163   ARG 
+        91   164   TRP    92   165   ASP    93   166   TYR    94   167   LEU    95   168   THR 
+        96   169   GLN    97   170   VAL    98   171   GLU    99   172   LYS   100   173   GLU 
+       101   174   CYS   102   175   LYS   103   176   GLU   104   177   LYS   105   178   GLU 
+
+   stop_
+
+   _Sequence_homology_query_date                2005-09-22
+   _Sequence_homology_query_revised_last_date   2005-09-08
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       GenBank     AAH25948.1     "Calcyclin binding protein [Mus musculus]"                                 45.85  229   100   100   4e-55 
+       GenBank     AAH79007.1     "Calcyclin binding protein [Rattusnorvegicus]"                             45.85  229    99    99   1e-54 
+       GenBank     AAC16757.1     "calcyclin binding protein [Mus musculus]"                                 42.51  247   100   100   4e-55 
+       REF         NP_033916.1    "calcyclin binding protein [Musmusculus]"                                  45.85  229   100   100   4e-55 
+       REF         NP_001004208.1 "calcyclin binding protein [Rattusnorvegicus]"                             45.85  229    99    99   1e-54 
+       SWISS-PROT  Q9CXW3         "CYBP_MOUSE Calcyclin-binding protein (CacyBP)(Siah-interacting protein)"  45.85  229   100   100   4e-55 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+
+      $SIP_(74-178) "house mouse"  10090   Eukaryota  Metazoa  Mus  musculus 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_type
+      _Vector_name
+
+      $SIP_(74-178) 'recombinant technology' "E. coli"  Escherichia  coli  BL21(DE3)  plasmid  pET28 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_Sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $SIP_(74-178)   1.0  mM "[U-100% 13C; U-100% 15N]" 
+       NaPi          20    mM  .                         
+       NaCl          50    mM  .                         
+       DTT            5    mM  .                         
+       H2O           90    %   .                         
+       D2O           10    %   .                         
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_FELIX
+   _Saveframe_category   software
+
+   _Name                 FELIX
+   _Version              2000
+
+   loop_
+      _Task
+
+      "processing" 
+      "analysis"   
+
+   stop_
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                AVANCE
+   _Field_strength       600
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+1H-15N HSQC
+1H-13C CT-HSQC
+3D-HNCO
+3D-HNCACB
+3D-CBCA(CO)NH
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_Exp_cond_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH             7.0  0.2  pH 
+       temperature  303    1    K  
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       DSS  H   1  'methyl protons'  ppm  0.0  internal  direct    .  .  .  1.0         
+       DSS  N  15  'methyl protons'  ppm  0.0  .         indirect  .  .  .  0.101329118 
+       DSS  C  13  'methyl protons'  ppm  0.0  .         indirect  .  .  .  0.251449530 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique (geminal atoms and geminal methyl     #
+#                         groups with identical chemical shifts   #
+#                         are assumed to be assigned to           #
+#                         stereospecific atoms)                   #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of          #
+#                         symmetrical rings (e.g. Tyr HE1 and HE2 #
+#                         protons)                                #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons or Trp HZ2 and HZ3 protons)  #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_CSR_1
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $Sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $Exp_cond_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "SIP CS-Domain"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     1   VAL       N     N    128.71     0.03     1
+     2     1   VAL       CA    C     61.70     0.50     1
+     3     1   VAL       CB    C     32.88     0.50     1
+     4     1   VAL       H     H      8.88     0.02     1
+     5     1   VAL       C     C    175.05     0.50     1
+     6     2   LYS       N     N    127.54     0.03     1
+     7     2   LYS       CA    C     55.80     0.50     1
+     8     2   LYS       CB    C     32.67     0.50     1
+     9     2   LYS       H     H      8.42     0.02     1
+    10     2   LYS       C     C    177.24     0.50     1
+    11     3   ILE       N     N    126.92     0.03     1
+    12     3   ILE       CA    C     61.72     0.50     1
+    13     3   ILE       CB    C     39.00     0.50     1
+    14     3   ILE       H     H      8.67     0.02     1
+    15     3   ILE       C     C    176.07     0.50     1
+    16     4   SER       N     N    119.79     0.03     1
+    17     4   SER       CA    C     58.55     0.50     1
+    18     4   SER       CB    C     64.91     0.50     1
+    19     4   SER       H     H      8.73     0.02     1
+    20     4   SER       C     C    173.51     0.50     1
+    21     5   ASN       N     N    120.27     0.03     1
+    22     5   ASN       CA    C     53.08     0.50     1
+    23     5   ASN       CB    C     40.37     0.50     1
+    24     5   ASN       H     H      7.81     0.02     1
+    25     5   ASN       C     C    173.12     0.50     1
+    26     6   TYR       N     N    117.46     0.03     1
+    27     6   TYR       CA    C     56.51     0.50     1
+    28     6   TYR       CB    C     39.93     0.50     1
+    29     6   TYR       H     H      7.59     0.02     1
+    30     6   TYR       C     C    173.92     0.50     1
+    31     7   GLY       N     N    107.73     0.03     1
+    32     7   GLY       CA    C     43.80     0.50     1
+    33     7   GLY       H     H      8.59     0.02     1
+    34     7   GLY       C     C    172.49     0.50     1
+    35     8   TRP       N     N    118.13     0.03     1
+    36     8   TRP       CA    C     56.48     0.50     1
+    37     8   TRP       CB    C     32.21     0.50     1
+    38     8   TRP       H     H      8.74     0.02     1
+    39     8   TRP       C     C    173.80     0.50     1
+    40     9   ASP       N     N    120.53     0.03     1
+    41     9   ASP       CA    C     53.11     0.50     1
+    42     9   ASP       CB    C     42.19     0.50     1
+    43     9   ASP       H     H      9.67     0.02     1
+    44     9   ASP       C     C    173.81     0.50     1
+    45    10   GLN       N     N    111.56     0.03     1
+    46    10   GLN       CA    C     54.44     0.50     1
+    47    10   GLN       CB    C     33.81     0.50     1
+    48    10   GLN       H     H      8.41     0.02     1
+    49    10   GLN       C     C    172.92     0.50     1
+    50    11   SER       N     N    117.79     0.03     1
+    51    11   SER       CA    C     55.14     0.50     1
+    52    11   SER       CB    C     67.38     0.50     1
+    53    11   SER       H     H      9.54     0.02     1
+    54    11   SER       C     C    174.43     0.50     1
+    55    12   ASP       N     N    119.02     0.03     1
+    56    12   ASP       CA    C     57.61     0.50     1
+    57    12   ASP       CB    C     39.69     0.50     1
+    58    12   ASP       H     H      8.82     0.02     1
+    59    12   ASP       C     C    176.94     0.50     1
+    60    13   LYS       N     N    113.84     0.03     1
+    61    13   LYS       CA    C     57.16     0.50     1
+    62    13   LYS       CB    C     36.49     0.50     1
+    63    13   LYS       H     H      7.66     0.02     1
+    64    13   LYS       C     C    175.62     0.50     1
+    65    14   PHE       N     N    115.34     0.03     1
+    66    14   PHE       CA    C     56.93     0.50     1
+    67    14   PHE       CB    C     43.99     0.50     1
+    68    14   PHE       H     H      7.50     0.02     1
+    69    14   PHE       C     C    175.15     0.50     1
+    70    15   VAL       N     N    122.58     0.03     1
+    71    15   VAL       CA    C     63.31     0.50     1
+    72    15   VAL       CB    C     33.13     0.50     1
+    73    15   VAL       H     H      9.11     0.02     1
+    74    15   VAL       C     C    173.98     0.50     1
+    75    16   LYS       N     N    127.80     0.03     1
+    76    16   LYS       CA    C     54.70     0.50     1
+    77    16   LYS       CB    C     34.02     0.50     1
+    78    16   LYS       H     H      8.99     0.02     1
+    79    16   LYS       C     C    173.95     0.50     1
+    80    17   ILE       N     N    122.82     0.03     1
+    81    17   ILE       CA    C     60.57     0.50     1
+    82    17   ILE       CB    C     39.90     0.50     1
+    83    17   ILE       H     H      8.67     0.02     1
+    84    17   ILE       C     C    174.26     0.50     1
+    85    18   TYR       N     N    124.98     0.03     1
+    86    18   TYR       CA    C     56.72     0.50     1
+    87    18   TYR       CB    C     39.70     0.50     1
+    88    18   TYR       H     H      9.05     0.02     1
+    89    18   TYR       C     C    175.78     0.50     1
+    90    19   ILE       N     N    126.48     0.03     1
+    91    19   ILE       CA    C     60.74     0.50     1
+    92    19   ILE       CB    C     41.06     0.50     1
+    93    19   ILE       H     H      9.23     0.02     1
+    94    19   ILE       C     C    175.13     0.50     1
+    95    20   THR       N     N    125.83     0.03     1
+    96    20   THR       CA    C     62.85     0.50     1
+    97    20   THR       CB    C     69.21     0.50     1
+    98    20   THR       H     H      8.73     0.02     1
+    99    20   THR       C     C    173.67     0.50     1
+   100    21   LEU       N     N    131.28     0.03     1
+   101    21   LEU       CA    C     53.55     0.50     1
+   102    21   LEU       CB    C     44.24     0.50     1
+   103    21   LEU       H     H      8.09     0.02     1
+   104    21   LEU       C     C    174.29     0.50     1
+   105    22   THR       N     N    123.31     0.03     1
+   106    22   THR       CA    C     65.12     0.50     1
+   107    22   THR       CB    C     68.54     0.50     1
+   108    22   THR       H     H      8.35     0.02     1
+   109    22   THR       C     C    175.91     0.50     1
+   110    23   GLY       N     N    112.84     0.03     1
+   111    23   GLY       CA    C     45.59     0.50     1
+   112    23   GLY       H     H      9.82     0.02     1
+   113    23   GLY       C     C    177.47     0.50     1
+   114    24   VAL       N     N    121.37     0.03     1
+   115    24   VAL       CA    C     64.67     0.50     1
+   116    24   VAL       CB    C     31.06     0.50     1
+   117    24   VAL       H     H      8.03     0.02     1
+   118    24   VAL       C     C    173.79     0.50     1
+   119    25   HIS       N     N    117.57     0.03     1
+   120    25   HIS       CA    C     57.38     0.50     1
+   121    25   HIS       CB    C     28.81     0.50     1
+   122    25   HIS       H     H      8.66     0.02     1
+   123    25   HIS       C     C    175.59     0.50     1
+   124    26   GLN       N     N    118.05     0.03     1
+   125    26   GLN       CA    C     55.36     0.50     1
+   126    26   GLN       CB    C     28.82     0.50     1
+   127    26   GLN       H     H      7.37     0.02     1
+   128    26   GLN       C     C    176.46     0.50     1
+   129    27   VAL       N     N    116.18     0.03     1
+   130    27   VAL       CA    C     59.43     0.50     1
+   131    27   VAL       CB    C     31.30     0.50     1
+   132    27   VAL       H     H      6.84     0.02     1
+   133    28   PRO       CA    C     63.52     0.50     1
+   134    28   PRO       CB    C     32.18     0.50     1
+   135    28   PRO       C     C    178.09     0.50     1
+   136    29   THR       N     N    118.62     0.03     1
+   137    29   THR       CA    C     66.03     0.50     1
+   138    29   THR       CB    C     68.76     0.50     1
+   139    29   THR       H     H      8.40     0.02     1
+   140    29   THR       C     C    176.99     0.50     1
+   141    30   GLU       N     N    119.31     0.03     1
+   142    30   GLU       CA    C     58.11     0.50     1
+   143    30   GLU       CB    C     28.14     0.50     1
+   144    30   GLU       H     H      9.24     0.02     1
+   145    30   GLU       C     C    176.62     0.50     1
+   146    31   ASN       N     N    119.61     0.03     1
+   147    31   ASN       CA    C     53.31     0.50     1
+   148    31   ASN       CB    C     37.66     0.50     1
+   149    31   ASN       H     H      8.25     0.02     1
+   150    31   ASN       C     C    173.79     0.50     1
+   151    32   VAL       N     N    121.76     0.03     1
+   152    32   VAL       CA    C     62.40     0.50     1
+   153    32   VAL       CB    C     31.06     0.50     1
+   154    32   VAL       H     H      7.49     0.02     1
+   155    32   VAL       C     C    174.18     0.50     1
+   156    33   GLN       N     N    124.76     0.03     1
+   157    33   GLN       CA    C     54.23     0.50     1
+   158    33   GLN       CB    C     31.05     0.50     1
+   159    33   GLN       H     H      8.90     0.02     1
+   160    33   GLN       C     C    174.90     0.50     1
+   161    34   VAL       N     N    123.36     0.03     1
+   162    34   VAL       CA    C     59.65     0.50     1
+   163    34   VAL       CB    C     34.70     0.50     1
+   164    34   VAL       H     H      8.44     0.02     1
+   165    34   VAL       C     C    173.67     0.50     1
+   166    35   HIS       N     N    125.01     0.03     1
+   167    35   HIS       CA    C     53.78     0.50     1
+   168    35   HIS       CB    C     30.84     0.50     1
+   169    35   HIS       H     H      8.40     0.02     1
+   170    35   HIS       C     C    172.94     0.50     1
+   171    36   PHE       N     N    122.74     0.03     1
+   172    36   PHE       CA    C     57.86     0.50     1
+   173    36   PHE       CB    C     43.55     0.50     1
+   174    36   PHE       H     H      8.83     0.02     1
+   175    36   PHE       C     C    176.14     0.50     1
+   176    37   THR       N     N    112.08     0.03     1
+   177    37   THR       CA    C     61.44     0.50     1
+   178    37   THR       CB    C     71.48     0.50     1
+   179    37   THR       H     H      8.80     0.02     1
+   180    37   THR       C     C    173.45     0.50     1
+   181    38   GLU       N     N    114.71     0.03     1
+   182    38   GLU       CA    C     59.42     0.50     1
+   183    38   GLU       CB    C     30.18     0.50     1
+   184    38   GLU       H     H      8.44     0.02     1
+   185    38   GLU       C     C    176.09     0.50     1
+   186    39   ARG       N     N    111.67     0.03     1
+   187    39   ARG       CA    C     53.06     0.50     1
+   188    39   ARG       CB    C     32.87     0.50     1
+   189    39   ARG       H     H      7.50     0.02     1
+   190    39   ARG       C     C    174.58     0.50     1
+   191    40   SER       N     N    115.39     0.03     1
+   192    40   SER       CA    C     58.06     0.50     1
+   193    40   SER       CB    C     68.31     0.50     1
+   194    40   SER       H     H      7.67     0.02     1
+   195    40   SER       C     C    172.25     0.50     1
+   196    41   PHE       N     N    111.54     0.03     1
+   197    41   PHE       CA    C     57.04     0.50     1
+   198    41   PHE       CB    C     43.56     0.50     1
+   199    41   PHE       H     H      8.02     0.02     1
+   200    41   PHE       C     C    175.37     0.50     1
+   201    42   ASP       N     N    118.00     0.03     1
+   202    42   ASP       CA    C     57.06     0.50     1
+   203    42   ASP       CB    C     43.99     0.50     1
+   204    42   ASP       H     H      8.32     0.02     1
+   205    42   ASP       C     C    173.67     0.50     1
+   206    43   LEU       N     N    125.10     0.03     1
+   207    43   LEU       CA    C     52.88     0.50     1
+   208    43   LEU       CB    C     45.61     0.50     1
+   209    43   LEU       H     H      9.14     0.02     1
+   210    43   LEU       C     C    174.51     0.50     1
+   211    44   LEU       N     N    130.95     0.03     1
+   212    44   LEU       CA    C     53.78     0.50     1
+   213    44   LEU       CB    C     45.59     0.50     1
+   214    44   LEU       H     H      9.20     0.02     1
+   215    44   LEU       C     C    174.58     0.50     1
+   216    45   VAL       N     N    126.57     0.03     1
+   217    45   VAL       CA    C     60.88     0.50     1
+   218    45   VAL       CB    C     33.58     0.50     1
+   219    45   VAL       H     H      9.27     0.02     1
+   220    45   VAL       C     C    175.27     0.50     1
+   221    46   LYS       N     N    126.24     0.03     1
+   222    46   LYS       CA    C     55.13     0.50     1
+   223    46   LYS       CB    C     34.25     0.50     1
+   224    46   LYS       H     H      8.76     0.02     1
+   225    46   LYS       C     C    171.93     0.50     1
+   226    47   ASN       N     N    118.01     0.03     1
+   227    47   ASN       CA    C     53.48     0.50     1
+   228    47   ASN       CB    C     36.98     0.50     1
+   229    47   ASN       H     H      8.32     0.02     1
+   230    47   ASN       C     C    173.40     0.50     1
+   231    48   LEU       N     N    121.55     0.03     1
+   232    48   LEU       CA    C     53.55     0.50     1
+   233    48   LEU       CB    C     41.72     0.50     1
+   234    48   LEU       H     H      8.84     0.02     1
+   235    48   LEU       C     C    175.77     0.50     1
+   236    49   ASN       N     N    126.39     0.03     1
+   237    49   ASN       CA    C     53.98     0.50     1
+   238    49   ASN       CB    C     37.65     0.50     1
+   239    49   ASN       H     H      9.28     0.02     1
+   240    49   ASN       C     C    175.50     0.50     1
+   241    50   GLY       N     N    125.13     0.03     1
+   242    50   GLY       CA    C     45.58     0.50     1
+   243    50   GLY       H     H      7.79     0.02     1
+   244    50   GLY       C     C    173.80     0.50     1
+   245    51   LYS       N     N    119.46     0.03     1
+   246    51   LYS       CA    C     54.45     0.50     1
+   247    51   LYS       CB    C     36.06     0.50     1
+   248    51   LYS       H     H      7.42     0.02     1
+   249    51   LYS       C     C    173.58     0.50     1
+   250    52   ASN       N     N    116.72     0.03     1
+   251    52   ASN       CA    C     50.59     0.50     1
+   252    52   ASN       CB    C     40.16     0.50     1
+   253    52   ASN       H     H      8.07     0.02     1
+   254    52   ASN       C     C    174.27     0.50     1
+   255    53   TYR       N     N    120.12     0.03     1
+   256    53   TYR       CA    C     56.93     0.50     1
+   257    53   TYR       CB    C     42.19     0.50     1
+   258    53   TYR       H     H      9.23     0.02     1
+   259    53   TYR       C     C    174.97     0.50     1
+   260    54   SER       N     N    115.00     0.03     1
+   261    54   SER       CA    C     55.59     0.50     1
+   262    54   SER       CB    C     66.48     0.50     1
+   263    54   SER       H     H      8.82     0.02     1
+   264    54   SER       C     C    173.25     0.50     1
+   265    55   MET       N     N    124.14     0.03     1
+   266    55   MET       CA    C     56.27     0.50     1
+   267    55   MET       CB    C     37.87     0.50     1
+   268    55   MET       H     H      8.57     0.02     1
+   269    55   MET       C     C    172.97     0.50     1
+   270    56   ILE       N     N    125.96     0.03     1
+   271    56   ILE       CA    C     60.37     0.50     1
+   272    56   ILE       CB    C     41.05     0.50     1
+   273    56   ILE       H     H      8.22     0.02     1
+   274    56   ILE       C     C    174.98     0.50     1
+   275    57   VAL       N     N    128.42     0.03     1
+   276    57   VAL       CA    C     61.93     0.50     1
+   277    57   VAL       CB    C     32.20     0.50     1
+   278    57   VAL       H     H      7.76     0.02     1
+   279    57   VAL       C     C    173.41     0.50     1
+   280    58   ASN       N     N    122.66     0.03     1
+   281    58   ASN       CA    C     51.03     0.50     1
+   282    58   ASN       CB    C     41.06     0.50     1
+   283    58   ASN       H     H      7.94     0.02     1
+   284    58   ASN       C     C    174.28     0.50     1
+   285    59   ASN       N     N    114.55     0.03     1
+   286    59   ASN       CA    C     53.75     0.50     1
+   287    59   ASN       CB    C     37.18     0.50     1
+   288    59   ASN       H     H      8.29     0.02     1
+   289    59   ASN       C     C    174.73     0.50     1
+   290    60   LEU       N     N    117.79     0.03     1
+   291    60   LEU       CA    C     56.12     0.50     1
+   292    60   LEU       CB    C     42.40     0.50     1
+   293    60   LEU       H     H      8.27     0.02     1
+   294    60   LEU       C     C    178.10     0.50     1
+   295    61   LEU       N     N    122.14     0.03     1
+   296    61   LEU       CA    C     58.78     0.50     1
+   297    61   LEU       CB    C     42.63     0.50     1
+   298    61   LEU       H     H      7.91     0.02     1
+   299    61   LEU       C     C    175.92     0.50     1
+   300    62   LYS       N     N    111.38     0.03     1
+   301    62   LYS       CA    C     51.29     0.50     1
+   302    62   LYS       CB    C     34.03     0.50     1
+   303    62   LYS       H     H      5.55     0.02     1
+   304    63   PRO       CA    C     62.41     0.50     1
+   305    63   PRO       CB    C     32.89     0.50     1
+   306    63   PRO       C     C    177.24     0.50     1
+   307    64   ILE       N     N    117.26     0.03     1
+   308    64   ILE       CA    C     59.03     0.50     1
+   309    64   ILE       CB    C     41.50     0.50     1
+   310    64   ILE       H     H      9.03     0.02     1
+   311    64   ILE       C     C    175.46     0.50     1
+   312    65   SER       N     N    113.93     0.03     1
+   313    65   SER       CA    C     55.61     0.50     1
+   314    65   SER       CB    C     62.84     0.50     1
+   315    65   SER       H     H      8.49     0.02     1
+   316    65   SER       C     C    176.30     0.50     1
+   317    66   VAL       N     N    131.57     0.03     1
+   318    66   VAL       CA    C     66.96     0.50     1
+   319    66   VAL       CB    C     31.76     0.50     1
+   320    66   VAL       H     H      8.78     0.02     1
+   321    66   VAL       C     C    178.19     0.50     1
+   322    67   GLU       N     N    117.16     0.03     1
+   323    67   GLU       CA    C     59.00     0.50     1
+   324    67   GLU       CB    C     28.57     0.50     1
+   325    67   GLU       H     H      9.06     0.02     1
+   326    67   GLU       C     C    177.24     0.50     1
+   327    68   SER       N     N    111.31     0.03     1
+   328    68   SER       CA    C     57.39     0.50     1
+   329    68   SER       CB    C     63.98     0.50     1
+   330    68   SER       H     H      6.89     0.02     1
+   331    68   SER       C     C    174.04     0.50     1
+   332    69   SER       N     N    120.48     0.03     1
+   333    69   SER       CA    C     60.11     0.50     1
+   334    69   SER       CB    C     61.72     0.50     1
+   335    69   SER       H     H      6.86     0.02     1
+   336    69   SER       C     C    172.67     0.50     1
+   337    70   SER       N     N    117.59     0.03     1
+   338    70   SER       CA    C     58.07     0.50     1
+   339    70   SER       CB    C     64.66     0.50     1
+   340    70   SER       H     H      9.15     0.02     1
+   341    70   SER       C     C    171.92     0.50     1
+   342    71   LYS       N     N    115.33     0.03     1
+   343    71   LYS       CA    C     53.75     0.50     1
+   344    71   LYS       CB    C     35.63     0.50     1
+   345    71   LYS       H     H      8.33     0.02     1
+   346    71   LYS       C     C    174.36     0.50     1
+   347    72   LYS       N     N    121.89     0.03     1
+   348    72   LYS       CA    C     55.11     0.50     1
+   349    72   LYS       CB    C     36.72     0.50     1
+   350    72   LYS       H     H      9.33     0.02     1
+   351    72   LYS       C     C    173.65     0.50     1
+   352    73   VAL       N     N    122.61     0.03     1
+   353    73   VAL       CA    C     61.58     0.50     1
+   354    73   VAL       CB    C     33.79     0.50     1
+   355    73   VAL       H     H      8.45     0.02     1
+   356    73   VAL       C     C    175.76     0.50     1
+   357    74   LYS       N     N    127.37     0.03     1
+   358    74   LYS       CA    C     54.00     0.50     1
+   359    74   LYS       CB    C     35.16     0.50     1
+   360    74   LYS       H     H      8.93     0.02     1
+   361    74   LYS       C     C    175.20     0.50     1
+   362    75   THR       N     N    116.04     0.03     1
+   363    75   THR       CA    C     65.33     0.50     1
+   364    75   THR       CB    C     68.06     0.50     1
+   365    75   THR       H     H      7.78     0.02     1
+   366    75   THR       C     C    176.31     0.50     1
+   367    76   ASP       N     N    128.07     0.03     1
+   368    76   ASP       CA    C     57.15     0.50     1
+   369    76   ASP       CB    C     40.84     0.50     1
+   370    76   ASP       H     H      9.63     0.02     1
+   371    76   ASP       C     C    174.23     0.50     1
+   372    77   THR       N     N    115.35     0.03     1
+   373    77   THR       CA    C     62.43     0.50     1
+   374    77   THR       CB    C     73.32     0.50     1
+   375    77   THR       H     H      8.02     0.02     1
+   376    77   THR       C     C    172.42     0.50     1
+   377    78   VAL       N     N    125.95     0.03     1
+   378    78   VAL       CA    C     61.94     0.50     1
+   379    78   VAL       CB    C     33.78     0.50     1
+   380    78   VAL       H     H      9.13     0.02     1
+   381    78   VAL       C     C    173.40     0.50     1
+   382    79   ILE       N     N    127.40     0.03     1
+   383    79   ILE       CA    C     59.68     0.50     1
+   384    79   ILE       CB    C     39.70     0.50     1
+   385    79   ILE       H     H      8.99     0.02     1
+   386    79   ILE       C     C    175.16     0.50     1
+   387    80   ILE       N     N    128.00     0.03     1
+   388    80   ILE       CA    C     59.68     0.50     1
+   389    80   ILE       CB    C     37.20     0.50     1
+   390    80   ILE       H     H      9.22     0.02     1
+   391    80   ILE       C     C    174.28     0.50     1
+   392    81   LEU       N     N    128.24     0.03     1
+   393    81   LEU       CA    C     53.79     0.50     1
+   394    81   LEU       CB    C     41.73     0.50     1
+   395    81   LEU       H     H      8.64     0.02     1
+   396    81   LEU       C     C    175.13     0.50     1
+   397    82   CYS       N     N    120.71     0.03     1
+   398    82   CYS       CA    C     56.96     0.50     1
+   399    82   CYS       CB    C     27.68     0.50     1
+   400    82   CYS       H     H      8.92     0.02     1
+   401    82   CYS       C     C    174.27     0.50     1
+   402    83   ARG       N     N    128.78     0.03     1
+   403    83   ARG       CA    C     54.43     0.50     1
+   404    83   ARG       CB    C     29.91     0.50     1
+   405    83   ARG       H     H      8.59     0.02     1
+   406    83   ARG       C     C    175.15     0.50     1
+   407    84   LYS       N     N    129.87     0.03     1
+   408    84   LYS       CA    C     58.33     0.50     1
+   409    84   LYS       CB    C     33.81     0.50     1
+   410    84   LYS       H     H      8.35     0.02     1
+   411    84   LYS       C     C    176.27     0.50     1
+   412    85   LYS       N     N    123.62     0.03     1
+   413    85   LYS       CA    C     59.44     0.50     1
+   414    85   LYS       CB    C     32.44     0.50     1
+   415    85   LYS       H     H      7.73     0.02     1
+   416    85   LYS       C     C    176.55     0.50     1
+   417    86   ALA       N     N    121.18     0.03     1
+   418    86   ALA       CA    C     49.93     0.50     1
+   419    86   ALA       CB    C     17.70     0.50     1
+   420    86   ALA       H     H      8.06     0.02     1
+   421    86   ALA       C     C    176.53     0.50     1
+   422    87   GLU       N     N    123.52     0.03     1
+   423    87   GLU       CA    C     56.51     0.50     1
+   424    87   GLU       CB    C     29.72     0.50     1
+   425    87   GLU       H     H      8.28     0.02     1
+   426    87   GLU       C     C    176.77     0.50     1
+   427    88   ASN       N     N    114.61     0.03     1
+   428    88   ASN       CA    C     54.70     0.50     1
+   429    88   ASN       CB    C     36.74     0.50     1
+   430    88   ASN       H     H      9.20     0.02     1
+   431    88   ASN       C     C    174.43     0.50     1
+   432    89   THR       N     N    112.63     0.03     1
+   433    89   THR       CA    C     61.50     0.50     1
+   434    89   THR       CB    C     70.79     0.50     1
+   435    89   THR       H     H      6.98     0.02     1
+   436    89   THR       C     C    173.65     0.50     1
+   437    90   ARG       N     N    131.42     0.03     1
+   438    90   ARG       CA    C     56.27     0.50     1
+   439    90   ARG       CB    C     30.63     0.50     1
+   440    90   ARG       H     H      9.05     0.02     1
+   441    90   ARG       C     C    176.39     0.50     1
+   442    91   TRP       N     N    130.85     0.03     1
+   443    91   TRP       CA    C     56.48     0.50     1
+   444    91   TRP       CB    C     28.59     0.50     1
+   445    91   TRP       H     H     10.06     0.02     1
+   446    91   TRP       C     C    176.92     0.50     1
+   447    92   ASP       N     N    123.01     0.03     1
+   448    92   ASP       CA    C     56.04     0.50     1
+   449    92   ASP       CB    C     40.62     0.50     1
+   450    92   ASP       H     H      9.03     0.02     1
+   451    92   ASP       C     C    174.36     0.50     1
+   452    93   TYR       N     N    114.76     0.03     1
+   453    93   TYR       CA    C     55.81     0.50     1
+   454    93   TYR       CB    C     43.11     0.50     1
+   455    93   TYR       H     H      7.43     0.02     1
+   456    93   TYR       C     C    173.02     0.50     1
+   457    94   LEU       N     N    119.58     0.03     1
+   458    94   LEU       CA    C     57.17     0.50     1
+   459    94   LEU       CB    C     41.49     0.50     1
+   460    94   LEU       H     H      8.27     0.02     1
+   461    94   LEU       C     C    177.31     0.50     1
+   462    95   THR       N     N    124.23     0.03     1
+   463    95   THR       CA    C     58.08     0.50     1
+   464    95   THR       CB    C     72.85     0.50     1
+   465    95   THR       H     H      6.98     0.02     1
+
+   stop_
+
+save_
+

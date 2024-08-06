@@ -1,0 +1,1384 @@
+data_5169
+
+#Corrected using PDB structure: 2GITE
+#
+#N.B. (Observed* = Observed shift + Offset correction)
+#
+#After reference correction, the following residues still 
+#have a HA chemical shift difference (obs*-pred) greater than  0.7ppm:
+#NUM  AA    CS     Observed*    Predicted
+# 31   H    HA       4.52         5.35
+# 32   P    HA       3.80         4.99
+#
+#The average CS difference between predicted and observed:
+#HA       CA       CB      CO       N      HN
+#-0.00     N/A     N/A     N/A     N/A   0.12    
+#
+#bmr5169.str.corr chemical shifts have been re-referenced with the following 
+#offsets (these values have been added to the original bmr5169.str file):
+#HA       CA       CB      CO       N      HN
+#N/A     N/A      N/A     N/A     N/A     N/A
+#
+#The 95% confidence intervals for the above recommended offsets are:
+#    HA       CA       CB       CO       N        HN
+#+/-0.03      N/A      N/A      N/A      N/A  +/-0.06  
+#
+#The Correlation Coefficients between predicted and observed 
+#chemical shifts are:
+#HA       CA       CB      CO       N      HN
+#0.847     N/A     N/A     N/A     N/A   0.767   
+#
+#The RMSD between predicted and observed* (reference 
+#corrected) chemical shifts are:
+#HA       CA       CB      CO       N       HN
+#0.148     N/A     N/A     N/A     N/A   0.280   
+#
+
+
+
+#######################
+#  Entry information  #
+#######################
+
+save_entry_information
+   _Saveframe_category      entry_information
+
+   _Entry_title            
+;
+NMR solution structure of the human beta2-microglobulin 
+;
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+        1   Verdone     G.  .  . 
+        2   Corazza     A.  .  . 
+        3   Viglino     P.  .  . 
+        4   Pettirossi  F.  .  . 
+        5   Giorgetti   S.  .  . 
+        6   Mangione    P.  .  . 
+        7   Andreola    A.  .  . 
+        8   Stoppini    M.  .  . 
+        9   Bellotti    V.  .  . 
+       10   Esposito    G.  .  . 
+
+   stop_
+
+   _BMRB_accession_number   5169
+   _BMRB_flat_file_name     bmr5169.str
+   _Entry_type              new
+   _Submission_date         2001-10-03
+   _Accession_date          2001-10-03
+   _Entry_origination       author
+   _NMR_STAR_version        2.1.1
+   _Experimental_method     NMR
+
+   loop_
+      _Saveframe_category_type
+      _Saveframe_category_type_count
+
+       assigned_chemical_shifts  1  
+       coupling_constants        1  
+
+   stop_
+
+   loop_
+      _Data_type
+      _Data_type_count
+
+      '1H chemical shifts'  547  
+      'coupling constants'   66  
+
+   stop_
+
+   loop_
+      _Revision_date
+      _Revision_keyword
+      _Revision_author
+      _Revision_detail
+
+       2003-04-29  update    BMRB   "addition of relation loop" 
+       2002-05-06  original  author "original release"          
+
+   stop_
+
+   loop_
+      _Related_BMRB_accession_number
+      _Relationship
+
+       5782  "DN3 beta2-microglobulin (truncated form without the first 3 residues)" 
+       5783  "DN3 beta2-microglobulin (R3A mutant)"                                  
+       5784  "DN3 beta2-microglobulin (H31Y mutant)"                                 
+
+   stop_
+
+save_
+
+
+#############################
+#  Citation for this entry  #
+#############################
+
+save_entry_citation
+   _Saveframe_category     entry_citation
+
+   _Citation_title        
+;
+The Solution Structure of Human Beta2-microglobulin reveals the Prodromes of its
+ Amyloid Transition 
+;
+   _Citation_status        published
+   _Citation_type          journal
+   _MEDLINE_UI_code        21836431
+   _PubMed_ID              11847272
+
+   loop_
+      _Author_ordinal
+      _Author_family_name
+      _Author_given_name
+      _Author_middle_initials
+      _Author_family_title
+
+        1   Verdone     G.  .  . 
+        2   Corazza     A.  .  . 
+        3   Viglino     P.  .  . 
+        4   Pettirossi  F.  .  . 
+        5   Giorgetti   S.  .  . 
+        6   Mangione    P.  .  . 
+        7   Andreola    A.  .  . 
+        8   Stoppini    M.  .  . 
+        9   Bellotti    V.  .  . 
+       10   Esposito    G.  .  . 
+
+   stop_
+
+   _Journal_abbreviation  "Protein Sci."
+   _Journal_volume         11
+   _Journal_issue          3
+   _Page_first             487
+   _Page_last              499
+   _Year                   2002
+
+   loop_
+      _Keyword
+
+      "immunoglobulin constant domain" 
+
+   stop_
+
+save_
+
+
+##################################
+#  Molecular system description  #
+##################################
+
+save_system_microglobulin
+   _Saveframe_category         molecular_system
+
+   _Mol_system_name            beta2-microglobulin
+   _Abbreviation_common        microglobulin
+   _Enzyme_commission_number   .
+
+   loop_
+      _Mol_system_component_name
+      _Mol_label
+
+      "beta2-microglobulin" $microglobulin 
+
+   stop_
+
+   _System_physical_state      native
+   _System_oligomer_state      monomer
+   _System_paramagnetic        no
+   _System_thiol_state        'all disulfide bound'
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Database_entry_details
+
+       PDB  1JNJ  .  . 
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Monomeric polymers  #
+    ########################
+
+save_microglobulin
+   _Saveframe_category                          monomeric_polymer
+
+   _Mol_type                                    polymer
+   _Mol_polymer_class                           protein
+   _Name_common                                 beta2-microglobulin
+   _Name_variant                                .
+   _Abbreviation_common                         microglobulin
+   _Mol_thiol_state                            'all disulfide bound'
+   
+   	##############################
+   	#  Polymer residue sequence  #
+   	##############################
+   
+   _Residue_count                               100
+   _Mol_residue_sequence                       
+;
+MIQRTPKIQVYSRHPAENGK
+SNFLNCYVSGFHPSDIEVDL
+LKNGERIEKVEHSDLSFSKD
+WSFYLLYYTEFTPTEKDEYA
+CRVNHVTLSQPKIVKWDRDM
+;
+
+   loop_
+      _Residue_seq_code
+      _Residue_author_seq_code
+      _Residue_label
+
+         1    0   MET     2    1   ILE     3    2   GLN     4    3   ARG     5    4   THR 
+         6    5   PRO     7    6   LYS     8    7   ILE     9    8   GLN    10    9   VAL 
+        11   10   TYR    12   11   SER    13   12   ARG    14   13   HIS    15   14   PRO 
+        16   15   ALA    17   16   GLU    18   17   ASN    19   18   GLY    20   19   LYS 
+        21   20   SER    22   21   ASN    23   22   PHE    24   23   LEU    25   24   ASN 
+        26   25   CYS    27   26   TYR    28   27   VAL    29   28   SER    30   29   GLY 
+        31   30   PHE    32   31   HIS    33   32   PRO    34   33   SER    35   34   ASP 
+        36   35   ILE    37   36   GLU    38   37   VAL    39   38   ASP    40   39   LEU 
+        41   40   LEU    42   41   LYS    43   42   ASN    44   43   GLY    45   44   GLU 
+        46   45   ARG    47   46   ILE    48   47   GLU    49   48   LYS    50   49   VAL 
+        51   50   GLU    52   51   HIS    53   52   SER    54   53   ASP    55   54   LEU 
+        56   55   SER    57   56   PHE    58   57   SER    59   58   LYS    60   59   ASP 
+        61   60   TRP    62   61   SER    63   62   PHE    64   63   TYR    65   64   LEU 
+        66   65   LEU    67   66   TYR    68   67   TYR    69   68   THR    70   69   GLU 
+        71   70   PHE    72   71   THR    73   72   PRO    74   73   THR    75   74   GLU 
+        76   75   LYS    77   76   ASP    78   77   GLU    79   78   TYR    80   79   ALA 
+        81   80   CYS    82   81   ARG    83   82   VAL    84   83   ASN    85   84   HIS 
+        86   85   VAL    87   86   THR    88   87   LEU    89   88   SER    90   89   GLN 
+        91   90   PRO    92   91   LYS    93   92   ILE    94   93   VAL    95   94   LYS 
+        96   95   TRP    97   96   ASP    98   97   ARG    99   98   ASP   100   99   MET 
+
+   stop_
+
+   _Sequence_homology_query_date                2004-07-29
+   _Sequence_homology_query_revised_last_date   2004-07-16
+
+   loop_
+      _Database_name
+      _Database_accession_code
+      _Database_entry_mol_name
+      _Sequence_query_to_submitted_percentage
+      _Sequence_subject_length
+      _Sequence_identity
+      _Sequence_positive
+      _Sequence_homology_expectation_value
+
+       PDB         1HLA        "M Chain M, Human Class I HistocompatibilityAntigen A2 (HLA-A2, Human Leucocyte Antigen)"                                                                    103.09   97   100   100   3e-53  
+       PDB         1A1M        "B Chain B, Mhc Class I Molecule B5301 ComplexedWith Peptide Typdinqml From Gag Protein Of Hiv2"                                                             101.01   99   100   100   2e-54  
+       PDB         1A1N        "B Chain B, Mhc Class I Molecule B3501 ComplexedWith Peptide Vplrpmty From The Nef Protein (75-82) OfHiv1"                                                   101.01   99   100   100   2e-54  
+       PDB         1A1O        "B Chain B, Mhc Class I Molecule B5301 ComplexedWith Peptide Ls6 (Kpivqydnf) From The Malaria ParasiteP. Falciparum"                                         101.01   99   100   100   2e-54  
+       PDB         1A6Z        "B Chain B, Hfe (Human) Hemochromatosis Protein"                                                                                                             101.01   99   100   100   2e-54  
+       PDB         1AGB        "B Chain B, Antagonist Hiv-1 Gag Peptides InduceStructural Changes In Hla B8 - Hiv-1 Gag Peptide(Ggrkkykl - 3r Mutation)"                                    101.01   99   100   100   2e-54  
+       PDB         1AGC        "B Chain B, Antagonist Hiv-1 Gag Peptides InduceStructural Changes In Hla B8 - Hiv-1 Gag Peptide(Ggkkkyql - 7q Mutation)"                                    101.01   99   100   100   2e-54  
+       PDB         1AGD        "B Chain B, Antagonist Hiv-1 Gag Peptides InduceStructural Changes In Hla B8 - Hiv-1 Gag Peptide(Ggkkkykl - Index Peptide)"                                  101.01   99   100   100   2e-54  
+       PDB         1AGE        "B Chain B, Antagonist Hiv-1 Gag Peptides InduceStructural Changes In Hla B8 - Hiv-1 Gag Peptide(Ggkkkyrl - 7r Mutation)"                                    101.01   99   100   100   2e-54  
+       PDB         1AGF        "B Chain B, Antagonist Hiv-1 Gag Peptides InduceStructural Changes In Hla B8 - Hiv-1 Gag Peptide(Ggkkrykl - 5r Mutation)"                                    101.01   99   100   100   2e-54  
+       PDB         1AKJ        "B Chain B, Complex Of The Human Mhc Class IGlycoprotein Hla-A2 And The T Cell Coreceptor Cd8"                                                               101.01   99   100   100   2e-54  
+       PDB         1C16        "B Chain B, Crystal Structure Analysis Of TheGammaDELTA T CELL LIGAND T22"                                                                                   101.01   99   100   100   2e-54  
+       PDB         1DE4        "B Chain B, Hemochromatosis Protein HfeComplexed With Transferrin Receptor"                                                                                  101.01   99   100   100   2e-54  
+       PDB         1E27        "B Chain B, Nonstandard Peptide Binding OfHla-B5101 Complexed With Hiv Immunodominant EpitopeKm1(Lppvvakei)"                                                 101.01   99   100   100   2e-54  
+       PDB         1E28        "B Chain B, Nonstandard Peptide Binding OfHla-B5101 Complexed With Hiv Immunodominant EpitopeKm2(Taftipsi)"                                                  101.01   99   100   100   2e-54  
+       PDB         1EXU        "B Chain B, Crystal Structure Of The HumanMhc-Related Fc Receptor"                                                                                           101.01   99   100   100   2e-54  
+       PDB         1HSA        "B Chain B, Human Class I HistocompatibilityAntigen HLA-B(Asterisk)2705"                                                                                     101.01   99   100   100   2e-54  
+       PDB         1HSB        "B Chain B, Class I Histocompatibility AntigenAw68.1 (Leucocyte Antigen)"                                                                                    101.01   99   100   100   2e-54  
+       PDB         1M05        "B Chain B, Hla B8 In Complex With An EpsteinBarr Virus Determinant"                                                                                         101.01   99   100   100   2e-54  
+       PDB         1M6O        "B Chain B, Crystal Structure Of Hla B4402 InComplex With Hla Dpa0201 Peptide"                                                                               101.01   99   100   100   2e-54  
+       PDB         1MI5        "B Chain B, The Crystal Structure Of Lc13 TcrIn Complex With Hlab8-Ebv Peptide Complex"                                                                      101.01   99   100   100   2e-54  
+       PDB         1N2R        "B Chain B, A Natural Selected Dimorphism InHla B44 Alters Self, Peptide Reportoire And T CellRecognition."                                                  101.01   99   100   100   2e-54  
+       PDB         1ONQ        "B Chain B, Crystal Structure Of Cd1a InComplex With A Sulfatide"                                                                                            101.01   99   100   100   2e-54  
+       PDB         1P7Q        "B Chain B, Crystal Structure Of Hla-A2 BoundTo Lir-1, A Host And Viral Mhc Receptor"                                                                        101.01   99   100   100   2e-54  
+       PDB         1QLF        "B Chain B, Mhc Class I H-2db Complexed WithGlycopeptide K3g"                                                                                                101.01   99   100   100   2e-54  
+       PDB         1R3H        "B Chain B, Crystal Structure Of T10"                                                                                                                        101.01   99   100   100   2e-54  
+       PDB         2HLA        "B Chain B, Human Class I HistocompatibilityAntigen Aw 68.1 (HLA-Aw 68.1, Human Leucocyte Antigen)"                                                          101.01   99   100   100   2e-54  
+       PDB         3HLA        "B Chain B, Human Class I HistocompatibilityAntigen A2.1 (HLA-A2.1 Human Leucocyte Antigen)"                                                                 101.01   99   100   100   2e-54  
+       PDB         1QQD        "B Chain B, Crystal Structure Of Hla-Cw4, ALigand For The Kir2d Natural Killer Cell InhibitoryReceptor"                                                      101.01   99    99    99   10e-54 
+       PDB         1A9B        "B Chain B, Decamer-Like Conformation Of ANano-Peptide Bound To Hla-B 3501 Due To NonstandardPositioning Of The C-Terminus"                                  100.00  100   100   100   4e-55  
+       PDB         1A9E        "B Chain B, Decamer-Like Conformation Of ANano-Peptide Bound To Hla-B 3501 Due To NonstandardPositioning Of The C-Terminus"                                  100.00  100   100   100   4e-55  
+       PDB         1B0G        "B Chain B, Crystal Structure Of Human Class IMhc (Hla-A2.1) Complexed With Beta 2-Microglobulin AndHuman Peptide P1049"                                     100.00  100   100   100   4e-55  
+       PDB         1B0R        "B Chain B, Crystal Structure Of Hla-A0201Complexed With A Peptide With The Carboxyl-TerminalGroup Substituted By A Methyl Group"                            100.00  100   100   100   4e-55  
+       PDB         1BD2        "B Chain B, Complex Between Human T-CellReceptor B7, Viral Peptide (Tax) And Mhc Class IMolecule Hla-A 0201"                                                 100.00  100   100   100   4e-55  
+       PDB         1CG9        "B Chain B, Complex Recognition Of TheSupertypic Bw6-Determinant On Hla-B And-C Molecules ByThe Monoclonal Antibody Sfr8-B6"                                 100.00  100   100   100   4e-55  
+       PDB         1DUY        "B Chain B, Crystal Structure OfHla-A0201OCTAMERIC TAX PEPTIDE Complex"                                                                                      100.00  100   100   100   4e-55  
+       PDB         1DUZ        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) In Complex With A Nonameric PeptideFrom Htlv-1 Tax Protein"                                 100.00  100   100   100   4e-55  
+       PDB         1EEY        "B Chain B, Crystal Structure Determination OfHla A2 Complexed To Peptide Gp2 With The Substitution(I2lV5LL9V)"                                              100.00  100   100   100   4e-55  
+       PDB         1EEZ        "B Chain B, Crystal Structure Determination OfHla-A2.1 Complexed To Gp2 Peptide Variant(I2lV5L)"                                                             100.00  100   100   100   4e-55  
+       PDB         1EFX        "B Chain B, Structure Of A Complex Between TheHuman Natural Killer Cell Receptor Kir2dl2 And A Class IMhc Ligand Hla-Cw3"                                    100.00  100   100   100   4e-55  
+       PDB         1GZP        "B Chain B, Cd1b In Complex With Gm2Ganglioside"                                                                                                             100.00  100   100   100   4e-55  
+       PDB         1GZQ        "B Chain B, Cd1b In Complex WithPhophatidylinositol"                                                                                                         100.00  100   100   100   4e-55  
+       PDB         1HHG        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Nonameric PeptideFrom Hiv-1 Gp120 Envelope Protein (Residues 195-207)"       100.00  100   100   100   4e-55  
+       PDB         1HHH        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Decameric PeptideFrom Hepatitis B Nucleocapsid Protein (Residues 18-27)"     100.00  100   100   100   4e-55  
+       PDB         1HHI        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Nonameric PeptideFrom Influenza A Matrix Protein M1 (Residues 58-66)"        100.00  100   100   100   4e-55  
+       PDB         1HHJ        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Nonameric PeptideFrom Hiv-1 Reverse Transcriptase (Residues 309-317)"        100.00  100   100   100   4e-55  
+       PDB         1HHK        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Nonameric PeptideFrom Htlv-1 Tax Protein (Residues 11-19)"                   100.00  100   100   100   4e-55  
+       PDB         1I1F        "B Chain B, Crystal Structure Of Human Class IMhc (Hla-A2.1) Complexed With Beta 2- Microglobulin AndHiv-Rt Variant Peptide I1y"                             100.00  100   100   100   4e-55  
+       PDB         1I1Y        "B Chain B, Crystal Structure Of Human Class IMhc (Hla-A2.1) Complexed With Beta 2-Microglobulin AndHiv-Rt Variant Peptide I1y"                              100.00  100   100   100   4e-55  
+       PDB         1I4F        "B Chain B, Crystal Structure OfHla-A0201MAGE-A4-Peptide Complex"                                                                                            100.00  100   100   100   4e-55  
+       PDB         1I7R        "B Chain B, Crystal Structure Of Class I Mhc A2In Complex With Peptide P1058"                                                                                100.00  100   100   100   4e-55  
+       PDB         1I7T        "B Chain B, Crystal Structure Of Class I Mhc A2In Complex With Peptide P1049-5v"                                                                             100.00  100   100   100   4e-55  
+       PDB         1I7U        "B Chain B, Crystal Structure Of Class I Mhc A2In Complex With Peptide P1049-6v"                                                                             100.00  100   100   100   4e-55  
+       PDB         1IM3        "B Chain B, Crystal Structure Of The HumanCytomegalovirus Protein Us2 Bound To The Mhc Class IMolecule Hla-A2TAX"                                            100.00  100   100   100   4e-55  
+       PDB         1IM9        "B Chain B, Crystal Structure Of The HumanNatural Killer Cell Inhibitory Receptor Kir2dl1 Bound ToIts Mhc Ligand Hla-Cw4"                                    100.00  100   100   100   4e-55  
+       PDB         1JF1        "B Chain B, Crystal Structure Of Hla-A20201 InComplex With A Decameric Altered Peptide Ligand From TheMart-1MELAN-A"                                         100.00  100   100   100   4e-55  
+       PDB         1JGD        "B Chain B, Hla-B2709 Bound To Deca-PeptideS10r"                                                                                                             100.00  100   100   100   4e-55  
+       PDB         1JGE        "B Chain B, Hla-B2705 Bound To Nona-Peptide M9"                                                                                                              100.00  100   100   100   4e-55  
+       PDB         1JHT        "B Chain B, Crystal Structure Of Hla-A20201 InComplex With A Nonameric Altered Peptide Ligand(Algigiltv) From The Mart- 1MELAN-A."                           100.00  100   100   100   4e-55  
+       PDB         1JNJ        "A Chain A, Nmr Solution Structure Of The HumanBeta2-Microglobulin"                                                                                          100.00  100   100   100   4e-55  
+       PDB         1K5N        "B Chain B, Hla-B2709 Bound To Nona-Peptide M9"                                                                                                              100.00  100   100   100   4e-55  
+       PDB         1KPR        "B Chain B, The Human Non-Classical MajorHistocompatibility Complex Molecule Hla-E"                                                                          100.00  100   100   100   4e-55  
+       PDB         1KTL        "B Chain B, The Human Non-Classical MajorHistocompatibility Complex Molecule Hla-E"                                                                          100.00  100   100   100   4e-55  
+       PDB         1LDS        "A Chain A, Crystal Structure Of MonomericHuman Beta-2-Microglobulin"                                                                                        100.00  100   100   100   4e-55  
+       PDB         1LP9        "B Chain B, Xenoreactive Complex Ahiii 12.2 TcrBound To P1049HLA-A2.1"                                                                                       100.00  100   100   100   4e-55  
+       PDB         1MHE        "B Chain B, The Human Non-Classical MajorHistocompatibility Complex Molecule Hla-E"                                                                          100.00  100   100   100   4e-55  
+       PDB         1OF2        "B Chain B, Crystal Structure Of Hla-B2709Complexed With The Vasoactive Intestinal Peptide Type 1Receptor (Vipr) Peptide (Residues 400-408)"                 100.00  100   100   100   4e-55  
+       PDB         1OGA        "B Chain B, A Structural Basis ForImmunodominant Human T-Cell Receptor Recognition."                                                                         100.00  100   100   100   4e-55  
+       PDB         1OGT        "B Chain B, Crystal Structure Of Hla-B2705Complexed With The Vasoactive Intestinal Peptide Type 1Receptor (Vipr) Peptide (Residues 400-408)"                 100.00  100   100   100   4e-55  
+       PDB         1Q94        "B Chain B, Structures Of Hla-A1101 In ComplexWith Immunodominant Nonamer And Decamer Hiv-1 EpitopesClearly Reveal The Presence Of A Middle Anchor Residue"  100.00  100   100   100   4e-55  
+       PDB         1QEW        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complex With A Nonameric PeptideFrom Melanoma-Associated Antigen 3 (Residues 271-279)"      100.00  100   100   100   4e-55  
+       PDB         1QR1        "B Chain B, Poor Binding Of A Her-2NEU EPITOPE(GP2) TO HLA-A2.1 Is Due To A Lack Of Interactions InThe Center Of The Peptide"                                100.00  100   100   100   4e-55  
+       PDB         1QRN        "B Chain B, Crystal Structure Of Human A6 TcrComplexed With Hla-A2 Bound To Altered Htlv-1 TaxPeptide P6a"                                                   100.00  100   100   100   4e-55  
+       PDB         1QSE        "B Chain B, Structure Of Human A6-Tcr Bound ToHla-A2 Complexed With Altered Htlv-1 Tax Peptide V7r"                                                          100.00  100   100   100   4e-55  
+       PDB         1QSF        "B Chain B, Structure Of A6-Tcr Bound To Hla-A2Complexed With Altered Htlv-1 Tax Peptide Y8a"                                                                100.00  100   100   100   4e-55  
+       PDB         1QVO        "B Chain B, Structures Of Hla-A1101 In ComplexWith Immunodominant Nonamer And Decamer Hiv-1 EpitopesClearly Reveal The Presence Of A Middle Anchor Residue"  100.00  100   100   100   4e-55  
+       PDB         1TMC        "B Chain B, Truncated Human Class IHistocompatibility Antigen Hla-Aw68 Complexed With ADecameric Peptide (Evappeyhrk)"                                       100.00  100   100   100   4e-55  
+       PDB         1UQS        "B Chain B, The Crystal Structure Of Human Cd1bWith A Bound Bacterial Glycolipid"                                                                            100.00  100   100   100   4e-55  
+       PDB         2CLR        "B Chain B, Human Class I HistocompatibilityAntigen (Hla-A 0201) Complexed With A Decameric PeptideFrom Calreticulin"                                        100.00  100   100   100   4e-55  
+       PDB         1PY4        "A Chain A, Beta2 Microglobulin Mutant H31yDisplays Hints For Amyloid Formations"                                                                            100.00  100    99   100   2e-54  
+       PDB         1AO7        "B Chain B, Complex Between Human T-CellReceptor, Viral Peptide (Tax), And Hla-A 0201"                                                                       100.00  100    98    98   4e-53  
+       PDB         1CE6        "B Chain B, Mhc Class I H-2db Complexed With ASendai Virus Nucleoprotein Peptide"                                                                             92.59  108   100   100   2e-54  
+       DBJ         BAA35182.1  "beta 2-microglobulin [Homo sapiens]"                                                                                                                         84.03  119   100   100   2e-54  
+       EMBL        CAA23830.1  "beta-2 microglobulin [Homo sapiens]"                                                                                                                         90.91  110   100   100   2e-54  
+       EMBL        CAG33347.1  "B2M [Homo sapiens]"                                                                                                                                          84.03  119    99   100   5e-54  
+       GenBank     AAA87972.1   beta-2-microglobulin                                                                                                                                         84.03  119   100   100   2e-54  
+       GenBank     AAA88008.1   beta-2-microglobulin                                                                                                                                         84.03  119   100   100   2e-54  
+       GenBank     AAD48083.1  "beta-2 microglobulin [Homo sapiens]"                                                                                                                         84.03  119   100   100   2e-54  
+       GenBank     AAG02006.1  "similar to Homo sapiens mRNA for beta2-microglobulin with GenBank Accession Number AB021288"                                                                 84.03  119   100   100   2e-54  
+       GenBank     AAH32589.1  "Beta-2-microglobulin, precursor [Homosapiens]"                                                                                                               84.03  119   100   100   2e-54  
+       PIR         I36963      "beta-2-microglobulin precursor - chimpanzee"                                                                                                                 84.03  119   100   100   2e-54  
+       PIR         I37063      "beta-2-microglobulin precursor - gorilla"                                                                                                                    84.03  119   100   100   2e-54  
+       PIR         MGHUB2      "beta-2-microglobulin precursor [validated] -human"                                                                                                           84.03  119   100   100   2e-54  
+       REF         NP_004039.1 "beta-2-microglobulin precursor [Homosapiens]"                                                                                                                84.03  119   100   100   2e-54  
+       SWISS-PROT  P61769      "B2MG_HUMAN Beta-2-microglobulin precursor(HDCMA22P)"                                                                                                         84.03  119   100   100   2e-54  
+       SWISS-PROT  P61770      "B2MG_PANTR Beta-2-microglobulin precursor"                                                                                                                   84.03  119   100   100   2e-54  
+       SWISS-PROT  P61771      "B2MG_GORGO Beta-2-microglobulin precursor"                                                                                                                   84.03  119   100   100   2e-54  
+
+   stop_
+
+save_
+
+
+    ########################################
+    #  Molecular bond linkage definitions  #
+    ########################################
+
+save_crosslink_bond_definitions
+   _Saveframe_category   crosslink_bonds
+
+
+   loop_
+      _Bond_order
+      _Bond_type
+      _Atom_one_mol_system_component_name
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_atom_name
+      _Atom_two_mol_system_component_name
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_atom_name
+
+       single  disulfide "beta2-microglobulin"  25   CYS  SG "beta2-microglobulin"  80   CYS  SG 
+
+   stop_
+
+save_
+
+
+    ####################
+    #  Natural source  #
+    ####################
+
+save_natural_source
+   _Saveframe_category   natural_source
+
+
+   loop_
+      _Mol_label
+      _Organism_name_common
+      _NCBI_taxonomy_ID
+      _Superkingdom
+      _Kingdom
+      _Genus
+      _Species
+
+      $microglobulin  Human  9606   Eukaryota  Metazoa  Homo  sapiens 
+
+   stop_
+
+save_
+
+
+    #########################
+    #  Experimental source  #
+    #########################
+
+save_experimental_source
+   _Saveframe_category   experimental_source
+
+
+   loop_
+      _Mol_label
+      _Production_method
+      _Host_organism_name_common
+      _Genus
+      _Species
+      _Strain
+      _Vector_name
+
+      $microglobulin 'recombinant technology' "Escherichia coli"  Escherichia  coli  .  . 
+
+   stop_
+
+save_
+
+
+#####################################
+#  Sample contents and methodology  #
+#####################################
+	 
+    ########################
+    #  Sample description  #
+    ########################
+
+save_sample_1
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $microglobulin        0.68  mM  . 
+      "phosphate buffer"   70     mM  . 
+       NaCl               100     mM  . 
+       H2O                 90     %   . 
+       D2O                 10     %   . 
+
+   stop_
+
+save_
+
+
+save_sample_2
+   _Saveframe_category   sample
+
+   _Sample_type          solution
+
+   loop_
+      _Mol_label
+      _Concentration_value
+      _Concentration_value_units
+      _Isotopic_labeling
+
+      $microglobulin        0.37  mM  . 
+      "phosphate buffer"   70     mM  . 
+       NaCl               100     mM  . 
+       D2O                100     %   . 
+
+   stop_
+
+save_
+
+
+############################
+#  Computer software used  #
+############################
+
+save_XWINNMR
+   _Saveframe_category   software
+
+   _Name                 XWINNMR
+   _Version              2.6
+
+   loop_
+      _Task
+
+       collection 
+
+   stop_
+
+   _Details              Bruker
+
+save_
+
+
+save_FELIX
+   _Saveframe_category   software
+
+   _Name                 FELIX
+   _Version              2000
+
+   loop_
+      _Task
+
+      "processing"    
+      "data analysis" 
+
+   stop_
+
+   _Details              MSI
+
+save_
+
+
+save_DIANA
+   _Saveframe_category   software
+
+   _Name                 DIANA
+   _Version              1.5
+
+   loop_
+      _Task
+
+      "structure solution" 
+
+   stop_
+
+   _Details              Guentert
+
+save_
+
+
+save_DISCOVER
+   _Saveframe_category   software
+
+   _Name                 DISCOVER
+   _Version              2000
+
+   loop_
+      _Task
+
+       refinement 
+
+   stop_
+
+   _Details              MSI
+
+save_
+
+
+#########################
+#  Experimental detail  #
+#########################
+
+    ##################################
+    #  NMR Spectrometer definitions  #
+    ##################################
+
+save_NMR_spectrometer
+   _Saveframe_category   NMR_spectrometer
+
+   _Manufacturer         Bruker
+   _Model                AVANCE
+   _Field_strength       500.13
+
+save_
+
+
+    #############################
+    #  NMR applied experiments  #
+    #############################
+
+save_NMR_applied_experiment
+   _Saveframe_category   NMR_applied_experiment
+
+   _Experiment_name     
+;
+2D TOCSY
+2D DQF
+;
+
+save_
+
+
+#######################
+#  Sample conditions  #
+#######################
+
+save_sample_cond_1
+   _Saveframe_category   sample_conditions
+
+
+   loop_
+      _Variable_type
+      _Variable_value
+      _Variable_value_error
+      _Variable_value_units
+
+       pH                 6.4  .  n/a 
+       temperature      310    .  K   
+      'ionic strength'  190    .  mM  
+       pressure           1    .  atm 
+
+   stop_
+
+save_
+
+
+####################
+#  NMR parameters  #
+####################
+
+    ##############################
+    #  Assigned chemical shifts  #
+    ##############################
+
+	################################
+	#  Chemical shift referencing  #
+	################################
+
+save_chemical_shift_reference
+   _Saveframe_category   chemical_shift_reference
+
+
+   loop_
+      _Mol_common_name
+      _Atom_type
+      _Atom_isotope_number
+      _Atom_group
+      _Chem_shift_units
+      _Chem_shift_value
+      _Reference_method
+      _Reference_type
+      _External_reference_sample_geometry
+      _External_reference_location
+      _External_reference_axis
+      _Indirect_shift_ratio
+
+       .  H  1   .  ppm  .  .  .  .  .  .  . 
+
+   stop_
+
+save_
+
+
+	###################################
+	#  Assigned chemical shift lists  #
+	###################################
+
+###################################################################
+#       Chemical Shift Ambiguity Index Value Definitions          #
+#                                                                 #
+#   Index Value            Definition                             #
+#                                                                 #
+#      1             Unique                                       #
+#      2             Ambiguity of geminal atoms or geminal methyl #
+#                         proton groups                           #
+#      3             Aromatic atoms on opposite sides of the ring #
+#                        (e.g. Tyr HE1 and HE2 protons)           #
+#      4             Intraresidue ambiguities (e.g. Lys HG and    #
+#                         HD protons)                             #
+#      5             Interresidue ambiguities (Lys 12 vs. Lys 27) #
+#      9             Ambiguous, specific ambiguity not defined    #
+#                                                                 #
+###################################################################
+
+save_chemical_shift_set_1
+   _Saveframe_category               assigned_chemical_shifts
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label         $sample_cond_1
+   _Chem_shift_reference_set_label  $chemical_shift_reference
+   _Mol_system_component_name       "beta2-microglobulin"
+
+   loop_
+      _Atom_shift_assign_ID
+      _Residue_seq_code
+      _Residue_label
+      _Atom_name
+      _Atom_type
+      _Chem_shift_value
+      _Chem_shift_value_error
+      _Chem_shift_ambiguity_code
+
+     1     0   MET       HA    H      3.95        .     1
+     2     0   MET       HB2   H      1.97        .     2
+     3     0   MET       HG2   H      2.49        .     2
+     4     1   ILE       HA    H      4.20        .     1
+     5     1   ILE       HB    H      1.70        .     1
+     6     1   ILE       HD1   H      0.76        .     1
+     7     1   ILE       HG12  H      1.38        .     2
+     8     1   ILE       HG13  H      1.10        .     2
+     9     1   ILE       HG2   H      0.80        .     1
+    10     2   GLN       HA    H      4.65        .     1
+    11     2   GLN       HB2   H      2.08        .     2
+    12     2   GLN       HE21  H      7.40        .     2
+    13     2   GLN       HE22  H      6.71        .     2
+    14     2   GLN       HG2   H      2.52        .     2
+    15     2   GLN       HG3   H      2.36        .     2
+    16     2   GLN       H     H      8.34        .     1
+    17     3   ARG       HA    H      4.84        .     1
+    18     3   ARG       HB2   H      2.22        .     2
+    19     3   ARG       HB3   H      1.81        .     2
+    20     3   ARG       HD2   H      3.18        .     2
+    21     3   ARG       HD3   H      3.10        .     2
+    22     3   ARG       HG2   H      1.74        .     2
+    23     3   ARG       HG3   H      1.65        .     2
+    24     3   ARG       H     H      9.37        .     1
+    25     4   THR       HA    H      5.01        .     1
+    26     4   THR       HB    H      4.08        .     1
+    27     4   THR       HG2   H      1.32        .     1
+    28     4   THR       H     H      8.33        .     1
+    29     5   PRO       HA    H      4.41        .     1
+    30     5   PRO       HB2   H      1.53        .     2
+    31     5   PRO       HD2   H      3.65        .     2
+    32     5   PRO       HD3   H      3.10        .     2
+    33     5   PRO       HG2   H      1.67        .     2
+    34     5   PRO       HG3   H      1.11        .     2
+    35     6   LYS       HA    H      4.51        .     1
+    36     6   LYS       HB2   H      1.78        .     2
+    37     6   LYS       HB3   H      1.51        .     2
+    38     6   LYS       HG2   H      1.64        .     2
+    39     6   LYS       HG3   H      1.43        .     2
+    40     6   LYS       H     H      9.19        .     1
+    41     7   ILE       HA    H      4.76        .     1
+    42     7   ILE       HB    H      1.64        .     1
+    43     7   ILE       HG12  H      1.39        .     2
+    44     7   ILE       HG2   H      0.76        .     1
+    45     7   ILE       H     H      8.39        .     1
+    46     8   GLN       HA    H      4.94        .     1
+    47     8   GLN       HB2   H      2.35        .     2
+    48     8   GLN       HB3   H      2.21        .     2
+    49     8   GLN       HE21  H      7.49        .     2
+    50     8   GLN       HE22  H      6.79        .     2
+    51     8   GLN       HG2   H      2.42        .     2
+    52     8   GLN       H     H      9.04        .     1
+    53     9   VAL       HA    H      5.33        .     1
+    54     9   VAL       HB    H      2.04        .     1
+    55     9   VAL       HG1   H      0.97        .     2
+    56     9   VAL       HG2   H      0.91        .     2
+    57     9   VAL       H     H      9.03        .     1
+    58    10   TYR       HA    H      5.31        .     1
+    59    10   TYR       HB2   H      3.41        .     2
+    60    10   TYR       HB3   H      3.15        .     2
+    61    10   TYR       HD1   H      6.80        .     3
+    62    10   TYR       HE1   H      6.55        .     3
+    63    10   TYR       H     H      8.46        .     1
+    64    11   SER       HA    H      5.29        .     1
+    65    11   SER       HB2   H      4.42        .     2
+    66    11   SER       HB3   H      3.66        .     2
+    67    11   SER       H     H      9.34        .     1
+    68    12   ARG       HA    H      3.92        .     1
+    69    12   ARG       HB2   H      1.95        .     2
+    70    12   ARG       HB3   H      1.74        .     2
+    71    12   ARG       HG2   H      1.42        .     2
+    72    12   ARG       H     H      8.85        .     1
+    73    13   HIS       HA    H      5.34        .     1
+    74    13   HIS       HB3   H      3.26        .     1
+    75    13   HIS       HB2   H      2.92        .     1
+    76    13   HIS       HD2   H      7.09        .     1
+    77    13   HIS       HE1   H      7.90        .     1
+    78    13   HIS       H     H      8.31        .     1
+    79    14   PRO       HA    H      4.52        .     1
+    80    14   PRO       HB2   H      2.41        .     2
+    81    14   PRO       HB3   H      1.93        .     2
+    82    14   PRO       HD2   H      4.05        .     2
+    83    14   PRO       HD3   H      3.78        .     2
+    84    14   PRO       HG2   H      2.21        .     2
+    85    14   PRO       HG3   H      2.07        .     2
+    86    15   ALA       HA    H      4.10        .     1
+    87    15   ALA       HB    H      1.68        .     1
+    88    15   ALA       H     H      9.00        .     1
+    89    16   GLU       HA    H      4.40        .     1
+    90    16   GLU       HB2   H      1.86        .     2
+    91    16   GLU       HG2   H      2.16        .     2
+    92    16   GLU       H     H      8.84        .     1
+    93    17   ASN       HA    H      4.49        .     1
+    94    17   ASN       HB2   H      2.78        .     2
+    95    17   ASN       HB3   H      2.68        .     2
+    96    17   ASN       HD21  H      7.53        .     2
+    97    17   ASN       HD22  H      7.10        .     2
+    98    17   ASN       H     H      8.74        .     1
+    99    18   GLY       HA3   H      4.18        .     1
+   100    18   GLY       HA2   H      3.52        .     1
+   101    18   GLY       H     H      8.81        .     1
+   102    19   LYS       HA    H      4.66        .     1
+   103    19   LYS       HB2   H      1.82        .     1
+   104    19   LYS       HB3   H      1.76        .     1
+   105    19   LYS       HD2   H      1.63        .     2
+   106    19   LYS       HD3   H      1.57        .     2
+   107    19   LYS       HE2   H      2.92        .     2
+   108    19   LYS       HG2   H      1.35        .     2
+   109    19   LYS       HG3   H      1.30        .     2
+   110    19   LYS       H     H      7.83        .     1
+   111    20   SER       HA    H      4.26        .     1
+   112    20   SER       HB2   H      3.74        .     2
+   113    20   SER       HB3   H      3.71        .     2
+   114    20   SER       H     H      8.34        .     1
+   115    21   ASN       HA    H      4.88        .     1
+   116    21   ASN       HB2   H      2.53        .     2
+   117    21   ASN       HB3   H      2.74        .     2
+   118    21   ASN       H     H      8.88        .     1
+   119    21   ASN       HD21  H      7.74        .     2
+   120    21   ASN       HD22  H      7.75        .     2
+   121    22   PHE       HA    H      5.42        .     1
+   122    22   PHE       HB2   H      2.68        .     2
+   123    22   PHE       HB3   H      2.61        .     2
+   124    22   PHE       HD1   H      7.00        .     3
+   125    22   PHE       HE1   H      7.39        .     3
+   126    22   PHE       H     H     10.30        .     1
+   127    22   PHE       HZ    H      7.32        .     1
+   128    23   LEU       HA    H      3.69        .     1
+   129    23   LEU       HB2   H      0.81        .     1
+   130    23   LEU       HB3   H     -0.83        .     1
+   131    23   LEU       HD1   H     -0.58        .     2
+   132    23   LEU       HD2   H     -0.01        .     2
+   133    23   LEU       HG    H      0.65        .     1
+   134    23   LEU       H     H      8.97        .     1
+   135    24   ASN       HA    H      5.37        .     1
+   136    24   ASN       HB2   H      1.43        .     1
+   137    24   ASN       HB3   H      1.83        .     1
+   138    24   ASN       HD21  H      5.75        .     2
+   139    24   ASN       HD22  H      5.52        .     2
+   140    24   ASN       H     H      8.19        .     1
+   141    25   CYS       HA    H      5.15        .     1
+   142    25   CYS       HB2   H      3.27        .     1
+   143    25   CYS       HB3   H      2.54        .     1
+   144    25   CYS       H     H      9.61        .     1
+   145    26   TYR       HA    H      5.43        .     1
+   146    26   TYR       HB2   H      3.23        .     2
+   147    26   TYR       HB3   H      3.20        .     2
+   148    26   TYR       HD1   H      7.20        .     3
+   149    26   TYR       HE1   H      6.66        .     3
+   150    26   TYR       H     H      9.67        .     1
+   151    27   VAL       HA    H      5.17        .     1
+   152    27   VAL       HB    H      1.92        .     1
+   153    27   VAL       HG1   H      0.90        .     2
+   154    27   VAL       HG2   H      0.74        .     2
+   155    27   VAL       H     H      8.84        .     1
+   156    28   SER       HA    H      5.64        .     1
+   157    28   SER       HB2   H      3.81        .     1
+   158    28   SER       HB3   H      3.39        .     1
+   159    28   SER       H     H      8.99        .     1
+   160    29   GLY       HA2   H      4.11        .     2
+   161    29   GLY       HA3   H      3.81        .     2
+   162    29   GLY       H     H      8.14        .     1
+   163    30   PHE       HA    H      4.86        .     1
+   164    30   PHE       HB2   H      2.33        .     2
+   165    30   PHE       HB3   H      1.99        .     2
+   166    30   PHE       HD1   H      7.00        .     3
+   167    30   PHE       HE1   H      7.26        .     3
+   168    30   PHE       H     H      7.18        .     1
+   169    30   PHE       HZ    H      6.95        .     1
+   170    31   HIS       HA    H      4.52        .     1
+   171    31   HIS       HB2   H      3.10        .     1
+   172    31   HIS       HB3   H      3.35        .     1
+   173    31   HIS       HD2   H      7.01        .     1
+   174    31   HIS       HE1   H      7.89        .     1
+   175    31   HIS       H     H      8.61        .     1
+   176    32   PRO       HA    H      3.80        .     1
+   177    32   PRO       HB2   H      2.31        .     2
+   178    32   PRO       HD2   H      3.72        .     2
+   179    32   PRO       HD3   H      3.63        .     2
+   180    32   PRO       HG2   H      2.01        .     2
+   181    32   PRO       HG3   H      1.74        .     2
+   182    33   SER       HA    H      3.56        .     1
+   183    33   SER       HB2   H      3.27        .     2
+   184    33   SER       HB3   H      1.87        .     2
+   185    33   SER       H     H      8.29        .     1
+   186    34   ASP       HA    H      4.38        .     1
+   187    34   ASP       HB2   H      2.39        .     2
+   188    34   ASP       HB3   H      2.33        .     2
+   189    34   ASP       H     H      7.19        .     1
+   190    35   ILE       HA    H      4.55        .     1
+   191    35   ILE       HB    H      1.40        .     1
+   192    35   ILE       HD1   H     -0.51        .     1
+   193    35   ILE       HG12  H      1.49        .     2
+   194    35   ILE       HG13  H      0.68        .     2
+   195    35   ILE       HG2   H      0.58        .     1
+   196    35   ILE       H     H      7.95        .     1
+   197    36   GLU       HA    H      4.58        .     1
+   198    36   GLU       HB2   H      1.90        .     1
+   199    36   GLU       HB3   H      1.73        .     1
+   200    36   GLU       HG2   H      2.08        .     2
+   201    36   GLU       HG3   H      2.05        .     2
+   202    36   GLU       H     H      7.99        .     1
+   203    37   VAL       HA    H      4.63        .     1
+   204    37   VAL       HB    H      0.44        .     1
+   205    37   VAL       HG1   H      0.23        .     1
+   206    37   VAL       HG2   H      0.47        .     1
+   207    37   VAL       H     H      7.94        .     1
+   208    38   ASP       HA    H      4.94        .     1
+   209    38   ASP       HB2   H      2.40        .     2
+   210    38   ASP       HB3   H      2.16        .     2
+   211    38   ASP       H     H      8.85        .     1
+   212    39   LEU       HA    H      5.00        .     1
+   213    39   LEU       HB2   H      1.67        .     2
+   214    39   LEU       HB3   H      1.23        .     2
+   215    39   LEU       HD1   H      0.73        .     2
+   216    39   LEU       HG    H      1.60        .     1
+   217    39   LEU       H     H      9.04        .     1
+   218    40   LEU       HA    H      4.99        .     1
+   219    40   LEU       HB2   H      1.56        .     2
+   220    40   LEU       HB3   H      0.81        .     2
+   221    40   LEU       HD1   H      0.59        .     2
+   222    40   LEU       HD2   H      0.39        .     2
+   223    40   LEU       HG    H      1.19        .     1
+   224    40   LEU       H     H      8.96        .     1
+   225    41   LYS       HA    H      4.40        .     1
+   226    41   LYS       HB2   H      1.69        .     2
+   227    41   LYS       HB3   H      1.43        .     2
+   228    41   LYS       HD2   H      1.74        .     2
+   229    41   LYS       HD3   H      1.61        .     2
+   230    41   LYS       HE2   H      2.84        .     2
+   231    41   LYS       HE3   H      2.76        .     2
+   232    41   LYS       HG2   H      0.79        .     2
+   233    41   LYS       HG3   H      0.55        .     2
+   234    41   LYS       H     H      8.81        .     1
+   235    42   ASN       HA    H      4.35        .     1
+   236    42   ASN       HB2   H      2.90        .     1
+   237    42   ASN       HB3   H      2.87        .     1
+   238    42   ASN       HD21  H      7.96        .     2
+   239    42   ASN       HD22  H      7.72        .     2
+   240    42   ASN       H     H      9.72        .     1
+   241    43   GLY       HA2   H      4.18        .     1
+   242    43   GLY       HA3   H      3.32        .     1
+   243    43   GLY       H     H      8.80        .     1
+   244    44   GLU       HA    H      4.57        .     1
+   245    44   GLU       HB2   H      2.04        .     2
+   246    44   GLU       HB3   H      1.95        .     2
+   247    44   GLU       HG2   H      2.28        .     2
+   248    44   GLU       HG3   H      2.13        .     2
+   249    44   GLU       H     H      7.81        .     1
+   250    45   ARG       HA    H      4.16        .     1
+   251    45   ARG       HB2   H      1.62        .     2
+   252    45   ARG       HD2   H      3.12        .     2
+   253    45   ARG       HD3   H      3.06        .     2
+   254    45   ARG       HG2   H      1.53        .     2
+   255    45   ARG       HG3   H      1.32        .     2
+   256    45   ARG       H     H      8.65        .     1
+   257    46   ILE       HA    H      3.98        .     1
+   258    46   ILE       HB    H      1.53        .     1
+   259    46   ILE       HD1   H      0.85        .     1
+   260    46   ILE       HG12  H      1.71        .     2
+   261    46   ILE       HG13  H      1.06        .     2
+   262    46   ILE       HG2   H      0.95        .     1
+   263    46   ILE       H     H      8.78        .     1
+   264    47   GLU       HA    H      4.17        .     1
+   265    47   GLU       HB2   H      2.11        .     2
+   266    47   GLU       HB3   H      2.01        .     2
+   267    47   GLU       HG2   H      2.36        .     2
+   268    47   GLU       HG3   H      2.23        .     2
+   269    47   GLU       H     H      8.48        .     1
+   270    48   LYS       HA    H      4.52        .     1
+   271    48   LYS       HB2   H      1.94        .     2
+   272    48   LYS       HB3   H      1.78        .     2
+   273    48   LYS       HE2   H      3.02        .     2
+   274    48   LYS       HG2   H      1.43        .     2
+   275    48   LYS       HG3   H      1.38        .     2
+   276    48   LYS       H     H      7.96        .     1
+   277    49   VAL       HA    H      4.40        .     1
+   278    49   VAL       HB    H      2.12        .     1
+   279    49   VAL       HG1   H      1.09        .     1
+   280    49   VAL       HG2   H      1.02        .     1
+   281    49   VAL       H     H      7.80        .     1
+   282    50   GLU       HA    H      4.48        .     1
+   283    50   GLU       HB2   H      0.74        .     1
+   284    50   GLU       HB3   H      1.56        .     1
+   285    50   GLU       HG2   H      2.06        .     2
+   286    50   GLU       H     H      8.43        .     1
+   287    51   HIS       HA    H      5.49        .     1
+   288    51   HIS       HB2   H      2.46        .     2
+   289    51   HIS       HB3   H      1.98        .     2
+   290    51   HIS       HD2   H      7.01        .     1
+   291    51   HIS       HE1   H      8.52        .     1
+   292    51   HIS       H     H      8.11        .     1
+   293    52   SER       HA    H      4.66        .     1
+   294    52   SER       HB2   H      4.48        .     2
+   295    52   SER       HB3   H      4.09        .     2
+   296    52   SER       H     H      9.13        .     1
+   297    53   ASP       HA    H      4.79        .     1
+   298    53   ASP       HB2   H      2.74        .     2
+   299    53   ASP       HB3   H      2.55        .     2
+   300    53   ASP       H     H      8.67        .     1
+   301    54   LEU       HA    H      4.35        .     1
+   302    54   LEU       HB2   H      1.84        .     2
+   303    54   LEU       HD1   H      1.06        .     2
+   304    54   LEU       HD2   H      0.87        .     2
+   305    54   LEU       HG    H      1.71        .     1
+   306    54   LEU       H     H      8.74        .     1
+   307    55   SER       HA    H      4.79        .     1
+   308    55   SER       HB2   H      3.41        .     2
+   309    55   SER       HB3   H      2.78        .     2
+   310    55   SER       H     H      8.10        .     1
+   311    56   PHE       HA    H      5.12        .     1
+   312    56   PHE       HB2   H      2.60        .     2
+   313    56   PHE       HD1   H      6.42        .     3
+   314    56   PHE       HE1   H      6.99        .     3
+   315    56   PHE       H     H      8.08        .     1
+   316    56   PHE       HZ    H      7.03        .     1
+   317    57   SER       HA    H      4.55        .     1
+   318    57   SER       HB2   H      3.90        .     2
+   319    57   SER       HB3   H      3.69        .     2
+   320    57   SER       H     H      8.38        .     1
+   321    58   LYS       HA    H      3.78        .     1
+   322    58   LYS       HB3   H      1.74        .     2
+   323    58   LYS       HD2   H      1.63        .     2
+   324    58   LYS       HE2   H      2.96        .     2
+   325    58   LYS       HG2   H      1.38        .     2
+   326    59   ASP       HA    H      4.35        .     1
+   327    59   ASP       HB2   H      2.32        .     2
+   328    59   ASP       H     H      7.70        .     1
+   329    60   TRP       HA    H      4.16        .     1
+   330    60   TRP       HB2   H      3.15        .     2
+   331    60   TRP       HD1   H      6.88        .     1
+   332    60   TRP       HE1   H      9.72        .     1
+   333    60   TRP       HE3   H      7.02        .     1
+   334    60   TRP       HH2   H      7.09        .     1
+   335    60   TRP       H     H      7.46        .     1
+   336    60   TRP       HZ2   H      7.37        .     1
+   337    60   TRP       HZ3   H      6.84        .     1
+   338    61   SER       HA    H      3.97        .     1
+   339    61   SER       HB2   H      3.66        .     2
+   340    61   SER       H     H      7.42        .     1
+   341    62   PHE       HA    H      5.26        .     1
+   342    62   PHE       HB2   H      2.42        .     2
+   343    62   PHE       HB3   H      1.54        .     2
+   344    62   PHE       HD1   H      7.33        .     3
+   345    62   PHE       HE1   H      7.25        .     3
+   346    62   PHE       H     H      7.94        .     1
+   347    62   PHE       HZ    H      7.21        .     1
+   348    63   TYR       HA    H      5.49        .     1
+   349    63   TYR       HB2   H      2.84        .     1
+   350    63   TYR       HB3   H      3.01        .     1
+   351    63   TYR       HD1   H      7.00        .     3
+   352    63   TYR       HE1   H      6.64        .     3
+   353    63   TYR       H     H      8.21        .     1
+   354    64   LEU       HA    H      4.64        .     1
+   355    64   LEU       HB2   H      1.98        .     2
+   356    64   LEU       HD1   H      1.04        .     2
+   357    64   LEU       HD2   H      0.97        .     2
+   358    64   LEU       HG    H      1.78        .     1
+   359    64   LEU       H     H      9.16        .     1
+   360    65   LEU       HA    H      5.48        .     1
+   361    65   LEU       HB2   H      1.99        .     2
+   362    65   LEU       HD1   H      1.03        .     2
+   363    65   LEU       HD2   H      0.80        .     2
+   364    65   LEU       HG    H      1.58        .     1
+   365    65   LEU       H     H      8.14        .     1
+   366    66   TYR       HA    H      5.36        .     1
+   367    66   TYR       HB2   H      3.04        .     2
+   368    66   TYR       HB3   H      2.64        .     2
+   369    66   TYR       HD1   H      7.00        .     3
+   370    66   TYR       HE1   H      6.64        .     3
+   371    66   TYR       H     H      9.12        .     1
+   372    67   TYR       HA    H      5.96        .     1
+   373    67   TYR       HB2   H      3.21        .     1
+   374    67   TYR       HB3   H      2.63        .     1
+   375    67   TYR       HD1   H      6.68        .     3
+   376    67   TYR       HE1   H      6.54        .     3
+   377    67   TYR       H     H      8.91        .     1
+   378    68   THR       HA    H      4.86        .     1
+   379    68   THR       HB    H      4.11        .     1
+   380    68   THR       HG2   H      0.93        .     1
+   381    68   THR       H     H      8.28        .     1
+   382    69   GLU       HA    H      4.30        .     1
+   383    69   GLU       HB2   H      1.83        .     2
+   384    69   GLU       HB3   H      1.69        .     2
+   385    69   GLU       HG2   H      1.87        .     2
+   386    69   GLU       H     H      8.48        .     1
+   387    70   PHE       HA    H      4.83        .     1
+   388    70   PHE       HB2   H      2.79        .     2
+   389    70   PHE       HB3   H      2.71        .     2
+   390    70   PHE       HD1   H      6.19        .     3
+   391    70   PHE       H     H      8.74        .     1
+   392    70   PHE       HZ    H      5.72        .     1
+   393    71   THR       HA    H      4.46        .     1
+   394    71   THR       HB    H      3.87        .     1
+   395    71   THR       HG2   H      0.85        .     1
+   396    71   THR       H     H      8.20        .     1
+   397    72   PRO       HA    H      4.56        .     1
+   398    72   PRO       HB2   H      2.41        .     2
+   399    72   PRO       HB3   H      2.18        .     2
+   400    72   PRO       HD2   H      3.94        .     2
+   401    72   PRO       HD3   H      2.23        .     2
+   402    72   PRO       HG2   H      1.96        .     2
+   403    72   PRO       HG3   H      1.39        .     2
+   404    73   THR       HA    H      4.67        .     1
+   405    73   THR       HB    H      4.52        .     1
+   406    73   THR       HG2   H      1.30        .     1
+   407    73   THR       H     H      8.05        .     1
+   408    74   GLU       HA    H      4.20        .     1
+   409    74   GLU       HB2   H      2.07        .     2
+   410    74   GLU       HG2   H      2.34        .     2
+   411    74   GLU       HG3   H      2.27        .     2
+   412    74   GLU       H     H      9.07        .     1
+   413    75   LYS       HA    H      4.44        .     1
+   414    75   LYS       HB2   H      1.86        .     2
+   415    75   LYS       HB3   H      1.77        .     2
+   416    75   LYS       HD2   H      1.65        .     2
+   417    75   LYS       HE2   H      3.00        .     2
+   418    75   LYS       HG2   H      1.40        .     2
+   419    75   LYS       H     H      7.78        .     1
+   420    76   ASP       HA    H      5.12        .     1
+   421    76   ASP       HB2   H      2.81        .     2
+   422    76   ASP       HB3   H      2.15        .     2
+   423    76   ASP       H     H      7.11        .     1
+   424    77   GLU       HA    H      4.80        .     1
+   425    77   GLU       HB2   H      1.98        .     2
+   426    77   GLU       HB3   H      2.07        .     2
+   427    77   GLU       HG2   H      2.37        .     2
+   428    77   GLU       H     H      8.59        .     1
+   429    78   TYR       HA    H      5.59        .     1
+   430    78   TYR       HB2   H      2.80        .     1
+   431    78   TYR       HB3   H      2.72        .     1
+   432    78   TYR       HD1   H      7.09        .     3
+   433    78   TYR       HE1   H      6.87        .     3
+   434    78   TYR       H     H      9.46        .     1
+   435    79   ALA       HA    H      5.04        .     1
+   436    79   ALA       HB    H      1.19        .     1
+   437    79   ALA       H     H      8.78        .     1
+   438    80   CYS       HA    H      5.11        .     1
+   439    80   CYS       HB2   H      3.05        .     2
+   440    80   CYS       HB3   H      2.61        .     2
+   441    80   CYS       H     H      9.10        .     1
+   442    81   ARG       HA    H      5.39        .     1
+   443    81   ARG       HB2   H      1.80        .     2
+   444    81   ARG       HB3   H      1.17        .     2
+   445    81   ARG       HG2   H      1.30        .     2
+   446    81   ARG       HG3   H      1.22        .     2
+   447    81   ARG       H     H      9.39        .     1
+   448    82   VAL       HA    H      4.95        .     1
+   449    82   VAL       HB    H      1.64        .     1
+   450    82   VAL       HG1   H      0.79        .     2
+   451    82   VAL       HG2   H      0.58        .     2
+   452    82   VAL       H     H      9.02        .     1
+   453    83   ASN       HA    H      5.18        .     1
+   454    83   ASN       HB2   H      2.80        .     2
+   455    83   ASN       HB3   H      2.38        .     2
+   456    83   ASN       HD21  H      6.60        .     2
+   457    83   ASN       HD22  H      7.39        .     2
+   458    83   ASN       H     H      9.00        .     1
+   459    84   HIS       HA    H      4.56        .     1
+   460    84   HIS       HB2   H      2.90        .     2
+   461    84   HIS       HB3   H      2.42        .     2
+   462    84   HIS       HD2   H      7.56        .     1
+   463    84   HIS       HE1   H      8.10        .     1
+   464    84   HIS       H     H      7.73        .     1
+   465    85   VAL       HA    H      3.97        .     1
+   466    85   VAL       HB    H      1.97        .     1
+   467    85   VAL       HG1   H      0.60        .     1
+   468    85   VAL       HG2   H      0.86        .     1
+   469    85   VAL       H     H      8.01        .     1
+   470    86   THR       HA    H      4.15        .     1
+   471    86   THR       HB    H      4.50        .     1
+   472    86   THR       HG1   H      7.62        .     1
+   473    86   THR       HG2   H      1.47        .     1
+   474    86   THR       H     H      7.51        .     1
+   475    87   LEU       HA    H      4.76        .     1
+   476    87   LEU       HB2   H      2.02        .     1
+   477    87   LEU       HB3   H      1.82        .     1
+   478    87   LEU       HD1   H      0.95        .     2
+   479    87   LEU       HG    H      1.72        .     1
+   480    87   LEU       H     H      8.02        .     1
+   481    88   SER       HA    H      4.23        .     1
+   482    88   SER       HB2   H      3.94        .     2
+   483    89   GLN       HA    H      4.73        .     1
+   484    89   GLN       HB2   H      2.15        .     2
+   485    89   GLN       HB3   H      1.88        .     2
+   486    89   GLN       HG2   H      2.24        .     2
+   487    89   GLN       HG3   H      2.30        .     2
+   488    89   GLN       H     H      7.54        .     1
+   489    90   PRO       HA    H      4.49        .     1
+   490    90   PRO       HB2   H      1.82        .     1
+   491    90   PRO       HB3   H      1.49        .     1
+   492    90   PRO       HD2   H      3.71        .     2
+   493    90   PRO       HD3   H      3.51        .     2
+   494    90   PRO       HG2   H      1.99        .     2
+   495    90   PRO       HG3   H      1.77        .     2
+   496    91   LYS       HA    H      4.51        .     1
+   497    91   LYS       HB2   H      1.73        .     2
+   498    91   LYS       HB3   H      1.64        .     2
+   499    91   LYS       HG2   H      1.41        .     2
+   500    91   LYS       HG3   H      1.33        .     2
+   501    91   LYS       H     H      8.71        .     1
+   502    92   ILE       HA    H      4.78        .     1
+   503    92   ILE       HB    H      1.69        .     1
+   504    92   ILE       HD1   H      0.73        .     1
+   505    92   ILE       HG12  H      1.40        .     2
+   506    92   ILE       HG2   H      0.60        .     1
+   507    92   ILE       H     H      8.48        .     1
+   508    93   VAL       HA    H      4.31        .     1
+   509    93   VAL       HB    H      1.87        .     1
+   510    93   VAL       HG1   H      1.02        .     1
+   511    93   VAL       HG2   H      0.91        .     1
+   512    93   VAL       H     H      9.04        .     1
+   513    94   LYS       HA    H      4.44        .     1
+   514    94   LYS       HB2   H      1.84        .     2
+   515    94   LYS       HG2   H      1.53        .     2
+   516    94   LYS       HG3   H      1.42        .     2
+   517    94   LYS       H     H      8.77        .     1
+   518    95   TRP       HA    H      4.64        .     1
+   519    95   TRP       HB2   H      2.61        .     1
+   520    95   TRP       HB3   H      3.49        .     1
+   521    95   TRP       HD1   H      7.10        .     1
+   522    95   TRP       HE1   H     10.46        .     1
+   523    95   TRP       HE3   H      7.97        .     1
+   524    95   TRP       HH2   H      6.96        .     1
+   525    95   TRP       H     H      8.68        .     1
+   526    95   TRP       HZ2   H      7.63        .     1
+   527    95   TRP       HZ3   H      7.47        .     1
+   528    96   ASP       HA    H      4.48        .     1
+   529    96   ASP       HB2   H      2.75        .     2
+   530    96   ASP       HB3   H      2.46        .     2
+   531    96   ASP       H     H      8.42        .     1
+   532    97   ARG       HA    H      3.37        .     1
+   533    97   ARG       HB2   H      1.41        .     2
+   534    97   ARG       HB3   H      1.13        .     2
+   535    97   ARG       HD2   H      2.94        .     2
+   536    97   ARG       HG2   H      0.92        .     2
+   537    97   ARG       H     H      7.41        .     1
+   538    98   ASP       HA    H      4.64        .     1
+   539    98   ASP       HB2   H      2.77        .     2
+   540    98   ASP       HB3   H      2.60        .     2
+   541    98   ASP       H     H      8.18        .     1
+   542    99   MET       HA    H      4.28        .     1
+   543    99   MET       HB2   H      2.16        .     2
+   544    99   MET       HB3   H      2.02        .     2
+   545    99   MET       HG2   H      2.58        .     2
+   546    99   MET       HG3   H      2.52        .     2
+   547    99   MET       H     H      7.58        .     1
+
+   stop_
+
+save_
+
+
+    ########################
+    #  Coupling constants  #
+    ########################
+
+save_coupling_constant_set_1
+   _Saveframe_category          coupling_constants
+
+
+   loop_
+      _Sample_label
+
+      $sample_1 
+
+   stop_
+
+   _Sample_conditions_label    $sample_cond_1
+   _Spectrometer_frequency_1H   500.13
+   _Mol_system_component_name  "beta2-microglobulin"
+
+   loop_
+      _Coupling_constant_code
+      _Atom_one_residue_author_seq_code
+      _Atom_one_residue_seq_code
+      _Atom_one_residue_label
+      _Atom_one_name
+      _Atom_two_residue_author_seq_code
+      _Atom_two_residue_seq_code
+      _Atom_two_residue_label
+      _Atom_two_name
+      _Coupling_constant_value
+      _Coupling_constant_value_error
+
+       3JHNHA   3    2   GLN  H   3    2   GLN  HA  10.64  2.25 
+       3JHNHA   4    3   ARG  H   4    3   ARG  HA   9.85  2.52 
+       3JHNHA   5    4   THR  H   5    4   THR  HA   8.51  2.25 
+       3JHNHA   7    6   LYS  H   7    6   LYS  HA   9.95  2.25 
+       3JHNHA   8    7   ILE  H   8    7   ILE  HA  12.19  2.25 
+       3JHNHA  10    9   VAL  H  10    9   VAL  HA  10.10  2.25 
+       3JHNHA  11   10   TYR  H  11   10   TYR  HA   8.44  2.25 
+       3JHNHA  12   11   SER  H  12   11   SER  HA   7.50  2.25 
+       3JHNHA  13   12   ARG  H  13   12   ARG  HA   6.21  2.25 
+       3JHNHA  14   13   HIS  H  14   13   HIS  HA  10.10  2.25 
+       3JHNHA  17   16   GLU  H  17   16   GLU  HA   9.14  2.25 
+       3JHNHA  20   19   LYS  H  20   19   LYS  HA   6.98  2.25 
+       3JHNHA  21   20   SER  H  21   20   SER  HA   3.84  2.25 
+       3JHNHA  22   21   ASN  H  22   21   ASN  HA   8.59  2.25 
+       3JHNHA  23   22   PHE  H  23   22   PHE  HA  10.10  2.25 
+       3JHNHA  25   24   ASN  H  25   24   ASN  HA  10.10  2.25 
+       3JHNHA  26   25   CYS  H  26   25   CYS  HA  11.35  2.25 
+       3JHNHA  27   26   TYR  H  27   26   TYR  HA   8.89  2.25 
+       3JHNHA  28   27   VAL  H  28   27   VAL  HA  10.10  2.25 
+       3JHNHA  29   28   SER  H  29   28   SER  HA  13.21  2.25 
+       3JHNHA  31   30   PHE  H  31   30   PHE  HA  10.10  2.25 
+       3JHNHA  34   33   SER  H  34   33   SER  HA   7.09  2.25 
+       3JHNHA  35   34   ASP  H  35   34   ASP  HA   7.48  2.25 
+       3JHNHA  36   35   ILE  H  36   35   ILE  HA   7.49  2.25 
+       3JHNHA  37   36   GLU  H  37   36   GLU  HA   7.49  2.25 
+       3JHNHA  38   37   VAL  H  38   37   VAL  HA   9.62  2.25 
+       3JHNHA  39   38   ASP  H  39   38   ASP  HA   8.86  2.25 
+       3JHNHA  41   40   LEU  H  41   40   LEU  HA  11.03  2.25 
+       3JHNHA  43   42   ASN  H  43   42   ASN  HA   6.92  2.25 
+       3JHNHA  45   44   GLU  H  45   44   GLU  HA   8.63  2.25 
+       3JHNHA  46   45   ARG  H  46   45   ARG  HA   7.21  2.25 
+       3JHNHA  47   46   ILE  H  47   46   ILE  HA   9.85  2.25 
+       3JHNHA  48   47   GLU  H  48   47   GLU  HA   7.06  2.25 
+       3JHNHA  49   48   LYS  H  49   48   LYS  HA   8.37  2.25 
+       3JHNHA  50   49   VAL  H  50   49   VAL  HA   8.42  2.25 
+       3JHNHA  53   52   SER  H  53   52   SER  HA   7.13  2.25 
+       3JHNHA  56   55   SER  H  56   55   SER  HA  10.49  2.25 
+       3JHNHA  57   56   PHE  H  57   56   PHE  HA  13.06  2.25 
+       3JHNHA  60   59   ASP  H  60   59   ASP  HA   9.62  2.25 
+       3JHNHA  64   63   TYR  H  64   63   TYR  HA  13.20  2.25 
+       3JHNHA  66   65   LEU  H  66   65   LEU  HA  10.16  2.25 
+       3JHNHA  67   66   TYR  H  67   66   TYR  HA  10.10  2.25 
+       3JHNHA  68   67   TYR  H  68   67   TYR  HA   9.97  2.25 
+       3JHNHA  69   68   THR  H  69   68   THR  HA   8.18  2.25 
+       3JHNHA  70   69   GLU  H  70   69   GLU  HA   7.10  2.25 
+       3JHNHA  71   70   PHE  H  71   70   PHE  HA   7.75  2.25 
+       3JHNHA  72   71   THR  H  72   71   THR  HA  10.99  2.25 
+       3JHNHA  74   73   THR  H  74   73   THR  HA   9.23  2.25 
+       3JHNHA  76   75   LYS  H  76   75   LYS  HA   9.06  2.25 
+       3JHNHA  77   76   ASP  H  77   76   ASP  HA   8.14  2.25 
+       3JHNHA  78   77   GLU  H  78   77   GLU  HA   9.95  2.25 
+       3JHNHA  79   78   TYR  H  79   78   TYR  HA  10.10  2.25 
+       3JHNHA  80   79   ALA  H  80   79   ALA  HA   8.15  2.25 
+       3JHNHA  81   80   CYS  H  81   80   CYS  HA  11.25  2.25 
+       3JHNHA  82   81   ARG  H  82   81   ARG  HA  10.10  2.25 
+       3JHNHA  84   83   ASN  H  84   83   ASN  HA  10.10  2.25 
+       3JHNHA  85   84   HIS  H  85   84   HIS  HA   6.35  2.25 
+       3JHNHA  86   85   VAL  H  86   85   VAL  HA   5.97  2.25 
+       3JHNHA  87   86   THR  H  87   86   THR  HA   9.22  2.25 
+       3JHNHA  88   87   LEU  H  88   87   LEU  HA   8.18  2.25 
+       3JHNHA  90   89   GLN  H  90   89   GLN  HA   6.59  2.25 
+       3JHNHA  92   91   LYS  H  92   91   LYS  HA   9.18  2.25 
+       3JHNHA  93   92   ILE  H  93   92   ILE  HA  10.02  2.25 
+       3JHNHA  94   93   VAL  H  94   93   VAL  HA   8.99  2.25 
+       3JHNHA  95   94   LYS  H  95   94   LYS  HA   6.77  2.25 
+       3JHNHA  98   97   ARG  H  98   97   ARG  HA   6.23  2.25 
+
+   stop_
+
+save_
+
