@@ -23,14 +23,6 @@ with open(config_path, 'r') as f:
     config = json.load(f)
 
 def predict_from_seq(protein_sequence, result_file):
-        print("Starting prediction...")
-        # 你的代码逻辑
-        # 在关键步骤添加打印信息
-        print("Loading model...")
-        # 加载模型代码
-        print("Model loaded.")
-        # 其他代码逻辑
-        print("Prediction completed.")
         cs_df = {'HA':[], 'H':[], 'N':[], 'CA':[], 'CB':[], 'C':[]}
         model_path = config['model_paths']['esm_model']
         # model_path = ".\\esm_ckpt\\esm2_t33_650M_UR50D.pt"
