@@ -14,11 +14,9 @@ import numpy as np
 
 seed = 42
 torch.manual_seed(seed)
-# 为CPU设置随机种子
 torch.cuda.manual_seed(seed)
-# 为当前GPU设置随机种子
 torch.cuda.manual_seed_all(seed)
-# if you are using multi-GPU，为所有GPU设置随机种子
+# if you are using multi-GPU, you can use torch.cuda.manual_seed_all(seed) to set all seeds.
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
 
