@@ -15,7 +15,7 @@ model.eval()
 
 if __name__ == '__main__':
     # ----------------------------------------------------------------------------------------------------
-    '''这段程序用于产生shiftx中训练集的tensordataset'''
+    '''this program is used to create a tensordataset based on the esm-2'''
     from utils import extract_protein_sequence, refdb_find_shift, refdb_get_cs_seq, refdb_get_shift_re
     from pdb_bmrb_ali import align_bmrb_pdb
     import os
@@ -42,12 +42,12 @@ if __name__ == '__main__':
                     token_representations = results["representations"][33]
                     embedding = token_representations[:, 1:-1, :].squeeze()
                     embedding = torch.nn.functional.pad(embedding, (0, 0, 0, 512 - embedding.shape[0]))
-                    # 将res*1280大小的tensor padding到512*1280的大小
+                    # padding the size of tensor from "res*1280" to 512*1280
                     label = torch.tensor(shift[i])
                     padding_mask = torch.zeros(512).bool()
                     padding_mask[:label.shape[0]] = True
                     label = torch.nn.functional.pad(label, (0, 512-label.shape[0]))
-                    # 将大小为res的tensor padding到512的大小
+                    # padding the size of tensor from "res" to 512
                     mask = torch.tensor(mask[i])
                     mask = torch.nn.functional.pad(mask, (0, 512-mask.shape[0]), value=False)
                     if not torch.all(mask.eq(False)):
@@ -59,6 +59,5 @@ if __name__ == '__main__':
         all_label = all_label[1:, :]
         all_mask = all_mask[1:, :]
         all_padding_mask = all_padding_mask[1:, :]
-        # 去除第一个初始化的空张量
         dataset = TensorDataset(all_esm_vec, all_label, all_mask, all_padding_mask)
         torch.save(dataset, "your/path/to/dataset/")
