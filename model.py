@@ -35,7 +35,6 @@ class PositionalEncoder(nn.Module):
                 pe[pos, i + 1] = \
                     math.cos(pos / (10000 ** ((2 * (i + 1)) / d_model)))
         pe = pe.unsqueeze(0)
-        # 测试时因为batchsize为1，需将此行注释掉
         self.register_buffer('pe', pe)
 
     def forward(self, x):
@@ -73,7 +72,6 @@ def attention(q, k, v, d_k, mask=None, dropout=None):
         # mask = mask.unsqueeze(1)
         mask = mask.unsqueeze(1).unsqueeze(2)
         scores = scores.masked_fill(mask == 0, -1e9)
-        # mask为一个输入的tensor，大小与scores相同，其中为零或者为False的位置将scores中对应位置替换为大负数
 
     scores = F.softmax(scores, dim=-1)
 
@@ -159,10 +157,8 @@ class Encoder(nn.Module):
         super().__init__()
         self.N = N
         self.Linear0 = nn.Linear(vocab_size, d_model)
-        # 将输入转为512的维度
         self.pe = PositionalEncoder(d_model, dropout=dropout)
         self.layers = get_clones(EncoderLayer(d_model, heads, dropout), N)
-        # N即为模型包含N层encoder
         self.norm = Norm(d_model)
     def forward(self, src, mask):
         x = self.Linear0(src)
@@ -174,7 +170,6 @@ class Encoder(nn.Module):
 
 class uncertainty_encoder(nn.Module):
     def __init__(self, word_vec, d_model, N, heads, dropout):
-        # 输入的word_vec会经过一个embedding层后转为d_model的维度
         super().__init__()
         self.encoder = Encoder(word_vec, d_model, N, heads, dropout)
         self.out = nn.Linear(d_model, 1)
@@ -187,10 +182,8 @@ class uncertainty_encoder(nn.Module):
 
 
 def create_target_mask(padding_mask):
-    '''输入paddingmask,例如大小为res*1，输出一个res*res的mask'''
     target_size = padding_mask.shape[1]
     batchsize = padding_mask.shape[0]
-    # 创建一个下三角矩阵，它将用作前瞻遮罩
     look_ahead_mask = torch.tril(torch.ones(batchsize, target_size, target_size)) == 0
     target_mask = look_ahead_mask | ~padding_mask.unsqueeze(1)
     return ~target_mask
@@ -199,7 +192,6 @@ class Encoder1(nn.Module):
     def __init__(self,d_vec, d_model, heads, dropout):
         super().__init__()
         self.Linear0 = nn.Linear(d_vec, d_model)
-        # 将输入转为512的维度
         self.pe = PositionalEncoder(d_model, dropout=dropout)
         self.norm_1 = Norm(d_model)
         self.norm_2 = Norm(d_model)
