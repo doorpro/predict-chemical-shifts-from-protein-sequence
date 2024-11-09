@@ -13,26 +13,29 @@ model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
 batch_converter = alphabet.get_batch_converter()
 model.eval()
 
+atom_type = "" #[CA,CB,C,N,H,HA]
+
+
 if __name__ == '__main__':
     # ----------------------------------------------------------------------------------------------------
     '''this program is used to create a tensordataset based on the esm-2'''
     from utils import extract_protein_sequence, refdb_find_shift, refdb_get_cs_seq, refdb_get_shift_re
-    from pdb_bmrb_ali import align_bmrb_pdb
+    from utils import align_bmrb_pdb
     import os
 
-    nmr_test = "F:\\nmrprediction\\CSpre\\dataset\\nmr_structure"
+    refdb = "\dateset\RefDB_test_remove"
     all_esm_vec = torch.zeros(1, 512, 1280)
     all_label = torch.zeros((1, 512))
     all_mask = torch.zeros((1, 512)).bool()
     all_padding_mask = torch.zeros((1, 512)).bool()
-    for root, directories, files in os.walk(nmr_test):
+    for root, directories, files in os.walk(refdb):
         for file in files:
             file_path =str(file.split(".")[0])
             bmrb_seq_list = extract_protein_sequence(file_path)
             s, e = refdb_find_shift(file_path)
             cs_seq = refdb_get_cs_seq(file_path, s, e)
             matched = align_bmrb_pdb(bmrb_seq, cs_seq)
-            shift, mask = refdb_get_shift_re(file_path, s, e, bmrb_seq, matched)
+            shift, mask = refdb_get_shift_re(file_path, s, e, bmrb_seq, matched, atom_type)
             for i, bmrb_seq in enumerate(bmrb_seq_list):
                 if '_' not in bmrb_seq and 0<len(bmrb_seq) < 512:
                     data = [("protein1", bmrb_seq_list[i])]
