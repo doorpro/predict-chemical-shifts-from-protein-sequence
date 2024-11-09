@@ -6,7 +6,7 @@ coding:utf-8
 '''
 import math
 import torch
-from torch.utils.data import TensorDataset, DataLoader, ConcatDataset
+from torch.utils.data import DataLoader
 from model import regression
 from torch.utils.data import random_split
 import argparse
@@ -37,10 +37,8 @@ parser.add_argument('-p', '--path', type=str, default='/mnt/DATA1/zhuhe/CSpre/MY
 parser.add_argument('--device', type=str, default="cuda:0", help='learning rate')
 args = parser.parse_args()
 
-def main(data, shiftxtest):
-    # model = uncertainty_encoder(args.d_vec, args.d_model, args.N, args.n_head, args.dropout)
+def main(data):
     model = regression(args.d_vec, args.d_model, args.n_head, args.dropout)
-    # model = LinearModel(1280, 1)
     device = torch.device(args.device)
     train_loss_all = []
     val_loss_all = []
@@ -127,4 +125,5 @@ def main(data, shiftxtest):
             best_acc = val_loss
 
 if __name__ == '__main__':
+    data = np.load("path/to/refdb_", allow_pickle=True)
     print(True)
