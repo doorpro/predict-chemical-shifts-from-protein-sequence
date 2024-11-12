@@ -15,20 +15,12 @@ model.eval()
 
 atom_type = "" #[CA,CB,C,N,H,HA]
 
-
-if __name__ == '__main__':
-    # ----------------------------------------------------------------------------------------------------
-    '''this program is used to create a tensordataset based on the esm-2'''
-    from utils import extract_protein_sequence, refdb_find_shift, refdb_get_cs_seq, refdb_get_shift_re
-    from utils import align_bmrb_pdb
-    import os
-
-    refdb = "\dateset\RefDB_test_remove"
+def main(refdb_path, save_path):
     all_esm_vec = torch.zeros(1, 512, 1280)
     all_label = torch.zeros((1, 512))
     all_mask = torch.zeros((1, 512)).bool()
     all_padding_mask = torch.zeros((1, 512)).bool()
-    for root, directories, files in os.walk(refdb):
+    for root, directories, files in os.walk(refdb_path):
         for file in files:
             file_path =str(file.split(".")[0])
             bmrb_seq_list = extract_protein_sequence(file_path)
@@ -64,3 +56,17 @@ if __name__ == '__main__':
         all_padding_mask = all_padding_mask[1:, :]
         dataset = TensorDataset(all_esm_vec, all_label, all_mask, all_padding_mask)
         torch.save(dataset, "your/path/to/dataset/")
+
+
+if __name__ == '__main__':
+    # ----------------------------------------------------------------------------------------------------
+    '''this program is used to create a tensordataset based on the esm-2'''
+    from utils import extract_protein_sequence, refdb_find_shift, refdb_get_cs_seq, refdb_get_shift_re
+    from utils import align_bmrb_pdb
+    import os
+
+    refdb = "\dateset\RefDB_test_remove"
+    save_path = "your/path/to/dataset/"
+    main(refdb, save_path)
+
+
