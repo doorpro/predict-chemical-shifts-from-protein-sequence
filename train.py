@@ -30,19 +30,20 @@ parser.add_argument('--d_model', type=int, default=512, help='qkv d-model dimens
 parser.add_argument('--d_vec', type=int, default=1280, help='amino embedding dimension')
 parser.add_argument('--n_head', type=int, default=8, help='number of attention heads')
 parser.add_argument('--shuffle', type=bool, default=False, help='shuffle dataset')
-parser.add_argument('--epoch', type=int, default=5000, help='epoch time')
-parser.add_argument('--lr', type=float, default=0.02, help='learning rate')
-parser.add_argument('-p', '--path', type=str, default='/mnt/DATA1/zhuhe/CSpre/MYdata/best_model_all.pth',
-                        help='the path of file saving [default: ./save]')
+parser.add_argument('--epoch', type=int, default=20000, help='epoch time')
+parser.add_argument('--lr', type=float, default=5e-4, help='learning rate')
 parser.add_argument('--device', type=str, default="cuda:0", help='learning rate')
 args = parser.parse_args()
 
-def main(data):
+def main(data, save_path):
     model = regression(args.d_vec, args.d_model, args.n_head, args.dropout)
     device = torch.device(args.device)
     train_loss_all = []
     val_loss_all = []
-    optimizer = torch.optim.SGD(model.parameters(), lr=args.lr)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, betas=(0.9, 0.99), eps=1e-8,
+                                   weight_decay=0)
+    # optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    optimizer.zero_grad()
     loss_func = torch.nn.MSELoss()
     model.to(device)
     def init_weights1(model):
@@ -114,7 +115,7 @@ def main(data):
         val_loss_all.append(val_loss)
 
         if val_loss<best_acc:
-            sp = args.path
+            sp = save_path + f"epoch{epoch}_val{val_loss:.3f}.pth"
             state = {
                 "epoch": epoch,
                 "accuracy": val_loss,
@@ -126,4 +127,5 @@ def main(data):
 
 if __name__ == '__main__':
     data = np.load("path/to/refdb_", allow_pickle=True)
-    print(True)
+    save_path = "path/to/save"
+    main(data, save_path)
