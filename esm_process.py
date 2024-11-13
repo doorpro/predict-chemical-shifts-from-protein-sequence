@@ -13,7 +13,6 @@ model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
 batch_converter = alphabet.get_batch_converter()
 model.eval()
 
-atom_type = "" #[CA,CB,C,N,H,HA]
 
 def main(refdb_path, save_path):
     all_esm_vec = torch.zeros(1, 512, 1280)
@@ -64,9 +63,10 @@ if __name__ == '__main__':
     from utils import extract_protein_sequence, refdb_find_shift, refdb_get_cs_seq, refdb_get_shift_re
     from utils import align_bmrb_pdb
     import os
-
+    atom_types = ["CA","CB","C","N","H","HA"]
     refdb = "\dateset\RefDB_test_remove"
     save_path = "your/path/to/dataset/"
-    main(refdb, save_path)
+    for atom_type in atom_types:
+        main(refdb, save_path, atom_type)
 
 
