@@ -8,11 +8,10 @@ import torch
 import esm
 from torch.utils.data import TensorDataset
 
-model_path = "F:\\.cache\\torch\\hub\\checkpoints\\esm2_t33_650M_UR50D.pt"
-model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
+model, alphabet = esm.pretrained.esm2_t33_650M_UR50D()
 batch_converter = alphabet.get_batch_converter()
 model.eval()
-
+'''In the data processing process, the esm model is used in advance to convert the sequence to embedding'''
 
 def main(refdb_path, save_path):
     all_esm_vec = torch.zeros(1, 512, 1280)

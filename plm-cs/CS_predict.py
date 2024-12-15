@@ -68,13 +68,16 @@ def main():
     parser.add_argument('--result_file', type=str, default='./result/new.csv', help='Output CSV file for results')
     args = parser.parse_args()
     
+    if not args.sequence.isalpha():
+        raise ValueError("Protein Sequence formatting error")
+
     try:
         predict_from_seq(args.sequence, args.result_file)
     except Exception as e:
         print(f"An error occurred: {e}")
         traceback.print_exc()
-        with open("error.log", "w") as f:
-            f.write(str(e))
+        # with open("error.log", "w") as f:
+        #     f.write(str(e))
 
 if __name__ == '__main__':
     main()

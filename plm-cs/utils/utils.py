@@ -74,7 +74,7 @@ def refdb_find_shift(file):
     return start_line, end_line
 
 
-def refdb_get_shift(file, s, e, bmrb_seq):
+def refdb_get_shift(file, s, e, bmrb_seq, atom_type):
     res = len(bmrb_seq)
     shift = torch.zeros(res)
     mask = torch.zeros(res).bool()
@@ -84,7 +84,7 @@ def refdb_get_shift(file, s, e, bmrb_seq):
                 res_id = line.split()[1]
                 cs = line.split()[5]
                 atom = line.split()[3]
-                if atom == "HA":
+                if atom == atom_type:
                     shift[int(res_id) - 1] = float(cs)
                     mask[int(res_id) - 1] = True
     return shift, mask
