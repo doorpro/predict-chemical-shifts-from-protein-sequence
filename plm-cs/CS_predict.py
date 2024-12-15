@@ -24,9 +24,10 @@ with open(config_path, 'r') as f:
 
 def predict_from_seq(protein_sequence, result_file):
         cs_df = {'HA':[], 'H':[], 'N':[], 'CA':[], 'CB':[], 'C':[]}
-        model_path = config['model_paths']['esm_model']
+        # model_path = config['model_paths']['esm_model']
         # model_path = ".\\esm_ckpt\\esm2_t33_650M_UR50D.pt"
-        model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
+        # model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
+        model, alphabet = esm.pretrained.esm2_t33_650M_UR50D()
         # Load ESM-2 650m model
 
         batch_converter = alphabet.get_batch_converter()
