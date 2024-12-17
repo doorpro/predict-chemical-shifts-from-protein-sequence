@@ -13,7 +13,7 @@ batch_converter = alphabet.get_batch_converter()
 model.eval()
 '''In the data processing process, the esm model is used in advance to convert the sequence to embedding'''
 
-def main(refdb_path, save_path):
+def main(refdb_path, save_path, atom_type):
     all_esm_vec = torch.zeros(1, 512, 1280)
     all_label = torch.zeros((1, 512))
     all_mask = torch.zeros((1, 512)).bool()

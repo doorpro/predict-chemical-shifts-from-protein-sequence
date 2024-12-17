@@ -8,9 +8,9 @@ import torch
 from pynmrstar import Entry
 import copy
 
-def extract_protein_sequence(entry):
+def extract_protein_sequence(file_path):
     '''read protein sequences from nmrstar'''
-    nmrstar_file = 'F:\\nmrprediction\\CSpre\\dataset\\all_bmrb\\' + str(entry) + '.str'
+    nmrstar_file = file_path
     entry = Entry.from_file(nmrstar_file)
     amino_list = ['ALA','ARG','ASN','ASP','CYS','GLN','GLU','GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER','THR','TRP','TYR','VAL','U']
     amino_list2 = ['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W','Y','V','U']
@@ -145,6 +145,22 @@ def refdb_get_cs_seq(file_path, s, e):
     with open(file_path, encoding='utf-8') as entry:
         for i, line in enumerate(entry):
             if s < i < e:
+                res = line.split()[2]
+                res_id = int(line.split()[1])
+                res = aa(res)
+                if res_id != start_resid:
+                    cs_seq += res
+                    start_resid = res_id
+                    res_num += 1
+    return cs_seq
+
+def shiftx_get_cs_seq(file_path, s, e):
+    cs_seq = ""
+    start_resid = 99999
+    res_num = -1
+    with open(file_path, encoding='utf-8') as entry:
+        for i, line in enumerate(entry):
+            if s < i < e:
                 res = line.split()[3]
                 res_id = int(line.split()[2])
                 res = aa(res)
@@ -155,6 +171,34 @@ def refdb_get_cs_seq(file_path, s, e):
     return cs_seq
 
 def refdb_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
+    res = len(bmrb_seq)
+    shift = torch.zeros(res)
+    mask = torch.zeros(res).bool()
+    res_num = -1
+    start_res_num = 99999
+    with open(file, encoding='utf-8') as entry:
+        for i, line in enumerate(entry):
+            if s < i < e:
+                res_id = int(line.split()[1])
+                if res_id != start_res_num:
+                    start_res_num = res_id
+                    res_num += 1
+                cs = line.split()[5]
+                atom = line.split()[3]
+                if atom_type == "HA":
+                    if "HA" in atom and res_num < len(matched):
+                        if type(matched[res_num]) == type(9):
+                            shift[int(matched[res_num])] = float(cs)
+                            mask[int(matched[res_num])] = True
+                else:
+                    if atom == atom_type and res_num < len(matched):
+                    # if "HA" in atom and res_num < len(matched):
+                        if type(matched[res_num]) == type(9):
+                            shift[int(matched[res_num])] = float(cs)
+                            mask[int(matched[res_num])] = True
+    return shift, mask
+
+def shiftx_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
     res = len(bmrb_seq)
     shift = torch.zeros(res)
     mask = torch.zeros(res).bool()
@@ -182,12 +226,12 @@ def refdb_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
                             mask[int(matched[res_num])] = True
     return shift, mask
 
-def get_shifts(entry, atom_type, bmrb_seq_list):
+def get_shifts(file_path, atom_type, bmrb_seq_list):
     entity_num = len(bmrb_seq_list)
     shift_list_all = [0 for i in range(entity_num)]
     mask_all = [0 for i in range(entity_num)]
     entry = Entry.from_file(
-        'F:\\nmrprediction\\CSpre\\dataset\\all_bmrb\\' + str(entry) + '.str')
+        file_path)
     chem_shifts = entry.get_loops_by_category('Atom_chem_shift')
     for entity in range(entity_num):
         shift_list = [0 for i in range(len(bmrb_seq_list[entity]))]
@@ -201,12 +245,12 @@ def get_shifts(entry, atom_type, bmrb_seq_list):
         mask_all[entity] = mask
     return shift_list_all, mask_all
 
-def get_HA_shifts(entry, atom_type, bmrb_seq_list):
+def get_HA_shifts(file_path, atom_type, bmrb_seq_list):
     entity_num = len(bmrb_seq_list)
     shift_list_all = [0 for i in range(entity_num)]
     mask_all = [0 for i in range(entity_num)]
     entry = Entry.from_file(
-        'F:\\nmrprediction\\CSpre\\dataset\\all_bmrb\\' + str(entry) + '.str')
+        file_path)
     chem_shifts = entry.get_loops_by_category('Atom_chem_shift')
     for entity in range(entity_num):
         shift_list = [0 for i in range(len(bmrb_seq_list[entity]))]
