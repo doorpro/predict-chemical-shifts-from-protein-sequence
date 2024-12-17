@@ -23,8 +23,13 @@ setup(
     },
     install_requires=[
         'pandas',
-        'torch >= 2.0.0',
-        'esm >= 3.0.3',
+        'torch = 2.5.0',
+        'torchaudio = 2.5.0',
+        'torchvision = 0.20.0',
+        'fair-esm = 2.0.0',
+        'numpy = 2.1.2',
+        'biopython = 1.84',
+        'pandas = 2.2.3'
     ],
     classifiers = [
         "Programming Language :: Python :: 3",
