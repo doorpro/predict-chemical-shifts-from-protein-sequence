@@ -13,6 +13,24 @@ batch_converter = alphabet.get_batch_converter()
 model.eval()
 '''In the data processing process, the esm model is used in advance to convert the sequence to embedding'''
 
+def esm_process(protein_sequence, chemical_shifts, mask):
+    data = [("protein1", protein_sequence)]
+    batch_labels, batch_strs, batch_tokens = batch_converter(data)
+    with torch.no_grad():
+        results = model(batch_tokens, repr_layers=[33], return_contacts=True)
+    token_representations = results["representations"][33]
+    embedding = token_representations[:, 1:-1, :].squeeze()
+    esm_vec = torch.nn.functional.pad(embedding, (0, 0, 0, 512 - embedding.shape[0]))
+    # padding the size of tensor from "res*1280" to 512*1280
+    mask = torch.tensor(mask)
+    mask = torch.nn.functional.pad(mask, (0, 512-mask.shape[0]), value=False)
+    label = torch.tensor(chemical_shifts)
+    label = torch.nn.functional.pad(label, (0, 512-label.shape[0]))
+    padding_mask = torch.zeros(512).bool()
+    padding_mask[:len(protein_sequence)] = True
+    padding_mask = padding_mask.unsqueeze(0)
+    return esm_vec, label, mask, padding_mask
+
 def main(refdb_path, save_path, atom_type):
     all_esm_vec = torch.zeros(1, 512, 1280)
     all_label = torch.zeros((1, 512))

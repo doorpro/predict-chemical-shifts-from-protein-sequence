@@ -7,7 +7,7 @@
 # @File : CS_predict.py
 # @desc:
 import torch
-from model import PLM_CS
+from plm_cs.model import PLM_CS
 import esm
 import pandas as pd
 import os
@@ -15,12 +15,24 @@ import argparse
 import traceback
 import json
 
-current_file_directory = os.path.dirname(os.path.abspath(__file__))
-os.chdir(current_file_directory)
-# change the current directory to the directory of this file
-config_path = os.path.join(current_file_directory, 'config.json')
-with open(config_path, 'r') as f:
-    config = json.load(f)
+# current_file_directory = os.path.dirname(os.path.abspath(__file__))
+# # os.chdir(current_file_directory)
+# config_path = os.path.join(current_file_directory, 'config.json')
+# with open(config_path, 'r') as f:
+#     config = json.load(f)
+
+config = {
+    "model_paths": {
+        "reg_HA": "./plm_cs/ckpt/model_ckpt/reg_ha.pth",
+        "reg_H": "./plm_cs/ckpt/model_ckpt/reg_h.pth",
+        "reg_N": "./plm_cs/ckpt/model_ckpt/reg_n.pth",
+        "reg_CA": "./plm_cs/ckpt/model_ckpt/reg_ca.pth",
+        "reg_CB": "./plm_cs/ckpt/model_ckpt/reg_cb.pth",
+        "reg_C": "./plm_cs/ckpt/model_ckpt/reg_c.pth"
+    }
+}
+
+amino_acids = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', 'X']
 
 def predict_from_seq(protein_sequence, result_file):
         cs_df = {'HA':[], 'H':[], 'N':[], 'CA':[], 'CB':[], 'C':[]}
@@ -49,7 +61,7 @@ def predict_from_seq(protein_sequence, result_file):
 
         for atom in ['HA', 'H', 'N', 'CA', 'CB', 'C']:
             model.load_state_dict(
-                torch.load(config['model_paths'][f'reg_{atom}'], map_location=torch.device('cpu')))
+                torch.load(config['model_paths'][f'reg_{atom}'], map_location=torch.device('cpu'), weights_only=True))
             # load the model
             model.eval()
             out = model(embedding.unsqueeze(0), padding_mask)
@@ -61,7 +73,7 @@ def predict_from_seq(protein_sequence, result_file):
         cs_df = pd.DataFrame(cs_df)   
         cs_df.to_csv(result_file, index=False)
         
-        print("The chemical shifts of the protein sequence have been saved in the result folder.")
+        print("The chemical shifts of the protein sequence have been saved in the result folder:"+result_file)
 
 def main():
     parser = argparse.ArgumentParser(description="Predict chemical shifts from protein sequence.")
@@ -69,9 +81,12 @@ def main():
     parser.add_argument('--result_file', type=str, default='./result/new.csv', help='Output CSV file for results')
     args = parser.parse_args()
     
+
+    args.sequence = args.sequence.upper()
     if not args.sequence.isalpha():
         raise ValueError("Protein Sequence formatting error")
-
+    if  [char for char in args.sequence if char not in amino_acids]:
+        raise ValueError("Protein Sequence contains invalid characters, it is recommended to use X to replace unknown amino acids")
     try:
         predict_from_seq(args.sequence, args.result_file)
     except Exception as e:
