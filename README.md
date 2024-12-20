@@ -31,7 +31,8 @@ If you want to train your own PLM-CS model, this repository provides all the too
     'fair-esm == 2.0.0',
     'numpy == 2.1.2',
     'biopython == 1.84',
-    'pandas == 2.2.3'
+    'pandas == 2.2.3',
+    'pynmrstar == 3.3.4'
 ### Train with RefDB dataset
 If you want to train with the data we provide and get the results in the paper, all the processes are already provided in the ipynb file [train_your_model](./train_your_model.ipynb).
 
