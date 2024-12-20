@@ -4,7 +4,7 @@ The github repository address of the project: https://github.com/doorpro/predict
 If you have any comments or questions, email the author: 2260913071@qq.com
 
 
-![image](https://github.com/doorpro/predict-chemical-shifts-from-protein-sequence/blob/main/image/image1.png)
+![image](https://github.com/doorpro/predict-chemical-shifts-from-protein-sequence/blob/main/image/image1.png "PLM-CS")
 
 ## File introduction in the project
 [af_pdb](./af_pdb/) deposit the protein structures in the *solution_nmr test set*  
