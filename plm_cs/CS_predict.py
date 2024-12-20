@@ -1,11 +1,12 @@
-#!/usr/bin/env python
-# -*- coding = utf-8 -*-
-# @Time : 2024/8/7 20:24
-# @Author : ZhuHe
-# @File : LinearModel.py
-# @Software : PyCharm
-# @File : CS_predict.py
-# @desc:
+'''
+!/usr/bin/env python
+-*- coding = utf-8 -*-
+@Time : 2024/8/7 20:24
+@Author : ZhuHe
+@File : LinearModel.py
+@Software : PyCharm
+@File : CS_predict.py
+'''
 import torch
 from plm_cs.model import PLM_CS
 import esm

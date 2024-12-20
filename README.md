@@ -20,10 +20,7 @@ If you have any comments or questions, email the author: 2260913071@qq.com
  [train](./train.py) provides scripts for training the model if you want to train the model with your own data.
  [utils](./utils.py) provides tools for extract protein sequences and chemical shifts from various types of file.
 
-
-## Train your model
-If you want to train your own PLM-CS model, this repository provides all the tools and data.
-
+### Use PLM-CS through python SDK
 #### Requirement
     'torch == 2.5.0',
     'torchaudio == 2.5.0',
@@ -31,8 +28,31 @@ If you want to train your own PLM-CS model, this repository provides all the too
     'fair-esm == 2.0.0',
     'numpy == 2.1.2',
     'biopython == 1.84',
-    'pandas == 2.2.3',
-    'pynmrstar == 3.3.4'
+    'pandas == 2.2.3'
+
+#### Install with pip
+```python
+pip install plm-cs
+```
+
+#### Or install after git clone
+After cloning the complete project file locally, run the following command in the folder containing setup.py
+```python
+pip install .
+```
+
+#### Use plm-cs
+Using commands similar to the one below, enter the protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
+```python
+plm-cs YOURSEQUENCE -your_save_path
+```
+Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
+
+You can simply check by: ```plm-cs AAAA```
+
+## Train your model
+If you want to train your own PLM-CS model, this repository provides all the tools and data.
+
 ### Train with RefDB dataset
 If you want to train with the data we provide and get the results in the paper, all the processes are already provided in the ipynb file [train_your_model](./train_your_model.ipynb).
 
@@ -53,24 +73,7 @@ For convenience, the reasoning process of the ESM model is separate from the tra
 dataset = TensorDataset(all_esm_vec, all_label, all_mask, all_padding_mask)
 ```
 The final dimension of each parameter should be:
-*n&#215;512&#215;1280*, *n&#215;512&#215;1*, *n&#215;512&#215;1*, *n&#215;512&#215;1*. *n* refers to the number of sequences.
+*b&#215;512&#215;1280*, *b&#215;512&#215;1*, *b&#215;512&#215;1*, *b&#215;512&#215;1*
 
 #### Train
-Modify the path in the [train.py](./train.py) to your own path. Also, be aware that this can only train a model of one type of atom at a time.
-### Use PLM-CS through python SDK
-#### Install with pip
-```python
-pip install plm-cs
-```
-
-#### Or install after git clone
-After cloning the complete project file locally, run the following command in the folder containing setup.py
-```python
-pip install .
-```
-#### Use plm-cs
-Using commands similar to the one below, enter the protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
-```python
-plm-cs YOURSEQUENCE -your_save_path
-```
-Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
+Modify the path in the [train.py](./train.py) to your own parh. Also, be aware that this can only train a model of one type of atom at a time.

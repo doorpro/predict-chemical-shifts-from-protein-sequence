@@ -2,7 +2,7 @@
 coding:utf-8
 @software:
 @Time:2024/7/30 22:15
-@Author:door
+@Author:zhuhe
 '''
 import torch
 import torch.nn as nn
@@ -131,55 +131,6 @@ class FeedForward(nn.Module):
         x = self.dropout(F.relu(self.linear_1(x)))
         x = self.linear_2(x)
         return x
-
-class EncoderLayer(nn.Module):
-    def __init__(self, d_model, heads, dropout=0.1):
-        super().__init__()
-        self.norm_1 = Norm(d_model)
-        self.norm_2 = Norm(d_model)
-        self.attn = MultiHeadAttention(heads, d_model, dropout=dropout)
-        self.ff = FeedForward(d_model, 2048, dropout=dropout)
-        self.dropout_1 = nn.Dropout(dropout)
-        self.dropout_2 = nn.Dropout(dropout)
-
-    def forward(self, x, mask):
-        x2 = self.norm_1(x)
-        x = x + self.dropout_1(self.attn(x2, x2, x2, mask))
-        x2 = self.norm_2(x)
-        x = x + self.dropout_2(self.ff(x2))
-        return x
-
-def get_clones(module, N):
-    return nn.ModuleList([copy.deepcopy(module) for i in range(N)])
-
-class Encoder(nn.Module):
-    def __init__(self, vocab_size, d_model, N, heads, dropout):
-        super().__init__()
-        self.N = N
-        self.Linear0 = nn.Linear(vocab_size, d_model)
-        self.pe = PositionalEncoder(d_model, dropout=dropout)
-        self.layers = get_clones(EncoderLayer(d_model, heads, dropout), N)
-        self.norm = Norm(d_model)
-    def forward(self, src, mask):
-        x = self.Linear0(src)
-        x = self.pe(x)
-        for i in range(self.N):
-            x = self.layers[i](x, mask)
-        return self.norm(x)
-
-
-class uncertainty_encoder(nn.Module):
-    def __init__(self, word_vec, d_model, N, heads, dropout):
-        super().__init__()
-        self.encoder = Encoder(word_vec, d_model, N, heads, dropout)
-        self.out = nn.Linear(d_model, 1)
-        self.sigma = nn.Linear(d_model, 1)
-    def forward(self, word_vec, padding_mask):
-        e_outputs = self.encoder(word_vec, padding_mask)
-        cs = self.out(e_outputs)
-        log_sigma = self.sigma(e_outputs)
-        return cs, log_sigma
-
 
 def create_target_mask(padding_mask):
     target_size = padding_mask.shape[1]

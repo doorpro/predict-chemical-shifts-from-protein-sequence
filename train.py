@@ -2,7 +2,7 @@
 coding:utf-8
 @software:
 @Time:2024/7/31 1:15
-@Author:door
+@Author:zhuhe
 '''
 import math
 import torch
