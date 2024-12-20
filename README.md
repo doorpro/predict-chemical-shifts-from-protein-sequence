@@ -5,6 +5,22 @@ If you have any comments or questions, email the author: 2260913071@qq.com
 
 
 ![image](/image/image1.png)
+
+## File introduction in the project
+[af_pdb](./af_pdb/) deposit the protein structures in the *solution_nmr test set*  
+[af_result_csv](./af_result_csv/) deposit the csv files of the protein in *solution_nmr test set* predicted by PLM-CS  
+[dataset](./dataset/) deposit all the dataset include the train set(RefDB) and two test set. The processed tensordataset are also included.  
+ [plm_cs](./plm_cs/) Inside the folder are installable plm-cs python sdk.  
+ [result](./result/) This folder is the default save path of prediction result.  
+ [esm_process](./esm_process.py) is a tool we provide for preprocessing sequences.  
+ [model](./model.py) holds architecture of the model  
+ [requirement](./requirement.txt) listed the relevant dependency libraries and version required for training and testing plm-cs.  
+ [setup](./setup.py) if the local installation setup file for plm-cs.  
+ [train_your_model](./train_your_model.ipynb) provided the code to completely reproduce the results in our paper.  
+ [train](./train.py) provides scripts for training the model if you want to train the model with your own data.
+ [utils](./utils.py) provides tools for extract protein sequences and chemical shifts from various types of file.
+
+
 ## Train your model
 If you want to train your own PLM-CS model, this repository provides all the tools and data.
 
@@ -36,10 +52,10 @@ For convenience, the reasoning process of the ESM model is separate from the tra
 dataset = TensorDataset(all_esm_vec, all_label, all_mask, all_padding_mask)
 ```
 The final dimension of each parameter should be:
-*b&#215;512&#215;1280*, *b&#215;512&#215;1*, *b&#215;512&#215;1*, *b&#215;512&#215;1*
+*n&#215;512&#215;1280*, *n&#215;512&#215;1*, *n&#215;512&#215;1*, *n&#215;512&#215;1*. *n* refers to the number of sequences.
 
 #### Train
-Modify the path in the [train.py](./train.py) to your own parh. Also, be aware that this can only train a model of one type of atom at a time.
+Modify the path in the [train.py](./train.py) to your own path. Also, be aware that this can only train a model of one type of atom at a time.
 ### Use PLM-CS through python SDK
 #### Install with pip
 ```python

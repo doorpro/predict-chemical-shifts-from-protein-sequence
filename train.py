@@ -7,7 +7,7 @@ coding:utf-8
 import math
 import torch
 from torch.utils.data import DataLoader
-from model import regression
+from model import PLM_CS
 from torch.utils.data import random_split
 import argparse
 import numpy as np
@@ -36,13 +36,18 @@ parser.add_argument('--device', type=str, default="cuda:0", help='learning rate'
 args = parser.parse_args()
 
 def main(data, save_path):
-    model = regression(args.d_vec, args.d_model, args.n_head, args.dropout)
+    """The main program is used to train the model"""
+    model = PLM_CS(args.d_vec, args.d_model, args.n_head, args.dropout)
+    # read the model, two Transformer encoder layers are used in the model
     device = torch.device(args.device)
     train_loss_all = []
     val_loss_all = []
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, betas=(0.9, 0.99), eps=1e-8,
                                    weight_decay=0)
     # optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+
+    # two optimizers are provided, you can choose the optimizer according to the our recommendation
+
     optimizer.zero_grad()
     loss_func = torch.nn.MSELoss()
     model.to(device)
@@ -59,14 +64,19 @@ def main(data, save_path):
             torch.nn.init.xavier_uniform_(model.in_proj_weight)
             torch.nn.init.xavier_uniform_(model.out_proj.weight)
 
+    # three initialization methods are provided, you can choose the initialization method according to the our recommendation
+
     model.apply(init_weights1)
-    train_size = int(len(data) * 1)
+    train_size = int(len(data) * 0.8)
+
+
     val_size = len(data) - train_size
     train_dataset, val_dataset = random_split(data, [train_size, val_size])
     traindata_loader = DataLoader(train_dataset, batch_size=args.batchsize, shuffle=True)
     valdata_loader = DataLoader(val_dataset, batch_size=args.batchsize, shuffle=True)
 
     def train(epoch):
+        '''train the model, the loss function is RMSE'''
         model.train()
         epoch_loss = 0
         all_CA = 0
@@ -89,6 +99,7 @@ def main(data, save_path):
         return (epoch_loss / all_CA)
 
     def val(epoch):
+        '''Use the partitioned validation set to perform the validation step'''
         # model.train()
         epoch_loss = 0
         all_CA = 0
@@ -127,5 +138,7 @@ def main(data, save_path):
 
 if __name__ == '__main__':
     data = np.load("path/to/refdb_", allow_pickle=True)
+    # The path of your processed dataset
     save_path = "path/to/save"
+    # the path you want to save your model checkpoint
     main(data, save_path)

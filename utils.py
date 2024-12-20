@@ -9,7 +9,7 @@ from pynmrstar import Entry
 import copy
 
 def extract_protein_sequence(file_path):
-    '''read protein sequences from nmrstar'''
+    '''read protein sequences from shiftx test set file'''
     nmrstar_file = file_path
     entry = Entry.from_file(nmrstar_file)
     amino_list = ['ALA','ARG','ASN','ASP','CYS','GLN','GLU','GLY','HIS','ILE','LEU','LYS','MET','PHE','PRO','SER','THR','TRP','TYR','VAL','U']
@@ -36,6 +36,7 @@ def extract_protein_sequence(file_path):
     return bmrb_seq_list
 
 def refdb_get_seq(file):
+    '''read protein sequences from refdb file'''
     amino_list2 = ['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W','Y','V'] # "U" is not included
     start_line = 99999
     bmrb_seq = ''
@@ -58,6 +59,7 @@ def refdb_get_seq(file):
     return bmrb_seq
 
 def refdb_find_shift(file):
+    """find the start and end line of the chemical shift data in refdb file"""
     start_line = 99999
     with open(file, encoding='utf-8') as entry:
         for i, line in enumerate(entry):
@@ -69,22 +71,8 @@ def refdb_find_shift(file):
     return start_line, end_line
 
 
-def refdb_get_shift(file, s, e, bmrb_seq, atom_type):
-    res = len(bmrb_seq)
-    shift = torch.zeros(res)
-    mask = torch.zeros(res).bool()
-    with open(file, encoding='utf-8') as entry:
-        for i, line in enumerate(entry):
-            if s < i < e:
-                res_id = line.split()[1]
-                cs = line.split()[5]
-                atom = line.split()[3]
-                if atom == atom_type:
-                    shift[int(res_id) - 1] = float(cs)
-                    mask[int(res_id) - 1] = True
-    return shift, mask
-
 def align_bmrb_pdb(bmrb_seq, pdb_seq):
+    """align bmrb sequence to pdb sequence, input: bmrb_seq, pdb_seq, output: matched_index_list"""
     matched_seq = [False for j in range(len(pdb_seq))]
     findmatch = 0
     index_bmrb = 0
@@ -128,6 +116,7 @@ def align_bmrb_pdb(bmrb_seq, pdb_seq):
                         index_bmrb += 1
                         break
     return matched_seq
+
 def aa(amino):
     amino_list = ['ALA', 'ARG', 'ASN', 'ASP', 'CYS', 'GLN', 'GLU', 'GLY', 'HIS', 'ILE', 'LEU', 'LYS', 'MET', 'PHE',
                   'PRO',
@@ -138,7 +127,9 @@ def aa(amino):
         if amino == amino_list[i]:
             return amino_list2[i]
     return "<mask>"
+
 def refdb_get_cs_seq(file_path, s, e):
+    """get the protein sequence from chemical shift part of refdb file"""
     cs_seq = ""
     start_resid = 99999
     res_num = -1
@@ -155,6 +146,7 @@ def refdb_get_cs_seq(file_path, s, e):
     return cs_seq
 
 def shiftx_get_cs_seq(file_path, s, e):
+    """get the protein sequence from chemical shift part of shiftx file"""
     cs_seq = ""
     start_resid = 99999
     res_num = -1
@@ -171,6 +163,7 @@ def shiftx_get_cs_seq(file_path, s, e):
     return cs_seq
 
 def refdb_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
+    """get chemical shifts from refdb file"""
     res = len(bmrb_seq)
     shift = torch.zeros(res)
     mask = torch.zeros(res).bool()
@@ -199,6 +192,7 @@ def refdb_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
     return shift, mask
 
 def shiftx_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
+    """get chemical shifts from shiftx file"""
     res = len(bmrb_seq)
     shift = torch.zeros(res)
     mask = torch.zeros(res).bool()
@@ -227,6 +221,8 @@ def shiftx_get_shift_re(file, s, e, bmrb_seq, matched, atom_type):
     return shift, mask
 
 def get_shifts(file_path, atom_type, bmrb_seq_list):
+    """get chemical shifts from nmrstar file, 
+       input: file_path, atom_type, bmrb_seq_list, output: shift_list_all, mask_all."""
     entity_num = len(bmrb_seq_list)
     shift_list_all = [0 for i in range(entity_num)]
     mask_all = [0 for i in range(entity_num)]
@@ -246,6 +242,7 @@ def get_shifts(file_path, atom_type, bmrb_seq_list):
     return shift_list_all, mask_all
 
 def get_HA_shifts(file_path, atom_type, bmrb_seq_list):
+    """get HA chemical shifts from nmrstar file"""
     entity_num = len(bmrb_seq_list)
     shift_list_all = [0 for i in range(entity_num)]
     mask_all = [0 for i in range(entity_num)]

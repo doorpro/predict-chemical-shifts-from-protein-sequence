@@ -3,7 +3,7 @@ import os
 
 setup(
     name='plm-cs',
-    version='1.8',
+    version='2.2',
     description='Protein chemical shift prediction based on Protein Language Model',
     author='Zhu He',
     author_email='2260913071@qq.com',

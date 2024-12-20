@@ -233,7 +233,8 @@ class Encoder2(nn.Module):
         x = self.pre(x)
         return x
 
-class regression(nn.Module):
+class PLM_CS(nn.Module):
+    # the final model
     def __init__(self, word_vec, d_model, heads, dropout):
         super().__init__()
         self.encoder = Encoder1(word_vec, d_model, heads, dropout)

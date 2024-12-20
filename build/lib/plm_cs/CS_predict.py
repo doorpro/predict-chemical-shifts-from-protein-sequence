@@ -14,6 +14,7 @@ import os
 import argparse
 import traceback
 import json
+from Bio import SeqIO
 
 # current_file_directory = os.path.dirname(os.path.abspath(__file__))
 # # os.chdir(current_file_directory)
@@ -34,11 +35,19 @@ config = {
 
 amino_acids = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', 'X']
 
+def read_fasta(file_path):
+    sequences = []
+    for record in SeqIO.parse(file_path, "fasta"):
+        sequences.append(record.seq)
+    return sequences
+
 def predict_from_seq(protein_sequence, result_file):
+        print("The first run takes time because the ESM weights need to be downloaded")
         cs_df = {'HA':[], 'H':[], 'N':[], 'CA':[], 'CB':[], 'C':[]}
         # model_path = config['model_paths']['esm_model']
         # model_path = ".\\esm_ckpt\\esm2_t33_650M_UR50D.pt"
         # model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
+
         model, alphabet = esm.pretrained.esm2_t33_650M_UR50D()
         # Load ESM-2 650m model
 
@@ -77,10 +86,19 @@ def predict_from_seq(protein_sequence, result_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Predict chemical shifts from protein sequence.")
-    parser.add_argument('sequence', type=str, help='Protein sequence')
+    parser.add_argument('input', type=str, help='Fasta file or Protein sequence')
     parser.add_argument('--result_file', type=str, default='./result/new.csv', help='Output CSV file for results')
     args = parser.parse_args()
     
+    input_file_seq = args.input
+    if os.path.exists(input_file_seq):
+        sequences = read_fasta(input_file_seq)
+        if len(sequences) > 1:
+            raise ValueError("Multiple sequences detected in the input file, please input one sequence at a time")
+        args.sequence = sequences[0]
+    else:
+        print("Input is not a file, assuming input is a protein sequence")
+        args.sequence = input_file_seq
 
     args.sequence = args.sequence.upper()
     if not args.sequence.isalpha():
