@@ -44,8 +44,8 @@ pip install .
 #### Use plm-cs
 Using commands similar to the one below, enter the Fasta file or protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
 ```python
-plm-cs YOURSEQUENCE -your_save_path
-plm-cs your_file.fasta -your_save_path
+plm-cs YOURSEQUENCE --result_file your_save_path
+plm-cs your_file.fasta --result_file your_save_path
 ```
 Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
 

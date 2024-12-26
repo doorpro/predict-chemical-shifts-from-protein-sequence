@@ -1,10 +1,12 @@
 Metadata-Version: 2.1
 Name: plm-cs
-Version: 2.2
+Version: 2.3
 Summary: Protein chemical shift prediction based on Protein Language Model
 Home-page: https://github.com/doorpro/predict-chemical-shifts-from-protein-sequence.git
 Author: Zhu He
 Author-email: 2260913071@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Natural Language :: English
@@ -13,13 +15,6 @@ Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
-Requires-Dist: torch==2.5.0
-Requires-Dist: torchaudio==2.5.0
-Requires-Dist: torchvision==0.20.0
-Requires-Dist: fair-esm==2.0.0
-Requires-Dist: numpy==2.1.2
-Requires-Dist: biopython==1.84
-Requires-Dist: pandas==2.2.3
 
 ## PLM-CS  
 ## Predict protein chemical shifts from sequence
@@ -27,7 +22,7 @@ The github repository address of the project: https://github.com/doorpro/predict
 If you have any comments or questions, email the author: 2260913071@qq.com
 
 
-![image](/image/image1.png)
+![image](https://github.com/doorpro/predict-chemical-shifts-from-protein-sequence/raw/main/image/image1.png "PLM-CS")
 
 ## File introduction in the project
 [af_pdb](./af_pdb/) deposit the protein structures in the *solution_nmr test set*  
@@ -43,10 +38,7 @@ If you have any comments or questions, email the author: 2260913071@qq.com
  [train](./train.py) provides scripts for training the model if you want to train the model with your own data.
  [utils](./utils.py) provides tools for extract protein sequences and chemical shifts from various types of file.
 
-
-## Train your model
-If you want to train your own PLM-CS model, this repository provides all the tools and data.
-
+### Use PLM-CS through python SDK
 #### Requirement
     'torch == 2.5.0',
     'torchaudio == 2.5.0',
@@ -55,6 +47,31 @@ If you want to train your own PLM-CS model, this repository provides all the too
     'numpy == 2.1.2',
     'biopython == 1.84',
     'pandas == 2.2.3'
+
+#### Install with pip
+```python
+pip install plm-cs
+```
+
+#### Or install after git clone
+After cloning the complete project file locally, run the following command in the folder containing setup.py
+```python
+pip install .
+```
+
+#### Use plm-cs
+Using commands similar to the one below, enter the Fasta file or protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
+```python
+plm-cs YOURSEQUENCE -your_save_path
+plm-cs your_file.fasta -your_save_path
+```
+Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
+
+You can simply check by: ```plm-cs AAAA```
+
+## Train your model
+If you want to train your own PLM-CS model, this repository provides all the tools and data.
+
 ### Train with RefDB dataset
 If you want to train with the data we provide and get the results in the paper, all the processes are already provided in the ipynb file [train_your_model](./train_your_model.ipynb).
 
@@ -75,24 +92,9 @@ For convenience, the reasoning process of the ESM model is separate from the tra
 dataset = TensorDataset(all_esm_vec, all_label, all_mask, all_padding_mask)
 ```
 The final dimension of each parameter should be:
-*n&#215;512&#215;1280*, *n&#215;512&#215;1*, *n&#215;512&#215;1*, *n&#215;512&#215;1*. *n* refers to the number of sequences.
+*b&#215;512&#215;1280*, *b&#215;512&#215;1*, *b&#215;512&#215;1*, *b&#215;512&#215;1*
 
 #### Train
-Modify the path in the [train.py](./train.py) to your own path. Also, be aware that this can only train a model of one type of atom at a time.
-### Use PLM-CS through python SDK
-#### Install with pip
-```python
-pip install plm-cs
-```
+Modify the path in the [train.py](./train.py) to your own parh. Also, be aware that this can only train a model of one type of atom at a time.
 
-#### Or install after git clone
-After cloning the complete project file locally, run the following command in the folder containing setup.py
-```python
-pip install .
-```
-#### Use plm-cs
-Using commands similar to the one below, enter the protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
-```python
-plm-cs YOURSEQUENCE -your_save_path
-```
-Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
+

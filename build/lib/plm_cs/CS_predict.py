@@ -1,11 +1,12 @@
-#!/usr/bin/env python
-# -*- coding = utf-8 -*-
-# @Time : 2024/8/7 20:24
-# @Author : ZhuHe
-# @File : LinearModel.py
-# @Software : PyCharm
-# @File : CS_predict.py
-# @desc:
+'''
+!/usr/bin/env python
+-*- coding = utf-8 -*-
+@Time : 2024/8/7 20:24
+@Author : ZhuHe
+@File : LinearModel.py
+@Software : PyCharm
+@File : CS_predict.py
+'''
 import torch
 from plm_cs.model import PLM_CS
 import esm
@@ -95,10 +96,10 @@ def main():
         sequences = read_fasta(input_file_seq)
         if len(sequences) > 1:
             raise ValueError("Multiple sequences detected in the input file, please input one sequence at a time")
-        args.sequence = sequences[0]
+        args.sequence = str(sequences[0])
     else:
         print("Input is not a file, assuming input is a protein sequence")
-        args.sequence = input_file_seq
+        args.sequence = str(input_file_seq)
 
     args.sequence = args.sequence.upper()
     if not args.sequence.isalpha():
