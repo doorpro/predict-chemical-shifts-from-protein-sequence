@@ -1,12 +1,10 @@
 Metadata-Version: 2.1
 Name: plm-cs
-Version: 2.3
+Version: 2.4
 Summary: Protein chemical shift prediction based on Protein Language Model
 Home-page: https://github.com/doorpro/predict-chemical-shifts-from-protein-sequence.git
 Author: Zhu He
 Author-email: 2260913071@qq.com
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Natural Language :: English
@@ -15,6 +13,13 @@ Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
+Requires-Dist: torch==2.5.0
+Requires-Dist: torchaudio==2.5.0
+Requires-Dist: torchvision==0.20.0
+Requires-Dist: fair-esm==2.0.0
+Requires-Dist: numpy==2.1.2
+Requires-Dist: biopython==1.84
+Requires-Dist: pandas==2.2.3
 
 ## PLM-CS  
 ## Predict protein chemical shifts from sequence
@@ -62,8 +67,8 @@ pip install .
 #### Use plm-cs
 Using commands similar to the one below, enter the Fasta file or protein sequence and the path to save the result to generate a csv file predicting the chemical shift at the specified location
 ```python
-plm-cs YOURSEQUENCE -your_save_path
-plm-cs your_file.fasta -your_save_path
+plm-cs YOURSEQUENCE --result_file your_save_path.csv
+plm-cs your_file.fasta --result_file your_save_path.csv
 ```
 Note that the first time you use it, it takes a lot of time because you need to download the weights of the esm model.
 
@@ -96,5 +101,3 @@ The final dimension of each parameter should be:
 
 #### Train
 Modify the path in the [train.py](./train.py) to your own parh. Also, be aware that this can only train a model of one type of atom at a time.
-
-

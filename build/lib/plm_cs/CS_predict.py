@@ -87,7 +87,7 @@ def predict_from_seq(protein_sequence, result_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Predict chemical shifts from protein sequence.")
-    parser.add_argument('input', type=str, help='Fasta file or Protein sequence')
+    parser.add_argument('input', type=str, help='Fasta file or Protein Sequence')
     parser.add_argument('--result_file', type=str, default='./result/new.csv', help='Output CSV file for results')
     args = parser.parse_args()
     

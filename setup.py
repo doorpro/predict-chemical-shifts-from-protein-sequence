@@ -3,7 +3,7 @@ import os
 
 setup(
     name='plm-cs',
-    version='2.3',
+    version='2.4',
     description='Protein chemical shift prediction based on Protein Language Model',
     author='Zhu He',
     author_email='2260913071@qq.com',
@@ -15,7 +15,8 @@ setup(
     include_package_data=True,
     package_data={
         "plm-cs":[
-                  "ckpt/*"]
+                  "ckpt/*",
+                  "ckpt/model_ckpt/*",]
     },
     entry_points = {
         'console_scripts': [
