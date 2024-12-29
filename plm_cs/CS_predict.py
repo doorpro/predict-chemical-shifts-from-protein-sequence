@@ -16,23 +16,34 @@ import argparse
 import traceback
 import json
 from Bio import SeqIO
+import io
 
-# current_file_directory = os.path.dirname(os.path.abspath(__file__))
-# # os.chdir(current_file_directory)
-# config_path = os.path.join(current_file_directory, 'config.json')
-# with open(config_path, 'r') as f:
-#     config = json.load(f)
 
-config = {
-    "model_paths": {
-        "reg_HA": "./plm_cs/ckpt/model_ckpt/reg_ha.pth",
-        "reg_H": "./plm_cs/ckpt/model_ckpt/reg_h.pth",
-        "reg_N": "./plm_cs/ckpt/model_ckpt/reg_n.pth",
-        "reg_CA": "./plm_cs/ckpt/model_ckpt/reg_ca.pth",
-        "reg_CB": "./plm_cs/ckpt/model_ckpt/reg_cb.pth",
-        "reg_C": "./plm_cs/ckpt/model_ckpt/reg_c.pth"
-    }
-}
+import pkg_resources
+
+def load_ckpt():
+    ckpt_path = pkg_resources.resource_filename('reg_ca', f'/reg_ca.pth')
+    with open(ckpt_path, 'rb') as f:
+        ca_ckpt = f.read()
+    ckpt_path = pkg_resources.resource_filename('reg_cb', f'/reg_cb.pth')
+    with open(ckpt_path, 'rb') as f:
+        cb_ckpt = f.read()
+    ckpt_path = pkg_resources.resource_filename('reg_c', f'/reg_c.pth')
+    with open(ckpt_path, 'rb') as f:
+        c_ckpt = f.read()
+    ckpt_path = pkg_resources.resource_filename('reg_h', f'/reg_h.pth')
+    with open(ckpt_path, 'rb') as f:
+        h_ckpt = f.read()
+    ckpt_path = pkg_resources.resource_filename('reg_ha', f'/reg_ha.pth')
+    with open(ckpt_path, 'rb') as f:
+        ha_ckpt = f.read()
+    ckpt_path = pkg_resources.resource_filename('reg_n', f'/reg_n.pth')
+    with open(ckpt_path, 'rb') as f:
+        n_ckpt = f.read()
+    return ca_ckpt, cb_ckpt, c_ckpt, h_ckpt, ha_ckpt, n_ckpt
+
+ca_ckpt, cb_ckpt, c_ckpt, h_ckpt, ha_ckpt, n_ckpt = load_ckpt()
+models = {'ha': ha_ckpt, 'h': h_ckpt, 'n': n_ckpt, 'ca': ca_ckpt, 'cb': cb_ckpt, 'c': c_ckpt}
 
 amino_acids = ['A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y', 'X']
 
@@ -44,7 +55,7 @@ def read_fasta(file_path):
 
 def predict_from_seq(protein_sequence, result_file):
         print("The first run takes time because the ESM weights need to be downloaded")
-        cs_df = {'HA':[], 'H':[], 'N':[], 'CA':[], 'CB':[], 'C':[]}
+        cs_df = {'ha':[], 'h':[], 'n':[], 'ca':[], 'cb':[], 'c':[]}
         # model_path = config['model_paths']['esm_model']
         # model_path = ".\\esm_ckpt\\esm2_t33_650M_UR50D.pt"
         # model, alphabet = esm.pretrained.load_model_and_alphabet(model_path)
@@ -69,9 +80,10 @@ def predict_from_seq(protein_sequence, result_file):
 
         model = PLM_CS(1280, 512, 8, 0.1)
 
-        for atom in ['HA', 'H', 'N', 'CA', 'CB', 'C']:
+        for atom in ['ha', 'h', 'n', 'ca', 'cb', 'c']:
+            ckpt = io.BytesIO(models[atom])
             model.load_state_dict(
-                torch.load(config['model_paths'][f'reg_{atom}'], map_location=torch.device('cpu'), weights_only=True))
+                torch.load(ckpt, map_location=torch.device('cpu'), weights_only=True))
             # load the model
             model.eval()
             out = model(embedding.unsqueeze(0), padding_mask)
@@ -87,7 +99,7 @@ def predict_from_seq(protein_sequence, result_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Predict chemical shifts from protein sequence.")
-    parser.add_argument('input', type=str, help='Fasta file or Protein sequence')
+    parser.add_argument('input', type=str, help='Fasta file or Protein Sequence')
     parser.add_argument('--result_file', type=str, default='./result/new.csv', help='Output CSV file for results')
     args = parser.parse_args()
     
@@ -96,10 +108,10 @@ def main():
         sequences = read_fasta(input_file_seq)
         if len(sequences) > 1:
             raise ValueError("Multiple sequences detected in the input file, please input one sequence at a time")
-        args.sequence = sequences[0]
+        args.sequence = str(sequences[0])
     else:
         print("Input is not a file, assuming input is a protein sequence")
-        args.sequence = input_file_seq
+        args.sequence = str(input_file_seq)
 
     args.sequence = args.sequence.upper()
     if not args.sequence.isalpha():
